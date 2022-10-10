@@ -1,30 +1,3 @@
-﻿using System;
-using UnityEngine;
-
-namespace ExternalPropertyAttributes
-{
-	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-	public class CurveRangeAttribute : DrawerAttribute
-	{
-		public Vector2 Min { get; private set; }
-		public Vector2 Max { get; private set; }
-		public EColor Color { get; private set; }
-
-		public CurveRangeAttribute(Vector2 min, Vector2 max, EColor color = EColor.Clear)
-		{
-			Min = min;
-			Max = max;
-			Color = color;
-		}
-
-		public CurveRangeAttribute(EColor color)
-			: this(Vector2.zero, Vector2.one, color)
-		{
-		}
-
-		public CurveRangeAttribute(float minX, float minY, float maxX, float maxY, EColor color = EColor.Clear)
-			: this(new Vector2(minX, minY), new Vector2(maxX, maxY), color)
-		{
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e3bed55263f60d5745a02aa445710c321c357a8ae800bc21000b5736a47b359
+size 766

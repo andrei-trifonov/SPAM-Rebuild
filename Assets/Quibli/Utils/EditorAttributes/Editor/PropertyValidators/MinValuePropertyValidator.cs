@@ -1,33 +1,3 @@
-﻿using UnityEngine;
-using UnityEditor;
-
-namespace ExternalPropertyAttributes.Editor
-{
-	public class MinValuePropertyValidator : PropertyValidatorBase
-	{
-		public override void ValidateProperty(SerializedProperty property)
-		{
-			MinValueAttribute minValueAttribute = PropertyUtility.GetAttribute<MinValueAttribute>(property);
-
-			if (property.propertyType == SerializedPropertyType.Integer)
-			{
-				if (property.intValue < minValueAttribute.MinValue)
-				{
-					property.intValue = (int)minValueAttribute.MinValue;
-				}
-			}
-			else if (property.propertyType == SerializedPropertyType.Float)
-			{
-				if (property.floatValue < minValueAttribute.MinValue)
-				{
-					property.floatValue = minValueAttribute.MinValue;
-				}
-			}
-			else
-			{
-				string warning = minValueAttribute.GetType().Name + " can be used only on int or float fields";
-				Debug.LogWarning(warning, property.serializedObject.targetObject);
-			}
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:daae8079568847d1dd753637b2908fef43d7fc84d21f491534ebde97bf9c335f
+size 929

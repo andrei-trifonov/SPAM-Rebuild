@@ -1,0 +1,12 @@
+D:/SPAM_Rebuild filter=lfs diff=lfs merge=lfs -text
+D:/SPAM_Rebuild/Assets filter=lfs diff=lfs merge=lfs -text
+D:/SPAM_Rebuild/Library filter=lfs diff=lfs merge=lfs -text
+D:/SPAM_Rebuild/Assets/_MK/MKToon/ filter=lfs diff=lfs merge=lfs -text
+Assets/Epic filter=lfs diff=lfs merge=lfs -text
+Toon filter=lfs diff=lfs merge=lfs -text
+FX/** filter=lfs diff=lfs merge=lfs -text
+Assets/_MK/** filter=lfs diff=lfs merge=lfs -text
+Assets/Resources/** filter=lfs diff=lfs merge=lfs -text
+Assets/Quibli/** filter=lfs diff=lfs merge=lfs -text
+Assets/Tree_Textures/** filter=lfs diff=lfs merge=lfs -text
+Assets/Minimalist/** filter=lfs diff=lfs merge=lfs -text

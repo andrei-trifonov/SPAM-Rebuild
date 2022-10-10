@@ -1,23 +1,3 @@
-﻿using System;
-
-namespace ExternalPropertyAttributes
-{
-	public abstract class EnableIfAttributeBase : MetaAttribute
-	{
-		public string[] Conditions { get; private set; }
-		public EConditionOperator ConditionOperator { get; private set; }
-		public bool Inverted { get; protected set; }
-
-		public EnableIfAttributeBase(string condition)
-		{
-			ConditionOperator = EConditionOperator.And;
-			Conditions = new string[1] { condition };
-		}
-
-		public EnableIfAttributeBase(EConditionOperator conditionOperator, params string[] conditions)
-		{
-			ConditionOperator = conditionOperator;
-			Conditions = conditions;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd5e0440edf907addadff59fe4b1c460434fdfe49d7a020f9335f85b1d3f7aef
+size 618

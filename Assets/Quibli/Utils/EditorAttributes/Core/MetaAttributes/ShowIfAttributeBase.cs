@@ -1,23 +1,3 @@
-﻿using System;
-
-namespace ExternalPropertyAttributes
-{
-	public class ShowIfAttributeBase : MetaAttribute
-	{
-		public string[] Conditions { get; private set; }
-		public EConditionOperator ConditionOperator { get; private set; }
-		public bool Inverted { get; protected set; }
-
-		public ShowIfAttributeBase(string condition)
-		{
-			ConditionOperator = EConditionOperator.And;
-			Conditions = new string[1] { condition };
-		}
-
-		public ShowIfAttributeBase(EConditionOperator conditionOperator, params string[] conditions)
-		{
-			ConditionOperator = conditionOperator;
-			Conditions = conditions;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b3b2ca829397ad8f7a2bf73327de6e5f780e4cf7f93808f865c77ff70c0644c
+size 603

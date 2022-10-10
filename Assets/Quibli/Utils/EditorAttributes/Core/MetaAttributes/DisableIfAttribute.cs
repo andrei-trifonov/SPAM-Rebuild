@@ -1,20 +1,3 @@
-﻿using System;
-
-namespace ExternalPropertyAttributes
-{
-	[AttributeUsage(AttributeTargets.Field | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
-	public class DisableIfAttribute : EnableIfAttributeBase
-	{
-		public DisableIfAttribute(string condition)
-			: base(condition)
-		{
-			Inverted = true;
-		}
-
-		public DisableIfAttribute(EConditionOperator conditionOperator, params string[] conditions)
-			: base(conditionOperator, conditions)
-		{
-			Inverted = true;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:44e04bb75cf1cb1685683e74fb59aa2d239180f6b95309a1ef2eb59d48df213e
+size 490

@@ -1,17 +1,3 @@
-﻿using System;
-
-namespace ExternalPropertyAttributes
-{
-	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-	public class MinMaxSliderAttribute : DrawerAttribute
-	{
-		public float MinValue { get; private set; }
-		public float MaxValue { get; private set; }
-
-		public MinMaxSliderAttribute(float minValue, float maxValue)
-		{
-			MinValue = minValue;
-			MaxValue = maxValue;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d17dde418de999e58e7649db82f2528befe065a3a3d2d6830081a4c404fc8e4
+size 414

@@ -1,20 +1,3 @@
-﻿using System;
-
-namespace ExternalPropertyAttributes
-{
-	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-	public class MinValueAttribute : ValidatorAttribute
-	{
-		public float MinValue { get; private set; }
-
-		public MinValueAttribute(float minValue)
-		{
-			MinValue = minValue;
-		}
-
-		public MinValueAttribute(int minValue)
-		{
-			MinValue = minValue;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d65e44cbce713aeb68401f12116723bec9a59048b81febac5665f96ab6c41069
+size 397

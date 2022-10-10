@@ -1,20 +1,3 @@
-﻿using System;
-
-namespace ExternalPropertyAttributes
-{
-	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-	public class ShowAssetPreviewAttribute : DrawerAttribute
-	{
-		public const int DefaultWidth = 64;
-		public const int DefaultHeight = 64;
-
-		public int Width { get; private set; }
-		public int Height { get; private set; }
-
-		public ShowAssetPreviewAttribute(int width = DefaultWidth, int height = DefaultHeight)
-		{
-			Width = width;
-			Height = height;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7688b47b42fc2c8f30eef7f521a6c61bf923c93b28995888478529d5aac637ed
+size 503

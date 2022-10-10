@@ -1,20 +1,3 @@
-﻿using System;
-
-namespace ExternalPropertyAttributes
-{
-	[AttributeUsage(AttributeTargets.Field, AllowMultiple = true, Inherited = true)]
-	public class HorizontalLineAttribute : DrawerAttribute
-	{
-		public const float DefaultHeight = 2.0f;
-		public const EColor DefaultColor = EColor.Gray;
-
-		public float Height { get; private set; }
-		public EColor Color { get; private set; }
-
-		public HorizontalLineAttribute(float height = DefaultHeight, EColor color = DefaultColor)
-		{
-			Height = height;
-			Color = color;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:64eb50b425f60e75ea7b119876b3eab3846ba1180067b1cd8ada5fea7ac5d31a
+size 524

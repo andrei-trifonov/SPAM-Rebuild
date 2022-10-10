@@ -1,20 +1,3 @@
-﻿using System;
-
-namespace ExternalPropertyAttributes
-{
-	[AttributeUsage(AttributeTargets.Field | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
-	public class HideIfAttribute : ShowIfAttributeBase
-	{
-		public HideIfAttribute(string condition)
-			: base(condition)
-		{
-			Inverted = true;
-		}
-
-		public HideIfAttribute(EConditionOperator conditionOperator, params string[] conditions)
-			: base(conditionOperator, conditions)
-		{
-			Inverted = true;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e6b5addbd610c2f0469a24f4a2fd25fd218af5e2a917a9d1b72af7b1ac0c7aa
+size 479

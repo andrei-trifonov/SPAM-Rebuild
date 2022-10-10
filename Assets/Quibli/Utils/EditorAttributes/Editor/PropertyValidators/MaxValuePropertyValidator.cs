@@ -1,33 +1,3 @@
-﻿using UnityEngine;
-using UnityEditor;
-
-namespace ExternalPropertyAttributes.Editor
-{
-	public class MaxValuePropertyValidator : PropertyValidatorBase
-	{
-		public override void ValidateProperty(SerializedProperty property)
-		{
-			MaxValueAttribute maxValueAttribute = PropertyUtility.GetAttribute<MaxValueAttribute>(property);
-
-			if (property.propertyType == SerializedPropertyType.Integer)
-			{
-				if (property.intValue > maxValueAttribute.MaxValue)
-				{
-					property.intValue = (int)maxValueAttribute.MaxValue;
-				}
-			}
-			else if (property.propertyType == SerializedPropertyType.Float)
-			{
-				if (property.floatValue > maxValueAttribute.MaxValue)
-				{
-					property.floatValue = maxValueAttribute.MaxValue;
-				}
-			}
-			else
-			{
-				string warning = maxValueAttribute.GetType().Name + " can be used only on int or float fields";
-				Debug.LogWarning(warning, property.serializedObject.targetObject);
-			}
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ce7944512797838a5c427b4d148eca3188a37c34b74eb109caf7a1a324ccfa3
+size 929

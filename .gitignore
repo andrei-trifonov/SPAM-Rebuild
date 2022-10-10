@@ -1,0 +1,8 @@
+﻿Library/Artifacts
+Library/ShaderCache
+Library/StateCache
+.idea
+Builds
+Library
+obj
+Logs
