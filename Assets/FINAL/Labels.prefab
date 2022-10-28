@@ -3664,8 +3664,6 @@ MonoBehaviour:
   - "    stop music  fadeout 5.0\r"
   - "    scene opening\r"
   - "    $ quick_menu = False\r"
-  - "    $ renpy.pause(36.0, hard = True)\r"
-  - "    hide opening\r"
   - "    scene black\r"
   - "    nvl clear\r"
   - "    nvl hide\r"
@@ -3673,7 +3671,6 @@ MonoBehaviour:
   - "    scene gl1_back \r"
   - "    narrator \"\u041C\u041D\u0415 \u041E\u0414\u0418\u041D\u041E\u041A\u041E?\"\r"
   - "\tstop music  fadeout 5.0\r"
-  - "    $ renpy.pause(5.0, hard = True)\r"
   - "    $ save_name = \"\u041C\u043D\u0435 \u043E\u0434\u0438\u043D\u043E\u043A\u043E?\"\r"
   - "    scene Room with dissolve\r"
   - "    show mr_s at zoomer (0.5)\r"
@@ -17003,11 +17000,6 @@ MonoBehaviour:
     \u043F\u0435\u0440\u0435\u0432\u0430\u0440\u0438\u0442\u044C \u043C\u044B\u0441\u043B\u0438.\"\r"
   - "        \"\u0427\u0443\u0448\u044C \u043A\u0430\u043A\u0430\u044F-\u0442\u043E.\":\r"
   - "            pass\r"
-  - '    scene Scene2'
-  - '    play music "audio/Farewell.mp3'
-  - '    show mr_b2 at custom (-0.7539999, -6.366)'
-  - '    show k_b at custom (0.5810001, -6.366)'
-  - '    show mr_b at custom (-0.7539999, -6.366)'
   - "        \"\u0422\u044B \u043D\u0435 \u043F\u0440\u0430\u0432.\":\r"
   - "            mr \"\u042D\u0442\u043E \u0437\u0432\u0443\u0447\u0438\u0442 \u043A\u0430\u043A-\u0442\u043E...
     \u0421\u043B\u0438\u0448\u043A\u043E\u043C \u043F\u0440\u0435\u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u043E.\"\r"
@@ -17835,32 +17827,7 @@ MonoBehaviour:
   - Kirill_night2
   - cg118
   - Room3
-  illustrationImage:
-  - {fileID: 21300000, guid: 6ca89ddfb3004e743af78c3e533c9b44, type: 3}
-  - {fileID: 21300000, guid: 898dd7572f3182840a34d167738bd413, type: 3}
-  - {fileID: 21300000, guid: 692b56d07b0c36f46977189e920ece0d, type: 3}
-  - {fileID: 21300000, guid: 3d4f2dc97e1bb6542a5259f81554dc51, type: 3}
-  - {fileID: 21300000, guid: 5e0ee2d18cfb0c34ba540c6ed115d3d6, type: 3}
-  - {fileID: 21300000, guid: 9e056829400f0fa408e5800698f23a9f, type: 3}
-  - {fileID: 21300000, guid: 0bc365bb166f6cb41986d6b38236adb7, type: 3}
-  - {fileID: 21300000, guid: dc79feea603647a438bf5519f22d048c, type: 3}
-  - {fileID: 21300000, guid: 23dffbd01e3fbe74dbdaac15efcc127d, type: 3}
-  - {fileID: 21300000, guid: 3ce3baafbbd730b4c992b34bad8df340, type: 3}
-  - {fileID: 21300000, guid: 19b41ed815a85bf47b2c4e77fb673749, type: 3}
-  - {fileID: 21300000, guid: 8d71781397cb7b6439c740591d877124, type: 3}
-  - {fileID: 21300000, guid: b64c05385917bcf48a8de703e0593b40, type: 3}
-  - {fileID: 21300000, guid: b5ff9c49731666148a9f7e350853b825, type: 3}
-  - {fileID: 21300000, guid: df76183cc52e6fa4bad79456c668f42e, type: 3}
-  - {fileID: 21300000, guid: 4d953ab539e75324996f2da80f5a84f4, type: 3}
-  - {fileID: 21300000, guid: 946588ceeb016374abb5991bcea430de, type: 3}
-  - {fileID: 21300000, guid: 9ce4c0e5009ef4741960c21b7704cbdb, type: 3}
-  - {fileID: 21300000, guid: a957560bef322174789ba212b592826e, type: 3}
-  - {fileID: 21300000, guid: c5be85a6d0bbb4747b6a17ec6d74e009, type: 3}
-  - {fileID: 21300000, guid: 993494fa3ad354d438983ea3c09a1067, type: 3}
-  - {fileID: 21300000, guid: caf202aa38972db48940d00151d01413, type: 3}
-  - {fileID: 21300000, guid: f5239049e47134a4a88ab64a2cf2c77f, type: 3}
-  - {fileID: 21300000, guid: 0dd96b19fc4f1fe489f7f2c228b90fd6, type: 3}
-  - {fileID: 21300000, guid: 4e24882b41d9d7a4ca12f80ab259ccba, type: 3}
+  illustrationImage: []
   audiosName:
   - Farewell
   - Nude

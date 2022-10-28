@@ -16,9 +16,9 @@ using Random = UnityEngine.Random;
 
 public class Core : MonoBehaviour
 {
-    public bool LOAD_NEW_SCENARIO;
-    public string clearLine;
-    public string lastSave;
+   
+    private string clearLine;
+    private string lastSave;
     public GameObject AutoSave;
     public int maxLogSize;
     public float textDelay;
@@ -36,7 +36,6 @@ public class Core : MonoBehaviour
     public GameObject labelGroup;
     public GameObject spritePref;
     public GameObject defaultSpritePos;
-    public GameObject Label;
     public GameObject ChooseBox;
     public LayoutGroup Group;
     public TextMeshProUGUI TextMP;
@@ -46,7 +45,7 @@ public class Core : MonoBehaviour
     public Dictionary<string, Label> Labels;
     public int currLine = 0;
     public string currLabel ;
-    public List<string> LabelName;
+    [HideInInspector] public List<string> LabelName;
     public List<Label> LabelList;
     [HideInInspector] public bool Block;
     [HideInInspector] public int chooseReturnEdgeLine;
@@ -57,8 +56,8 @@ public class Core : MonoBehaviour
     [HideInInspector] public List<Choose> tmpChoose ;
     [HideInInspector] public List<SpriteRenderer> Sprites;
    
-    public List<string> imagePseudoName;
-    public List<string> imageRealName;
+    [HideInInspector] public List<string> imagePseudoName;
+    [HideInInspector] public List<string> imageRealName;
     public List<string> varName;
     public List<int> varValue;
     [HideInInspector] public List<string> logName;
@@ -66,10 +65,8 @@ public class Core : MonoBehaviour
     [HideInInspector] public List<Color> logColor;
     
     [HideInInspector] public string currSaveNum;
-    public TextAsset mainTA;
+
     [HideInInspector] public bool isTextCasting;
-    
-    
     [HideInInspector] public AudioSource toMax;
     [HideInInspector] public AudioSource toMin;
     [HideInInspector] public Image oldScene;
@@ -249,141 +246,11 @@ public class Core : MonoBehaviour
     }
     void Start()
     {
-        if (LOAD_NEW_SCENARIO)
-        {
-            Label newLabel1;
-            newLabel1 = Instantiate(Label, transform.position, transform.rotation).GetComponent<Label>();
-            newLabel1.labelName = "START";
-            LabelName.Add(newLabel1.labelName);
-            LabelList.Add(newLabel1);
-            currLabel = "START";
-
-            
-            string[] scriptLines = Regex.Split(mainTA.text, "\n");
-
-
-
-
-            string line = "";
-            int counter = 0;
-
-            for (int i = 0; i < scriptLines.Length; i++)
-            {
-                line = scriptLines[i];
-                counter++;
-                if (line.Contains("$ ") && !line.Contains("renpy") && !line.Contains("quick_menu") &&
-                    !line.Contains("save_name"))
-                {
-                    // Debug.Log("Нашел переменную");
-
-
-
-                    var regex = new Regex(string.Format(@"(?<!\w){0}\W+(\w+)", Regex.Escape("$")));
-                    var match = regex.Match(line);
-                    if (match.Success)
-                    {
-                        if (varName.Find(x => x.Equals(match.Groups[1].Value)) == null)
-                        {
-                            varName.Add(match.Groups[1].Value);
-                            regex = new Regex(string.Format(@"(?<!\w){0}\W+(\w+)", Regex.Escape("=")));
-                            match = regex.Match(line);
-                            if (match.Success)
-                            {
-
-                                if (match.Groups[1].Value == "True")
-                                    varValue.Add(1);
-                                if (match.Groups[1].Value == "False")
-                                    varValue.Add(0);
-                                else
-                                {
-                                    try
-                                    {
-                                        varValue.Add(int.Parse(match.Groups[1].Value));
-                                    }
-                                    catch (Exception e)
-                                    {
-                                        varName.RemoveAt(varName.IndexOf(varName.Last()));
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
-                    }
-                }
-
-                if (line.Contains("label "))
-                {
-                    // Debug.Log("Нашел главу");
-
-                    
-                    Label newLabel;
-                    newLabel = Instantiate(Label, transform.position, transform.rotation, labelGroup.transform)
-                        .GetComponent<Label>();
-                   
-                    string formattedLableName = line.Split(' ').Last().Substring(0, line.Split(' ').Last().Length - 1);
-                    formattedLableName =   Regex.Replace(formattedLableName, @"[ \r\n\t]", "");
-                    formattedLableName = formattedLableName.Substring(0, formattedLableName.Length - 1);
-                    newLabel.labelName = formattedLableName;
-                    newLabel.gameObject.name = formattedLableName;
-                    LabelName.Add (formattedLableName);
-                    LabelList.Add(newLabel);
-                    currLabel = formattedLableName;
-                    continue;
-                }
-
-              
-                foreach (var ImageName in imagePseudoName)
-                {
-                    if (line.Contains(" " + ImageName + " "))
-                    {
-                        if (LabelList[labelIndex(currLabel)].illustrationName.FindIndex(x => x.Equals(ImageName))<0)
-                        {
-                            LabelList[labelIndex(currLabel)].illustrationName.Add(ImageName);
-                            LabelList[labelIndex(currLabel)].illustrationRName
-                                .Add(imageRealName[imagePseudoName.IndexOf(ImageName)]);
-                        }
-
-                        break;
-                    }
-                    
-                        
-                }
-                
-                if (line.Contains("play music") || line.Contains("play sound"))
-                {
-                
-                    int istart = line.IndexOf("/") + "/".Length;
-                    string posStr = line.Substring(istart, line.IndexOf(".") - istart);
-                  
-                    if (LabelList[labelIndex(currLabel)].audiosName.FindIndex(x => x.Equals(posStr)) < 0)
-                    {
-                        LabelList[labelIndex(currLabel)].audiosName.Add(posStr);
-                    }
-                }
-
-                    
-                        
-                
-                if (Regex.IsMatch(line, "\\w"))  
-                    LabelList[labelIndex(currLabel)].scenarioBlock.Add(line);
-                
-
-            }
-
-            currLabel = "START";
-            currLine = 0;
-        }
-        else
-        {
-            foreach (Transform label in labelGroup.transform)
+        foreach (Transform label in labelGroup.transform)
             {
                 LabelList.Add(label.GetComponent<Label>());
                 LabelName.Add(label.GetComponent<Label>().name);
             }
-        }
 
         BG3DSpawned = new GameObject[BG3D.Count];
         BG3DSpawned_bool = new bool [BG3D.Count];
@@ -636,6 +503,7 @@ public class Core : MonoBehaviour
     private IEnumerator textCastEnum(string line)
     {
         clearLine = line;
+        Debug.Log(clearLine);
         isTextCasting = true;
         for (int i = 0; i < line.Length+1; i++)
         {
@@ -746,7 +614,7 @@ public class Core : MonoBehaviour
         }
          catch (Exception e)
          {
-            Debug.Log("SpriteTrouble");
+            Debug.Log("Error in casting sprite with name " + name);
          }
       
     }
@@ -807,7 +675,7 @@ public class Core : MonoBehaviour
             }
              catch (Exception e)
              {
-                 Debug.Log("Проблема с фоном " + name);
+                 Debug.Log("Error in casting BG with name " + name);
              }
         
     }
@@ -824,7 +692,7 @@ public class Core : MonoBehaviour
             if (pos > 0.75f)
                 pos = 0.75f;
             sprite = Instantiate(spritePref, new Vector3((position.x + pos * 4.45f),0, position.z), Quaternion.identity, defaultSpritePos.transform).GetComponentInChildren<SpriteRenderer>();
-        
+            Debug.Log("Casting sprite in NORMAL position  "+ pos );
         }
 
         if (type == "Zoomed")
@@ -834,13 +702,13 @@ public class Core : MonoBehaviour
             if (pos > 0.75f)
                 pos = 0.75f;
             sprite = Instantiate(spritePref, new Vector3((position.x + pos * 4.45f),-0.234f, position.z-0.581f), Quaternion.identity, defaultSpritePos.transform).GetComponentInChildren<SpriteRenderer>();
- 
+            Debug.Log("Casting sprite in ZOOMED position  "+ pos );
             
         }
         if (type == "Custom")
         {
             sprite = Instantiate(spritePref).GetComponentInChildren<SpriteRenderer>();
-            Debug.Log("pos "+ pos2 );
+            Debug.Log("Casting sprite in CUSTOM position  "+ pos + " " + pos2 );
             sprite.transform.parent.transform.position = new Vector3(pos, 0, pos2);
 
         }
@@ -848,7 +716,7 @@ public class Core : MonoBehaviour
         if (type == "Default")
         {
             sprite = Instantiate(spritePref, new Vector3((position.x + pos * 4.45f),0, position.z), Quaternion.identity, defaultSpritePos.transform).GetComponentInChildren<SpriteRenderer>();
-   
+            Debug.Log("Casting sprite in DEFAULT position  "+ pos );
         }
 
         castSprite(sprite, name);
@@ -968,7 +836,7 @@ public class Core : MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.Log("pause error");
+            Debug.Log("Error in pausing");
             currLine++;
             Step();
         }
@@ -1002,7 +870,7 @@ public class Core : MonoBehaviour
     {
         string tmpLine = currLineValue;
         List<string> clusterLabels = new List<string>();
-        Debug.Log("КАРТА " + currLineValue);
+        Debug.Log("Opening map " + currLineValue);
         tmpLine = tmpLine.Remove(0, currLineValue.IndexOf("(")+1);
         tmpLine = tmpLine.Substring(0, tmpLine.Length-1);
         while (tmpLine.Contains(','))
@@ -1091,7 +959,7 @@ public class Core : MonoBehaviour
                 Debug.Log("No string");
             }
 
-            Debug.Log(currLineValue);
+           
             
 
             if (currLine < LabelList[labelIndex(currLabel)].scenarioBlock.Count)
@@ -1108,7 +976,7 @@ public class Core : MonoBehaviour
                 var match = regex.Match(currLineValue);
                 if (match.Success)
                 {
-                    Debug.Log(match.Groups[1].Value);
+                   
                    loadScene(match.Groups[1].Value);
                    currLine++;
                    Step();
@@ -1119,7 +987,7 @@ public class Core : MonoBehaviour
                 match = regex.Match(currLineValue);
                 if (match.Success)
                 {
-                    Debug.Log("SPRITE APPEARS");
+                   
                     bool isZoomed;
                     bool isNormal;
                     isZoomed = currLineValue.Contains("zoomer");
@@ -1147,12 +1015,12 @@ public class Core : MonoBehaviour
 
                     if (currLineValue.Contains("custom"))
                     {
-                        Debug.Log("CUSTOM");
+                       
                         int istart = currLineValue.IndexOf("(", StringComparison.Ordinal) + "(".Length;
                         string posStr = currLineValue.Substring(istart, currLineValue.IndexOf(")", StringComparison.Ordinal) - istart);
                         string first = posStr.Substring(0, posStr.IndexOf(",", StringComparison.Ordinal));
                         string second = posStr.Substring(posStr.IndexOf(",", StringComparison.Ordinal)+1, posStr.Length-1 - posStr.IndexOf(",", StringComparison.Ordinal));
-                        Debug.Log(first + " " + second);
+                       
                         
                         pos = float.Parse(first, NumberStyles.Any, ci);
                         float pos2 = float.Parse(second, NumberStyles.Any, ci);
@@ -1167,7 +1035,7 @@ public class Core : MonoBehaviour
                     return;
                 
                    
-                    //Debug.Log(match.Groups[1].Value);
+                    
                     
           
                 }
@@ -1179,7 +1047,7 @@ public class Core : MonoBehaviour
                     GameObject toDelete;
                     if (toDelete = GameObject.Find(match.Groups[1].Value)) 
                     {
-                        Debug.Log("Sprite found");
+                       
                         hideSprite(toDelete);
                     }
 
@@ -1232,7 +1100,7 @@ public class Core : MonoBehaviour
                 if (currLineValue.Contains("if"))
                 {
                     
-                    Debug.Log("УСЛОВИЕ");
+                    
                     generateIf();
                     string nextStr = LabelList[labelIndex(currLabel)].scenarioBlock[ifReturnStartLine - 1];
                     if (nextStr.Contains("<="))
@@ -1254,7 +1122,7 @@ public class Core : MonoBehaviour
                 if (currLineValue.Contains("menu:")) //Если меню
                 {
                     AutoSave.GetComponent<LoadButton>().SaveOverride();
-                    Debug.Log("ВЫБОР");
+                   
                     SetBlock(true);
                     
                     generateMenu();
@@ -1266,11 +1134,11 @@ public class Core : MonoBehaviour
                 if (currLineValue.Contains("jump")) //Если прыжок
                 {
 
-                    Debug.Log("ПРЫЖОК " + currLineValue);
+                   
                     chooseReturnEdgeLine = 9999;
                     jumpLabel(); 
                     Step();
-                    Debug.Log(labelIndex(currLabel));
+                    Debug.Log("Jumping " + labelIndex(currLabel));
                     return;
                 }
                 

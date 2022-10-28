@@ -55,6 +55,7 @@
      <Compile Include="Assets\Quibli\Post Process\Scripts\QuibliPostProcess.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
      <Compile Include="Assets\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\ReorderableListAttribute.cs" />
+     <Compile Include="Assets\LightFlicking.cs" />
      <Compile Include="Assets\Quibli\Utils\EditorAttributes\Core\MetaAttributes\IGroupAttribute.cs" />
      <Compile Include="Assets\Quibli\Post Process\Effects\Scripts\ColorGrading.cs" />
      <Compile Include="Assets\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\EnumFlagsAttribute.cs" />
@@ -79,6 +80,7 @@
      <Compile Include="Assets\Quibli\Scripts\Mesh Generators\GrassMeshGenerator.cs" />
      <Compile Include="Assets\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\ShowNativePropertyAttribute.cs" />
      <Compile Include="Assets\living birds\scripts\lb_Bird.cs" />
+     <Compile Include="Assets\MapPoint.cs" />
      <Compile Include="Assets\SaveManager.cs" />
      <Compile Include="Assets\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\SceneAttribute.cs" />
      <Compile Include="Assets\GameMenuController.cs" />
@@ -108,6 +110,7 @@
      <Compile Include="Assets\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\ValidateInputAttribute.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
      <Compile Include="Assets\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\Expandable.cs" />
+     <Compile Include="Assets\CrowFly.cs" />
      <Compile Include="Assets\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\DrawerAttribute.cs" />
      <Compile Include="Assets\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\CurveRangeAttribute.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
@@ -129,8 +132,6 @@
      <Compile Include="Assets\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\HorizontalLineAttribute.cs" />
      <Compile Include="Assets\Label.cs" />
      <Compile Include="Assets\GroupManager.cs" />
-     <Compile Include="Assets\LightFlicking.cs" />
-     <Compile Include="Assets\MapPoint.cs" />
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\CTI URP Leaves.shader" />
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\Includes\CTI URP Lighting.hlsl" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
