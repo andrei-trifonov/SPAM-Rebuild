@@ -25,15 +25,10 @@ public class PreferencesController : MonoBehaviour
     {
         PlayerPrefs.SetFloat(playerPrefsValue, valueSlider.value);
         if (music)
-        {
-            gameCore.maxVolumeMusic = valueSlider.value;
-            gameCore.toMax.volume = valueSlider.value;
-            gameCore.toMax.GetComponent<Fader>().maxVolumeMusic = valueSlider.value;
-        }
-
+            gameCore.SetMusicSettings(valueSlider.value);
         if (sound)
-            gameCore.maxVolumeSound = valueSlider.value;
+            gameCore.SetSoundSettings (valueSlider.value);
         if (text)
-            gameCore.textDelay = valueSlider.value;
+            gameCore.SetTextDelay(valueSlider.value);
     }
 }

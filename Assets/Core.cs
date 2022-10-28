@@ -1,96 +1,134 @@
 using UnityEngine;
-using System.IO;
+
 using TMPro;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Resources;
+
 using System.Text.RegularExpressions;
-using Unity.Mathematics;
-using Unity.VisualScripting;
+
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
+
 
 
 public class Core : MonoBehaviour
 {
-   
+    [SerializeField] private int currLine = 0;
+    [SerializeField] private string currLabel ;
     private string clearLine;
+    
     private string lastSave;
-    public GameObject AutoSave;
-    public int maxLogSize;
-    public float textDelay;
-    public GameObject bgCanvas;
+    [SerializeField] private GameObject AutoSave;
+    [HideInInspector] public string currSaveNum;
+    private int saveLineStart = 9999;
+    private int saveLineFinish = 9999;
+    private string lastAudio;
+    private string saveSprites;
+    private Label tmpLabelComp;
+        
+    [SerializeField] private GameObject bgCanvas;
     private GameObject last3DBG;
-    public float maxVolumeMusic;
-    [HideInInspector] public bool Skipping;
-    public float maxVolumeSound;
-    public AudioSource MusicPlayer;
-    public AudioSource SoundPlayer;
     public List<GameObject> BG3D;
     private bool[] BG3DSpawned_bool; 
     private GameObject[] BG3DSpawned; 
-    public GameObject BG;
-    public GameObject labelGroup;
-    public GameObject spritePref;
-    public GameObject defaultSpritePos;
-    public GameObject ChooseBox;
-    public LayoutGroup Group;
-    public TextMeshProUGUI TextMP;
-    public TextMeshProUGUI SayerMP;
-    public Canvas downMenu;
-    public Canvas mapCanvas;
-    public Dictionary<string, Label> Labels;
-    public int currLine = 0;
-    public string currLabel ;
+    [SerializeField] private GameObject BG;
+    private Image oldScene;
+    private Image newScene;
+    
+    [SerializeField] private bool Block;
+    private bool isTextCasting;
+    private bool Skipping;
+    private float textDelay;   
+    [SerializeField] private TextMeshProUGUI TextMP;
+    [SerializeField] private TextMeshProUGUI SayerMP;
+   
+    private float maxVolumeMusic;
+    private float maxVolumeSound;
+    [SerializeField] private AudioSource MusicPlayer;
+    [SerializeField] private AudioSource SoundPlayer;
+    private AudioSource toMax;
+    private AudioSource toMin;
+      
+    [SerializeField] private GameObject labelGroup;
     [HideInInspector] public List<string> LabelName;
     public List<Label> LabelList;
-    [HideInInspector] public bool Block;
-    [HideInInspector] public int chooseReturnEdgeLine;
-    [HideInInspector] public int chooseReturnPointLine;
-    [HideInInspector] public int ifReturnEndLine;
-    [HideInInspector] public int ifReturnStartLine;
+    
+    [HideInInspector] public List<SpriteRenderer> Sprites;
+    [SerializeField] private GameObject spritePref;
+    [SerializeField] private GameObject defaultSpritePos;
+    
+    [SerializeField] private GameObject ChooseBox;
+    [SerializeField] private LayoutGroup Group;
+ 
+    
+    [SerializeField] private Canvas downMenu;
+    [SerializeField] private Canvas mapCanvas;
+    public List<MapPoint> MapPoints;
+   
+    private int chooseReturnEdgeLine;
+    private int chooseReturnPointLine;
+    private int ifReturnEndLine;
+    private int ifReturnStartLine;
     private int chooseNum = -1;
     [HideInInspector] public List<Choose> tmpChoose ;
-    [HideInInspector] public List<SpriteRenderer> Sprites;
-   
+    
     [HideInInspector] public List<string> imagePseudoName;
     [HideInInspector] public List<string> imageRealName;
+    
     public List<string> varName;
     public List<int> varValue;
+    
+    [SerializeField] private int maxLogSize;
     [HideInInspector] public List<string> logName;
     [HideInInspector] public List<string> logLine;
     [HideInInspector] public List<Color> logColor;
     
-    [HideInInspector] public string currSaveNum;
 
-    [HideInInspector] public bool isTextCasting;
-    [HideInInspector] public AudioSource toMax;
-    [HideInInspector] public AudioSource toMin;
-    [HideInInspector] public Image oldScene;
-    [HideInInspector] public Image newScene;
-    [HideInInspector] public int saveLineStart = 9999;
-    [HideInInspector] public int saveLineFinish = 9999;
-    [HideInInspector] public string lastAudio;
-    [HideInInspector] public string saveSprites;
-    [HideInInspector] public Label tmpLabelComp;
 
-    public List<MapPoint> MapPoints;
-
+    public void SetTextDelay(float speed)
+    {
+        textDelay = speed;
+    }
+    public void SetMusicSettings(float value)
+    {
+        maxVolumeMusic = value;
+        toMax.volume = value;
+        toMax.GetComponent<Fader>().maxVolumeMusic = value;
+    }
+    public void SetSoundSettings(float value)
+    {
+        maxVolumeSound = value;
+    }
     public void SetMemory(List<string> l1, List<string> l2)
     {
         imagePseudoName = l1;
         imageRealName = l2;
     }
-    
+    public List<string> GetImPseudoName()
+    {
+        return imagePseudoName;
+    }
+    public List<string> GetImRealName()
+    {
+        return imageRealName;
+    }
+    public void SetLabelsData(List<string> labelname, List<Label> labellist, List<string>varname, List<int>varvalue, List<string> imagerealname, List<string> imagepseudoname)
+    {
+        LabelName = labelname;
+        LabelList = labellist;
+        varName = varname;
+        varValue = varvalue;
+        imageRealName = imagerealname;
+        imagePseudoName = imagepseudoname;
+    }
     public void SetBlock(bool state)
     {
         Block = state;
         downMenu.enabled = !state;
     }
-
+//TODO ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void LoadMediaCluster(List<string> labels)
     {
@@ -246,11 +284,13 @@ public class Core : MonoBehaviour
     }
     void Start()
     {
+        currLabel = "START";
+        currLine = 0;
         foreach (Transform label in labelGroup.transform)
-            {
+        {
                 LabelList.Add(label.GetComponent<Label>());
                 LabelName.Add(label.GetComponent<Label>().name);
-            }
+        }
 
         BG3DSpawned = new GameObject[BG3D.Count];
         BG3DSpawned_bool = new bool [BG3D.Count];

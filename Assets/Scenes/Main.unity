@@ -2681,39 +2681,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5350e68d2f6ac548b48f4ba3fa06645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currLine: 0
+  currLabel: mira_jump
   AutoSave: {fileID: 186798164}
-  maxLogSize: 50
-  textDelay: 0.01
+  currSaveNum: 
   bgCanvas: {fileID: 1210175514}
-  maxVolumeMusic: 1
-  Skipping: 0
-  maxVolumeSound: 1
-  MusicPlayer: {fileID: 4361316659385064246, guid: 950654cc995391048b9477fdf5b0f9f3, type: 3}
-  SoundPlayer: {fileID: 1257958567}
   BG3D:
   - {fileID: 1541884378379623880, guid: 6f54a8a46cea52d4f80b6ec12ee2824a, type: 3}
   - {fileID: 6999357203642435437, guid: 526666b4a84e70f459a0740e7e2c457c, type: 3}
   BG: {fileID: 4832865542884980233, guid: d62fbfb98932c6948ba530429ebe0012, type: 3}
+  Block: 0
+  TextMP: {fileID: 949154809}
+  SayerMP: {fileID: 880759177}
+  MusicPlayer: {fileID: 4361316659385064246, guid: 950654cc995391048b9477fdf5b0f9f3, type: 3}
+  SoundPlayer: {fileID: 1257958567}
   labelGroup: {fileID: 1223318021}
+  LabelName: []
+  LabelList: []
+  Sprites: []
   spritePref: {fileID: 790968568677830520, guid: 375f15be3261df94aa0a76eb7db76c93, type: 3}
   defaultSpritePos: {fileID: 1693147877}
   ChooseBox: {fileID: 5746164450407689610, guid: 797798d42e1b76b41bdd9eb5603c7116, type: 3}
   Group: {fileID: 1926733182}
-  TextMP: {fileID: 949154809}
-  SayerMP: {fileID: 880759177}
   downMenu: {fileID: 757530814}
   mapCanvas: {fileID: 1892896771}
-  currLine: 0
-  currLabel: mira_jump
-  LabelName: []
-  LabelList: []
-  Block: 0
-  chooseReturnEdgeLine: 0
-  chooseReturnPointLine: 0
-  ifReturnEndLine: 0
-  ifReturnStartLine: 0
+  MapPoints:
+  - {fileID: 2048423949}
   tmpChoose: []
-  Sprites: []
   imagePseudoName:
   - agents
   - d_s
@@ -3669,22 +3663,10 @@ MonoBehaviour:
   - kpf
   - true_final_points
   varValue: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000680100006801000068010000680100006801000068010000680100006801000068010000010000000000000000000000000000000000000000000000000000000000000000000000
+  maxLogSize: 50
   logName: []
   logLine: []
   logColor: []
-  currSaveNum: 
-  isTextCasting: 0
-  toMax: {fileID: 0}
-  toMin: {fileID: 0}
-  oldScene: {fileID: 0}
-  newScene: {fileID: 0}
-  saveLineStart: 0
-  saveLineFinish: 0
-  lastAudio: 
-  saveSprites: 
-  tmpLabelComp: {fileID: 0}
-  MapPoints:
-  - {fileID: 2048423949}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3699,12 +3681,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LOAD_NEW_RESOURCES: 0
   LOAD_NEW_SCENARIO: 0
-  pseudoName: []
-  realName: []
   imageList: []
   labelGroup: {fileID: 78867491}
   mainTA: {fileID: 4900000, guid: da62ef5ce133c884298a6b0e74abb9b2, type: 3}
   resourcesTA: {fileID: 4900000, guid: 446be0cc0efea5f478bf2eccb5cc2a35, type: 3}
+  LabelName: []
+  currLine: 0
+  currLabel: 
+  LabelList: []
+  varName: []
+  varValue: 
+  imagePseudoName: []
+  imageRealName: []
   gameCore: {fileID: 519420033}
   Label: {fileID: 1057027972990476929, guid: ac10a759cef12594899d9ab58601b0c5, type: 3}
 --- !u!114 &519420035

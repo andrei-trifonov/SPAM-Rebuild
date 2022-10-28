@@ -1,30 +1,52 @@
-using System.Collections;
+using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine;
-using System.IO;
-using TMPro;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+
 using System.Text.RegularExpressions;
+
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
+
+
+
+
 public class ResourceConvert : MonoBehaviour
 {
     public bool LOAD_NEW_RESOURCES;
     public bool LOAD_NEW_SCENARIO;
-    public List<string> pseudoName;
-    public List<string> realName;
+    
+    
     public List<Sprite> imageList;
-    public GameObject labelGroup;
-    public TextAsset mainTA;
-    public TextAsset resourcesTA;
-    public Core gameCore;
+    [SerializeField] private GameObject labelGroup;
+    [SerializeField] private TextAsset mainTA;
+    [SerializeField] private TextAsset resourcesTA;
     
-    public GameObject Label;
+    public List<string> LabelName;
+    [SerializeField] private int currLine = 0;
+    [SerializeField] private string currLabel ;
+    public List<Label> LabelList;
+    public List<string> varName;
+    public List<int> varValue;
+    public List<string> imagePseudoName;
+    public List<string> imageRealName;
+    [SerializeField] private Core gameCore;
+    [SerializeField] private GameObject Label;
     
+    
+    public int labelIndex(string name)
+    {
+        
+        for(int i=0; i<LabelName.Count; i++)
+        {
+            if (LabelName[i] == name)
+                return i;
+        }
+
+        return 0;
+    }
     // Start is called before the first frame update
     void Awake()
     {
@@ -48,10 +70,10 @@ public class ResourceConvert : MonoBehaviour
                 if (match.Success && line.Contains("/"))
                 {
 
-                    pseudoName.Add(match.Groups[1].Value);
+                    imagePseudoName.Add(match.Groups[1].Value);
                     int istart = line.IndexOf("/") + "/".Length;
                     string posStr = line.Substring(istart, line.IndexOf(".") - istart);
-                    realName.Add(posStr);
+                    imageRealName.Add(posStr);
 
                 }
 
@@ -62,29 +84,35 @@ public class ResourceConvert : MonoBehaviour
 
             }
 
-            for (int i = 0; i < realName.Count; i++)
-                imageList.Add(Resources.Load<Sprite>("images/" + realName[i]));
+            for (int i = 0; i < imageRealName.Count; i++)
+                imageList.Add(Resources.Load<Sprite>("images/" + imageRealName[i]));
 
 
 
 
-            gameCore.SetMemory(pseudoName, realName);
+            gameCore.SetMemory(imagePseudoName, imageRealName);
 
-            
 
 
 
 
 
         }
-        if (LOAD_NEW_SCENARIO)
-        {
+       
+    }
+
+    private void Start()
+    {
+         if (LOAD_NEW_SCENARIO)
+         {
+             imagePseudoName = gameCore.GetImPseudoName();
+             imageRealName = gameCore.GetImRealName();
             Label newLabel1;
             newLabel1 = Instantiate(Label, transform.position, transform.rotation).GetComponent<Label>();
             newLabel1.labelName = "START";
-            gameCore.LabelName.Add(newLabel1.labelName);
-            gameCore.LabelList.Add(newLabel1);
-            gameCore.currLabel = "START";
+            LabelName.Add(newLabel1.labelName);
+            LabelList.Add(newLabel1);
+            currLabel = "START";
 
             
             string[] scriptLines = Regex.Split(mainTA.text, "\n");
@@ -110,27 +138,27 @@ public class ResourceConvert : MonoBehaviour
                     var match = regex.Match(line);
                     if (match.Success)
                     {
-                        if (gameCore.varName.Find(x => x.Equals(match.Groups[1].Value)) == null)
+                        if (varName.Find(x => x.Equals(match.Groups[1].Value)) == null)
                         {
-                            gameCore.varName.Add(match.Groups[1].Value);
+                            varName.Add(match.Groups[1].Value);
                             regex = new Regex(string.Format(@"(?<!\w){0}\W+(\w+)", Regex.Escape("=")));
                             match = regex.Match(line);
                             if (match.Success)
                             {
 
                                 if (match.Groups[1].Value == "True")
-                                    gameCore.varValue.Add(1);
+                                    varValue.Add(1);
                                 if (match.Groups[1].Value == "False")
-                                    gameCore.varValue.Add(0);
+                                    varValue.Add(0);
                                 else
                                 {
                                     try
                                     {
-                                        gameCore.varValue.Add(int.Parse(match.Groups[1].Value));
+                                        varValue.Add(int.Parse(match.Groups[1].Value));
                                     }
                                     catch (Exception e)
                                     {
-                                        gameCore.varName.RemoveAt(gameCore.varName.IndexOf(gameCore.varName.Last()));
+                                        varName.RemoveAt(varName.IndexOf(varName.Last()));
                                     }
 
                                 }
@@ -156,22 +184,22 @@ public class ResourceConvert : MonoBehaviour
                     formattedLableName = formattedLableName.Substring(0, formattedLableName.Length - 1);
                     newLabel.labelName = formattedLableName;
                     newLabel.gameObject.name = formattedLableName;
-                    gameCore.LabelName.Add (formattedLableName);
-                    gameCore.LabelList.Add(newLabel);
-                    gameCore.currLabel = formattedLableName;
+                    LabelName.Add (formattedLableName);
+                    LabelList.Add(newLabel);
+                    currLabel = formattedLableName;
                     continue;
                 }
 
               
-                foreach (var ImageName in gameCore.imagePseudoName)
+                foreach (var ImageName in imagePseudoName)
                 {
                     if (line.Contains(" " + ImageName + " "))
                     {
-                        if (gameCore.LabelList[gameCore.labelIndex(gameCore.currLabel)].illustrationName.FindIndex(x => x.Equals(ImageName))<0)
+                        if (LabelList[labelIndex(currLabel)].illustrationName.FindIndex(x => x.Equals(ImageName))<0)
                         {
-                            gameCore.LabelList[gameCore.labelIndex(gameCore.currLabel)].illustrationName.Add(ImageName);
-                            gameCore.LabelList[gameCore.labelIndex(gameCore.currLabel)].illustrationRName
-                                .Add(gameCore.imageRealName[gameCore.imagePseudoName.IndexOf(ImageName)]);
+                            LabelList[labelIndex(currLabel)].illustrationName.Add(ImageName);
+                            LabelList[labelIndex(currLabel)].illustrationRName
+                                .Add(imageRealName[imagePseudoName.IndexOf(ImageName)]);
                         }
 
                         break;
@@ -186,9 +214,9 @@ public class ResourceConvert : MonoBehaviour
                     int istart = line.IndexOf("/") + "/".Length;
                     string posStr = line.Substring(istart, line.IndexOf(".") - istart);
                   
-                    if (gameCore.LabelList[gameCore.labelIndex(gameCore.currLabel)].audiosName.FindIndex(x => x.Equals(posStr)) < 0)
+                    if (LabelList[labelIndex(currLabel)].audiosName.FindIndex(x => x.Equals(posStr)) < 0)
                     {
-                        gameCore.LabelList[gameCore.labelIndex(gameCore.currLabel)].audiosName.Add(posStr);
+                        LabelList[labelIndex(currLabel)].audiosName.Add(posStr);
                     }
                 }
 
@@ -196,15 +224,18 @@ public class ResourceConvert : MonoBehaviour
                         
                 
                 if (Regex.IsMatch(line, "\\w"))  
-                    gameCore.LabelList[gameCore.labelIndex(gameCore.currLabel)].scenarioBlock.Add(line);
+                    LabelList[labelIndex(currLabel)].scenarioBlock.Add(line);
                 
 
             }
 
-            gameCore.currLabel = "START";
-            gameCore.currLine = 0;
-        }
+            gameCore.SetLabelsData(
+                LabelName,
+                LabelList,
+                varName,
+                varValue,
+                imageRealName,
+                imagePseudoName);
+        }        
     }
-
-
 }
