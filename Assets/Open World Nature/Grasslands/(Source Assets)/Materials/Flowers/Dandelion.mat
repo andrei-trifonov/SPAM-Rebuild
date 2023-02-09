@@ -8,21 +8,36 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Dandelion
-  m_Shader: {fileID: -6465566751694194690, guid: 9920c1f1781549a46ba081a2a15a16ec, type: 3}
-  m_ValidKeywords:
-  - BACKFACE_NORMAL_MODE_MIRROR
-  - _WINDQUALITY_BEST
-  m_InvalidKeywords: []
+  m_Shader: {fileID: -6465566751694194690, guid: 55d33328ab3ba4efca3c7706d97d8ee8, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _DETAILMAPBLENDINGMODE_MULTIPLY
+  - _NORMALMAP
+  - _RECEIVESHADOWS_OFF
+  - _RECEIVE_SHADOWS_OFF
+  - _SURFACE_TYPE_TRANSPARENT
+  - _TEXTUREBLENDINGMODE_MULTIPLY
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - SRPDEFAULTUNLIT
+  - SHADOWCASTER
+  - DepthOnly
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
+        m_Texture: {fileID: 2800000, guid: d4e67a16285b8af4d9eef4831d657169, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BakedGIRamp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
         m_Texture: {fileID: 2800000, guid: d4e67a16285b8af4d9eef4831d657169, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -35,6 +50,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -51,6 +70,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ExtraTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GradientRamp:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -119,23 +142,50 @@ Material:
     - BACKFACE_NORMAL_MODE: 1
     - EFFECT_BILLBOARD: 0
     - EFFECT_EXTRA_TEX: 0
-    - _AlphaClipThreshold: 0.33
+    - Space_0: 0
+    - Space_1: 0
+    - Space_2: 0
+    - Space_3: 0
+    - _AlphaClip: 0
+    - _AlphaClipThreshold: 0.496
     - _BakedMask: 1
+    - _Blend: 0
     - _BumpScale: 1
+    - _CameraDistanceImpact: 0.5
+    - _Cull: 2
     - _Cutoff: 0.5
     - _DebugGust: 0
     - _DebugRotation: 0
+    - _DetailMapBlendingMode: 0
+    - _DetailMapImpact: 0
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _DstBlend: 10
+    - _FlatRimEdgeSmoothness: 0.5
+    - _FlatRimLightAlign: 0
+    - _FlatRimSize: 0.5
+    - _FlatSpecularEdgeSmoothness: 0
+    - _FlatSpecularSize: 0.1
     - _Float1: 0.1
     - _GlossMapScale: 1
     - _Glossiness: 0.2
     - _GlossyReflections: 1
+    - _GradientAngle: 0
+    - _GradientCenterX: 0
+    - _GradientCenterY: 0
+    - _GradientEnabled: 0
+    - _GradientSize: 10
+    - _GustEnabled: 1
+    - _GustFrequency: 0.142
+    - _GustIntensity: 0.07
+    - _GustSpeed: 0.2
     - _Hue: 0
     - _HueVariationKwToggle: 1
     - _IgnoreNormals: 0
     - _Keyword0: 0
     - _Keyword1: 1
+    - _LightContribution: 1
+    - _LightmapDirectionPitch: 0
+    - _LightmapDirectionYaw: 0
     - _Lightness: 0
     - _METALLICGLOSSMAP: 0
     - _Metallic: 0
@@ -145,17 +195,36 @@ Material:
     - _OcclusionProbesStrength: 0.7058824
     - _OcclusionStrength: 1
     - _OldHueVarBehavior: 0
+    - _OutlineDepthOffset: 0
+    - _OutlineEnabled: 0
+    - _OutlineScale: 1
+    - _OutlineWidth: 1
+    - _OverrideBakedGi: 0
+    - _OverrideLightAttenuation: 0
+    - _OverrideLightmapDir: 0
     - _Parallax: 0.02
+    - _PatchesBluriness: 0.2
+    - _PatchesEnabled: 1
+    - _PatchesScale: 0.5
+    - _PatchesThreshold: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ReceiveShadows: 0
+    - _RimEnabled: 0
     - _Saturation: 0
+    - _SelfShadingSize: 0
+    - _ShadowStrength: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
+    - _SpecularEnabled: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _StiffnessVariation: 0.3
     - _SubsurfaceIndirect: 0.25
     - _SubsurfaceKwToggle: 0
+    - _Surface: 1
+    - _TextureBlendingMode: 0
+    - _TextureImpact: 1
     - _TransAmbient: 0.2
     - _TransDirect: 1
     - _TransNormalDistortion: 0.1
@@ -164,20 +233,43 @@ Material:
     - _Translucency: 1
     - _UVMask: 0
     - _UVSec: 0
+    - _UnityShadowOcclusion: 0
+    - _VertexColorsEnabled: 0
     - _VertexNormalStrength: 0.5
     - _VertexPositionMask: 0
     - _WINDQUALITY: 4
+    - _WindDirection: -0.91
+    - _WindEnabled: 1
+    - _WindFrequency: 0.66
+    - _WindIntensity: 0
+    - _WindNoise: 0.45
     - _WindQuality: 1
-    - _ZWrite: 1
+    - _WindSpeed: 0
+    - _ZWrite: 0
     - __dirty: 0
     m_Colors:
+    - Color_fa7bfd953c0f468faf964c3a5545c86d: {r: 0, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorBottom: {r: 1, g: 0.855209, b: 0.32452828, a: 1}
+    - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _ColorTop: {r: 0.85542667, g: 1, b: 0.3433962, a: 1}
+    - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _GlossRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _GustColor: {r: 0.9450981, g: 0.8274511, b: 0.7803922, a: 1}
     - _GustHighlightColor: {r: 1, g: 1, b: 1, a: 0}
     - _HueVariationColor: {r: 1, g: 0.5, b: 0, a: 0.2}
+    - _LightAttenuation: {r: 0, g: 1, b: 0, a: 0}
+    - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _LowVegetationStiffness: {r: 0, g: 1, b: 0, a: 0}
     - _OcclusionRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _PatchesColor: {r: 0.937255, g: 0.7568628, b: 0.2470588, a: 1}
+    - _PatchesOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _Shiver: {r: 1, g: 1, b: 0, a: 0}
     - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TranslucentColor: {r: 0.60294116, g: 0.60294116, b: 0.60294116, a: 0}

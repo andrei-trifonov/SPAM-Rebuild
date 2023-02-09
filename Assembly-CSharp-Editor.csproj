@@ -41,54 +41,55 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ShowAssetPreviewPropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyValidators\RequiredPropertyValidator.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\MinMaxSliderPropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\Utility\ExternalCustomEditorGUI.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\CurveRangePropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ShowAssetPreviewPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyValidators\RequiredPropertyValidator.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\MinMaxSliderPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\Utility\ExternalCustomEditorGUI.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\CurveRangePropertyDrawer.cs" />
      <Compile Include="Assets\Minimalist\Editor\MinimalistSkyEditor.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\AnimatorParamPropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\DropdownPropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Scripts\Editor\MaterialVector2Drawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\Utility\PropertyUtility.cs" />
-     <Compile Include="Assets\Quibli\Scripts\Editor\Tooltips.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ResizableTextAreaPropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\Readme\Editor\Readme.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\AnimatorParamPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\DropdownPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Scripts\Editor\MaterialVector2Drawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\Utility\PropertyUtility.cs" />
+     <Compile Include="Assets\Resources\Quibli\Scripts\Editor\Tooltips.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ResizableTextAreaPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\Readme\Editor\Readme.cs" />
      <Compile Include="Assets\Minimalist\Editor\EditorGUILayoutExtended.cs" />
-     <Compile Include="Assets\Quibli\Scripts\Editor\CustomDrawersShaderEditor.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers_SpecialCase\SpecialCasePropertyDrawerBase.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyValidators\PropertyValidatorBase.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\DecoratorDrawers\HorizontalLineDecoratorDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyValidators\MaxValuePropertyValidator.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ScenePropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\DecoratorDrawers\InfoBoxDecoratorDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\PropertyDrawerBase.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ExpandablePropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\TagPropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\Readme\Editor\NetworkManager.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\AllowNestingPropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\InputAxisPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Scripts\Editor\CustomDrawersShaderEditor.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers_SpecialCase\SpecialCasePropertyDrawerBase.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyValidators\PropertyValidatorBase.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\DecoratorDrawers\HorizontalLineDecoratorDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyValidators\MaxValuePropertyValidator.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ScenePropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\DecoratorDrawers\InfoBoxDecoratorDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\PropertyDrawerBase.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ExpandablePropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\TagPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\Readme\Editor\NetworkManager.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\AllowNestingPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\InputAxisPropertyDrawer.cs" />
      <Compile Include="Assets\Minimalist\Editor\MinimalistEditorHelper.cs" />
-     <Compile Include="Assets\Quibli\Scripts\Editor\QuibliEditor.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ReadOnlyPropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\Utility\SavedBool.cs" />
-     <Compile Include="Assets\Quibli\Utils\Readme\Editor\ReadmeEditor.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyValidators\ValidateInputPropertyValidator.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\EnumFlagsPropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ProgressBarPropertyDrawer.cs" />
-     <Compile Include="Assets\Quibli\Scripts\Editor\MaterialGradientDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Scripts\Editor\QuibliEditor.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ReadOnlyPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\Utility\SavedBool.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\Readme\Editor\ReadmeEditor.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyValidators\ValidateInputPropertyValidator.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\EnumFlagsPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers\ProgressBarPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Scripts\Editor\MaterialGradientDrawer.cs" />
      <Compile Include="Assets\CTI URP\CTI Runtime Components URP\Scripts\Editor\CTI_URPWindDrawer.cs" />
      <Compile Include="Assets\Minimalist\Editor\MinimalistStandardEditor.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\ExternalCustomInspector.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\ExternalCustomInspector.cs" />
+     <Compile Include="Assets\Editor\DialogueEditor.cs" />
      <Compile Include="Assets\CTI URP\CTI Runtime Components URP\Scripts\Editor\CTI_URP_ShaderGUI.cs" />
-     <Compile Include="Assets\Quibli\Post Process\Editor\QSettingsEditor.cs" />
+     <Compile Include="Assets\Resources\Quibli\Post Process\Editor\QSettingsEditor.cs" />
      <Compile Include="Assets\CTI URP\CTI Runtime Components URP\Scripts\Editor\CTI_URPTransDrawer.cs" />
-     <Compile Include="Assets\Quibli\Scripts\Editor\MaterialMinMaxDrawer.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\Utility\ReflectionUtility.cs" />
+     <Compile Include="Assets\Resources\Quibli\Scripts\Editor\MaterialMinMaxDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\Utility\ReflectionUtility.cs" />
      <Compile Include="Assets\Minimalist\Editor\MinimalistClipboard.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyValidators\MinValuePropertyValidator.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\Utility\ButtonUtility.cs" />
-     <Compile Include="Assets\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers_SpecialCase\ReorderableListPropertyDrawer.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyValidators\MinValuePropertyValidator.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\Utility\ButtonUtility.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Editor\PropertyDrawers_SpecialCase\ReorderableListPropertyDrawer.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -1034,8 +1035,14 @@
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.CacheServer">
+     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+     </Reference>
      <Reference Include="PsdPlugin">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables">
+     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -1052,11 +1059,11 @@
      <Reference Include="Unity.2D.Path.Editor">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
@@ -1078,6 +1085,9 @@
      </Reference>
      <Reference Include="Unity.Mathematics.Editor">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables.Editor">
+     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Editor">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
@@ -1127,6 +1137,9 @@
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.ResourceManager">
+     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Postprocessing.Editor">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
@@ -1172,8 +1185,14 @@
      <Reference Include="Unity.2D.Common.Runtime">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline">
+     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
      <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>

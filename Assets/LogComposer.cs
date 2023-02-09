@@ -5,14 +5,23 @@ using UnityEngine;
 
 public class LogComposer : MonoBehaviour
 {
-    public Core Engine;
-    public List<string> logName;
+    public int maxLogSize;
+    public List<GDB.Name> logName;
     public List<string> logLine;
-    public List<Color> logColor;
     public GameObject Group;
     public GameObject Prefab;
     public List <LogElement> Logs;
     public GameObject Visual;
+
+    public void RenewLog(GDB.Name name, string line)
+    {
+        logName.Add(name);
+        logLine.Add(line);
+        
+        if (logLine.Count >= maxLogSize)
+            logLine.Remove(logLine[0]);
+    }
+    
     void Flush()
     {
         
@@ -28,14 +37,11 @@ public class LogComposer : MonoBehaviour
     {
         Visual.SetActive(true);
         Flush();
-        logLine = Engine.logLine;
-        logName = Engine.logName;
-        logColor = Engine.logColor;
         for (int i = logLine.Count-1; i>= 0; i--)
         {
             LogElement inst = Instantiate(Prefab, Group.transform).GetComponent<LogElement>();
-            inst.Name.text = logName[i];
-            inst.Name.color = logColor[i];
+            inst.Name.text = logName[i].ToString();
+            inst.Name.color = GDB.CharColor((int)logName[i]);
             inst.Text.text = logLine[i];
             Logs.Add(inst);
         }
