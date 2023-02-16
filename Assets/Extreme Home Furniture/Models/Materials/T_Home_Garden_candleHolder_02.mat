@@ -8,26 +8,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: T_Home_Garden_candleHolder_02
-  m_Shader: {fileID: 4800000, guid: df695d70c539c3d4c87b79de307ab7bb, type: 3}
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ValidKeywords:
-  - _MK_ALBEDO_MAP
-  - _MK_ARTISTIC_PROJECTION_SCREEN_SPACE
-  - _MK_DETAIL_BLEND_MIX
-  - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
-  - _MK_FRESNEL_HIGHLIGHTS
-  - _MK_LIGHT_CEL
-  - _MK_RECEIVE_SHADOWS
-  - _MK_WRAPPED_DIFFUSE
-  m_InvalidKeywords:
-  - _FRESNELHIGHLIGHTS_ON
-  - _GLOSSINESS_FROM_BASE_ALPHA
-  - _RECEIVESHADOWS_ON
-  - _SPECULAR_COLOR
-  - _WRAPPEDLIGHTING_ON
-  m_LightmapFlags: 6
+  - _EMISSION
+  - _SPECULARHIGHLIGHTS_OFF
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap:
     IGNOREPROJECTOR: False
     RenderType: Opaque
@@ -47,7 +36,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -111,6 +108,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 1b7240a7a26fb834fbcccf7b809989ba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -124,6 +125,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -190,13 +195,17 @@ Material:
     - _BlendSrc: 1
     - _Brightness: 1
     - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
     - _ColorGrading: 0
     - _Contrast: 1
     - _Cull: 2
     - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
     - _DetailBlend: 0
     - _DetailMix: 0.5
     - _DetailNormalMapIntensity: 1
+    - _DetailNormalMapScale: 1
     - _Diffuse: 0
     - _DiffuseSmoothness: 0
     - _DiffuseThresholdOffset: 0.25
@@ -210,7 +219,10 @@ Material:
     - _DstBlend: 0
     - _EnvironmentReflections: 2
     - _FresnelHighlights: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
     - _GlossinessSource: 0
+    - _GlossyReflections: 0
     - _GoochRampIntensity: 0.5
     - _HatchingMapScale: 1
     - _Initialized: 1
@@ -231,6 +243,7 @@ Material:
     - _Metallic: 0
     - _NormalMapIntensity: 1
     - _OcclusionMapIntensity: 1
+    - _OcclusionStrength: 1
     - _OptionsTab: 1
     - _Outline: 3
     - _OutlineData: 0
@@ -253,6 +266,7 @@ Material:
     - _SketchMapScale: 1
     - _Smoothness: 0.22233185
     - _SmoothnessSource: 1
+    - _SmoothnessTextureChannel: 0
     - _SpecSource: 0
     - _Specular: 0
     - _SpecularHighlights: 0
@@ -275,6 +289,7 @@ Material:
     - _VertexAnimationIntensity: 0.05
     - _VertexAnimationStutter: 0
     - _Workflow: 0
+    - _WorkflowMode: 1
     - _WrappedLighting: 1
     - _ZTest: 4
     - _ZWrite: 1
@@ -284,7 +299,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0.13207549, g: 0.120238535, b: 0.120238535, a: 1}
     - _GoochBrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _GoochDarkColor: {r: 0, g: 0, b: 0, a: 1}
     - _IridescenceColor: {r: 1, g: 1, b: 1, a: 0.5}
@@ -297,3 +312,16 @@ Material:
     - _SpecularColor: {r: 0.7647059, g: 0.8344827, b: 1, a: 1}
     - _VertexAnimationFrequency: {r: 2.5, g: 2.5, b: 2.5, a: 1}
   m_BuildTextureStacks: []
+--- !u!114 &1592489015493263493
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5

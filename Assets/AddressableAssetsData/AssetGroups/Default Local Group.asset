@@ -25,6 +25,26 @@ MonoBehaviour:
     m_Address: cg2
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 12cb2bc1f3f7b1d4d8df88242d3ec2fb
+    m_Address: Garages
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6f54a8a46cea52d4f80b6ec12ee2824a
+    m_Address: Construct
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5da733ebf40f8e243b0c268861db493f
+    m_Address: Mira_house
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 526666b4a84e70f459a0740e7e2c457c
+    m_Address: Park
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 83d3116bb838fb440a8c6d7b4aa56821
+    m_Address: Krypton2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 08e76260542fbaf4a91b4020b57cd37c, type: 2}
   m_SchemaSet:

@@ -97,7 +97,7 @@ public static class GDB
     }
     public enum Music
     {
-        Track1,
+        Crypton2,
         Track2,
         Track3
     }

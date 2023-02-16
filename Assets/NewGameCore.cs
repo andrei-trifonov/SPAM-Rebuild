@@ -12,13 +12,15 @@ using UnityEngine.UI;
 public class NewGameCore : MonoBehaviour
 {
     [SerializeField] private Canvas textCanvas;
-
+    
     [SerializeField] private TextMeshProUGUI textAuthor;
     [SerializeField] private TextMeshProUGUI textContent;
     
     [SerializeField] private Dialogue scenarioComposer;
     private List<LabelSample> scenario;
 
+    private float maxVolumeMusic = 1; //TODO
+   
     private float textDelay = 0.1f; //TODO 
     private bool skipping; //TODO
     
@@ -30,11 +32,15 @@ public class NewGameCore : MonoBehaviour
     [SerializeField] private LogComposer Log;
     
     public List<GameObject> choiseBoxes;
-    [SerializeField] private GameObject choiseBox;
+    private GameObject choiseBox;
     [SerializeField] private LayoutGroup choiseGroup;
     [SerializeField] private Image CG;
+    private GameObject BG;
 
-  
+    private AudioSource fadeInMusic;
+    private AudioSource fadeOutMusic;
+    [SerializeField] GameObject musicPlayer;
+
     private void Start()
     {
         scenario = scenarioComposer.Labels;
@@ -85,12 +91,45 @@ public class NewGameCore : MonoBehaviour
                 cgAction(line);
                 break;
             case GDB.LineType.BG:
-                cgAction(line);
+                bgAction(line);
+                break;
+            case GDB.LineType.Music:
+                musicAction(line);
                 break;
         }
     }
 
-    void bgAction(Item line)
+    void musicAction(Item line)
+    {
+
+        StartCoroutine(LoadMusic(line));
+    
+    }
+    IEnumerator LoadMusic(Item line)
+    {
+        if (fadeInMusic)
+            fadeOutMusic = fadeInMusic;
+        fadeInMusic = Instantiate(musicPlayer, transform).GetComponent<AudioSource>();
+        loadC = true;
+        AsyncOperationHandle<AudioClip> handle = Addressables.LoadAssetAsync<AudioClip>(line.music.ToString());
+        yield return handle;
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+        {
+            AudioClip res = handle.Result;
+            fadeInMusic.clip = res;
+            lineNum++;
+            loadC = false;
+            fadeInMusic.Play();
+
+            fadeInMusic.GetComponent<Fader>().maxVolumeMusic = maxVolumeMusic;
+            if (fadeOutMusic)
+                fadeOutMusic.GetComponent<Fader>().fadingOut = true;
+            fadeInMusic.GetComponent<Fader>().fadingIn = true;
+        }
+
+        Addressables.Release(handle);
+    }
+        void bgAction(Item line)
     {
         if (loadC == false)
         {
@@ -100,16 +139,23 @@ public class NewGameCore : MonoBehaviour
 
     IEnumerator LoadBackground(Item line)
     {
+       
         loadC = true;
-        AsyncOperationHandle<GameObject> handle = Addressables.InstantiateAsync(line.BGname);
+        Debug.Log(line.BGname);
+        AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line.BGname.ToString());
         yield return handle;
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
+            try { Destroy(BG); } catch (Exception e) { 
+            }
+            GameObject res = handle.Result;
+            BG = Instantiate(res);
             lineNum++;
             loadC = false;
         }
-      
+       
         Addressables.Release(handle);
+        //TODO Effects
         
     }
     
