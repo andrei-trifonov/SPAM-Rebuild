@@ -20,7 +20,7 @@ public class NewGameCore : MonoBehaviour
     private List<LabelSample> scenario;
 
     private float maxVolumeMusic = 1; //TODO
-   
+    private Coroutine c;
     private float textDelay = 0.1f; //TODO 
     private bool skipping; //TODO
     
@@ -41,29 +41,59 @@ public class NewGameCore : MonoBehaviour
     private AudioSource fadeOutMusic;
     [SerializeField] GameObject musicPlayer;
 
+    [SerializeField] private AudioSource soundPlayer;
+
+    private bool blocked;
+
     private void Start()
     {
         scenario = scenarioComposer.Labels;
     }
 
+
+
+    public void SkipDown()
+    {
+        skipping = true;
+        StartCoroutine(SkipCoroutine());
+    }
+
+    IEnumerator SkipCoroutine()
+    {
+        while (skipping)
+        {
+            Step();
+            yield return new WaitForSeconds(0.25f);
+
+        }
+            
+      
+    }
+    public void SkipUp()
+    {
+        skipping = false;
+    }
     public void Step()
     {
-        if (labelNum == scenario.Count)
+        if (!blocked)
         {
-            Debug.Log("Бебра");
-            //TODO Конец игры
-        }
-        else
-        {
-            if (lineNum == scenario[labelNum].lines.Count)
+            if (labelNum == scenario.Count)
             {
-                lineNum = 0;
-                labelNum++;
-                Step();
+                Debug.Log("Стоп");
+                //TODO Конец игры
             }
             else
             {
-                LineTypeAction(scenario[labelNum].lines[lineNum]);
+                if (lineNum == scenario[labelNum].lines.Count)
+                {
+                    lineNum = 0;
+                    labelNum++;
+                    Step();
+                }
+                else
+                {
+                    LineTypeAction(scenario[labelNum].lines[lineNum]);
+                }
             }
         }
     }
@@ -96,14 +126,78 @@ public class NewGameCore : MonoBehaviour
             case GDB.LineType.Music:
                 musicAction(line);
                 break;
+            case GDB.LineType.Sound:
+                soundAction(line);
+                break;
+            case GDB.LineType.Pause:
+                pauseAction(line);
+                break;
         }
     }
 
+    void pauseAction(Item line)
+    {
+        StartCoroutine (PauseCoroutine(line));
+    }
+
+    IEnumerator PauseCoroutine(Item line)
+    {
+        if (!blocked && !skipping)
+        {
+            blocked = true;
+            yield return new WaitForSeconds(line.time);
+            blocked = false;
+            lineNum++;
+            Step();
+        }
+        else
+        {
+            lineNum++;
+            Step();
+        }
+    }
+    void soundAction(Item line)
+    {
+        
+        if(line.show)
+            StartCoroutine(LoadSound(line));
+        else
+        {
+            soundPlayer.Stop();
+            lineNum++;
+            Step();
+        }
+    
+    }
+    IEnumerator LoadSound(Item line)
+    {
+        loadC = true;
+        AsyncOperationHandle<AudioClip> handle = Addressables.LoadAssetAsync<AudioClip>(line.additionalPose);
+        yield return handle;
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+        {
+            AudioClip res = handle.Result;
+            soundPlayer.PlayOneShot(res);
+            loadC = false;
+            lineNum++;
+            Step();
+        }
+
+        Addressables.Release(handle);
+    }
     void musicAction(Item line)
     {
-
-        StartCoroutine(LoadMusic(line));
-    
+       if(line.show)
+          StartCoroutine(LoadMusic(line));
+       else
+        {
+            fadeOutMusic = fadeInMusic; 
+            fadeInMusic = null;
+            if (fadeOutMusic)
+                fadeOutMusic.GetComponent<Fader>().fadingOut = true;
+            lineNum++;
+            Step();
+        }
     }
     IEnumerator LoadMusic(Item line)
     {
@@ -117,14 +211,14 @@ public class NewGameCore : MonoBehaviour
         {
             AudioClip res = handle.Result;
             fadeInMusic.clip = res;
-            lineNum++;
             loadC = false;
             fadeInMusic.Play();
-
             fadeInMusic.GetComponent<Fader>().maxVolumeMusic = maxVolumeMusic;
             if (fadeOutMusic)
                 fadeOutMusic.GetComponent<Fader>().fadingOut = true;
             fadeInMusic.GetComponent<Fader>().fadingIn = true;
+            lineNum++;
+            Step();
         }
 
         Addressables.Release(handle);
@@ -141,7 +235,6 @@ public class NewGameCore : MonoBehaviour
     {
        
         loadC = true;
-        Debug.Log(line.BGname);
         AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line.BGname.ToString());
         yield return handle;
         if (handle.Status == AsyncOperationStatus.Succeeded)
@@ -181,14 +274,7 @@ public class NewGameCore : MonoBehaviour
             Addressables.Release(handle);
             lineNum++;
         loadC = false;
-
-
-
-
-
     }
-
-
     public void decisionAction(string name)
     {
         
@@ -212,11 +298,7 @@ public class NewGameCore : MonoBehaviour
             cb.SetMenuItem(choiseVariant, line.menu_jump[line.menu_label.IndexOf(choiseVariant)], this);
             choiseBoxes.Add(cb.gameObject);
         }
-
-        
-
     }
-
     void ifAction(Item line)
     {
         int var = PlayerPrefs.GetInt(line.var.ToString());
@@ -281,9 +363,9 @@ public class NewGameCore : MonoBehaviour
     }
 
     void textAction(Item line)
-    {
-       
-        StopAllCoroutines();
+    {   
+        if(c!= null)
+            StopCoroutine(c); 
         castingLine = "";
         textContent.text = "";
 
@@ -299,7 +381,8 @@ public class NewGameCore : MonoBehaviour
         if (!skipping && textDelay > 0)
         {
             castingLine = line.line;
-            StartCoroutine(textCastEnum());
+           
+           c = StartCoroutine(textCastEnum());
         }
         else
         {

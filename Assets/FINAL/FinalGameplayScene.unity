@@ -8427,6 +8427,7 @@ MonoBehaviour:
   choiseGroup: {fileID: 1926733182}
   CG: {fileID: 369875938}
   musicPlayer: {fileID: 4361316659385064245, guid: 950654cc995391048b9477fdf5b0f9f3, type: 3}
+  soundPlayer: {fileID: 1257958567}
 --- !u!4 &1141920126
 Transform:
   m_ObjectHideFlags: 0
@@ -17062,10 +17063,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Core, Assembly-CSharp
-          m_MethodName: Skip
-          m_Mode: 6
+        - m_Target: {fileID: 1141920125}
+          m_TargetAssemblyTypeName: NewGameCore, Assembly-CSharp
+          m_MethodName: SkipDown
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17078,10 +17079,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Core, Assembly-CSharp
-          m_MethodName: Skip
-          m_Mode: 6
+        - m_Target: {fileID: 1141920125}
+          m_TargetAssemblyTypeName: NewGameCore, Assembly-CSharp
+          m_MethodName: SkipUp
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -22126,7 +22127,7 @@ MonoBehaviour:
   Labels:
   - name: "\u0433\u043B\u0430\u0432\u04301"
     lines:
-    - type: 6
+    - type: 5
       name: 1
       line: "\u0425\u0443\u0435\u0432\u043E. \u0410 \u0443 \u0442\u0435\u0431\u044F?"
       font: 0
@@ -22135,7 +22136,7 @@ MonoBehaviour:
       CGname: cg2
       show: 1
       pose: 0
-      additionalPose: 
+      additionalPose: Krypton2
       music: 0
       time: 0
       value: 0
@@ -22150,11 +22151,137 @@ MonoBehaviour:
       - "\u0433\u043B\u0430\u0432\u04302"
       - "\u0433\u043B\u0430\u0432\u04303"
       - "\u0433\u043B\u0430\u0432\u04304"
-    - type: 2
+    - type: 0
+      name: 0
+      line: "\u0430\u0446\u0443"
+      font: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+    - type: 0
+      name: 0
+      line: "\u043F\u0446\u0443"
+      font: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+    - type: 0
+      name: 0
+      line: "\u0430\u0443\u043A"
+      font: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+    - type: 0
+      name: 0
+      line: asd
+      font: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+    - type: 0
+      name: 0
+      line: asd
+      font: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+    - type: 0
+      name: 0
+      line: d
+      font: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+    - type: 0
+      name: 0
+      line: "\u0446\u0443\u043F\u043A"
+      font: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+    - type: 6
       name: 0
       line: 
       font: 0
-      BGname: 1
+      BGname: 0
       effects: 0
       CGname: 
       show: 0
@@ -22172,7 +22299,7 @@ MonoBehaviour:
       name: 0
       line: 
       font: 0
-      BGname: 3
+      BGname: 0
       effects: 0
       CGname: 
       show: 0
