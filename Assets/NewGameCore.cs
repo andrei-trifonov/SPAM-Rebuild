@@ -43,6 +43,9 @@ public class NewGameCore : MonoBehaviour
 
     [SerializeField] private AudioSource soundPlayer;
 
+    [SerializeField] private GameObject spritesOnScene;
+    private List<string> spritesOnScene = new List<string>();
+    private List<GameObject> spritesObjOnScene = new List<GameObject>();
     private bool blocked;
 
     private void Start()
@@ -50,13 +53,12 @@ public class NewGameCore : MonoBehaviour
         scenario = scenarioComposer.Labels;
     }
 
-
-
     public void SkipDown()
     {
         skipping = true;
         StartCoroutine(SkipCoroutine());
     }
+
 
     IEnumerator SkipCoroutine()
     {
@@ -132,29 +134,70 @@ public class NewGameCore : MonoBehaviour
             case GDB.LineType.Pause:
                 pauseAction(line);
                 break;
+            case GDB.LineType.Actor:
+                actorAction(line);
+                break;
+        }
+    }
+    
+    void actorAction(Item line)
+    {
+        if (loadC == false)
+        {
+            StartCoroutine(LoadActor(line));
         }
     }
 
+    IEnumerator LoadActor(Item line)
+    {
+       
+        loadC = true;
+        AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line.name.ToString());
+        yield return handle;
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+        {
+            if (line.show)
+            {
+                
+                
+            }
+            try { Destroy(BG); } catch (Exception e) { 
+            }
+           
+            BG = Instantiate(res);
+            lineNum++;
+            loadC = false;
+        }
+       
+        Addressables.Release(handle);
+        //TODO Effects
+        
+    }
+    
+
     void pauseAction(Item line)
     {
-        StartCoroutine (PauseCoroutine(line));
-    }
-
-    IEnumerator PauseCoroutine(Item line)
-    {
-        if (!blocked && !skipping)
+      
+        if (!skipping)
         {
-            blocked = true;
-            yield return new WaitForSeconds(line.time);
-            blocked = false;
-            lineNum++;
-            Step();
+            blocked = true; 
+            StartCoroutine(PauseCoroutine(line));
         }
         else
         {
             lineNum++;
             Step();
         }
+    }
+
+
+    IEnumerator PauseCoroutine(Item line)
+    {
+             yield return new WaitForSeconds(line.time);
+            blocked = false;
+            lineNum++;
+            Step();
+      
     }
     void soundAction(Item line)
     {
@@ -223,7 +266,7 @@ public class NewGameCore : MonoBehaviour
 
         Addressables.Release(handle);
     }
-        void bgAction(Item line)
+    void bgAction(Item line)
     {
         if (loadC == false)
         {
