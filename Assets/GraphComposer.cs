@@ -32,8 +32,8 @@ public class LabelGraph
 public class GraphComposer : MonoBehaviour
 {
     [HideInInspector]public List<LabelGraph> AllLabels;
-    [HideInInspector]public float spaceSizeX;
-    [HideInInspector] public float spaceSizeY;
+    public float spaceSizeX;
+    public float spaceSizeY;
     public bool update;
    
     public GameObject labelObj;

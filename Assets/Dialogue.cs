@@ -39,7 +39,7 @@ public class Item
 
     public List<string> menu_label;
     public List<string> menu_jump;
-
+    public Vector3 V3position;
 }
 
 [System.Serializable]

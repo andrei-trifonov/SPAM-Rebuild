@@ -88,6 +88,7 @@ public static class GDB
     }
     public enum Pose
     {
+        Hide,
         Sad,
         Normal,
         Happy,

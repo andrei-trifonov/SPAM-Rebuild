@@ -118,7 +118,9 @@ public class DialogueEditor : Editor
                                     EditorGUILayout.LabelField("Эффект", GUILayout.Height(20), GUILayout.Width(50));
                                     item.effects = (GDB.Effects) EditorGUILayout.EnumPopup("", item.effects,
                                         GUILayout.Height(20), GUILayout.Width(100));
-                                    GUILayout.Space(540);
+                                    EditorGUILayout.LabelField("Вкл", GUILayout.Height(20), GUILayout.Width(50));
+                                    item.show = EditorGUILayout.Toggle(item.show, GUILayout.Height(20), GUILayout.Width(50));
+                                  GUILayout.Space(440);
                                 }
                                     break;
                                 case (GDB.LineType.Actor):
@@ -126,20 +128,20 @@ public class DialogueEditor : Editor
                                     GUI.backgroundColor = new Color(1,0.5f,0.4f);
                                     
                                     item.name = (GDB.Name) EditorGUILayout.EnumPopup("", item.name,  GUILayout.Height(20), GUILayout.Width(50));
-                                    EditorGUILayout.LabelField("На сцену", GUILayout.Height(30), GUILayout.Width(50));
-                                    item.show = EditorGUILayout.Toggle(item.show,GUILayout.Height(20), GUILayout.Width(50));
                                     EditorGUILayout.LabelField("Поза", GUILayout.Height(20), GUILayout.Width(50));
                                     item.pose = (GDB.Pose) EditorGUILayout.EnumPopup("", item.pose,
                                         GUILayout.Height(20), GUILayout.Width(50));
-                                    if (item.pose == GDB.Pose.Custom)
+                                    item.V3position = EditorGUILayout.Vector3Field("", item.V3position,
+                                           GUILayout.Height(20), GUILayout.Width(150));
+                                if (item.pose == GDB.Pose.Custom)
                                     {
                                         
                                         item.additionalPose = EditorGUILayout.TextField("", item.additionalPose, GUILayout.Height(20), GUILayout.Width(50));
-                                        GUILayout.Space(540);
+                                        GUILayout.Space(485);
                                     }
                                     else
                                     
-                                       GUILayout.Space(590);
+                                       GUILayout.Space(540);
                                 }
                                     break;
                                 case (GDB.LineType.Music):

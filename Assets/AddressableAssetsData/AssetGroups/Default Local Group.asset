@@ -45,6 +45,14 @@ MonoBehaviour:
     m_Address: Krypton2
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 50151a2724d42754b8ad5bc9f6c342c1
+    m_Address: "\u0410\u043B\u0438\u043D\u0430"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2de409d29b27b13479c617f613acabbf
+    m_Address: "\u041C\u0438\u0448\u0430"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 08e76260542fbaf4a91b4020b57cd37c, type: 2}
   m_SchemaSet:

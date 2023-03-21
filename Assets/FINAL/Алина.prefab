@@ -94,9 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 790968568677830527}
   - component: {fileID: 3274375653581429134}
-  - component: {fileID: 7415309892956102985}
+  - component: {fileID: -7191400473466300282}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: "\u0410\u043B\u0438\u043D\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479a51a39c8b06d4783b80ff19263f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &7415309892956102985
+--- !u!95 &-7191400473466300282
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ Animator:
   m_GameObject: {fileID: 790968568677830520}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69816627f9370534b917f58b0888ae65, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
