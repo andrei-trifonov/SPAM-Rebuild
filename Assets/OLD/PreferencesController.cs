@@ -10,7 +10,7 @@ public class PreferencesController : MonoBehaviour
 
     public Slider valueSlider;
 
-    public Core gameCore;
+    public NewGameCore m_Core;
     // Start is called before the first frame update
     public bool music;
     public bool text;
@@ -19,16 +19,22 @@ public class PreferencesController : MonoBehaviour
     private void Start()
     {
         valueSlider.value = PlayerPrefs.GetFloat(playerPrefsValue);
+        if (music)
+            m_Core.SetMusicSettings(valueSlider.value);
+        if (sound)
+            m_Core.SetSoundSettings(valueSlider.value);
+        if (text)
+            m_Core.SetTextDelay(valueSlider.value);
     }
 
     public void OnValueChanged()
     {
         PlayerPrefs.SetFloat(playerPrefsValue, valueSlider.value);
         if (music)
-            gameCore.SetMusicSettings(valueSlider.value);
+            m_Core.SetMusicSettings(valueSlider.value);
         if (sound)
-            gameCore.SetSoundSettings (valueSlider.value);
+            m_Core.SetSoundSettings (valueSlider.value);
         if (text)
-            gameCore.SetTextDelay(valueSlider.value);
+            m_Core.SetTextDelay(valueSlider.value);
     }
 }
