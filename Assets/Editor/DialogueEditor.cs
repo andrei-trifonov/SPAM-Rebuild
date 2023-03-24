@@ -177,6 +177,7 @@ public class DialogueEditor : Editor
                                     GUILayout.Space(750);
                                 }
                                     break;
+
                                 case (GDB.LineType.Var):
                                 {
                                     GUI.backgroundColor = Color.blue;
@@ -243,8 +244,38 @@ public class DialogueEditor : Editor
                                     EditorGUILayout.EndHorizontal();
                                     EditorGUILayout.EndVertical();
                                 } break;
+                                case (GDB.LineType.CamEffect):
+                                    {
+                                        GUI.backgroundColor = new Color(1,0.5f,1);
+                                        EditorGUILayout.LabelField("Эффект", GUILayout.Height(20), GUILayout.Width(50));
+                                        item.effects = (GDB.Effects)EditorGUILayout.EnumPopup("", item.effects,
+                                         GUILayout.Height(20), GUILayout.Width(100));
+                             
+                                        if (item.effects == GDB.Effects.PointToAndZoom)
+                                        {
+                                            item.V3position = EditorGUILayout.Vector3Field("", item.V3position, GUILayout.Height(20), GUILayout.Width(150));
+                                            EditorGUILayout.LabelField("Зум", GUILayout.Height(20), GUILayout.Width(50));
+                                            item.time = EditorGUILayout.FloatField("", item.time, GUILayout.Height(20), GUILayout.Width(50));
+                                             GUILayout.Space(440);
+                                        }
+                                        else
+                                                if (item.effects == GDB.Effects.PointTo)
+                                                {
+                                                    item.V3position = EditorGUILayout.Vector3Field("", item.V3position, GUILayout.Height(20), GUILayout.Width(150));     
+                                                     GUILayout.Space(545);
+                                                }     
+                                                else
+                                                    if (item.effects == GDB.Effects.Zoom)
+                                                    {
+                                                        item.time = EditorGUILayout.FloatField("", item.time, GUILayout.Height(20), GUILayout.Width(50));
+                                                        GUILayout.Space(645);
+                                                    }
+                                                    else
+                                                         GUILayout.Space(700);
+                                                     }
+                                    break;
 
-                            }
+                    }
 
                             if (GUILayout.Button("Add", GUILayout.Height(20), GUILayout.Width(50)))
                             {

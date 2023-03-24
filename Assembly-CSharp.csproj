@@ -144,6 +144,7 @@
     <Compile Include="Assets\LogComposer.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXEffectControllerPooled.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\Utility\EColor.cs" />
+    <Compile Include="Assets\OLD\FirstLaunchSettings.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\InputAxisAttribute.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\EnableIfAttributeBase.cs" />
     <Compile Include="Assets\Resources\Quibli\Post Process\Effects\Scripts\StylizedDetail.cs" />
@@ -154,7 +155,7 @@
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\HorizontalLineAttribute.cs" />
     <Compile Include="Assets\OLD\Label.cs" />
     <Compile Include="Assets\OLD\GroupManager.cs" />
-    <Compile Include="Assets\OLD\FirstLaunchSettings.cs" />
+    <Compile Include="Assets\RotateToPoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\CTI URP Leaves.shader" />

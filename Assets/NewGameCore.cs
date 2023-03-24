@@ -346,9 +346,30 @@ public class NewGameCore : MonoBehaviour
             case GDB.LineType.Actor:
                 actorAction(line);
                 break;
+            case GDB.LineType.CamEffect:
+                cameraAction(line);
+                break;
         }
     }
-    
+    void cameraAction(Item line)
+    {
+
+        StartCoroutine(EffectCoroutine(line, cid++));
+
+
+    }
+
+    IEnumerator EffectCoroutine(Item line, int cid)
+    {
+        CoroutinesWorking.Add(cid);
+        ApplyEffects(line.effects, true);
+        yield return new WaitForSeconds(1f);
+        ApplyEffects(line.effects, false);
+        lineNum++;
+        CoroutinesWorking.Remove(cid);
+        Step();
+    }
+
     void actorAction(Item line)
     {
        
@@ -559,14 +580,14 @@ public class NewGameCore : MonoBehaviour
             try { StopCoroutine(lBGcoroutine); } catch { }
             loadingBG = false;
         }
-        lBGcoroutine = StartCoroutine(LoadBackground(line));
+        lBGcoroutine = StartCoroutine(LoadBackground(line, cid++));
 
     }
 
-    IEnumerator LoadBackground(Item line)
+    IEnumerator LoadBackground(Item line, int cid)
     {
         CoroutinesWorking.Add(cid);
-        ApplyEffects(line.effects, true);
+        Camera.SetBool("BlackOut", true);
         yield return new WaitForSeconds(0.5f);
         lastBG = line.BGname.ToString();
         loadingBG = true;
@@ -582,8 +603,14 @@ public class NewGameCore : MonoBehaviour
           
 
         }
-        yield return new WaitForSeconds(0.5f);
-        ApplyEffects(line.effects, false);
+        yield return new WaitForSeconds(1f);
+        Camera.SetBool("BlackOut", false);
+        if (line.effects != GDB.Effects.BlackOut)
+        {
+            ApplyEffects(line.effects, true);
+            yield return new WaitForSeconds(1.5f);
+            ApplyEffects(line.effects, false);
+        }
         Addressables.Release(handle);
         loadingBG = false;
         CoroutinesWorking.Remove(cid);
@@ -593,15 +620,7 @@ public class NewGameCore : MonoBehaviour
 
     void ApplyEffects(GDB.Effects effect, bool show)
     {
-        switch (effect)
-        {
-            case GDB.Effects.BlackOut:
-                {
-                    Camera.SetBool("Blackout", show);
-                }
-                break;
-        }
-
+       Camera.SetBool(effect.ToString(), show);
     }
     
     void cgAction(Item line)

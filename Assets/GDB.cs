@@ -46,14 +46,15 @@ public static class GDB
         Pause,
         Var,
         If,
-        Jump
+        Jump,
+        CamEffect
     }
     public enum BGName
     {
         Park,
         Construct,
         Garages,
-        MiraHouse,
+        Mira_house,
         Field,
         Scene,
         Hospital,
@@ -83,9 +84,13 @@ public static class GDB
         BlackOut,
         VShake,
         HShake,
-        Derealise
+        Punch,
+        PointTo,
+        Zoom,
+        PointToAndZoom
 
     }
+
     public enum Pose
     {
         Hide,
