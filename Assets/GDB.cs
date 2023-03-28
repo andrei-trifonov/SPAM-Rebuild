@@ -76,8 +76,9 @@ public static class GDB
     public enum Fonts
     {
         Regular,
-        SMASHED,
-        Scared
+        Wave,
+        Scared,
+        Rainbow
     }
     public enum Effects
     {

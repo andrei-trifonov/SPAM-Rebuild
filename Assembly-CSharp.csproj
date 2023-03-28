@@ -69,7 +69,7 @@
     <Compile Include="Assets\Resources\Quibli\Post Process\Scripts\QuibliPostProcess.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\ReorderableListAttribute.cs" />
-    <Compile Include="Assets\OLD\LightFlicking.cs" />
+    <Compile Include="Assets\Assets\LightFlicking.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\IGroupAttribute.cs" />
     <Compile Include="Assets\Resources\Quibli\Post Process\Effects\Scripts\ColorGrading.cs" />
     <Compile Include="Assets\RDB.cs" />
@@ -98,12 +98,12 @@
     <Compile Include="Assets\living birds\scripts\lb_Bird.cs" />
     <Compile Include="Assets\GraphComposer.cs" />
     <Compile Include="Assets\OLD\MapPoint.cs" />
-    <Compile Include="Assets\OLD\SaveManager.cs" />
+    <Compile Include="Assets\Assets\SaveManager.cs" />
     <Compile Include="Assets\CG.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\SceneAttribute.cs" />
     <Compile Include="Assets\OLD\GameMenuController.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\Utility\EConditionOperator.cs" />
-    <Compile Include="Assets\OLD\YesnoScreen.cs" />
+    <Compile Include="Assets\Assets\YesnoScreen.cs" />
     <Compile Include="Assets\CTI URP\CTI Runtime Components URP\Scripts\CTI_SRP_CustomWind.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\MinMaxSliderAttribute.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\FoldoutAttribute.cs" />
@@ -119,10 +119,11 @@
     <Compile Include="Assets\GDB.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\InfoBoxAttribute.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\ResizableTextAreaAttribute.cs" />
-    <Compile Include="Assets\OLD\Fader.cs" />
+    <Compile Include="Assets\Assets\Fader.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
+    <Compile Include="Assets\RotateToPoint.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\ShowAssetPreviewAttribute.cs" />
-    <Compile Include="Assets\OLD\LoadButton.cs" />
+    <Compile Include="Assets\Assets\LoadButton.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXRotation.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\MinValueAttribute.cs" />
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\DisableIfAttribute.cs" />
@@ -155,7 +156,7 @@
     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\HorizontalLineAttribute.cs" />
     <Compile Include="Assets\OLD\Label.cs" />
     <Compile Include="Assets\OLD\GroupManager.cs" />
-    <Compile Include="Assets\RotateToPoint.cs" />
+    <Compile Include="Assets\TextEffects.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\CTI URP Leaves.shader" />

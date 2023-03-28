@@ -45,10 +45,10 @@ public class NewGameCore : MonoBehaviour
 
     [SerializeField] private LogComposer Log;
     
-    public List<GameObject> choiseBoxes;
-    private GameObject choiseBox;
+    private List<GameObject> choiseBoxes = new List<GameObject>();
+    [SerializeField] private GameObject choiseBox;
     [SerializeField] private LayoutGroup choiseGroup;
-    [SerializeField] private Image CG;
+    [SerializeField] private SpriteRenderer CG;
     private GameObject BG;
 
     private AudioSource fadeInMusic;
@@ -71,7 +71,10 @@ public class NewGameCore : MonoBehaviour
    
     public List<int> CoroutinesWorking;
     int cid;
-
+    public void EnableText()
+    {
+        textCanvas.GetComponent<Animator>().SetBool("Hide", !textCanvas.GetComponent<Animator>().GetBool("Hide"));
+    }
     public void SetTextDelay(float speed)
     {
         textDelay = speed;
@@ -640,7 +643,10 @@ public class NewGameCore : MonoBehaviour
     IEnumerator LoadSprite(Item line)
     {
         CoroutinesWorking.Add(cid);
+        Camera.SetBool("BlackOut", true);
+        yield return new WaitForSeconds(0.5f);
 
+       
         if (line.show)
         {
             //TODO ЭФфекты
@@ -670,7 +676,14 @@ public class NewGameCore : MonoBehaviour
             lineNum++;
             CG.enabled = false;
         }
-
+        yield return new WaitForSeconds(1f);
+        Camera.SetBool("BlackOut", false);
+        if (line.effects != GDB.Effects.BlackOut)
+        {
+            ApplyEffects(line.effects, true);
+            yield return new WaitForSeconds(1.5f);
+            ApplyEffects(line.effects, false);
+        }
         CoroutinesWorking.Remove(cid);
         
     }
@@ -762,9 +775,14 @@ public class NewGameCore : MonoBehaviour
         labelNum = FindLabel(line.additionalPose);
         Step();
     }
-
+    void ApplyTextEffects(GDB.Fonts font) {
+        
+        textContent.GetComponent<TextEffects>().effect = font;
+        
+    }
     void textAction(Item line)
     {
+        ApplyTextEffects(GDB.Fonts.Regular);
         lastAuthor = line.name;
         lastLine = line.line;
         if(c!= null)
@@ -776,11 +794,8 @@ public class NewGameCore : MonoBehaviour
        
         Log.RenewLog(line.name, line.line);
 
-        switch (line.font)
-        {
-            //TODO Эффекты текста
-        }
-        
+        ApplyTextEffects(line.font);
+
         if (!skipping && textDelay > 0)
         {
             castingLine = line.line;
