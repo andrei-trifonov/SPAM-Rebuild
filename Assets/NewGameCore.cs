@@ -775,6 +775,11 @@ public class NewGameCore : MonoBehaviour
         labelNum = FindLabel(line.additionalPose);
         Step();
     }
+    public void jumpAction(string name)
+    {
+        labelNum = FindLabel(name);
+        Step();
+    }
     void ApplyTextEffects(GDB.Fonts font) {
         
         textContent.GetComponent<TextEffects>().effect = font;
