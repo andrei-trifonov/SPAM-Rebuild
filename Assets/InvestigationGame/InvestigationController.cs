@@ -32,6 +32,7 @@ public struct Result
 
 public class InvestigationController : MonoBehaviour
 {
+
     [SerializeField] private Vector4 ScreenSpace;
     [SerializeField] List<ThoughtSt> Thoughts;
     [SerializeField] List<Result> Results;
@@ -39,13 +40,23 @@ public class InvestigationController : MonoBehaviour
     [SerializeField] GameObject thoughtTemplate;
     [SerializeField] GameObject resultPanel;
     [SerializeField] TextMeshProUGUI resultText;
-   List<GameObject> spawnedObjects = new List<GameObject>();
-    [SerializeField] List<GameObject> thoughtGameElements;
-    [SerializeField] NewGameCore Core;
-    private Result chosenResult; 
+     GameObject Brain;
+    [SerializeField] Canvas canInv;
+    [SerializeField] Canvas canTho;
+    GameObject cameraInvestigation;
+     GameObject cameraThought;
+    [SerializeField] GameObject Scene;
+    private NewGameCore Core;
+    private Result chosenResult;  List<GameObject> spawnedObjects = new List<GameObject>();
     // Start is called before the first frame update
 
-
+    private void Start()
+    {
+        cameraInvestigation = GameObject.FindGameObjectWithTag("InvCam");
+        cameraThought = GameObject.FindGameObjectWithTag("ThoCam");
+        Core = GameObject.FindObjectOfType<NewGameCore>();
+        Brain = GameObject.FindGameObjectWithTag("Brain");
+    }
     void DestroyAllThought() {
 
         for (int i = 0; i < spawnedObjects.Count; i++)
@@ -58,10 +69,12 @@ public class InvestigationController : MonoBehaviour
     public void OpenThought() {
 
         DestroyAllThought();
-        foreach (GameObject obj in thoughtGameElements)
-        {
-            obj.SetActive(true);
-        }
+        Scene.SetActive(false);
+        cameraThought.SetActive(true);
+        cameraInvestigation.SetActive(false);
+        canTho.enabled = true;
+        canInv.enabled = false;
+        Brain.SetActive(true);
         foreach (ThoughtSt item in Thoughts)
         {
             Thought spawned = Instantiate(thoughtTemplate, new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y), UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), gameObject.transform.position.z), gameObject.transform.rotation).GetComponent<Thought>();
@@ -84,16 +97,18 @@ public class InvestigationController : MonoBehaviour
     }
     public void CloseThought()
     {
+        Scene.SetActive(true);
         DestroyAllThought();
-        foreach (GameObject obj in thoughtGameElements)
-        {
-            obj.SetActive(false);
-        }
+        cameraThought.SetActive(false);
+        canTho.enabled = false;
+        canInv.enabled = true;
+        cameraInvestigation.SetActive(true);
+        Brain.SetActive(false);
     }
 
     public void AddThought(ThoughtSt obj)
     {
-        if (Thoughts.Contains(obj))
+        if (!Thoughts.Contains(obj))
         Thoughts.Add(obj);
     }
 
@@ -105,7 +120,11 @@ public class InvestigationController : MonoBehaviour
             if (res.ID == ID)
             {
 
-                CloseThought();
+                DestroyAllThought();
+                cameraThought.SetActive(false);
+                cameraInvestigation.SetActive(true);
+                canTho.enabled = false;
+                canInv.enabled = true;
                 resultPanel.SetActive(true); 
                 resultText.text = res.Content;
                 chosenResult = res;
@@ -155,7 +174,7 @@ public class InvestigationController : MonoBehaviour
                         }
 
                     }
-                    Merges.Remove(connection);
+                   
                     break;
                 }
             }

@@ -15,7 +15,8 @@ public class Item
     public  GDB.Name name;
     [Multiline] public string line;
     public GDB.Fonts font;
-    
+
+    public GDB.Investigation inv;
     
     public GDB.BGName BGname;
     public GDB.Effects effects;
@@ -34,6 +35,8 @@ public class Item
     public int value;
     public GDB.Signs signs;
     public GDB.Variables var;
+
+    public ThoughtType ThoType;
 
     public GDB.SignsIf signsIf;
 

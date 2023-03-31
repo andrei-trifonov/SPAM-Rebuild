@@ -8,10 +8,12 @@ public class DragNDropObject : MonoBehaviour
     private bool _isDragging;
     private InvestigationController IC;
     bool prepped_to_drop;
+    private Camera ThoCam;
     
     private void Start()
     {
         IC = GameObject.FindObjectOfType<InvestigationController>();
+        ThoCam = GameObject.FindGameObjectWithTag("ThoCam").GetComponent<Camera>();
     }
     private void OnMouseDown()
     {
@@ -43,11 +45,11 @@ public class DragNDropObject : MonoBehaviour
 
         if (Input.touchCount > 0)
         {
-            worldPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+            worldPosition = ThoCam.ScreenToWorldPoint(Input.GetTouch(0).position);
         }
         else
         {
-            worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            worldPosition = ThoCam.ScreenToWorldPoint(Input.mousePosition);
         }
 
         worldPosition.z = 0f; // Set the Z position to be 0 so that it matches the object's Z position

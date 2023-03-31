@@ -56,7 +56,7 @@ public class NewGameCore : MonoBehaviour
     [SerializeField] GameObject musicPlayer;
 
     [SerializeField] private AudioSource soundPlayer;
-   
+    [SerializeField] private Transform InvSceneSpawn;
     
     private List<m_Actor> actorsOnScene = new List<m_Actor>();
     
@@ -352,7 +352,32 @@ public class NewGameCore : MonoBehaviour
             case GDB.LineType.CamEffect:
                 cameraAction(line);
                 break;
+            case GDB.LineType.Investigation:
+                invAction(line);
+                break;
         }
+    }
+    void invAction(Item line)
+    {
+        Camera.gameObject.SetActive(false);
+        textCanvas.enabled = false;
+        StartCoroutine(LoadInv(line, cid++));
+    }
+    IEnumerator LoadInv(Item line, int id)
+    {
+        CoroutinesWorking.Add(id);
+      
+        AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line.additionalPose);
+        yield return handle;
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+        {
+            GameObject res = handle.Result;
+            Instantiate(res, InvSceneSpawn);
+        }
+        Addressables.Release(handle);
+        CoroutinesWorking.Remove(id);
+
+
     }
     void cameraAction(Item line)
     {
@@ -362,12 +387,15 @@ public class NewGameCore : MonoBehaviour
 
     }
 
+
+
+
     IEnumerator EffectCoroutine(Item line, int cid)
     {
         CoroutinesWorking.Add(cid);
-        ApplyEffects(line.effects, true);
+        ApplyEffects(line.effects, true, line.time, line.V3position);
         yield return new WaitForSeconds(1f);
-        ApplyEffects(line.effects, false);
+        ApplyEffects(line.effects, false, line.time, line.V3position);
         lineNum++;
         CoroutinesWorking.Remove(cid);
         Step();
@@ -610,9 +638,9 @@ public class NewGameCore : MonoBehaviour
         Camera.SetBool("BlackOut", false);
         if (line.effects != GDB.Effects.BlackOut)
         {
-            ApplyEffects(line.effects, true);
+            ApplyEffects(line.effects, true, line.time, line.V3position);
             yield return new WaitForSeconds(1.5f);
-            ApplyEffects(line.effects, false);
+            ApplyEffects(line.effects, false, line.time, line.V3position);
         }
         Addressables.Release(handle);
         loadingBG = false;
@@ -621,9 +649,33 @@ public class NewGameCore : MonoBehaviour
 
     }
 
-    void ApplyEffects(GDB.Effects effect, bool show)
+    void ApplyEffects(GDB.Effects effect, bool show, float zoom, Vector3 dest)
     {
-       Camera.SetBool(effect.ToString(), show);
+        switch (effect){
+            case GDB.Effects.Zoom:
+                {
+                    GetComponent<CameraMoveZoom>().destZoom = zoom;
+                } break;
+            case GDB.Effects.PointTo:
+                {
+                    Camera.GetComponent<Animator>().enabled = false;
+                    GetComponent<CameraMoveZoom>().destPos = dest;
+                }
+                break;
+            case GDB.Effects.PointToAndZoom:
+                {
+                    Camera.GetComponent<Animator>().enabled = false;
+                    GetComponent<CameraMoveZoom>().destPos = dest;
+                    GetComponent<CameraMoveZoom>().destZoom = zoom;
+                }
+                break;
+            default: 
+                {
+                    Camera.GetComponent<Animator>().enabled = true;
+                    Camera.SetBool(effect.ToString(), show);
+                } break;
+        }
+     
     }
     
     void cgAction(Item line)
@@ -680,9 +732,9 @@ public class NewGameCore : MonoBehaviour
         Camera.SetBool("BlackOut", false);
         if (line.effects != GDB.Effects.BlackOut)
         {
-            ApplyEffects(line.effects, true);
+            ApplyEffects(line.effects, true, line.time, line.V3position);
             yield return new WaitForSeconds(1.5f);
-            ApplyEffects(line.effects, false);
+            ApplyEffects(line.effects, false, line.time, line.V3position);
         }
         CoroutinesWorking.Remove(cid);
         

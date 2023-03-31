@@ -47,7 +47,8 @@ public static class GDB
         Var,
         If,
         Jump,
-        CamEffect
+        CamEffect,
+        Investigation
     }
     public enum BGName
     {
@@ -90,6 +91,11 @@ public static class GDB
         Zoom,
         PointToAndZoom
 
+    }
+    public enum Investigation
+    {
+        Open,
+        AddThought
     }
 
     public enum Pose

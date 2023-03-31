@@ -272,10 +272,31 @@ public class DialogueEditor : Editor
                                                     }
                                                     else
                                                          GUILayout.Space(700);
-                                                     }
+                                    }
                                     break;
+                                case (GDB.LineType.Investigation):
+                                {
+                                GUI.backgroundColor = Color.red;
+                                EditorGUILayout.LabelField("Сцена", GUILayout.Height(20), GUILayout.Width(50));
+                                item.inv = (GDB.Investigation)EditorGUILayout.EnumPopup("", item.inv, GUILayout.Height(20), GUILayout.Width(100));
+                                
 
-                    }
+                                if (item.inv == GDB.Investigation.Open)
+                                {
+                                    item.additionalPose = EditorGUILayout.TextField("", item.additionalPose, GUILayout.Height(20), GUILayout.Width(100));
+                                    GUILayout.Space(600);
+                                }
+                                else
+                                {
+                                    item.additionalPose = EditorGUILayout.TextField("", item.additionalPose, GUILayout.Height(20), GUILayout.Width(200));
+                                    EditorGUILayout.LabelField("ID", GUILayout.Height(20), GUILayout.Width(20));
+                                    item.value = EditorGUILayout.IntField("", item.value, GUILayout.Height(20), GUILayout.Width(100));
+                                    item.ThoType = (ThoughtType)EditorGUILayout.EnumPopup("", item.ThoType, GUILayout.Height(20), GUILayout.Width(100));
+                                    GUILayout.Space(270);
+                                }
+                            }break;
+
+                            }
 
                             if (GUILayout.Button("Add", GUILayout.Height(20), GUILayout.Width(50)))
                             {
