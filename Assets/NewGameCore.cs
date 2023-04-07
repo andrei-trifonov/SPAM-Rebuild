@@ -17,7 +17,7 @@ public class m_Actor{
 public class NewGameCore : MonoBehaviour
 {
     [SerializeField] private Canvas textCanvas;
-    
+    [SerializeField] private GameObject newThoughtLabel;
     [SerializeField] private TextMeshProUGUI textAuthor;
     [SerializeField] private TextMeshProUGUI textContent;
     [SerializeField] private Animator Camera;
@@ -56,7 +56,7 @@ public class NewGameCore : MonoBehaviour
     [SerializeField] GameObject musicPlayer;
 
     [SerializeField] private AudioSource soundPlayer;
-    [SerializeField] private Transform InvSceneSpawn;
+    
     
     private List<m_Actor> actorsOnScene = new List<m_Actor>();
     
@@ -359,9 +359,21 @@ public class NewGameCore : MonoBehaviour
     }
     void invAction(Item line)
     {
-        Camera.gameObject.SetActive(false);
-        textCanvas.enabled = false;
-        StartCoroutine(LoadInv(line, cid++));
+        if (line.inv == GDB.Investigation.Open)
+             StartCoroutine(LoadInv(line, cid++));
+        else
+        {
+            StartCoroutine(NewThoughtCoroutine());
+            PlayerPrefs.SetString(line.investigationName, (line.value + "|" + line.additionalPose + "|" + line.ThoType.ToString()));
+            lineNum++;
+            Step();
+        }
+    }
+    IEnumerator NewThoughtCoroutine()
+    {
+        newThoughtLabel.SetActive(true);
+        yield return new WaitForSeconds(2);
+        newThoughtLabel.SetActive(false);
     }
     IEnumerator LoadInv(Item line, int id)
     {
@@ -372,7 +384,7 @@ public class NewGameCore : MonoBehaviour
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
             GameObject res = handle.Result;
-            Instantiate(res, InvSceneSpawn);
+            Instantiate(res);
         }
         Addressables.Release(handle);
         CoroutinesWorking.Remove(id);

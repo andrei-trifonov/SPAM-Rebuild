@@ -80,6 +80,7 @@ public static class GDB
         Wave,
         Scared,
         Rainbow
+      
     }
     public enum Effects
     {

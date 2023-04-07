@@ -288,11 +288,14 @@ public class DialogueEditor : Editor
                                 }
                                 else
                                 {
+                                    EditorGUILayout.LabelField("InvName", GUILayout.Height(20), GUILayout.Width(50));
+                                    item.investigationName = EditorGUILayout.TextField("", item.investigationName, GUILayout.Height(20), GUILayout.Width(100));
+                                    EditorGUILayout.LabelField("Content", GUILayout.Height(20), GUILayout.Width(50));
                                     item.additionalPose = EditorGUILayout.TextField("", item.additionalPose, GUILayout.Height(20), GUILayout.Width(200));
                                     EditorGUILayout.LabelField("ID", GUILayout.Height(20), GUILayout.Width(20));
                                     item.value = EditorGUILayout.IntField("", item.value, GUILayout.Height(20), GUILayout.Width(100));
                                     item.ThoType = (ThoughtType)EditorGUILayout.EnumPopup("", item.ThoType, GUILayout.Height(20), GUILayout.Width(100));
-                                    GUILayout.Space(270);
+                                    GUILayout.Space(50);
                                 }
                             }break;
 

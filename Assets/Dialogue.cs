@@ -27,7 +27,7 @@ public class Item
     public bool show;
     public GDB.Pose pose;
     public string additionalPose;
-    
+    public string investigationName;
     public GDB.Music  music;
     
     public float time;

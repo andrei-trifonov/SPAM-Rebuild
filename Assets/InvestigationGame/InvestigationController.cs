@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+
 [System.Serializable]
 public class MergeConnection {
     public int Item1;
@@ -32,7 +34,7 @@ public struct Result
 
 public class InvestigationController : MonoBehaviour
 {
-
+    [SerializeField] private string invName;
     [SerializeField] private Vector4 ScreenSpace;
     [SerializeField] List<ThoughtSt> Thoughts;
     [SerializeField] List<Result> Results;
@@ -43,6 +45,9 @@ public class InvestigationController : MonoBehaviour
      GameObject Brain;
     [SerializeField] Canvas canInv;
     [SerializeField] Canvas canTho;
+    private Canvas canText;
+
+    public GameObject cameraMain;
     GameObject cameraInvestigation;
      GameObject cameraThought;
     [SerializeField] GameObject Scene;
@@ -52,10 +57,42 @@ public class InvestigationController : MonoBehaviour
 
     private void Start()
     {
+        cameraMain = GameObject.FindGameObjectWithTag("MainCamera");
+        canText = GameObject.Find("TextCanvas").GetComponent<Canvas>();
         cameraInvestigation = GameObject.FindGameObjectWithTag("InvCam");
         cameraThought = GameObject.FindGameObjectWithTag("ThoCam");
         Core = GameObject.FindObjectOfType<NewGameCore>();
         Brain = GameObject.FindGameObjectWithTag("Brain");
+        cameraMain.SetActive(false);
+        canText.enabled = false;
+        string[] elements;
+        if (PlayerPrefs.GetString(invName).Length > 0)
+        {
+            elements = PlayerPrefs.GetString(invName).Split("|");
+            int counter = 0;
+            ThoughtSt thought = new ThoughtSt();
+            for (int i = 0; i < elements.Length; i++)
+            {
+               
+                counter++;
+                switch (counter)
+                {
+                    case 1:
+                        thought.ID = int.Parse(elements[i]); break;
+                    case 2: 
+                        thought.Content = elements[i]; break;
+                        
+                    case 3:
+                        {
+                            
+                            thought.Type = (ThoughtType)Enum.Parse(typeof(ThoughtType), elements[i]);
+                            AddThought(thought);
+                            thought = new ThoughtSt();
+                            counter = 0;
+                        } break;  
+                }
+            }
+        }
     }
     void DestroyAllThought() {
 
@@ -77,8 +114,8 @@ public class InvestigationController : MonoBehaviour
         Brain.SetActive(true);
         foreach (ThoughtSt item in Thoughts)
         {
-            Thought spawned = Instantiate(thoughtTemplate, new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y), UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), gameObject.transform.position.z), gameObject.transform.rotation).GetComponent<Thought>();
-            spawned.transform.position = new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y), UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), 10);
+            Thought spawned = Instantiate(thoughtTemplate, cameraThought.transform.position + new Vector3(UnityEngine.Random.Range( ScreenSpace.x, ScreenSpace.y),  UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), gameObject.transform.position.z), gameObject.transform.rotation).GetComponent<Thought>();
+            spawned.transform.position = cameraThought.transform.position + new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y), UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), 10);
             spawnedObjects.Add(spawned.gameObject);
             spawned.Initiate(item.Content, item.Level, item.Type, item.ID);
             foreach (MergeConnection connection in Merges)
@@ -140,6 +177,12 @@ public class InvestigationController : MonoBehaviour
         resultPanel.SetActive(false);
         PlayerPrefs.SetInt(chosenResult.Var.ToString(), 1);
         Core.jumpAction(chosenResult.jumpLabel);
+        canText.enabled = true;
+        cameraMain.SetActive(true);
+        cameraThought.SetActive(true);
+        cameraInvestigation.SetActive(true);
+        Destroy(gameObject.transform.parent.gameObject);
+        
     }
     // Update is called once per frame
     public void UpdateCollisions(int ID)

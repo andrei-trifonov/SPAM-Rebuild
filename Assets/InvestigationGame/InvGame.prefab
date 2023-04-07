@@ -63,7 +63,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5969221851133607060}
   m_LocalRotation: {x: 0.35355338, y: -0.35355338, z: 0.1464466, w: 0.8535535}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalPosition: {x: 0, y: 0, z: 4.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df48702f571a384b848a47f0ab4d7d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invName: Inv1
   ScreenSpace: {x: -8, y: 8, z: -4, w: 4}
   Thoughts:
   - ID: 0
@@ -210,7 +211,7 @@ MonoBehaviour:
     Content: "\u042F \u0420\u0435\u0448\u0438\u043B\u0430 \u0441\u044A\u0435\u0441\u0442\u044C
       \u0442\u0443\u0445\u043B\u0443\u044E \u0440\u044B\u0431\u0443"
     Var: 0
-    jumpLabel: 
+    jumpLabel: "\u0413\u043B\u0430\u0432\u04302"
   Merges:
   - Item1: 0
     t1: {fileID: 0}
@@ -225,9 +226,9 @@ MonoBehaviour:
   thoughtTemplate: {fileID: 4806277519136717691, guid: 210d36b5d8ccb854998f6bea3582f91d, type: 3}
   resultPanel: {fileID: 5969221850305509641}
   resultText: {fileID: 5969221851084033669}
-  Brain: {fileID: 0}
   canInv: {fileID: 5969221852065181788}
   canTho: {fileID: 5969221851978630036}
+  cameraMain: {fileID: 0}
   Scene: {fileID: 5969221852282944102}
 --- !u!1 &5969221852282944102
 GameObject:
@@ -253,7 +254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5969221852282944102}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 127.15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -280,6 +281,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 5969221851373897319}
+    - target: {fileID: 5710843138297468254, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710843138297468254, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710843138297468254, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710843138297468254, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710843138297468254, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710843138297468254, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -34
+      objectReference: {fileID: 0}
     - target: {fileID: 5710843138764364547, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
       propertyPath: m_Name
       value: ThoughtsCanvas

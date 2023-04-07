@@ -9,15 +9,18 @@ public class TextEffects : MonoBehaviour
     public GDB.Fonts effect;
     public TMP_Text textComponent;
     private bool redraw;
+    private Animator m_Animator;
     // Start is called before the first frame update
     private void Start()
     {
         StartCoroutine(Rainbow());
+        m_Animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         if (effect == GDB.Fonts.Rainbow && redraw || effect != GDB.Fonts.Rainbow)
             textComponent.ForceMeshUpdate();
         var textInfo = textComponent.textInfo;
