@@ -617,6 +617,7 @@ public class NewGameCore : MonoBehaviour
     }
     void bgAction(Item line)
     {
+        Debug.Log(("Попытка загрузки"));  
         ClearSprites();
         if (loadingBG)
         {
@@ -837,11 +838,13 @@ public class NewGameCore : MonoBehaviour
     void jumpAction(Item line)
     {
         labelNum = FindLabel(line.additionalPose);
+        lineNum = 0;
         Step();
     }
     public void jumpAction(string name)
     {
         labelNum = FindLabel(name);
+        lineNum = 0;
         Step();
     }
     void ApplyTextEffects(GDB.Fonts font) {

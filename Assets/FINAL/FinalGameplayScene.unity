@@ -2112,7 +2112,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3696,7 +3696,7 @@ Camera:
   field of view: 45.454105
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6790,7 +6790,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20234,29 +20234,29 @@ MonoBehaviour:
   Labels:
   - name: "\u0433\u043B\u0430\u0432\u04301"
     lines:
-    - type: 12
-      name: 2
-      line: "\u042D\u0442\u043E \u0440\u0430\u0434\u0443\u0433\u0430"
-      font: 3
-      inv: 1
-      BGname: 1
+    - type: 2
+      name: 0
+      line: "\u0422\u0435\u043A\u0441\u0442 \u043E\u0431\u044B\u0447\u043D\u044B\u0439"
+      font: 0
+      inv: 0
+      BGname: 0
       effects: 0
       CGname: 
       show: 0
       pose: 1
-      additionalPose: "\u041C\u044B\u0441\u043B\u044C \u0438\u0437 \u0441\u0446\u0435\u043D\u0430\u0440\u0438\u044F"
-      investigationName: Inv1
+      additionalPose: 
+      investigationName: 
       music: 0
       time: 0
-      value: 15
+      value: 0
       signs: 0
       var: 0
-      ThoType: 1
+      ThoType: 0
       signsIf: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 5, y: 0, z: 45}
-    - type: 12
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 4
       name: 0
       line: 
       font: 0
@@ -20265,8 +20265,8 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
-      pose: 0
-      additionalPose: InvGame
+      pose: 1
+      additionalPose: 
       investigationName: 
       music: 0
       time: 0
@@ -20280,18 +20280,18 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 0
-      line: "\u042D\u0442\u043E \u0432\u043E\u043B\u043D\u0430"
-      font: 1
+      line: "\u0422\u0435\u043A\u0441\u0442 \u043E\u0431\u044B\u0447\u043D\u044B\u0439"
+      font: 0
       inv: 0
       BGname: 0
-      effects: 5
+      effects: 0
       CGname: 
       show: 0
       pose: 0
       additionalPose: 
       investigationName: 
       music: 0
-      time: 20
+      time: 0
       value: 0
       signs: 0
       var: 0
@@ -20299,11 +20299,167 @@ MonoBehaviour:
       signsIf: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 5, y: 0, z: 45}
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 2
+      line: "\u0422\u0435\u043A\u0441\u0442 \u0432\u043E\u043B\u043D\u043E\u0439"
+      font: 1
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 3
+      line: "\u0414\u0440\u043E\u0436\u044C \u0442\u0435\u043A\u0441\u0442\u0430"
+      font: 2
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 4
+      line: "\u0422\u0435\u043A\u0441\u0442 \u0420\u0430\u0414\u0443\u0413\u0430"
+      font: 3
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 5
+      line: "\u0438 \u0441\u043D\u043E\u0432\u0430 \u043E\u0431\u044B\u0447\u043D\u044B\u0439"
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 10
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: "\u0413\u043B\u0430\u0432\u04302"
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+  - name: "\u0413\u043B\u0430\u0432\u04302"
+    lines:
+    - type: 2
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 2
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 4
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 1
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 3, y: 0, z: 0}
     - type: 0
       name: 0
-      line: "\u042D\u0442\u043E \u0434\u0440\u043E\u0436\u044C"
-      font: 2
+      line: "\u042D\u0444\u0444\u0435\u043A\u0442 \u043E\u0434\u0438\u043D"
+      font: 0
       inv: 0
       BGname: 0
       effects: 0
@@ -20324,13 +20480,191 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 11
       name: 0
-      line: pizda
+      line: "\u041D\u0430\u0447\u0430\u043B\u0430\u0441\u044C \u0432\u0442\u043E\u0440\u0430\u044F
+        \u0433\u043B\u0430\u0432\u0430"
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 1
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 0
+      line: "\u042D\u0444\u0444\u0435\u043A\u0442 \u0434\u0432\u0430"
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 11
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 2
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 0
+      line: "\u042D\u0444\u0444\u0435\u043A\u0442 \u0442\u0440\u0438"
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 11
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 3
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 0
+      line: "\u042D\u0444\u0444\u0435\u043A\u0442\u044B \u0447\u0435\u0442\u044B\u0440\u0435
+        \u0438 \u043F\u044F\u0442\u044C"
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 11
+      name: 0
+      line: 
       font: 0
       inv: 0
       BGname: 0
       effects: 6
-      CGname: cg3
-      show: 1
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 20
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 6, y: 1.86, z: 45}
+    - type: 7
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 2
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 11
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 6
+      CGname: 
+      show: 0
       pose: 0
       additionalPose: 
       investigationName: 
@@ -20343,8 +20677,8 @@ MonoBehaviour:
       signsIf: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 0, y: 0, z: 45}
-    - type: 8
+      V3position: {x: 0.15, y: 1.86, z: 45}
+    - type: 10
       name: 0
       line: 
       font: 0
@@ -20354,29 +20688,7 @@ MonoBehaviour:
       CGname: 
       show: 0
       pose: 0
-      additionalPose: 
-      investigationName: 
-      music: 0
-      time: 0
-      value: 2
-      signs: 2
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 3
-      name: 0
-      line: asd
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: cg3
-      show: 1
-      pose: 0
-      additionalPose: 
+      additionalPose: "\u0413\u043B\u0430\u0432\u04303"
       investigationName: 
       music: 0
       time: 0
@@ -20388,31 +20700,11 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
-    - type: 3
+  - name: "\u0413\u043B\u0430\u0432\u04303"
+    lines:
+    - type: 1
       name: 0
-      line: asd
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: cg3
-      show: 0
-      pose: 0
-      additionalPose: 
-      investigationName: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 0
-      name: 0
-      line: d
+      line: "\u0422\u0440\u0435\u0442\u044C\u044F \u0433\u043B\u0430\u0432\u0430"
       font: 0
       inv: 0
       BGname: 0
@@ -20429,66 +20721,73 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
-      menu_label: []
-      menu_jump: []
+      menu_label:
+      - "\u0412\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u043A \u044D\u0444\u0444\u0435\u043A\u0442\u0430\u043C"
+      - "\u0418\u0434\u0442\u0438 \u0434\u0430\u043B\u044C\u0448\u0435"
+      menu_jump:
+      - "\u0413\u043B\u0430\u0432\u04302"
+      - "\u0413\u043B\u0430\u0432\u04304"
       V3position: {x: 0, y: 0, z: 0}
-    - type: 0
-      name: 0
-      line: "\u0446\u0443\u043F\u043A"
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      additionalPose: 
-      investigationName: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 2
-      name: 0
-      line: 
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      additionalPose: 
-      investigationName: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-  - name: "\u0413\u043B\u0430\u0432\u04302"
+  - name: "\u0413\u043B\u0430\u0432\u04304"
     lines:
     - type: 0
       name: 0
-      line: "\u041F\u0440\u044B\u0436\u043E\u0447\u0435\u043A \u0441\u0432\u0435\u0440\u0448\u0438\u043B\u0441\u044F"
-      font: 3
+      line: "\u0422\u044B \u0432\u044B\u0431\u0440\u0430\u043B \u0438\u0434\u0442\u0438
+        \u0434\u0430\u043B\u044C\u0448\u0435. \u0417\u0430\u0447\u0435\u043C?"
+      font: 0
       inv: 0
       BGname: 0
       effects: 0
       CGname: 
       show: 0
       pose: 0
-      additionalPose: "\u0433\u043B\u0430\u0432\u04301"
+      additionalPose: 
+      investigationName: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 12
+      name: 0
+      line: 
+      font: 0
+      inv: 1
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: "\u042F \u0432\u044B\u0431\u0440\u0430\u043Ba \u0438\u0434\u0442\u0438
+        \u0434\u0430\u043B\u044C\u0448\u0435"
+      investigationName: Inv1
+      music: 0
+      time: 0
+      value: 5
+      signs: 0
+      var: 0
+      ThoType: 1
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 0
+      line: "\u0425\u043E\u0440\u043E\u0448\u043E. \u0412\u0440\u0435\u043C\u044F
+        \u0440\u0430\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u044F!"
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
       investigationName: 
       music: 0
       time: 0
