@@ -8,12 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Daisy
-  m_Shader: {fileID: -6465566751694194690, guid: 9920c1f1781549a46ba081a2a15a16ec, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: -6465566751694194690, guid: 55d33328ab3ba4efca3c7706d97d8ee8, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - BACKFACE_NORMAL_MODE_MIRROR
   - _WINDQUALITY_BEST
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -23,6 +23,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
+        m_Texture: {fileID: 2800000, guid: dd57352e0251b3d4cbb57014310da368, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
         m_Texture: {fileID: 2800000, guid: dd57352e0251b3d4cbb57014310da368, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -119,7 +123,11 @@ Material:
     - BACKFACE_NORMAL_MODE: 1
     - EFFECT_BILLBOARD: 0
     - EFFECT_EXTRA_TEX: 0
-    - _AlphaClipThreshold: 0.33
+    - Space_0: 0
+    - Space_1: 0
+    - Space_2: 0
+    - Space_3: 0
+    - _AlphaClipThreshold: 0.188
     - _BakedMask: 1
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -129,8 +137,12 @@ Material:
     - _DstBlend: 0
     - _Float1: 0.1
     - _GlossMapScale: 1
-    - _Glossiness: 0.2
+    - _Glossiness: 0.423
     - _GlossyReflections: 1
+    - _GustEnabled: 1
+    - _GustFrequency: 0.931
+    - _GustIntensity: 0.033
+    - _GustSpeed: 0.131
     - _Hue: 0
     - _HueVariationKwToggle: 1
     - _IgnoreNormals: 0
@@ -146,9 +158,14 @@ Material:
     - _OcclusionStrength: 1
     - _OldHueVarBehavior: 0
     - _Parallax: 0.02
+    - _PatchesBluriness: 0.2
+    - _PatchesEnabled: 1
+    - _PatchesScale: 0.5
+    - _PatchesThreshold: 0.359
     - _QueueControl: 0
-    - _QueueOffset: 0
+    - _QueueOffset: 7
     - _Saturation: 0
+    - _ShadowStrength: 0.804
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -167,17 +184,29 @@ Material:
     - _VertexNormalStrength: 0.3
     - _VertexPositionMask: 0
     - _WINDQUALITY: 4
+    - _WindDirection: 0
+    - _WindEnabled: 1
+    - _WindFrequency: 1
+    - _WindIntensity: 0.74
+    - _WindNoise: 0
     - _WindQuality: 1
+    - _WindSpeed: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
+    - Color_fa7bfd953c0f468faf964c3a5545c86d: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorBottom: {r: 0.1607843, g: 0.1607843, b: 0.1607843, a: 1}
+    - _ColorTop: {r: 0.66146755, g: 0.6792453, b: 0.59850484, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlossRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _GustColor: {r: 0.9450981, g: 0.8274511, b: 0.7803922, a: 1}
     - _GustHighlightColor: {r: 1, g: 1, b: 1, a: 0}
     - _HueVariationColor: {r: 1, g: 0.5, b: 0, a: 0.2}
     - _LowVegetationStiffness: {r: 0, g: 1, b: 0, a: 0}
     - _OcclusionRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _PatchesColor: {r: 0.30017796, g: 0.5788915, b: 0.5849056, a: 1}
+    - _PatchesOffset: {r: 0, g: 0, b: 0, a: 0}
     - _Shiver: {r: 1, g: 1, b: 0, a: 0}
     - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TranslucentColor: {r: 0.60294116, g: 0.60294116, b: 0.60294116, a: 0}
