@@ -21,56 +21,21 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Hospital_ark_pils
-  m_Shader: {fileID: 4800000, guid: dd71abba2dbe683468cb262da3893f4a, type: 3}
+  m_Shader: {fileID: 4800000, guid: 2a230514c860643f69b6a4d1871d3825, type: 3}
   m_ValidKeywords:
-  - TEXTUREMODULE_ON
-  m_InvalidKeywords:
-  - _AOUV_UV0
-  - _EMISSION
-  - _FRESNELHIGHLIGHTS_ON
-  - _GRADIENTSPACE_LOCAL_SPACE
-  - _GRADSETTINGS_B_USE_GLOBAL
-  - _GRADSETTINGS_D_USE_GLOBAL
-  - _GRADSETTINGS_F_USE_GLOBAL
-  - _GRADSETTINGS_L_USE_GLOBAL
-  - _GRADSETTINGS_R_USE_GLOBAL
-  - _GRADSETTINGS_T_USE_GLOBAL
-  - _LMAPBLENDINGMODE_ADD
-  - _METALLICGLOSSMAP
-  - _METALLICSPECGLOSSMAP
-  - _MK_ALBEDO_MAP
-  - _MK_ARTISTIC_PROJECTION_SCREEN_SPACE
-  - _MK_DETAIL_BLEND_MIX
-  - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
-  - _MK_FRESNEL_HIGHLIGHTS
-  - _MK_HEIGHT_MAP
-  - _MK_LIGHT_CEL
-  - _MK_NORMAL_MAP
-  - _MK_OCCLUSION_MAP
-  - _MK_PARALLAX
-  - _MK_PBS_MAP_0
-  - _MK_RECEIVE_SHADOWS
-  - _MK_SPECULAR_ISOTROPIC
-  - _MK_WRAPPED_DIFFUSE
+  - _DETAILMAPBLENDINGMODE_MULTIPLY
   - _NORMALMAP
-  - _OCCLUSIONMAP
-  - _PARALLAXMAP
-  - _RECEIVESHADOWS_ON
-  - _SHADING_B_VERTEX_COLOR
-  - _SHADING_D_VERTEX_COLOR
-  - _SHADING_F_VERTEXCOLOR
-  - _SHADING_L_VERTEX_COLOR
-  - _SHADING_R_VERTEX_COLOR
-  - _SHADING_T_VERTEX_COLOR
-  - _SHOWTEXTURE_ON
-  - _WRAPPEDLIGHTING_ON
+  - _TEXTUREBLENDINGMODE_MULTIPLY
+  m_InvalidKeywords: []
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     IGNOREPROJECTOR: False
-  disabledShaderPasses: []
+    RenderType: Opaque
+  disabledShaderPasses:
+  - SRPDEFAULTUNLIT
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -80,6 +45,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _AlbedoMap:
         m_Texture: {fileID: 2800000, guid: ae072d358c9aa03428cb774c53d50991, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BakedGIRamp:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -135,6 +104,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GoochRamp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GradientRamp:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -257,6 +230,7 @@ Material:
     - _BlendSrc: 1
     - _Brightness: 1
     - _BumpScale: 1
+    - _CameraDistanceImpact: 0.5
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _ColorCorrectionEnable: 0
@@ -266,6 +240,8 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailBlend: 0
+    - _DetailMapBlendingMode: 0
+    - _DetailMapImpact: 0
     - _DetailMix: 0.5
     - _DetailNormalMapIntensity: 1
     - _DetailNormalMapScale: 1
@@ -283,6 +259,11 @@ Material:
     - _DstBlend: 0
     - _EnvironmentReflections: 2
     - _Fade: 1
+    - _FlatRimEdgeSmoothness: 0.5
+    - _FlatRimLightAlign: 0
+    - _FlatRimSize: 0.5
+    - _FlatSpecularEdgeSmoothness: 0
+    - _FlatSpecularSize: 0.1
     - _FogHeight: 10
     - _FogYStartPos: 0
     - _FresnelHighlights: 1
@@ -296,6 +277,10 @@ Material:
     - _GradSettings_L: 0
     - _GradSettings_R: 0
     - _GradSettings_T: 0
+    - _GradientAngle: 0
+    - _GradientCenterX: 0
+    - _GradientCenterY: 0
+    - _GradientEnabled: 0
     - _GradientHeight_B: 1
     - _GradientHeight_D: 1
     - _GradientHeight_F: 1
@@ -303,6 +288,7 @@ Material:
     - _GradientHeight_L: 1
     - _GradientHeight_R: 1
     - _GradientHeight_T: 1
+    - _GradientSize: 10
     - _GradientSpace: 1
     - _HFogEnable: 0
     - _HatchingMapScale: 1
@@ -316,12 +302,15 @@ Material:
     - _Light: 1
     - _LightBands: 4
     - _LightBandsScale: 0.5
+    - _LightContribution: 1
     - _LightThreshold: 0.5
     - _LightTransmission: 0
     - _LightTransmissionDistortion: 0.25
     - _LightTransmissionIntensity: 1
     - _LightTransmissionSmoothness: 0.5
     - _LightTransmissionThresholdOffset: 0.25
+    - _LightmapDirectionPitch: 0
+    - _LightmapDirectionYaw: 0
     - _LmapBlendingMode: 0
     - _LmapEnable: 0
     - _MainTexturePower: 0
@@ -334,10 +323,17 @@ Material:
     - _OtherSettings: 0
     - _Outline: 3
     - _OutlineData: 0
+    - _OutlineDepthOffset: 0
+    - _OutlineEnabled: 0
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25
     - _OutlineNoise: 0
+    - _OutlineScale: 1
     - _OutlineSize: 5
+    - _OutlineWidth: 1
+    - _OverrideBakedGi: 0
+    - _OverrideLightAttenuation: 0
+    - _OverrideLightmapDir: 0
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _RealtimeShadow: 0
@@ -346,6 +342,7 @@ Material:
     - _RenderPriority: 0
     - _Rim: 0
     - _RimEnable: 0
+    - _RimEnabled: 0
     - _RimPower: 1
     - _RimSize: 1
     - _RimSmoothness: 0.5
@@ -359,6 +356,7 @@ Material:
     - _Rotation_T: 0
     - _Roughness: 0.5
     - _Saturation: 1
+    - _SelfShadingSize: 0
     - _Shading_B: 0
     - _Shading_D: 0
     - _Shading_F: 0
@@ -385,6 +383,7 @@ Material:
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _Specular: 1
+    - _SpecularEnabled: 0
     - _SpecularHighlights: 1
     - _SpecularIntensity: 1
     - _SpecularSmoothness: 0
@@ -400,12 +399,16 @@ Material:
     - _StencilZFail: 0
     - _StylizeTab: 0
     - _Surface: 0
+    - _TextureBlendingMode: 0
+    - _TextureImpact: 1
     - _ThresholdMapScale: 1
     - _UVSec: 0
     - _UnityFogEnable: 0
+    - _UnityShadowOcclusion: 0
     - _VertexAnimation: 0
     - _VertexAnimationIntensity: 0.05
     - _VertexAnimationStutter: 0
+    - _VertexColorsEnabled: 0
     - _Workflow: 0
     - _WorkflowMode: 1
     - _WrappedLighting: 1
@@ -430,10 +433,14 @@ Material:
     - _Color2_L: {r: 1, g: 1, b: 1, a: 1}
     - _Color2_R: {r: 1, g: 1, b: 1, a: 1}
     - _Color2_T: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _Color_Fog: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _GizmoPosition_B: {r: 0, g: 0, b: 10, a: 10}
     - _GizmoPosition_D: {r: 0, g: 0, b: 10, a: 10}
     - _GizmoPosition_F: {r: 0, g: 0, b: 10, a: 10}
@@ -451,7 +458,9 @@ Material:
     - _GradientYStartPos_R: {r: 0, g: 0, b: 0, a: 0}
     - _IridescenceColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _LMColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LightAttenuation: {r: 0, g: 1, b: 0, a: 0}
     - _LightTransmissionColor: {r: 1, g: 0.65, b: 0, a: 1}
+    - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimBrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}

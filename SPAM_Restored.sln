@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{d28b0b2b-a8e1-e4cb-4028-dff0250d3700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DELTation.ToonShader", "DELTation.ToonShader.csproj", "{cc969b71-59e4-88c4-0fb4-cd278ad52f94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MK.Toon", "MK.Toon.csproj", "{04178340-07cc-6d66-81f6-aa688ffc8a21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MK.Toon.Editor", "MK.Toon.Editor.csproj", "{bc22e195-a6e0-e8ab-f999-140b9478075b}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{35f5f11b-4d56-00e1-3782-633a331527c0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MK.RampCreator", "MK.RampCreator.csproj", "{4a7d1826-4cdd-3c96-9a46-9eafdf0f454c}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DELTation.ToonShader.Editor", "DELTation.ToonShader.Editor.csproj", "{093416dd-f42a-cccb-372c-ee4464b662af}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MK.MKTextureChannelPacker", "MK.MKTextureChannelPacker.csproj", "{d9c58bd6-63e3-1ae5-9075-31bf2d973138}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MK.MeshUtility", "MK.MeshUtility.csproj", "{1316a8cb-2c2c-2f79-61fd-efcccbfddcbe}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{d28b0b2b-a8e1-e4cb-4028-dff0250d3700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{d28b0b2b-a8e1-e4cb-4028-dff0250d3700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{cc969b71-59e4-88c4-0fb4-cd278ad52f94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{cc969b71-59e4-88c4-0fb4-cd278ad52f94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04178340-07cc-6d66-81f6-aa688ffc8a21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04178340-07cc-6d66-81f6-aa688ffc8a21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{bc22e195-a6e0-e8ab-f999-140b9478075b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{bc22e195-a6e0-e8ab-f999-140b9478075b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35f5f11b-4d56-00e1-3782-633a331527c0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35f5f11b-4d56-00e1-3782-633a331527c0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4a7d1826-4cdd-3c96-9a46-9eafdf0f454c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4a7d1826-4cdd-3c96-9a46-9eafdf0f454c}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{093416dd-f42a-cccb-372c-ee4464b662af}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{093416dd-f42a-cccb-372c-ee4464b662af}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{d9c58bd6-63e3-1ae5-9075-31bf2d973138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{d9c58bd6-63e3-1ae5-9075-31bf2d973138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1316a8cb-2c2c-2f79-61fd-efcccbfddcbe}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1316a8cb-2c2c-2f79-61fd-efcccbfddcbe}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

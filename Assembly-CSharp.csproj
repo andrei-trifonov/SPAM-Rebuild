@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5afac07b-1ec8-dfbe-3c3e-cd3c9f259388}</ProjectGuid>
+    <ProjectGuid>{d28b0b2b-a8e1-e4cb-4028-dff0250d3700}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -44,6 +44,7 @@
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\RequiredAttribute.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
      <Compile Include="Assets\living birds\scripts\lb_CrowProximity.cs" />
+     <Compile Include="Assets\ToonWater\Scripts\Core\ToonWaterFloatObject.cs" />
      <Compile Include="Assets\OLD\PreferencesController.cs" />
      <Compile Include="Assets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
@@ -62,6 +63,7 @@
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
      <Compile Include="Assets\InvestigationGame\InvestigationController.cs" />
      <Compile Include="Assets\Resources\Quibli\Scripts\Mesh Generators\CurveRenderer.cs" />
+     <Compile Include="Assets\ToonWater\Scripts\Core\ToonWaterBall.cs" />
      <Compile Include="Assets\Resources\Quibli\Post Process\Scripts\CompoundPass.cs" />
      <Compile Include="Assets\OLD\Core.cs" />
      <Compile Include="Assets\InvestigationGame\Thought.cs" />
@@ -74,6 +76,7 @@
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
      <Compile Include="Assets\ChoiseBox.cs" />
      <Compile Include="Assets\living birds\scripts\lb_BirdController.cs" />
+     <Compile Include="Assets\ToonWater\Scripts\SmoothCameraOrbit.cs" />
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\TagAttribute.cs" />
      <Compile Include="Assets\Resources\Quibli\Post Process\Scripts\CompoundRenderer.cs" />
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\EnableIfAttribute.cs" />
@@ -98,8 +101,9 @@
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\FoldoutAttribute.cs" />
      <Compile Include="Assets\Resources\Quibli\Scripts\Mesh Generators\FoliageGenerator.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\LabelAttribute.cs" />
+     <Compile Include="Assets\ToonWater\Scripts\Core\ToonWater.cs" />
      <Compile Include="Assets\LogElement.cs" />
+     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\LabelAttribute.cs" />
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\ShowIfAttributeBase.cs" />
      <Compile Include="Assets\SimpleLabel.cs" />
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\AllowNestingAttribute.cs" />
@@ -115,6 +119,7 @@
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\ShowAssetPreviewAttribute.cs" />
      <Compile Include="Assets\Assets\LoadButton.cs" />
      <Compile Include="Assets\Epic Toon FX\Scripts\ETFXRotation.cs" />
+     <Compile Include="Assets\ToonWater\Scripts\SmoothFollowCamBump.cs" />
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\MinValueAttribute.cs" />
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\DisableIfAttribute.cs" />
      <Compile Include="Assets\OLD\Choose.cs" />
@@ -137,6 +142,7 @@
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\Utility\EColor.cs" />
      <Compile Include="Assets\OLD\FirstLaunchSettings.cs" />
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\InputAxisAttribute.cs" />
+     <Compile Include="Assets\ToonWater\Scripts\Core\ToonWaterDuck.cs" />
      <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\EnableIfAttributeBase.cs" />
      <Compile Include="Assets\Resources\Quibli\Post Process\Effects\Scripts\StylizedDetail.cs" />
      <Compile Include="Assets\OLD\AudioFadeOut.cs" />
@@ -176,6 +182,7 @@
      <None Include="Assets\Resources\Quibli\Post Process\Effects\Resources\StylizedDetail.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Resources\all_assets.txt" />
+     <None Include="Assets\ToonWater\ToonWater - Readme.txt" />
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\Includes\CTI URP Billboard.hlsl" />
      <None Include="Assets\Resources\Quibli\Post Process\Effects\Resources\ColorGrading.shader" />
      <None Include="Assets\Minimalist\Minimalist V2.7.2 (Readme).txt" />
@@ -189,11 +196,14 @@
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\CTI URP Bark Array.shader" />
      <None Include="Assets\Epic Toon FX\Prefabs\Interactive\Interactive FX.txt" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\ToonWater\Shaders\ToonWater - Mobile-Particle-Alpha.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\Open World Nature\Plugins\com.VisualDesignCafe.PackageManager\VisualDesignCafe.Editor.Community.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\ToonWater\Shaders\Toony-Basic.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\ToonWater\Shaders\ToonWater - shader.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\CTI URP Billboard.shader" />
      <None Include="Assets\Oak Trees Package\Oak Trees Version 2.0\CTI Runtime Components\Shaders\CTI_LOD_Bark_301.shader" />
@@ -470,49 +480,49 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="VisualDesignCafe.Packages">
-     <HintPath>D:\SPAM_Rebuild\Assets\Open World Nature\Plugins\com.VisualDesignCafe.PackageManager\VisualDesignCafe.Packages.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Assets\Open World Nature\Plugins\com.VisualDesignCafe.PackageManager\VisualDesignCafe.Packages.dll</HintPath>
      </Reference>
      <Reference Include="VisualDesignCafe.Editor.Events">
-     <HintPath>D:\SPAM_Rebuild\Assets\Open World Nature\Plugins\com.VisualDesignCafe.Assemblies\VisualDesignCafe.Editor.Events.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Assets\Open World Nature\Plugins\com.VisualDesignCafe.Assemblies\VisualDesignCafe.Editor.Events.dll</HintPath>
      </Reference>
      <Reference Include="VisualDesignCafe.Editor.OpenWorldNature">
-     <HintPath>D:\SPAM_Rebuild\Assets\Open World Nature\Plugins\com.VisualDesignCafe.OpenWorldNature\VisualDesignCafe.Editor.OpenWorldNature.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Assets\Open World Nature\Plugins\com.VisualDesignCafe.OpenWorldNature\VisualDesignCafe.Editor.OpenWorldNature.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>D:\SPAM_Rebuild\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>D:\SPAM_Rebuild\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="VisualDesignCafe.Nature">
-     <HintPath>D:\SPAM_Rebuild\Assets\Open World Nature\Plugins\com.VisualDesignCafe.OpenWorldNature\VisualDesignCafe.Nature.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Assets\Open World Nature\Plugins\com.VisualDesignCafe.OpenWorldNature\VisualDesignCafe.Nature.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>D:\SPAM_Rebuild\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>D:\SPAM_Rebuild\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="VisualDesignCafe.Editor">
-     <HintPath>D:\SPAM_Rebuild\Assets\Open World Nature\Plugins\com.VisualDesignCafe.Assemblies\VisualDesignCafe.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Assets\Open World Nature\Plugins\com.VisualDesignCafe.Assemblies\VisualDesignCafe.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>D:\SPAM_Rebuild\Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="VisualDesignCafe.Editor.PackageManager">
-     <HintPath>D:\SPAM_Rebuild\Assets\Open World Nature\Plugins\com.VisualDesignCafe.PackageManager\VisualDesignCafe.Editor.PackageManager.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Assets\Open World Nature\Plugins\com.VisualDesignCafe.PackageManager\VisualDesignCafe.Editor.PackageManager.dll</HintPath>
      </Reference>
      <Reference Include="VisualDesignCafe.Editor.Community">
-     <HintPath>D:\SPAM_Rebuild\Assets\Open World Nature\Plugins\com.VisualDesignCafe.PackageManager\VisualDesignCafe.Editor.Community.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Assets\Open World Nature\Plugins\com.VisualDesignCafe.PackageManager\VisualDesignCafe.Editor.Community.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>D:\SPAM_Rebuild\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="VisualDesignCafe.Nature.Editor">
-     <HintPath>D:\SPAM_Rebuild\Assets\Open World Nature\Plugins\com.VisualDesignCafe.OpenWorldNature\VisualDesignCafe.Nature.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Assets\Open World Nature\Plugins\com.VisualDesignCafe.OpenWorldNature\VisualDesignCafe.Nature.Editor.dll</HintPath>
      </Reference>
      <Reference Include="VisualDesignCafe.Editor.Web">
-     <HintPath>D:\SPAM_Rebuild\Assets\Open World Nature\Plugins\com.VisualDesignCafe.Assemblies\VisualDesignCafe.Editor.Web.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Assets\Open World Nature\Plugins\com.VisualDesignCafe.Assemblies\VisualDesignCafe.Editor.Web.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.0f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -887,213 +897,213 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.0f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEngineBridge.001">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.CacheServer">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
      </Reference>
      <Reference Include="PsdPlugin">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Addressables">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Searcher.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Path.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Runtime">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Addressables.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="PPv2URPConverters">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Psdimporter.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ResourceManager">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Postprocessing.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Postprocessing.Runtime">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Runtime">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Runtime">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Runtime">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>D:\SPAM_Rebuild\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="MK.Toon.Editor.csproj">
-      <Project>{f6648e3c-c49a-5431-cbfa-2a261b0b9b0f}</Project>
+      <Project>{bc22e195-a6e0-e8ab-f999-140b9478075b}</Project>
       <Name>MK.Toon.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="DELTation.ToonShader.csproj">
-      <Project>{8ab3955e-237b-1e8f-e99c-06566c0c4566}</Project>
+      <Project>{cc969b71-59e4-88c4-0fb4-cd278ad52f94}</Project>
       <Name>DELTation.ToonShader</Name>
     </ProjectReference>
     <ProjectReference Include="MK.RampCreator.csproj">
-      <Project>{206c6a42-aaac-982d-41b6-bd3b6c19aa31}</Project>
+      <Project>{4a7d1826-4cdd-3c96-9a46-9eafdf0f454c}</Project>
       <Name>MK.RampCreator</Name>
     </ProjectReference>
     <ProjectReference Include="MK.Toon.csproj">
-      <Project>{3b11720d-318a-a776-590e-1990b5be1e98}</Project>
+      <Project>{04178340-07cc-6d66-81f6-aa688ffc8a21}</Project>
       <Name>MK.Toon</Name>
     </ProjectReference>
     <ProjectReference Include="MK.MeshUtility.csproj">
-      <Project>{d57193f0-4240-7cf2-be76-7cf7652c2bb4}</Project>
+      <Project>{1316a8cb-2c2c-2f79-61fd-efcccbfddcbe}</Project>
       <Name>MK.MeshUtility</Name>
     </ProjectReference>
     <ProjectReference Include="MK.MKTextureChannelPacker.csproj">
-      <Project>{87306f43-a3f0-3c23-2eb1-19fa5e305898}</Project>
+      <Project>{d9c58bd6-63e3-1ae5-9075-31bf2d973138}</Project>
       <Name>MK.MKTextureChannelPacker</Name>
     </ProjectReference>
     <ProjectReference Include="DELTation.ToonShader.Editor.csproj">
-      <Project>{94817247-a99f-9a50-d840-fb19e1e1bdc9}</Project>
+      <Project>{093416dd-f42a-cccb-372c-ee4464b662af}</Project>
       <Name>DELTation.ToonShader.Editor</Name>
     </ProjectReference>
   </ItemGroup>
