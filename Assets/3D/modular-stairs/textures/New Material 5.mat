@@ -25,7 +25,7 @@ Material:
   m_ValidKeywords:
   - DR_LIGHT_ATTENUATION
   - DR_OUTLINE_ON
-  - _DETAILMAPBLENDINGMODE_ADD
+  - _DETAILMAPBLENDINGMODE_MULTIPLY
   - _NORMALMAP
   - _TEXTUREBLENDINGMODE_MULTIPLY
   m_InvalidKeywords: []
@@ -118,8 +118,8 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
-    - _DetailMapBlendingMode: 1
-    - _DetailMapImpact: 0.35
+    - _DetailMapBlendingMode: 0
+    - _DetailMapImpact: 0.744
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
@@ -131,11 +131,11 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _GradientAngle: 0
-    - _GradientCenterX: 0
-    - _GradientCenterY: 0
+    - _GradientAngle: 260
+    - _GradientCenterX: -10.63
+    - _GradientCenterY: -1.49
     - _GradientEnabled: 0
-    - _GradientSize: 10
+    - _GradientSize: 33.48
     - _LightContribution: 0
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
@@ -168,7 +168,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _ColorGradient: {r: 0, g: 0, b: 0, a: 0.85056}
     - _DetailMapColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
