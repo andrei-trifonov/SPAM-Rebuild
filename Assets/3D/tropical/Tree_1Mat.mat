@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Tree_1Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 28375c8afd8fa4900b90e1d5a4b6d88c, type: 3}
+  m_ValidKeywords:
+  - BILLBOARD_ROTATION_NOTHING
+  - _FRESNEL
+  - _USE_FILL_TEXTURE
+  - _WIND
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Fill_Texture:
+        m_Texture: {fileID: 2800000, guid: 033a195c3dd33d74cae2777400ce8d5e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Shape_Texture:
+        m_Texture: {fileID: 2800000, guid: e2774af1302494741bc741a541fd3a5f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: e2774af1302494741bc741a541fd3a5f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e2774af1302494741bc741a541fd3a5f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadingGradientTexture:
+        m_Texture: {fileID: 44490729820564218}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - BILLBOARD_FACE_CAMERA_POSITION: 0
+    - BILLBOARD_ROTATION: 0
+    - Billboard_Scale: 0.267
+    - Clip_Threshold: 0.5
+    - Fill_Impact: 0.793
+    - Fill_Scale: 1
+    - Fresnel_Power: 1
+    - Fresnel_Sharpness: 0.776
+    - Offset_Along_Normal: 0
+    - Wind: 0
+    - Wind_Speed: 0.047
+    - Wind_Strength: 0.053
+    - Wind_Turbulence: 0.21
+    - _AlphaClip: 0
+    - _Blend: 0
+    - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _FRESNEL: 1
+    - _FresnelToggleUpgrade: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _ShadowStrength: 1
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _USE_FILL_TEXTURE: 1
+    - _UVSec: 0
+    - _WIND: 1
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - Fresnel_Color: {r: 0.0936988, g: 0.4433962, b: 0.3400039, a: 0.5019608}
+    - Wind_Direction: {r: 1, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_BuildTextureStacks: []
+--- !u!28 &44490729820564218
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: z__ShadingGradientTextureTex{"mode":0,"colorKeys":[{"color":{"r":0.14509804546833039,"g":0.26274511218070986,"b":0.2081461101770401,"a":1.0},"time":0.2882429361343384},{"color":{"r":0.33173447847366335,"g":0.7075471878051758,"b":0.2629939317703247,"a":1.0},"time":0.5794155597686768},{"color":{"r":0.26464927196502688,"g":0.7924528121948242,"b":0.49578630924224856,"a":1.0},"time":0.7911803126335144},{"color":{"r":0.0,"g":0.5943396091461182,"b":0.2508763074874878,"a":1.0},"time":0.9647058844566345}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 256
+  m_Height: 1
+  m_CompleteImageSize: 1024
+  m_MipsStripped: 0
+  m_TextureFormat: 5
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  m_PlatformBlob: 
+  image data: 1024
+  _typelessdata: ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254335ff254435ff264535ff274736ff274836ff284a36ff294b36ff294d36ff2a4e36ff2a5037ff2b5237ff2c5337ff2c5537ff2d5637ff2e5838ff2e5938ff2f5b38ff305c38ff305e38ff315f39ff316139ff326239ff336439ff336539ff34673aff35683aff356a3aff366b3aff376d3aff376f3aff38703bff39723bff39733bff3a753bff3a763bff3b783cff3c793cff3c7b3cff3d7c3cff3e7e3cff3e7f3dff3f813dff40823dff40843dff41853dff42873dff42893eff438a3eff438c3eff448d3eff458f3eff45903fff46923fff47933fff47953fff48963fff499840ff499940ff4a9b40ff4a9c40ff4b9e40ff4c9f40ff4ca141ff4da241ff4ea441ff4ea641ff4fa741ff50a942ff50aa42ff51ac42ff52ad42ff52af42ff53b043ff53b243ff54b343ff55b543ff54b544ff54b546ff54b647ff53b648ff53b749ff53b74aff52b74bff52b84cff52b84dff51b94eff51b94fff51b951ff50ba52ff50ba53ff50bb54ff4fbb55ff4fbb56ff4fbc57ff4ebc58ff4ebd59ff4ebd5aff4ebd5cff4dbe5dff4dbe5eff4dbf5fff4cbf60ff4cbf61ff4cc062ff4bc063ff4bc164ff4bc165ff4ac167ff4ac268ff4ac269ff49c36aff49c36bff49c36cff48c46dff48c46eff48c56fff48c570ff47c572ff47c673ff47c674ff46c775ff46c776ff46c777ff45c878ff45c879ff45c97aff44c97bff44c97dff44ca7eff43ca7eff42c97dff40c87bff3fc67aff3dc578ff3bc477ff3ac376ff38c274ff37c173ff35c071ff34be70ff32bd6fff31bc6dff2fbb6cff2eba6aff2cb969ff2bb867ff29b666ff28b565ff26b463ff25b362ff23b260ff22b15fff20b05eff1fae5cff1dad5bff1bac59ff1aab58ff18aa57ff17a955ff15a854ff14a652ff12a551ff11a44fff0fa34eff0ea24dff0ca14bff0ba04aff099e48ff089d47ff069c46ff059b44ff039a43ff029941ff009840ff009840ff009840ff009840ff009840ff009840ff009840ff009840ff009840ff009840
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
+--- !u!114 &9207542780023150135
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5

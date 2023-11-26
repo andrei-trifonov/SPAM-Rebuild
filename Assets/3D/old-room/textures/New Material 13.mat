@@ -23,10 +23,11 @@ Material:
   m_Name: New Material 13
   m_Shader: {fileID: 4800000, guid: 2a230514c860643f69b6a4d1871d3825, type: 3}
   m_ValidKeywords:
+  - DR_GRADIENT_ON
   - DR_LIGHT_ATTENUATION
   - DR_OUTLINE_ON
+  - DR_RIM_ON
   - _DETAILMAPBLENDINGMODE_MULTIPLY
-  - _NORMALMAP
   - _TEXTUREBLENDINGMODE_MULTIPLY
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -48,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0.43, y: 0.11}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 28e760acf0e02f241a548f34a0e6bfed, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -124,17 +125,17 @@ Material:
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _FlatRimEdgeSmoothness: 0.5
-    - _FlatRimLightAlign: 0
+    - _FlatRimLightAlign: 0.272
     - _FlatRimSize: 0.5
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _GradientAngle: 0
+    - _GradientAngle: 360
     - _GradientCenterX: 0
-    - _GradientCenterY: 0
-    - _GradientEnabled: 0
+    - _GradientCenterY: -1.6
+    - _GradientEnabled: 1
     - _GradientSize: 10
     - _LightContribution: 0.741
     - _LightmapDirectionPitch: 0
@@ -151,7 +152,7 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimEnabled: 0
+    - _RimEnabled: 1
     - _SelfShadingSize: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -168,14 +169,14 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _ColorGradient: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0.85056}
     - _DetailMapColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _FlatRimColor: {r: 0.52116406, g: 0.61623096, b: 0.6320754, a: 1}
     - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _LightAttenuation: {r: 0, g: 1, b: 0, a: 0}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
+    - _ShadowColor: {r: 0.16037738, g: 0.1564436, b: 0.1564436, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []

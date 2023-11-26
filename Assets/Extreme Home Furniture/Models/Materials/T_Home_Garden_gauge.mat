@@ -10,6 +10,7 @@ Material:
   m_Name: T_Home_Garden_gauge
   m_Shader: {fileID: 4800000, guid: 2a230514c860643f69b6a4d1871d3825, type: 3}
   m_ValidKeywords:
+  - DR_RIM_ON
   - _DETAILMAPBLENDINGMODE_MULTIPLY
   - _TEXTUREBLENDINGMODE_MULTIPLY
   m_InvalidKeywords: []
@@ -214,9 +215,9 @@ Material:
     - _DrawnMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 2
-    - _FlatRimEdgeSmoothness: 0.5
-    - _FlatRimLightAlign: 0
-    - _FlatRimSize: 0.5
+    - _FlatRimEdgeSmoothness: 0.415
+    - _FlatRimLightAlign: 0.559
+    - _FlatRimSize: 0.272
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
     - _FresnelHighlights: 1
@@ -269,7 +270,7 @@ Material:
     - _RenderFace: 2
     - _RenderPriority: 0
     - _Rim: 0
-    - _RimEnabled: 0
+    - _RimEnabled: 1
     - _RimSize: 1
     - _RimSmoothness: 0.5
     - _RimThresholdOffset: 0.25
@@ -319,7 +320,7 @@ Material:
     - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _FlatRimColor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0.85056}
     - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _GoochBrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _GoochDarkColor: {r: 0, g: 0, b: 0, a: 1}
