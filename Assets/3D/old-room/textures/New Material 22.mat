@@ -25,6 +25,7 @@ Material:
   m_ValidKeywords:
   - DR_LIGHT_ATTENUATION
   - DR_OUTLINE_ON
+  - DR_SPECULAR_ON
   - _DETAILMAPBLENDINGMODE_ADD
   - _NORMALMAP
   - _TEXTUREBLENDINGMODE_MULTIPLY
@@ -126,8 +127,8 @@ Material:
     - _FlatRimEdgeSmoothness: 0.5
     - _FlatRimLightAlign: 0
     - _FlatRimSize: 0.5
-    - _FlatSpecularEdgeSmoothness: 0
-    - _FlatSpecularSize: 0.1
+    - _FlatSpecularEdgeSmoothness: 0.831
+    - _FlatSpecularSize: 0.423
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -155,7 +156,7 @@ Material:
     - _SelfShadingSize: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
-    - _SpecularEnabled: 0
+    - _SpecularEnabled: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0

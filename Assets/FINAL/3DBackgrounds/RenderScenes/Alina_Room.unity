@@ -1310,7 +1310,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 0.706
-  sharedProfile: {fileID: 11400000, guid: 06049e2a12b454408b1035a38bc32873, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 732e3b55dd71b2f498f43623d51db4c6, type: 2}
 --- !u!95 &519420037
 Animator:
   serializedVersion: 4
