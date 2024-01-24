@@ -13,7 +13,7 @@ Material:
   - DR_GRADIENT_ON
   - DR_OUTLINE_ON
   - DR_VERTEX_COLORS_ON
-  - _DETAILMAPBLENDINGMODE_ADD
+  - _DETAILMAPBLENDINGMODE_MULTIPLY
   - _NORMALMAP
   - _TEXTUREBLENDINGMODE_ADD
   m_InvalidKeywords: []
@@ -106,8 +106,8 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
-    - _DetailMapBlendingMode: 1
-    - _DetailMapImpact: 1
+    - _DetailMapBlendingMode: 0
+    - _DetailMapImpact: 0.457
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1

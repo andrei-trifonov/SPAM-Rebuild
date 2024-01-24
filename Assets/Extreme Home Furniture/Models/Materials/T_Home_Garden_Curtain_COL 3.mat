@@ -431,13 +431,13 @@ Material:
     - _ZTest: 4
     - _ZWrite: 0
     m_Colors:
-    - Color_fa7bfd953c0f468faf964c3a5545c86d: {r: 0.19010323, g: 0.3118264, b: 0.3773585, a: 0.94509804}
+    - Color_fa7bfd953c0f468faf964c3a5545c86d: {r: 0.18668565, g: 0.21386898, b: 0.2264151, a: 0.94509804}
     - _AlbedoColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorBottom: {r: 1, g: 0.7877302, b: 0, a: 0.16862746}
+    - _ColorBottom: {r: 0, g: 0, b: 0, a: 0.16862746}
     - _ColorGradient: {r: 0, g: 0, b: 0, a: 0.85056}
-    - _ColorTop: {r: 1, g: 0.7900747, b: 0, a: 0.11372549}
+    - _ColorTop: {r: 0, g: 0, b: 0, a: 0.11372549}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _DetailMapColor: {r: 1, g: 1, b: 1, a: 0.105882354}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
@@ -446,7 +446,7 @@ Material:
     - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _GoochBrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _GoochDarkColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GustColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GustColor: {r: 0, g: 0, b: 0, a: 1}
     - _IridescenceColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _LightAttenuation: {r: 0, g: 1, b: 0, a: 0}
     - _LightTransmissionColor: {r: 1, g: 0.65, b: 0, a: 1}

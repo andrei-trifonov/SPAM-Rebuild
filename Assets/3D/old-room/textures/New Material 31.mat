@@ -120,7 +120,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailMapBlendingMode: 0
-    - _DetailMapImpact: 0.817
+    - _DetailMapImpact: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
@@ -169,10 +169,10 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorGradient: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0.85056}
-    - _DetailMapColor: {r: 0.5, g: 0.40436637, b: 0.13396224, a: 1}
+    - _ColorGradient: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 0.85056}
+    - _DetailMapColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FlatRimColor: {r: 0.36909932, g: 0.44086865, b: 0.4528302, a: 1}
+    - _FlatRimColor: {r: 0.93773586, g: 0.9911838, b: 1, a: 1}
     - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _LightAttenuation: {r: 0, g: 1, b: 0, a: 0}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
