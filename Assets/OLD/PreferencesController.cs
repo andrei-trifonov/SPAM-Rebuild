@@ -15,26 +15,28 @@ public class PreferencesController : MonoBehaviour
     public bool music;
     public bool text;
     public bool sound;
+    public bool scene;
 
-    private void Start()
+    private void SetSettings()
     {
-        valueSlider.value = PlayerPrefs.GetFloat(playerPrefsValue);
         if (music)
             m_Core.SetMusicSettings(valueSlider.value);
         if (sound)
             m_Core.SetSoundSettings(valueSlider.value);
+        if (scene)
+            m_Core.SetSceneAudioSettings(valueSlider.value);
         if (text)
             m_Core.SetTextDelay(valueSlider.value);
+    }
+    private void Start()
+    {
+        valueSlider.value = PlayerPrefs.GetFloat(playerPrefsValue);
+        SetSettings();
     }
 
     public void OnValueChanged()
     {
         PlayerPrefs.SetFloat(playerPrefsValue, valueSlider.value);
-        if (music)
-            m_Core.SetMusicSettings(valueSlider.value);
-        if (sound)
-            m_Core.SetSoundSettings (valueSlider.value);
-        if (text)
-            m_Core.SetTextDelay(valueSlider.value);
+        SetSettings();
     }
 }

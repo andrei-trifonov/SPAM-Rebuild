@@ -72,7 +72,8 @@ public static class GDB
         KirRoom,
         SonyaHouse,
         SonyaRoom,
-        MishaHouse
+        MishaHouse,
+        BGTemp
     }
     public enum Fonts
     {

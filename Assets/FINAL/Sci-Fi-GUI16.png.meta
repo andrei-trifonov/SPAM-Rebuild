@@ -161,12 +161,12 @@ TextureImporter:
       name: Sci-Fi-GUI16_2
       rect:
         serializedVersion: 2
-        x: 1085
-        y: 397
-        width: 126
-        height: 93
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1102
+        y: 408
+        width: 87
+        height: 87
+      alignment: 9
+      pivot: {x: 0.5074505, y: 0.5713971}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -292,7 +292,7 @@ TextureImporter:
         width: 285
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -313,7 +313,7 @@ TextureImporter:
         width: 118
         height: 88
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -334,7 +334,7 @@ TextureImporter:
         width: 124
         height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -342,6 +342,27 @@ TextureImporter:
       bones: []
       spriteID: 92a14143b3ad61349b380672e9af2e32
       internalID: 1188529597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_11
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 249
+        width: 326
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aded725b72616941bffee9f282aac29
+      internalID: -947421825
       vertices: []
       indices: 
       edges: []
@@ -362,6 +383,7 @@ TextureImporter:
       Sci-Fi-GUI16_6: -533337814
       Sci-Fi-GUI16_3: 700212435
       Sci-Fi-GUI16_5: 520282902
+      Sci-Fi-GUI16_11: -947421825
       Sci-Fi-GUI16_4: 684148176
       Sci-Fi-GUI16_8: -815258066
       Sci-Fi-GUI16_10: 1188529597

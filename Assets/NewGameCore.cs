@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEditor.Searcher;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
+using UnityEngine.Video;
+using Random = UnityEngine.Random;
+
 [System.Serializable]
 public class m_Actor{
     public GameObject obj;
@@ -17,11 +21,12 @@ public class m_Actor{
 public class NewGameCore : MonoBehaviour
 {
     [SerializeField] private Canvas textCanvas;
+    private Animator textCanvasAnimator;
     [SerializeField] private GameObject newThoughtLabel;
     [SerializeField] private TextMeshProUGUI textAuthor;
     [SerializeField] private TextMeshProUGUI textContent;
     [SerializeField] private Animator Camera;
-
+    
     [SerializeField] private Dialogue scenarioComposer;
     private List<LabelSample> scenario;
 
@@ -42,27 +47,34 @@ public class NewGameCore : MonoBehaviour
     private Coroutine lMcoroutine;
     private bool loadingSound;
     private Coroutine lScoroutine;
-
+    private Coroutine BSLMCoroutine; 
+    private Coroutine menuCoroutine; 
     [SerializeField] private LogComposer Log;
     
     private List<GameObject> choiseBoxes = new List<GameObject>();
     [SerializeField] private GameObject choiseBox;
     [SerializeField] private LayoutGroup choiseGroup;
+    [SerializeField] private GameObject menuTimerSlider;
+    private bool choiseRoulette;
+    
     [SerializeField] private SpriteRenderer CG;
-    private GameObject BG;
+    [SerializeField] private VideoPlayer BG;
+    private VideoClip clipBG;
 
     private AudioSource fadeInMusic;
     private AudioSource fadeOutMusic;
     [SerializeField] GameObject musicPlayer;
-
+    [SerializeField] private AudioSource sceneAudioPlayer;
     [SerializeField] private AudioSource soundPlayer;
-    
-    
+
+    [SerializeField] private GameObject saveLoadMarker;
+
     private List<m_Actor> actorsOnScene = new List<m_Actor>();
     
    
     private bool loading;
-
+    private bool hideText;
+    
     string lastBG="";
     string lastMusic="";
     string lastCG = "";
@@ -71,9 +83,15 @@ public class NewGameCore : MonoBehaviour
    
     public List<int> CoroutinesWorking;
     int cid;
+
+    public void SetTextMarker(bool state)
+    {   
+        textCanvasAnimator.SetBool("Ready", !state);
+    }
     public void EnableText()
     {
-        textCanvas.GetComponent<Animator>().SetBool("Hide", !textCanvas.GetComponent<Animator>().GetBool("Hide"));
+        hideText = !textCanvasAnimator.GetBool("Hide");
+        textCanvasAnimator.SetBool("Hide", hideText);
     }
     public void SetTextDelay(float speed)
     {
@@ -92,9 +110,13 @@ public class NewGameCore : MonoBehaviour
     {
         soundPlayer.volume = value;
     }
-
+    public void SetSceneAudioSettings(float value)
+    {
+        sceneAudioPlayer.volume = value;
+    }
     private void Start()
     {
+        textCanvasAnimator = textCanvas.GetComponent<Animator>();
         scenario = scenarioComposer.Labels;
     }
     public void ClearSprites()
@@ -105,6 +127,22 @@ public class NewGameCore : MonoBehaviour
             catch { }
         }
         actorsOnScene.Clear();
+    }
+
+    void BlinkSLMarker(int state)
+    {
+        try { StopCoroutine(BSLMCoroutine); } catch { }
+        BSLMCoroutine = StartCoroutine(BlinkSLMarkerCoroutine(state));
+    }
+
+    IEnumerator BlinkSLMarkerCoroutine(int state)
+    {
+        saveLoadMarker.SetActive(true);
+        saveLoadMarker.transform.GetChild(state).gameObject.SetActive(true);
+        yield return new WaitForSeconds(2.5f);
+        saveLoadMarker.SetActive(false);
+        saveLoadMarker.transform.GetChild(0).gameObject.SetActive(false);
+        saveLoadMarker.transform.GetChild(1).gameObject.SetActive(false);
     }
     public void Load(string savenum)
     {
@@ -117,9 +155,12 @@ public class NewGameCore : MonoBehaviour
 
             ClearSprites();
             CG.enabled = false;
-            try { Destroy(BG); }
-            catch { }
-
+            ClearBG();
+                
+            
+            ApplyTextEffects(GDB.Fonts.Regular);
+            textContent.text = "";
+            textAuthor.text = "";
 
             //Load music
             Item item = new Item();
@@ -197,17 +238,20 @@ public class NewGameCore : MonoBehaviour
             if ( PlayerPrefs.GetString(savenum + "Scene").Length>0)
                 item.BGname = (GDB.BGName)Enum.Parse(typeof(GDB.BGName), PlayerPrefs.GetString(savenum + "Scene"));
             bgAction(item);
-
             //Return line num label num
             lineNum = PlayerPrefs.GetInt(savenum + "Line");
             labelNum = PlayerPrefs.GetInt(savenum + "Label");
 
+
             //return text to panel
+            GDB.Name.TryParse(PlayerPrefs.GetString(savenum + "AuthorText"), out lastAuthor);
+            lastLine = PlayerPrefs.GetString(savenum + "LineText");
             textContent.text = lastLine;
             textAuthor.color = GDB.CharColor((int)lastAuthor);
             textAuthor.text = lastAuthor.ToString();
             Debug.Log(PlayerPrefs.GetInt(("APoints")));
             Debug.Log(PlayerPrefs.GetInt(("MPoints")));
+            BlinkSLMarker(1);
             loading = false;
           
         }
@@ -225,23 +269,34 @@ public class NewGameCore : MonoBehaviour
             }
             if (save.Length>0) { save = save.Substring(0, save.Length - 1); } 
            
-            //Debug.Log(save);
+            Debug.Log("Actors "  + save);
 
 
+            PlayerPrefs.SetString(savenum + "AuthorText", lastAuthor.ToString());
+            Debug.Log("AuthorText "  + lastAuthor);
+            
+            PlayerPrefs.SetString(savenum + "LineText", lastLine);
+            Debug.Log("LineText "  + lastLine);
+            
             PlayerPrefs.SetString(savenum + "Actors", save);
 
             PlayerPrefs.SetString(savenum + "Scene", lastBG);
+            Debug.Log("Scene "  + lastBG);
 
             PlayerPrefs.SetString(savenum + "CG", lastCG);
-
+            Debug.Log("CG "  + lastBG);
+            
             PlayerPrefs.SetString(savenum + "Music", lastMusic);
+            Debug.Log("Music "  + lastMusic);
 
             PlayerPrefs.SetInt(savenum + "isSaved", 1);
 
             PlayerPrefs.SetInt(savenum + "Line", lineNum);
-
+            Debug.Log("Line "  + lineNum);
+            
             PlayerPrefs.SetInt(savenum + "Label", labelNum);
-
+            Debug.Log("Label "  + labelNum);
+            
             Enum tmpEnum = new GDB.Variables();
             save = "";
             foreach (string element in Enum.GetNames(tmpEnum.GetType()))
@@ -257,8 +312,10 @@ public class NewGameCore : MonoBehaviour
             PlayerPrefs.SetString(savenum + "Variables", save);
 
             PlayerPrefs.SetString(savenum + "Savetime", "" + System.DateTime.Now);
+            
 
             PlayerPrefs.Save();
+            BlinkSLMarker(0);
         }
     }
 
@@ -287,7 +344,7 @@ public class NewGameCore : MonoBehaviour
     }
     public void Step()
     {
-        if (!loading && CoroutinesWorking.Count==0)
+        if (!hideText && !loading && CoroutinesWorking.Count==0)
         {
             if (labelNum >= scenario.Count)
             {
@@ -491,7 +548,7 @@ public class NewGameCore : MonoBehaviour
 
         lineNum++;
         CoroutinesWorking.Remove(id);
-        //TODO Effects
+        
 
     }
 
@@ -617,7 +674,7 @@ public class NewGameCore : MonoBehaviour
     }
     void bgAction(Item line)
     {
-        Debug.Log(("Попытка загрузки"));  
+        Debug.Log(("Попытка загрузки BG"));  
         ClearSprites();
         if (loadingBG)
         {
@@ -635,14 +692,15 @@ public class NewGameCore : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         lastBG = line.BGname.ToString();
         loadingBG = true;
-        AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line.BGname.ToString());
+        AsyncOperationHandle<VideoClip> handle = Addressables.LoadAssetAsync<VideoClip>(line.BGname.ToString());
         yield return handle;
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
-            try { Destroy(BG); } catch (Exception e) { 
-            }
-            GameObject res = handle.Result;
-            BG = Instantiate(res);
+            ClearBG();
+            
+            clipBG = handle.Result;
+            BG.clip = clipBG;
+            BG.Play();
             lineNum++;
           
 
@@ -660,6 +718,11 @@ public class NewGameCore : MonoBehaviour
         CoroutinesWorking.Remove(cid);
       
 
+    }
+
+    void ClearBG()
+    {
+        BG.clip = null;
     }
 
     void ApplyEffects(GDB.Effects effect, bool show, float zoom, Vector3 dest)
@@ -754,19 +817,31 @@ public class NewGameCore : MonoBehaviour
     }
     public void decisionAction(string name)
     {
-        
-        foreach (var cb in choiseBoxes)
+        if (!choiseRoulette)
         {
-            Destroy(cb);
+            try
+            {
+                StopCoroutine(menuCoroutine);
+            }
+            catch
+            {
+            }
+
+            foreach (var cb in choiseBoxes)
+            {
+                Destroy(cb);
+            }
+
+            textCanvas.enabled = true;
+            choiseBoxes.Clear();
+            Item item = new Item();
+            item.additionalPose = name;
+            jumpAction(item);
         }
-        textCanvas.enabled = true;
-        choiseBoxes.Clear();
-        Item item = new Item();
-        item.additionalPose = name;
-        jumpAction(item);
     }
     void menuAction(Item line)
     {
+        menuCoroutine = StartCoroutine(MenuActionCoroutine());
         textCanvas.enabled = false;
         foreach (var choiseVariant in line.menu_label)
         {
@@ -776,6 +851,54 @@ public class NewGameCore : MonoBehaviour
             choiseBoxes.Add(cb.gameObject);
         }
     }
+
+    IEnumerator MenuActionCoroutine()
+    {
+        choiseRoulette = true;
+        menuTimerSlider.SetActive(true);
+        Slider slider = menuTimerSlider.GetComponent<Slider>();
+        float timer = 1.0f;
+        slider.value = timer;
+        for (int i = 0; i < 5; i++)
+        {
+            yield return new WaitForSeconds(1f);
+            timer -= 0.2f;
+            slider.value = timer;
+        }
+        menuTimerSlider.SetActive(false);
+        //Roulette
+        int random = Random.Range(0, choiseBoxes.Count);      
+        Debug.Log("Random number is... " + random);
+
+        for (int i = 0; i < 2; i++)
+        {
+            foreach (GameObject box in choiseBoxes)
+            {
+                Vector3 oldScale = box.transform.localScale;
+                box.transform.localScale *= 1.2f;
+                yield return new WaitForSeconds(0.2f);
+                box.transform.localScale = oldScale;
+            }
+            
+        }
+
+        for (int i = 0; i <= random; i++)
+        {
+            GameObject box = choiseBoxes[i];
+            Vector3 oldScale = box.transform.localScale;
+            box.transform.localScale *= 1.2f;
+            yield return new WaitForSeconds(0.2f);
+            box.transform.localScale = oldScale;
+            
+        }
+        choiseBoxes[random].transform.localScale *= 1.2f;
+        yield return new WaitForSeconds(0.7f);
+        choiseRoulette = false;
+        choiseBoxes[random].GetComponent<ChoiseBox>().MakeDecision();
+
+        
+    }
+    
     void ifAction(Item line)
     {
         int var = PlayerPrefs.GetInt(line.var.ToString());
@@ -857,8 +980,12 @@ public class NewGameCore : MonoBehaviour
         ApplyTextEffects(GDB.Fonts.Regular);
         lastAuthor = line.name;
         lastLine = line.line;
-        if(c!= null)
-            StopCoroutine(c); 
+        if (c != null)
+        {
+            SetTextMarker(false);
+            StopCoroutine(c);
+        }
+
         castingLine = "";
         textContent.text = "";
 
@@ -884,11 +1011,13 @@ public class NewGameCore : MonoBehaviour
     }
     private IEnumerator textCastEnum()
     {
+        SetTextMarker(true);
         foreach (var _char in castingLine)
         {
             textContent.text += _char;
             yield return new WaitForSeconds(textDelay);
         }
+        SetTextMarker(false);
         
     }
 }

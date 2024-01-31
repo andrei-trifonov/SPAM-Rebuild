@@ -61,6 +61,10 @@ MonoBehaviour:
     m_Address: InvGame
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f8b516d3bc6af1f498b69980797ca8a5
+    m_Address: BGTemp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 08e76260542fbaf4a91b4020b57cd37c, type: 2}
   m_SchemaSet:
