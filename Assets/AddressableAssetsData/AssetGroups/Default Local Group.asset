@@ -20,11 +20,13 @@ MonoBehaviour:
   - m_GUID: 0ac342f1904a85249a39bfd48ce43108
     m_Address: cg3
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - CG
   - m_GUID: 936228b24e13d9f44a1906cd7666c376
     m_Address: cg2
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - CG
   - m_GUID: 12cb2bc1f3f7b1d4d8df88242d3ec2fb
     m_Address: Garages
     m_ReadOnly: 0

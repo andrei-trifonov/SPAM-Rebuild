@@ -854,7 +854,7 @@ public class NewGameCore : MonoBehaviour
 
     IEnumerator MenuActionCoroutine()
     {
-        choiseRoulette = true;
+       
         menuTimerSlider.SetActive(true);
         Slider slider = menuTimerSlider.GetComponent<Slider>();
         float timer = 1.0f;
@@ -866,7 +866,10 @@ public class NewGameCore : MonoBehaviour
             slider.value = timer;
         }
         menuTimerSlider.SetActive(false);
+        
         //Roulette
+        choiseRoulette = true;
+        
         int random = Random.Range(0, choiseBoxes.Count);      
         Debug.Log("Random number is... " + random);
 

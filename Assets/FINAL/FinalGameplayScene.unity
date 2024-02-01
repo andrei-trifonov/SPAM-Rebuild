@@ -1688,7 +1688,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &287747018
 GameObject:
@@ -5497,7 +5497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 22.0579, y: 0.000100415244}
+  m_AnchoredPosition: {x: 22.0579, y: 0}
   m_SizeDelta: {x: -22.058, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &757530811
@@ -5839,7 +5839,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &810554436
 GameObject:
@@ -6692,7 +6692,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &922327020
 GameObject:
@@ -8258,7 +8258,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1141920127
 MonoBehaviour:
@@ -15151,7 +15151,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2065628373
 GameObject:
@@ -15606,7 +15606,7 @@ Transform:
   - {fileID: 2067894494}
   - {fileID: 1004837522}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2106391946
 MonoBehaviour:
@@ -15623,62 +15623,6 @@ MonoBehaviour:
   Labels:
   - name: "\u0433\u043B\u0430\u0432\u04301"
     lines:
-    - type: 1
-      name: 0
-      line: "\u0422\u0435\u043A\u0441\u0442 \u043E\u0431\u044B\u0447\u043D\u044B\u0439"
-      font: 0
-      inv: 0
-      BGname: 21
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 1
-      additionalPose: 
-      investigationName: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      menu_label:
-      - 1
-      - 2
-      - 3
-      menu_jump:
-      - "\u0433\u043B\u0430\u0432\u04301"
-      - "\u0433\u043B\u0430\u0432\u04301"
-      - "\u0433\u043B\u0430\u0432\u04301"
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 1
-      name: 0
-      line: grdgrgrrrrrrrrrrrrrrrrrrr
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 1
-      additionalPose: 
-      investigationName: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      menu_label:
-      - 4
-      - 5
-      - 6
-      menu_jump:
-      - "\u0433\u043B\u0430\u0432\u04301"
-      - "\u0433\u043B\u0430\u0432\u04301"
-      - "\u0433\u043B\u0430\u0432\u04301"
-      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 0
       line: "\u0422\u0435\u043A\u0441\u0442 \u043E\u0431\u044B\u0447\u043D\u044B\u0439"
@@ -15813,72 +15757,6 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
   - name: "\u0413\u043B\u0430\u0432\u04302"
     lines:
-    - type: 2
-      name: 0
-      line: 
-      font: 0
-      inv: 0
-      BGname: 2
-      effects: 0
-      CGname: 
-      show: 1
-      pose: 0
-      additionalPose: 
-      investigationName: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 4
-      name: 0
-      line: 
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 1
-      additionalPose: 
-      investigationName: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 3, y: 0, z: 0}
-    - type: 0
-      name: 0
-      line: "\u042D\u0444\u0444\u0435\u043A\u0442 \u043E\u0434\u0438\u043D"
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      additionalPose: 
-      investigationName: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
     - type: 11
       name: 0
       line: "\u041D\u0430\u0447\u0430\u043B\u0430\u0441\u044C \u0432\u0442\u043E\u0440\u0430\u044F
@@ -16389,7 +16267,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -270, y: 270, z: -270}
 --- !u!82 &2109385670
 AudioSource:
@@ -16758,7 +16636,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 151793641552576831, guid: c81ad8c148139a3488cca3495fb0a461, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 151793641552576831, guid: c81ad8c148139a3488cca3495fb0a461, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16874,7 +16752,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8063751363323390306
 MonoBehaviour:
@@ -16941,7 +16819,7 @@ Transform:
   m_Children:
   - {fileID: 8063751364268345366}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &8063751363614114725
 Camera:
