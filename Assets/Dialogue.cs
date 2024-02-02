@@ -1,16 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Dialogue : MonoBehaviour
 {
-   
+    
     public List<LabelSample> Labels;
+
+
 }
+
 
 [System.Serializable]
 public class Item
 {
+    
+    
     public  GDB.LineType type;
     public  GDB.Name name;
     [Multiline] public string line;

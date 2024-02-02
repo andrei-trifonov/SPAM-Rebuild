@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
@@ -9,8 +10,10 @@ using UnityEngine.ResourceManagement.ResourceLocations;
 public class Gallery : MonoBehaviour
 {
     private  List<string> cgName = new List<string>();
+    private  List<string> cgUnlocked = new List<string>();
     [SerializeField] private string labelName; // Имя метки, которую вы хотите загрузить
     [SerializeField] private Sprite placeholderImage; // Картинка-заглушка
+    [SerializeField] private string lockedImage;
     [SerializeField] private List<Button> buttons; // Список кнопок
   
     [SerializeField] private GameObject currentEnlargedImage; // Текущая увеличенная версия изображения
@@ -21,7 +24,7 @@ public class Gallery : MonoBehaviour
     void Start()
     {
         StartCoroutine(AsyncResourceLoad());
-       
+        
     }
 
     IEnumerator AsyncResourceLoad()
@@ -34,7 +37,19 @@ public class Gallery : MonoBehaviour
             foreach (var item in handle.Result)
             {
                 if (!cgName.Contains(item.PrimaryKey))
-                    cgName.Add(item.PrimaryKey);
+                {
+                  
+                        cgName.Add(item.PrimaryKey);
+                  
+                }
+            }
+
+            for (int i =0; i<  cgName.Count; i++)
+            {
+                if (PlayerPrefs.GetInt(cgName[i]) == 0)
+                {
+                    cgName[i] = lockedImage;
+                }
             }
         }
         UpdatePage(0);
@@ -63,12 +78,15 @@ public class Gallery : MonoBehaviour
 
     private void UpdatePage(int page)
     {
+        
+        
         for (int i = 0; i < buttons.Count; i++)
         {
             int spriteIndex = page * buttons.Count  + i;
-            Debug.Log(spriteIndex);
+            //Debug.Log(spriteIndex);
             if (spriteIndex < cgName.Count)
             {
+                
                 StartCoroutine(LoadCG(cgName[spriteIndex], buttons[i]));
             }
             else
@@ -79,7 +97,7 @@ public class Gallery : MonoBehaviour
     }
     IEnumerator LoadCG(string name, Button button)
     {
-        Debug.Log(name + " "  + button.name);
+       // Debug.Log(name + " "  + button.name);
         AsyncOperationHandle<Sprite> handle = Addressables.LoadAssetAsync<Sprite>(name);
         yield return handle;
         if (handle.Status == AsyncOperationStatus.Succeeded)

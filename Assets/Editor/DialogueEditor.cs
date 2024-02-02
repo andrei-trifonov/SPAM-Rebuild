@@ -7,22 +7,33 @@ using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(Dialogue))]
+[ExecuteInEditMode]
 public class DialogueEditor : Editor
 {
-    
+
+    private DialogueManager DM;
     private Dialogue sample;
     private void OnEnable()
     {
      
         sample = (Dialogue) target;
-        
+        DM = FindObjectOfType<DialogueManager>();
     }
     
-
+    [ExecuteInEditMode]
     public override void OnInspectorGUI()
     {
-
         
+        if (GUILayout.Button("SAVE TO JSON", GUILayout.Height(30),GUILayout.Width(160)))
+        {
+            DM.SaveDialogueToFile();
+            Repaint();
+        }
+        if (GUILayout.Button("LOAD FROM JSON", GUILayout.Height(30),GUILayout.Width(160)))
+        {
+            DM.LoadDialogueFromFile();
+            Repaint();
+        }
 
         foreach (var label in sample.Labels)
             {
@@ -243,6 +254,7 @@ public class DialogueEditor : Editor
                                     }
                                     EditorGUILayout.EndHorizontal();
                                     EditorGUILayout.EndVertical();
+                                    GUILayout.Space(440);
                                 } break;
                                 case (GDB.LineType.CamEffect):
                                     {

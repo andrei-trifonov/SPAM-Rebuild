@@ -756,6 +756,7 @@ public class NewGameCore : MonoBehaviour
     
     void cgAction(Item line)
     {
+        PlayerPrefs.SetInt(line.CGname, 1);
 
         if (loadingCG)
         {
