@@ -97,7 +97,8 @@ public static class GDB
     public enum Investigation
     {
         Open,
-        AddThought
+        AddThought,
+        AddDrugs
     }
 
     public enum Pose

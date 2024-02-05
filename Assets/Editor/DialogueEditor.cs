@@ -298,7 +298,7 @@ public class DialogueEditor : Editor
                                     item.additionalPose = EditorGUILayout.TextField("", item.additionalPose, GUILayout.Height(20), GUILayout.Width(100));
                                     GUILayout.Space(600);
                                 }
-                                else
+                                if (item.inv == GDB.Investigation.AddThought)
                                 {
                                     EditorGUILayout.LabelField("InvName", GUILayout.Height(20), GUILayout.Width(50));
                                     item.investigationName = EditorGUILayout.TextField("", item.investigationName, GUILayout.Height(20), GUILayout.Width(100));
@@ -308,6 +308,10 @@ public class DialogueEditor : Editor
                                     item.value = EditorGUILayout.IntField("", item.value, GUILayout.Height(20), GUILayout.Width(100));
                                     item.ThoType = (ThoughtType)EditorGUILayout.EnumPopup("", item.ThoType, GUILayout.Height(20), GUILayout.Width(100));
                                     GUILayout.Space(50);
+                                }
+                                if (item.inv == GDB.Investigation.AddDrugs)
+                                {
+                                    GUILayout.Space(700);
                                 }
                             }break;
 

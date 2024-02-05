@@ -18,18 +18,20 @@ public class m_Actor{
     public string name;
     public string pose;
 }
+
+
 public class NewGameCore : MonoBehaviour
 {
     [SerializeField] private Canvas textCanvas;
     private Animator textCanvasAnimator;
-    [SerializeField] private GameObject newThoughtLabel;
+    [SerializeField] private GameObject investigationLabel;
     [SerializeField] private TextMeshProUGUI textAuthor;
     [SerializeField] private TextMeshProUGUI textContent;
     [SerializeField] private Animator Camera;
     
     [SerializeField] private Dialogue scenarioComposer;
     private List<LabelSample> scenario;
-
+    
     private float maxVolumeMusic = 1; //TODO
     private Coroutine c;
     private float textDelay = 0.1f; //TODO 
@@ -56,6 +58,8 @@ public class NewGameCore : MonoBehaviour
     [SerializeField] private LayoutGroup choiseGroup;
     [SerializeField] private GameObject menuTimerSlider;
     private bool choiseRoulette;
+
+    [SerializeField] private InvestigationController invController;
     
     [SerializeField] private SpriteRenderer CG;
     [SerializeField] private VideoPlayer BG;
@@ -75,15 +79,17 @@ public class NewGameCore : MonoBehaviour
     private bool loading;
     private bool hideText;
     
+    
     string lastBG="";
     string lastMusic="";
     string lastCG = "";
     GDB.Name lastAuthor = GDB.Name.Мира;
-    string lastLine = "";
-   
+    string lastLine = ""; 
+    int drugsCount = 0;
     public List<int> CoroutinesWorking;
     int cid;
-
+    private SaveObject saveObj ;
+    private string saveJString = "";
     public void SetTextMarker(bool state)
     {   
         textCanvasAnimator.SetBool("Ready", !state);
@@ -116,6 +122,7 @@ public class NewGameCore : MonoBehaviour
     }
     private void Start()
     {
+        saveObj = new SaveObject();
         textCanvasAnimator = textCanvas.GetComponent<Animator>();
         scenario = scenarioComposer.Labels;
     }
@@ -233,6 +240,7 @@ public class NewGameCore : MonoBehaviour
                 }
             }
 
+            drugsCount = PlayerPrefs.GetInt(savenum + "Drugs");
             //Spawn Scene
             item = new Item();
             if ( PlayerPrefs.GetString(savenum + "Scene").Length>0)
@@ -311,6 +319,8 @@ public class NewGameCore : MonoBehaviour
 
             PlayerPrefs.SetString(savenum + "Variables", save);
 
+            PlayerPrefs.SetInt(savenum + "Drugs", drugsCount);
+            
             PlayerPrefs.SetString(savenum + "Savetime", "" + System.DateTime.Now);
             
 
@@ -416,38 +426,68 @@ public class NewGameCore : MonoBehaviour
     }
     void invAction(Item line)
     {
-        if (line.inv == GDB.Investigation.Open)
-             StartCoroutine(LoadInv(line, cid++));
-        else
+        switch (line.inv)
         {
-            StartCoroutine(NewThoughtCoroutine());
-            PlayerPrefs.SetString(line.investigationName, (line.value + "|" + line.additionalPose + "|" + line.ThoType.ToString()));
-            lineNum++;
-            Step();
+            case GDB.Investigation.Open:
+            {
+                Camera.gameObject.SetActive(false);
+                textCanvas.enabled = false;
+                List<int> unlockedThoughts = new List<int>();
+                if (saveObj.unlockedInv.Count>0)
+                foreach (UnlockMessage item in saveObj.unlockedInv)
+                {
+                    if (item.InvName == line.additionalPose)
+                    {
+                        unlockedThoughts.Add(item.ID);
+                    }
+                }
+                invController.SetNewGame(line.additionalPose, unlockedThoughts, drugsCount);
+                 //TODO
+            }
+                break;
+            case GDB.Investigation.AddThought:
+            {
+                
+                StartCoroutine(NewThoughtCoroutine("Я запомнила"));
+
+                saveObj.unlockedInv.Add(new UnlockMessage(line.additionalPose, line.value));
+                saveJString = JsonUtility.ToJson(saveObj);
+                //PlayerPrefs.SetString(line.investigationName, (line.value + "|" + line.additionalPose + "|" + line.ThoType.ToString()));
+               
+                lineNum++;
+                Step();        
+            } 
+                break;
+            case GDB.Investigation.AddDrugs:
+            {
+                StartCoroutine(NewThoughtCoroutine("+1 SPAM-V"));
+                drugsCount++;
+                
+                lineNum++;
+                Step();  
+            }
+                break;
+
+
+
+
         }
     }
-    IEnumerator NewThoughtCoroutine()
+    IEnumerator NewThoughtCoroutine(string text)
     {
-        newThoughtLabel.SetActive(true);
+        investigationLabel.SetActive(true);
+        investigationLabel.GetComponentInChildren<TMP_Text>().text = text;
         yield return new WaitForSeconds(2);
-        newThoughtLabel.SetActive(false);
+        investigationLabel.SetActive(false);
     }
-    IEnumerator LoadInv(Item line, int id)
+   
+
+    public void EndInv()
     {
-        CoroutinesWorking.Add(id);
-      
-        AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line.additionalPose);
-        yield return handle;
-        if (handle.Status == AsyncOperationStatus.Succeeded)
-        {
-            GameObject res = handle.Result;
-            Instantiate(res);
-        }
-        Addressables.Release(handle);
-        CoroutinesWorking.Remove(id);
-
-
+        Camera.gameObject.SetActive(true);
+        textCanvas.enabled = false;
     }
+    
     void cameraAction(Item line)
     {
 

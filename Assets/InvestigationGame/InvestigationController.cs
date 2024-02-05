@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+
+
 
 [System.Serializable]
 public class MergeConnection {
     public int Item1;
-   [HideInInspector] public Thought t1;
+    [HideInInspector] public Thought t1;
     public int Item2;
     [HideInInspector] public Thought t2;
     public ThoughtSt Result;
@@ -17,11 +21,29 @@ public class MergeConnection {
 [System.Serializable]
 public class ThoughtSt
 {
+    
     public int ID;
     public string Content;
     public int Level;
     public ThoughtType Type;
+
+    public bool Locked;
 }
+
+[System.Serializable]
+public class UnlockMessage
+{
+    public UnlockMessage(string invName, int ID)
+    {
+        this.ID = ID;
+        this.InvName = invName;
+    }
+    public int ID;
+    public string InvName;
+
+}
+
+
 [System.Serializable]
 public struct Result
 {
@@ -30,70 +52,76 @@ public struct Result
     public GDB.Variables Var;
     public string jumpLabel;
 }
-
-
 public class InvestigationController : MonoBehaviour
 {
-    [SerializeField] private string invName;
+    
+  
     [SerializeField] private Vector4 ScreenSpace;
-    [SerializeField] List<ThoughtSt> Thoughts;
-    [SerializeField] List<Result> Results;
-    [SerializeField] List<MergeConnection> Merges;
+   
     [SerializeField] GameObject thoughtTemplate;
     [SerializeField] GameObject resultPanel;
     [SerializeField] TextMeshProUGUI resultText;
-     GameObject Brain;
+    [SerializeField] private  GameObject Brain;
     [SerializeField] Canvas canInv;
     [SerializeField] Canvas canTho;
-    private Canvas canText;
 
-    public GameObject cameraMain;
-    GameObject cameraInvestigation;
-     GameObject cameraThought;
-    [SerializeField] GameObject Scene;
-    private NewGameCore Core;
-    private Result chosenResult;  List<GameObject> spawnedObjects = new List<GameObject>();
-    // Start is called before the first frame update
+    [SerializeField]  TMP_Text textDrugs;
 
-    private void Start()
+
+    [SerializeField] private  GameObject cameraInvestigation;
+    [SerializeField] private   GameObject cameraThought;
+   
+    [HideInInspector] public NewGameCore Core;
+    private Result chosenResult;
+    List<GameObject> spawnedObjects = new List<GameObject>();
+
+
+    List<ThoughtSt> Thoughts = new List<ThoughtSt>();
+    List<Result> Results = new List<Result>();
+    List<MergeConnection> Merges = new List<MergeConnection>();
+    private int drugsCount;
+    private GameObject Scene;
+    public void SetNewGame(string sceneName, List<int> Unlocks, int drugsCount)
     {
-        cameraMain = GameObject.FindGameObjectWithTag("MainCamera");
-        canText = GameObject.Find("TextCanvas").GetComponent<Canvas>();
-        cameraInvestigation = GameObject.FindGameObjectWithTag("InvCam");
-        cameraThought = GameObject.FindGameObjectWithTag("ThoCam");
-        Core = GameObject.FindObjectOfType<NewGameCore>();
-        Brain = GameObject.FindGameObjectWithTag("Brain");
-        cameraMain.SetActive(false);
-        canText.enabled = false;
-        string[] elements;
-        if (PlayerPrefs.GetString(invName).Length > 0)
-        {
-            elements = PlayerPrefs.GetString(invName).Split("|");
-            int counter = 0;
-            ThoughtSt thought = new ThoughtSt();
-            for (int i = 0; i < elements.Length; i++)
-            {
-               
-                counter++;
-                switch (counter)
-                {
-                    case 1:
-                        thought.ID = int.Parse(elements[i]); break;
-                    case 2: 
-                        thought.Content = elements[i]; break;
-                        
-                    case 3:
-                        {
-                            
-                            thought.Type = (ThoughtType)Enum.Parse(typeof(ThoughtType), elements[i]);
-                            AddThought(thought);
-                            thought = new ThoughtSt();
-                            counter = 0;
-                        } break;  
-                }
-            }
-        }
+  
+        StartCoroutine(LoadInv(sceneName, Unlocks));
+        this.drugsCount = drugsCount;
+        textDrugs.text = "SPAM-V: " + drugsCount;
+    
     }
+    IEnumerator LoadInv(string line, List<int> Unlocks)
+    {
+       
+      
+        AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line);
+        yield return handle;
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+        {
+            GameObject res = handle.Result;
+            Scene = Instantiate(res);
+            
+        }
+        Addressables.Release(handle);
+
+        InvestigationScenario scenario = Scene.GetComponent<InvestigationScenario>();
+        
+        Results = scenario.Results;
+        Merges = scenario.Merges;
+        foreach (int item in Unlocks)
+        {
+            Thoughts[item].Locked = false;
+        }
+
+
+
+    }
+    
+    public void AddThought(ThoughtSt obj)
+    {
+        if (!Thoughts.Contains(obj))
+            Thoughts.Add(obj);
+    }
+
     void DestroyAllThought() {
 
         for (int i = 0; i < spawnedObjects.Count; i++)
@@ -112,6 +140,12 @@ public class InvestigationController : MonoBehaviour
         canTho.enabled = true;
         canInv.enabled = false;
         Brain.SetActive(true);
+        SpawnThoughts();
+     
+    }
+
+    private void SpawnThoughts()
+    {
         foreach (ThoughtSt item in Thoughts)
         {
             Thought spawned = Instantiate(thoughtTemplate, cameraThought.transform.position + new Vector3(UnityEngine.Random.Range( ScreenSpace.x, ScreenSpace.y),  UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), gameObject.transform.position.z), gameObject.transform.rotation).GetComponent<Thought>();
@@ -132,6 +166,7 @@ public class InvestigationController : MonoBehaviour
             }
         }
     }
+    
     public void CloseThought()
     {
         Scene.SetActive(true);
@@ -143,11 +178,7 @@ public class InvestigationController : MonoBehaviour
         Brain.SetActive(false);
     }
 
-    public void AddThought(ThoughtSt obj)
-    {
-        if (!Thoughts.Contains(obj))
-        Thoughts.Add(obj);
-    }
+  
 
     public void FinishInvestigation(int ID)
     {
@@ -174,14 +205,21 @@ public class InvestigationController : MonoBehaviour
     }
     public void EndGame()
     {
+        Core.EndInv();
+        
         resultPanel.SetActive(false);
+        
+        //TODO start
         PlayerPrefs.SetInt(chosenResult.Var.ToString(), 1);
+        //TODO finish
+        
         Core.jumpAction(chosenResult.jumpLabel);
-        canText.enabled = true;
-        cameraMain.SetActive(true);
+       
         cameraThought.SetActive(true);
         cameraInvestigation.SetActive(true);
-        Destroy(gameObject.transform.parent.gameObject);
+        
+        Destroy(Scene);
+        
         
     }
     // Update is called once per frame

@@ -59,16 +59,16 @@ MonoBehaviour:
     m_Address: ParkPreview
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: c81ad8c148139a3488cca3495fb0a461
-    m_Address: InvGame
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: f8b516d3bc6af1f498b69980797ca8a5
     m_Address: BGTemp
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f6959348144b7a44fb804705e011bd1a
     m_Address: Locked
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b94a6f764c095fc4ba15311b2017ced6
+    m_Address: InvScenario1
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
