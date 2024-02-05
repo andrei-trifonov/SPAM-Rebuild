@@ -89,33 +89,50 @@ public class InvestigationController : MonoBehaviour
         textDrugs.text = "SPAM-V: " + drugsCount;
     
     }
+
     IEnumerator LoadInv(string line, List<int> Unlocks)
     {
-       
-      
+
+
         AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line);
         yield return handle;
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
             GameObject res = handle.Result;
             Scene = Instantiate(res);
-            
+
         }
+
         Addressables.Release(handle);
 
         InvestigationScenario scenario = Scene.GetComponent<InvestigationScenario>();
-        
+        Thoughts = scenario.Thoughts;
         Results = scenario.Results;
         Merges = scenario.Merges;
-        foreach (int item in Unlocks)
-        {
-            Thoughts[item].Locked = false;
-        }
+        if (Unlocks.Count > 0)
+            try
+            {
+                foreach (int unlockID in Unlocks)
+                {
+                    foreach (var thought in Thoughts)
+                    {
+                        if (thought.ID == unlockID)
+                            thought.Locked = false;
+                    }
 
+                }
+            }
+            catch
+            {
+            }
 
 
     }
     
+    //TODO проверить добавление мысли по клику на предмет
+    //TODO показать/убрать канвас расследования 
+    //TODO инкремент переменной
+    //TODO сделать все сохранение как объект  JSON
     public void AddThought(ThoughtSt obj)
     {
         if (!Thoughts.Contains(obj))
@@ -148,21 +165,31 @@ public class InvestigationController : MonoBehaviour
     {
         foreach (ThoughtSt item in Thoughts)
         {
-            Thought spawned = Instantiate(thoughtTemplate, cameraThought.transform.position + new Vector3(UnityEngine.Random.Range( ScreenSpace.x, ScreenSpace.y),  UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), gameObject.transform.position.z), gameObject.transform.rotation).GetComponent<Thought>();
-            spawned.transform.position = cameraThought.transform.position + new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y), UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), 10);
-            spawnedObjects.Add(spawned.gameObject);
-            spawned.Initiate(item.Content, item.Level, item.Type, item.ID);
-            foreach (MergeConnection connection in Merges)
+            if (!item.Locked)
             {
-                if (item.ID == connection.Item1)
+                Thought spawned = Instantiate(thoughtTemplate,
+                    cameraThought.transform.position +
+                    new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y),
+                        UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), gameObject.transform.position.z),
+                    gameObject.transform.rotation).GetComponent<Thought>();
+                spawned.transform.position = cameraThought.transform.position +
+                                             new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y),
+                                                 UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), 10);
+                spawnedObjects.Add(spawned.gameObject);
+                spawned.Initiate(item.Content, item.Level, item.Type, item.ID);
+                foreach (MergeConnection connection in Merges)
                 {
-                    connection.t1 = spawned.GetComponent<Thought>();
-                }
-                if (item.ID == connection.Item2)
-                {
-                    connection.t2 = spawned.GetComponent<Thought>();
-                }
+                    if (item.ID == connection.Item1)
+                    {
+                        connection.t1 = spawned.GetComponent<Thought>();
+                    }
 
+                    if (item.ID == connection.Item2)
+                    {
+                        connection.t2 = spawned.GetComponent<Thought>();
+                    }
+
+                }
             }
         }
     }

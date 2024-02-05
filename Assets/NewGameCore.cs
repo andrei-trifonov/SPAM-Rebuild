@@ -88,7 +88,7 @@ public class NewGameCore : MonoBehaviour
     int drugsCount = 0;
     public List<int> CoroutinesWorking;
     int cid;
-    private SaveObject saveObj ;
+    private SaveObject saveObj = new SaveObject();
     private string saveJString = "";
     public void SetTextMarker(bool state)
     {   
@@ -441,6 +441,8 @@ public class NewGameCore : MonoBehaviour
                         unlockedThoughts.Add(item.ID);
                     }
                 }
+
+            
                 invController.SetNewGame(line.additionalPose, unlockedThoughts, drugsCount);
                  //TODO
             }
@@ -451,9 +453,29 @@ public class NewGameCore : MonoBehaviour
                 StartCoroutine(NewThoughtCoroutine("Я запомнила"));
 
                 saveObj.unlockedInv.Add(new UnlockMessage(line.additionalPose, line.value));
+                
+                Debug.Log(saveObj.unlockedInv[0]);
                 saveJString = JsonUtility.ToJson(saveObj);
-                //PlayerPrefs.SetString(line.investigationName, (line.value + "|" + line.additionalPose + "|" + line.ThoType.ToString()));
-               
+                
+                /*
+                 SaveObject saveData;
+                saveData = new SaveObject();
+                saveData.unlockedInv.Add(new UnlockMessage("Unlocked feature A", 1));
+                saveData.unlockedInv.Add(new UnlockMessage("Unlocked feature B", 2));
+
+                string jsonData = JsonUtility.ToJson(saveData);
+                Debug.Log("Serialized SaveObject to JSON:\n" + jsonData);
+
+                // Здесь можно сохранить jsonData в файл или другое хранилище
+                // Предположим, что у вас уже есть JSON-строка с данными
+
+                SaveObject loadedData = JsonUtility.FromJson<SaveObject>(jsonData);
+                saveData = loadedData;
+                Debug.Log(saveData.unlockedInv[0]);
+              
+            */
+                
+                
                 lineNum++;
                 Step();        
             } 
@@ -472,6 +494,16 @@ public class NewGameCore : MonoBehaviour
 
 
         }
+    }
+    
+    void SaveDataToJson(SaveObject data)
+    {
+     
+    }
+
+    void LoadDataFromJson()
+    {
+       
     }
     IEnumerator NewThoughtCoroutine(string text)
     {
