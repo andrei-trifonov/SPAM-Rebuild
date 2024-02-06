@@ -12,13 +12,61 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using Random = UnityEngine.Random;
 
+//TODO проверить загрузку музыки и переменных + драгсов+ подключить превьюху одну.
 [System.Serializable]
-public class m_Actor{
-    public GameObject obj;
-    public string name;
-    public string pose;
+public class SaveObject 
+{
+    public SaveObject()
+    {
+        unlockedInv = new List<UnlockMessage>();
+        Variables = new List<VarItem>();
+        Actors = new List<Actor>();
+    }
+
+    public int drugsCount =0 ;
+    public List<UnlockMessage> unlockedInv;
+    public GDB.BGName lastBG = GDB.BGName.None;
+    public GDB.Music lastMusic = GDB.Music.None;
+    public string lastCG = "";
+    public GDB.Name lastAuthor = GDB.Name.Никто;
+    public string lastLine = "";
+    public List<VarItem> Variables;
+    public string Savetime = "";
+    public List<Actor> Actors ;
+    public int lastLineNum = 0;
+    public int lastLabelNum = 0;
+    public string previewName = "";
 }
 
+[System.Serializable]
+
+public class VarItem
+{
+    public VarItem(GDB.Variables varName, int varValue)
+    {
+        this.varName = varName;
+        this.varValue = varValue;
+    }
+    public GDB.Variables varName;
+    public int varValue;
+
+}
+
+[System.Serializable]
+public class Actor
+{
+    public Actor(Vector3 Position, GDB.Name Name, GDB.Pose Pose)
+    {
+        this.Name = Name;
+        this.Pose = Pose;
+        this.Position = Position;
+    }
+
+    public GameObject obj;
+    public Vector3 Position;
+    public GDB.Name Name;
+    public GDB.Pose Pose;
+}
 
 public class NewGameCore : MonoBehaviour
 {
@@ -73,22 +121,14 @@ public class NewGameCore : MonoBehaviour
 
     [SerializeField] private GameObject saveLoadMarker;
 
-    private List<m_Actor> actorsOnScene = new List<m_Actor>();
+    private List<Actor> actorsOnScene = new List<Actor>();
     
-   
     private bool loading;
     private bool hideText;
     
-    
-    string lastBG="";
-    string lastMusic="";
-    string lastCG = "";
-    GDB.Name lastAuthor = GDB.Name.Мира;
-    string lastLine = ""; 
-    int drugsCount = 0;
     public List<int> CoroutinesWorking;
     int cid;
-    private SaveObject saveObj = new SaveObject();
+    public SaveObject saveObj = new SaveObject();
     private string saveJString = "";
     public void SetTextMarker(bool state)
     {   
@@ -128,7 +168,7 @@ public class NewGameCore : MonoBehaviour
     }
     public void ClearSprites()
     {
-        foreach (m_Actor obj in actorsOnScene)
+        foreach (Actor obj in actorsOnScene)
         {
             try { Destroy(obj.obj); }
             catch { }
@@ -168,99 +208,53 @@ public class NewGameCore : MonoBehaviour
             ApplyTextEffects(GDB.Fonts.Regular);
             textContent.text = "";
             textAuthor.text = "";
+            
 
+            SaveObject loadedData = JsonUtility.FromJson<SaveObject>(PlayerPrefs.GetString(savenum+"Save"));
+            saveObj = loadedData;
+            
             //Load music
             Item item = new Item();
-            if (PlayerPrefs.GetString(savenum + "Music").Length > 0)
-                item.music = (GDB.Music)Enum.Parse(typeof(GDB.Music), PlayerPrefs.GetString(savenum + "Music"));
+            item.music = loadedData.lastMusic;
+    
+            item.show = true;
+
+            if (loadedData.lastMusic!= GDB.Music.None)
                 musicAction(item);
 
             //Get 
-            string[] elements = { };
-            if (PlayerPrefs.GetString(savenum + "Actors").Length > 0) {
-                elements = PlayerPrefs.GetString(savenum + "Actors").Split("|");
-                int counter = 0;
-
-                for (int i = 0; i < elements.Length; i++)
-                {
-                   // Debug.Log(elements[i]);
-                    counter++;
-                    switch (counter)
-                    {
-                        case 1:
-                            item.name = (GDB.Name)Enum.Parse(typeof(GDB.Name), elements[i]); break;
-                        case 2:
-                            item.V3position.x = int.Parse(elements[i]); break;
-                        case 3:
-                            item.V3position.y = int.Parse(elements[i]); break;
-                        case 4:
-                            item.V3position.z = int.Parse(elements[i]); break;
-                        case 5:
-                            {
-                                item.pose = (GDB.Pose)Enum.Parse(typeof(GDB.Pose), elements[i]);
-                                actorAction(item);
-                                item = new Item();
-                                counter = 0;
-                            }
-                            break;
-                    }
-
-                }
+            foreach (var actor in loadedData.Actors)
+            {
+                item.pose = actor.Pose;
+                item.name = actor.Name;
+                item.V3position = actor.Position;
+                actorAction(item);
             }
            
-
-            //Return variables
-            item = new Item();
-
-            if (PlayerPrefs.GetString(savenum + "Variables").Length > 0)
-            {
-                //Debug.Log(PlayerPrefs.GetString(savenum + "Variables"));
-                elements = PlayerPrefs.GetString(savenum + "Variables").Split("|");
-                int counter = 0;
-                //Debug.Log(elements[0]);
-
-                for (int i = 0; i < elements.Length; i++)
-                {
-                   // Debug.Log(elements[i]);
-                    counter++;
-                    switch (counter)
-                    {
-                        case 1:
-                            item.var = (GDB.Variables)Enum.Parse(typeof(GDB.Variables), elements[i]); break;
-                        case 2:
-                            { 
-                                item.value = int.Parse(elements[i]); 
-                                item.signs = GDB.Signs.equal;
-                                varAction(item);
-                                item = new Item();
-                                counter = 0;
-                            } break;
-                    }
-
-                }
-            }
-
-            drugsCount = PlayerPrefs.GetInt(savenum + "Drugs");
+           
             //Spawn Scene
-            item = new Item();
-            if ( PlayerPrefs.GetString(savenum + "Scene").Length>0)
-                item.BGname = (GDB.BGName)Enum.Parse(typeof(GDB.BGName), PlayerPrefs.GetString(savenum + "Scene"));
-            bgAction(item);
+            
+            item.BGname = loadedData.lastBG;
+            if (loadedData.lastBG!= GDB.BGName.None)
+                bgAction(item);
+            
+            item.CGname = loadedData.lastCG;
+            if (loadedData.lastCG!="")
+                cgAction(item);
             //Return line num label num
-            lineNum = PlayerPrefs.GetInt(savenum + "Line");
-            labelNum = PlayerPrefs.GetInt(savenum + "Label");
+            lineNum = loadedData.lastLineNum;
+            labelNum = loadedData.lastLabelNum;
 
 
-            //return text to panel
-            GDB.Name.TryParse(PlayerPrefs.GetString(savenum + "AuthorText"), out lastAuthor);
-            lastLine = PlayerPrefs.GetString(savenum + "LineText");
-            textContent.text = lastLine;
-            textAuthor.color = GDB.CharColor((int)lastAuthor);
-            textAuthor.text = lastAuthor.ToString();
-            Debug.Log(PlayerPrefs.GetInt(("APoints")));
-            Debug.Log(PlayerPrefs.GetInt(("MPoints")));
+            //return text to panelx 
+
+            item.line= loadedData.lastLine;
+            item.name = loadedData.lastAuthor;
+            textAction(item);
+            
             BlinkSLMarker(1);
             loading = false;
+            
           
         }
     }
@@ -268,63 +262,33 @@ public class NewGameCore : MonoBehaviour
     {
         if (!loading && CoroutinesWorking.Count == 0)
         {
+
+            List<Actor> actors = new List<Actor>();
+            foreach (Actor actor in actorsOnScene)
+            {
+                actors.Add(new Actor(actor.obj.transform.position, actor.Name, actor.Pose));
+             }
+
+            saveObj.Savetime = "" + System.DateTime.Now;
+            saveObj.Actors = actors;
+            saveObj.lastLineNum = lineNum;
+            saveObj.lastLabelNum = labelNum;
+            saveJString = JsonUtility.ToJson(saveObj);
+            
+            Debug.Log("Actors "  + saveObj.Actors);
+            Debug.Log("AuthorText "  + saveObj.lastAuthor);
+            Debug.Log("LineText "  + saveObj.lastLine);
+            Debug.Log("Scene "  + saveObj.lastBG);
+            Debug.Log("CG "  + saveObj.lastBG);
+            Debug.Log("Music "  + saveObj.lastMusic);
+            Debug.Log("Line " + saveObj.lastLineNum);
+            Debug.Log("Label "  + saveObj.lastLabelNum);
+
             PlayerPrefs.SetString("LastSave", savenum);
-            string save = "";
-            foreach (m_Actor actor in actorsOnScene)
-            {
-                save = save + actor.name + "|" + actor.obj.transform.position.x + "|" + actor.obj.transform.position.y + "|" + actor.obj.transform.position.z + "|" + actor.pose + "|";
-
-            }
-            if (save.Length>0) { save = save.Substring(0, save.Length - 1); } 
-           
-            Debug.Log("Actors "  + save);
-
-
-            PlayerPrefs.SetString(savenum + "AuthorText", lastAuthor.ToString());
-            Debug.Log("AuthorText "  + lastAuthor);
-            
-            PlayerPrefs.SetString(savenum + "LineText", lastLine);
-            Debug.Log("LineText "  + lastLine);
-            
-            PlayerPrefs.SetString(savenum + "Actors", save);
-
-            PlayerPrefs.SetString(savenum + "Scene", lastBG);
-            Debug.Log("Scene "  + lastBG);
-
-            PlayerPrefs.SetString(savenum + "CG", lastCG);
-            Debug.Log("CG "  + lastBG);
-            
-            PlayerPrefs.SetString(savenum + "Music", lastMusic);
-            Debug.Log("Music "  + lastMusic);
-
             PlayerPrefs.SetInt(savenum + "isSaved", 1);
-
-            PlayerPrefs.SetInt(savenum + "Line", lineNum);
-            Debug.Log("Line "  + lineNum);
-            
-            PlayerPrefs.SetInt(savenum + "Label", labelNum);
-            Debug.Log("Label "  + labelNum);
-            
-            Enum tmpEnum = new GDB.Variables();
-            save = "";
-            foreach (string element in Enum.GetNames(tmpEnum.GetType()))
-            {
-                save = save + element + "|" + PlayerPrefs.GetInt(element) + "|";
-            }
-            if (save.Length > 0)
-            {
-                save = save.Substring(0, save.Length - 1);
-            }
-           // Debug.Log(save);
-
-            PlayerPrefs.SetString(savenum + "Variables", save);
-
-            PlayerPrefs.SetInt(savenum + "Drugs", drugsCount);
-            
-            PlayerPrefs.SetString(savenum + "Savetime", "" + System.DateTime.Now);
-            
-
+            PlayerPrefs.SetString(savenum + "Save", saveJString);
             PlayerPrefs.Save();
+            
             BlinkSLMarker(0);
         }
     }
@@ -443,19 +407,18 @@ public class NewGameCore : MonoBehaviour
                 }
 
             
-                invController.SetNewGame(line.additionalPose, unlockedThoughts, drugsCount);
+                invController.SetNewGame(line.additionalPose, unlockedThoughts, saveObj.drugsCount);
                  //TODO
             }
                 break;
             case GDB.Investigation.AddThought:
             {
                 
-                StartCoroutine(NewThoughtCoroutine("Я запомнила"));
+                StartCoroutine(NewThoughtCoroutine("Я запомнила", cid++));
 
                 saveObj.unlockedInv.Add(new UnlockMessage(line.additionalPose, line.value));
                 
-                Debug.Log(saveObj.unlockedInv[0]);
-                saveJString = JsonUtility.ToJson(saveObj);
+                //Debug.Log(saveObj.unlockedInv[0]);
                 
                 /*
                  SaveObject saveData;
@@ -476,17 +439,15 @@ public class NewGameCore : MonoBehaviour
             */
                 
                 
-                lineNum++;
-                Step();        
+                   
             } 
                 break;
             case GDB.Investigation.AddDrugs:
             {
-                StartCoroutine(NewThoughtCoroutine("+1 SPAM-V"));
-                drugsCount++;
+                StartCoroutine(NewThoughtCoroutine("+1 SPAM-V", cid++));
+                saveObj.drugsCount++;
                 
-                lineNum++;
-                Step();  
+             
             }
                 break;
 
@@ -495,29 +456,24 @@ public class NewGameCore : MonoBehaviour
 
         }
     }
-    
-    void SaveDataToJson(SaveObject data)
-    {
-     
-    }
 
-    void LoadDataFromJson()
+    IEnumerator NewThoughtCoroutine(string text, int cid)
     {
-       
-    }
-    IEnumerator NewThoughtCoroutine(string text)
-    {
+        CoroutinesWorking.Add(cid);
         investigationLabel.SetActive(true);
         investigationLabel.GetComponentInChildren<TMP_Text>().text = text;
         yield return new WaitForSeconds(2);
         investigationLabel.SetActive(false);
+        CoroutinesWorking.Remove(cid);
+        lineNum++;
+        Step();    
     }
    
 
     public void EndInv()
     {
         Camera.gameObject.SetActive(true);
-        textCanvas.enabled = false;
+        textCanvas.enabled = true;
     }
     
     void cameraAction(Item line)
@@ -551,9 +507,9 @@ public class NewGameCore : MonoBehaviour
     }
     GameObject FindActorOnScene(string name)
     {
-        foreach(m_Actor obj in actorsOnScene)
+        foreach(Actor obj in actorsOnScene)
         {
-            if (obj.name == name)
+            if (obj.Name.ToString() == name)
             {
                 return obj.obj;
             }
@@ -561,11 +517,11 @@ public class NewGameCore : MonoBehaviour
 
         return null;
     }
-    m_Actor FindActorOnScenePointer(string name)
+    Actor FindActorOnScenePointer(string name)
     {
-        foreach (m_Actor obj in actorsOnScene)
+        foreach (Actor obj in actorsOnScene)
         {
-            if (obj.name == name)
+            if (obj.Name.ToString() == name)
             {
                 return obj;
             }
@@ -579,16 +535,15 @@ public class NewGameCore : MonoBehaviour
         GameObject ActorOnScene = FindActorOnScene(line.name.ToString());
         if (ActorOnScene == null)
         {
-            AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line.name.ToString());
+            AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line.name.ToString()+line.pose.ToString());
             yield return handle;
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
                 GameObject res = handle.Result;
                 ActorOnScene = GameObject.Instantiate(res);
-                m_Actor actor = new m_Actor();
-                actor.name = line.name.ToString();
+                Actor actor = new Actor(Vector3.zero, line.name, line.pose);
                 actor.obj = ActorOnScene;
-                actor.pose = line.pose.ToString();
+              
                 actorsOnScene.Add(actor);
 
             }
@@ -614,7 +569,7 @@ public class NewGameCore : MonoBehaviour
             catch { }
         }
         else {
-            FindActorOnScenePointer(line.name.ToString()).pose = line.pose.ToString();
+            FindActorOnScenePointer(line.name.ToString()).Pose = line.pose;
         }
 
 
@@ -721,7 +676,7 @@ public class NewGameCore : MonoBehaviour
     IEnumerator LoadMusic(Item line, int cid)
     {
         CoroutinesWorking.Add(cid);
-        lastMusic = line.music.ToString();
+        saveObj.lastMusic = line.music;
         if (fadeInMusic)
             fadeOutMusic = fadeInMusic;
         fadeInMusic = Instantiate(musicPlayer, transform).GetComponent<AudioSource>();
@@ -762,7 +717,8 @@ public class NewGameCore : MonoBehaviour
         CoroutinesWorking.Add(cid);
         Camera.SetBool("BlackOut", true);
         yield return new WaitForSeconds(0.5f);
-        lastBG = line.BGname.ToString();
+        saveObj.lastBG = line.BGname;
+        saveObj.lastCG = "";
         loadingBG = true;
         AsyncOperationHandle<VideoClip> handle = Addressables.LoadAssetAsync<VideoClip>(line.BGname.ToString());
         yield return handle;
@@ -856,7 +812,8 @@ public class NewGameCore : MonoBehaviour
             yield return handle;
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
-                lastCG = line.CGname;
+                saveObj.lastCG = line.CGname;
+                saveObj.lastBG = GDB.BGName.None;
                 CG.enabled = true;
                 CG.sprite = handle.Result;
             }
@@ -873,7 +830,7 @@ public class NewGameCore : MonoBehaviour
                 yield return new WaitForSeconds(1);
                             
             }
-            lastCG = "";
+            saveObj.lastCG = "";
             lineNum++;
             CG.enabled = false;
         }
@@ -1007,19 +964,55 @@ public class NewGameCore : MonoBehaviour
         //Debug.Log(line.value); 
         switch (line.signs)
         {
-            case GDB.Signs.decr: 
-                PlayerPrefs.SetInt(line.var.ToString(), PlayerPrefs.GetInt(line.var.ToString())-1);
+            case GDB.Signs.decr:
+            {
+                int i = FindVariable(line.var); 
+                if (i>-1)
+                    saveObj.Variables[i].varValue--;
+                
+                
+            }
                 break;
             case GDB.Signs.incr: 
-                PlayerPrefs.SetInt(line.var.ToString(), PlayerPrefs.GetInt(line.var.ToString())+1);
+           {
+               int i = FindVariable(line.var); 
+               if (i>-1)
+                   saveObj.Variables[i].varValue++;
+               else
+               {
+                   saveObj.Variables.Add(new VarItem(line.var, 1));
+               }
+
+            }
                 break;
-            case GDB.Signs.equal: 
-                PlayerPrefs.SetInt(line.var.ToString(), line.value);
+            case GDB.Signs.equal:
+            {
+                int i = FindVariable(line.var);
+                if (i > -1)
+                    saveObj.Variables[i].varValue = line.value;
+                else
+                {
+                    saveObj.Variables.Add(new VarItem(line.var, line.value));
+                }
+
+            }
                 break;
         }
         lineNum++;
         Step();
         
+    }
+    int FindVariable(GDB.Variables name)
+    {
+        foreach (var item in saveObj.Variables)
+        {
+            if (item.varName == name)
+            {
+                return saveObj.Variables.IndexOf(item);
+            } 
+        }
+
+        return -1;
     }
 
     int FindLabel(string name)
@@ -1054,8 +1047,8 @@ public class NewGameCore : MonoBehaviour
     void textAction(Item line)
     {
         ApplyTextEffects(GDB.Fonts.Regular);
-        lastAuthor = line.name;
-        lastLine = line.line;
+        saveObj.lastAuthor = line.name;
+        saveObj.lastLine = line.line;
         if (c != null)
         {
             SetTextMarker(false);

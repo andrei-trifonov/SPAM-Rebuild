@@ -57,7 +57,7 @@ public class InvestigationController : MonoBehaviour
     
   
     [SerializeField] private Vector4 ScreenSpace;
-   
+    [SerializeField] private Transform spawnPoint;
     [SerializeField] GameObject thoughtTemplate;
     [SerializeField] GameObject resultPanel;
     [SerializeField] TextMeshProUGUI resultText;
@@ -71,7 +71,7 @@ public class InvestigationController : MonoBehaviour
     [SerializeField] private  GameObject cameraInvestigation;
     [SerializeField] private   GameObject cameraThought;
    
-    [HideInInspector] public NewGameCore Core;
+    [SerializeField] private NewGameCore Core;
     private Result chosenResult;
     List<GameObject> spawnedObjects = new List<GameObject>();
 
@@ -87,6 +87,7 @@ public class InvestigationController : MonoBehaviour
         StartCoroutine(LoadInv(sceneName, Unlocks));
         this.drugsCount = drugsCount;
         textDrugs.text = "SPAM-V: " + drugsCount;
+        canInv.enabled=true;
     
     }
 
@@ -99,7 +100,7 @@ public class InvestigationController : MonoBehaviour
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
             GameObject res = handle.Result;
-            Scene = Instantiate(res);
+            Scene = Instantiate(res, spawnPoint.position, spawnPoint.rotation);
 
         }
 
@@ -129,10 +130,9 @@ public class InvestigationController : MonoBehaviour
 
     }
     
-    //TODO проверить добавление мысли по клику на предмет
-    //TODO показать/убрать канвас расследования 
+   
     //TODO инкремент переменной
-    //TODO сделать все сохранение как объект  JSON
+
     public void AddThought(ThoughtSt obj)
     {
         if (!Thoughts.Contains(obj))
@@ -244,7 +244,7 @@ public class InvestigationController : MonoBehaviour
        
         cameraThought.SetActive(true);
         cameraInvestigation.SetActive(true);
-        
+        canInv.enabled = false;
         Destroy(Scene);
         
         

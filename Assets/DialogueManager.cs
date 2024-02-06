@@ -9,16 +9,6 @@ using System.Collections.Generic;
    {
        public LabelSampleWrapper[] Labels;
    }
-[System.Serializable]
-public class SaveObject 
-{
-    public SaveObject()
-    {
-        unlockedInv = new List<UnlockMessage>();
-    }
-    public List<UnlockMessage> unlockedInv;
-    
-}
 
    [System.Serializable]
    public class LabelSampleWrapper

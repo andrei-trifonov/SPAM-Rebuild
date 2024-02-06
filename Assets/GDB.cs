@@ -8,7 +8,9 @@ public static class GDB
     public static Color CharColor(int i)
     {
         switch (i)
-        {
+        {  
+            case (int)Name.Никто: 
+                return Color.clear;
            case (int)Name.Алина:
                return new Color(0.16f, 0.97f, 0.93f);
            case (int)Name.Мира:
@@ -19,6 +21,7 @@ public static class GDB
                return new Color(1, 0.86f, 0.35f);
            case (int)Name.Кир:
                return new Color(0.77f, 0.24f, 1);
+      
 
         }
         return new Color(0.82f, 0.41f, 0.12f);
@@ -26,6 +29,7 @@ public static class GDB
 
     public enum Name
     {
+        Никто,
         Алина, 
         Мира,
         Миша,
@@ -33,6 +37,7 @@ public static class GDB
         Кир,
         Толя,
         Мама
+       
     }
     public enum LineType
     {
@@ -52,6 +57,7 @@ public static class GDB
     }
     public enum BGName
     {
+        None,
         Park,
         Construct,
         Garages,
@@ -115,7 +121,8 @@ public static class GDB
     {
         Krypton2,
         Track2,
-        Track3
+        Track3,
+        None
     }
     public enum Variables
     {

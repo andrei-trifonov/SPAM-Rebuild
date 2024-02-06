@@ -43,13 +43,11 @@ public class LoadButton : MonoBehaviour
         Savename.text = Savenum;
         if (PlayerPrefs.GetInt(Savenum + "isSaved") == 1)
         {
+            SaveObject loadedData = JsonUtility.FromJson<SaveObject>(PlayerPrefs.GetString(Savenum+"Save"));
             isSaved = true;
-            if (PlayerPrefs.GetString(Savenum + "Scene") != "")
-                 StartCoroutine(LoadPreview(PlayerPrefs.GetString(Savenum + "Scene")+"Preview"));
-            if (PlayerPrefs.GetString(Savenum + "Savetime") != "")
-            {
-                Savetime.text = PlayerPrefs.GetString(Savenum + "Savetime");
-            }
+            if (loadedData.previewName!="")
+                 StartCoroutine(LoadPreview(loadedData.previewName));
+            Savetime.text = loadedData.Savetime;
         }
     }
 
