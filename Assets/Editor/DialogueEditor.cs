@@ -226,23 +226,39 @@ public class DialogueEditor : Editor
                                 {
                                     GUI.backgroundColor = Color.cyan;
                                     EditorGUILayout.BeginVertical();
-                                    for (int i=0; i< item.menu_label.Count; i++)
+                                    try
                                     {
-                                       
-                                        EditorGUILayout.BeginHorizontal();
-                                        EditorGUILayout.LabelField("Выбор", GUILayout.Height(20), GUILayout.Width(50));
-                                        item.menu_label[i] = EditorGUILayout.TextArea(item.menu_label[i], GUILayout.Width(300));
-                                        EditorGUILayout.LabelField("Прыжок", GUILayout.Height(20), GUILayout.Width(50));
-                                        item.menu_jump[i] = EditorGUILayout.TextArea(item.menu_jump[i], GUILayout.Width(300));
-                                        EditorGUILayout.EndHorizontal();
-                                      
-                                     
+                                        for (int i = 0; i < item.menu_label.Count; i++)
+                                        {
+
+                                            EditorGUILayout.BeginHorizontal();
+                                            EditorGUILayout.LabelField("Выбор", GUILayout.Height(20),
+                                                GUILayout.Width(50));
+                                            item.menu_label[i] = EditorGUILayout.TextArea(item.menu_label[i],
+                                                GUILayout.Width(300));
+                                            EditorGUILayout.LabelField("Прыжок", GUILayout.Height(20),
+                                                GUILayout.Width(50));
+                                            item.menu_jump[i] = EditorGUILayout.TextArea(item.menu_jump[i],
+                                                GUILayout.Width(300));
+                                            EditorGUILayout.EndHorizontal();
+                                            
+
+                                        }
                                     }
+                                    catch
+                                    {
+                                        
+                                        item.menu_label = new List<string>();
+                                        item.menu_jump = new List<string>();
+
+                                    }Repaint();
+                                    UnityEditor.EditorApplication.RepaintHierarchyWindow();
                                     EditorGUILayout.BeginHorizontal();
                                     if (GUILayout.Button("+", GUILayout.Height(20), GUILayout.Width(50)))
                                     {
                                         item.menu_label.Add("");
                                         item.menu_jump.Add("");
+                                        Repaint();
 
                                     }
                                     
@@ -255,6 +271,7 @@ public class DialogueEditor : Editor
                                     EditorGUILayout.EndHorizontal();
                                     EditorGUILayout.EndVertical();
                                     GUILayout.Space(440);
+                                    UnityEditor.EditorApplication.RepaintHierarchyWindow();
                                 } break;
                                 case (GDB.LineType.CamEffect):
                                     {

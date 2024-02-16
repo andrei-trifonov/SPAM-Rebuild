@@ -6121,7 +6121,7 @@ MonoBehaviour:
     lastLine: 
     Variables: []
     Savetime: 
-    Actors: 
+    Actors: []
     lastLineNum: 0
     lastLabelNum: 0
     previewName: 
@@ -11726,15 +11726,98 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Labels:
-  - name: 
+  - name: 1
     lines:
-    - type: 2
+    - type: 12
       name: 0
-      line: "\u041F\u0440\u0438\u0432\u0435\u0442, \u044D\u0442\u043E \u0441\u0442\u0440\u043E\u0447\u043A\u0430
-        1"
+      line: 
+      font: 0
+      inv: 1
+      BGname: 0
+      effects: 0
+      CGname: cg2
+      show: 1
+      pose: 0
+      additionalPose: "\u043F\u0438\u0441\u044C\u043A\u0438 + \u0441\u0438\u0441\u044C\u043A\u0438"
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 12
+      name: 0
+      line: "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"
+      font: 0
+      inv: 2
+      BGname: 0
+      effects: 0
+      CGname: cg3
+      show: 1
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 12
+      name: 0
+      line: 
       font: 0
       inv: 0
-      BGname: 22
+      BGname: 0
+      effects: 0
+      CGname: cg2
+      show: 1
+      pose: 0
+      additionalPose: InvGame
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 3
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 12
+      name: 0
+      line: 
+      font: 0
+      inv: 2
+      BGname: 0
+      effects: 0
+      CGname: cg3
+      show: 1
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 11
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
       effects: 0
       CGname: 
       show: 0
@@ -11750,17 +11833,16 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
-    - type: 4
-      name: 1
-      line: "\u041F\u0440\u0438\u0432\u0435\u0442, \u044D\u0442\u043E \u0441\u0442\u0440\u043E\u0447\u043A\u0430
-        2"
+    - type: 2
+      name: 0
+      line: 
       font: 0
       inv: 0
       BGname: 0
       effects: 0
-      CGname: cg2
-      show: 1
-      pose: 1
+      CGname: 
+      show: 0
+      pose: 0
       additionalPose: 
       music: 0
       time: 0
@@ -11772,10 +11854,105 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 3
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 11
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 1
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label:
+      - 
+      - 
+      - 
+      - 
+      - 
+      menu_jump:
+      - 
+      - 
+      - 
+      - 
+      - 
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 3
-      line: "\u041F\u0440\u0438\u0432\u0435\u0442, \u044D\u0442\u043E \u0441\u0442\u0440\u043E\u0447\u043A\u0430
-        3"
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+  - name: 2
+    lines:
+    - type: 0
+      name: 0
+      line: 
       font: 0
       inv: 0
       BGname: 0
