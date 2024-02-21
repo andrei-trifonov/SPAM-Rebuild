@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 [SerializeField]
 public class GCLabel
@@ -16,6 +18,7 @@ public class GCFullLabel
     public GCLabel label;
     public List<GCLabel> linked = new List<GCLabel>();
 }
+[ExecuteInEditMode]
 public class GraphComposerNew : MonoBehaviour {
     public GameObject chapterPrefab;
     public GameObject linePrefab;
@@ -24,9 +27,11 @@ public class GraphComposerNew : MonoBehaviour {
     public float nodeSpacing = 2f; // Расстояние между узлами
     GameObject linkedNode;
 
-   
-    void Start() {
-        BuildDialogueGraph();
+
+    private void Start()
+    {
+        ClearDialogueGraph();
+        
     }
 
     int FindLabelIByName(string name)
@@ -42,11 +47,26 @@ public class GraphComposerNew : MonoBehaviour {
 
         return -1;
     }
-    void BuildDialogueGraph() {
+
+    public void ClearDialogueGraph()
+    {
+        foreach (Transform node in gameObject.transform.GetComponentsInChildren<Transform>())
+        {
+            try
+            {
+                if (node.gameObject != gameObject)
+                    DestroyImmediate(node.gameObject);
+            }
+            catch{}
+        }
+        Nodes.Clear();
+
+    }
+    public void BuildDialogueGraph() {
      
 
         foreach (var chapter in dialogueData.Labels) {
-            GameObject chapterObject = Instantiate(chapterPrefab,  CalculateNodePosition(chapter.name), Quaternion.identity, gameObject.transform);
+            GameObject chapterObject =  Instantiate(chapterPrefab,  CalculateNodePosition(chapter.name), Quaternion.identity, gameObject.transform);
             chapterObject.name = chapter.name;
 
             GCLabel l = new GCLabel();
@@ -68,7 +88,10 @@ public class GraphComposerNew : MonoBehaviour {
                     if (line.additionalPose != "")
                     {
                         Nodes[FindLabelIByName(linkedChapter.name)].label.lt = line.type;
-                        Nodes[FindLabelIByName(linkedChapter.name)].label.reason = currentNode.label.name;
+                        if (line.type == GDB.LineType.Jump )
+                           Nodes[FindLabelIByName(linkedChapter.name)].label.reason = currentNode.label.name;
+                        if (line.type == GDB.LineType.If) 
+                            Nodes[FindLabelIByName(linkedChapter.name)].label.reason = line.var.ToString() + " " +  line.signsIf.ToString() + " " + line.value.ToString();
                         currentNode.linked.Add(Nodes[FindLabelIByName(linkedChapter.name)].label);
                     }
                 }
@@ -101,7 +124,7 @@ public class GraphComposerNew : MonoBehaviour {
     }
 
     void DrawLine(Vector3 start, Vector3 end) {
-        GameObject line = Instantiate(linePrefab);
+        GameObject line = Instantiate(linePrefab, gameObject.transform);
         LineRenderer lineRenderer = line.GetComponent<LineRenderer>();
 
         lineRenderer.positionCount = 2;
@@ -120,7 +143,7 @@ public class GraphComposerNew : MonoBehaviour {
         Vector3 center = start + direction / 2f;
         
         // Создаем объект линии
-        GameObject line = Instantiate(linePrefab);
+        GameObject line = Instantiate(linePrefab, gameObject.transform);
         LineRenderer lineRenderer = line.GetComponent<LineRenderer>();
         
         // Задаем параметры линии
