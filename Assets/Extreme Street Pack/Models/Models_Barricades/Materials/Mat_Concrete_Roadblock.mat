@@ -10,6 +10,7 @@ Material:
   m_Name: Mat_Concrete_Roadblock
   m_Shader: {fileID: 4800000, guid: 2a230514c860643f69b6a4d1871d3825, type: 3}
   m_ValidKeywords:
+  - DR_GRADIENT_ON
   - DR_LIGHT_ATTENUATION
   - DR_OUTLINE_ON
   - _DETAILMAPBLENDINGMODE_MULTIPLY
@@ -118,11 +119,11 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _GradientAngle: 0
+    - _GradientAngle: 100.9
     - _GradientCenterX: 0
-    - _GradientCenterY: 0
-    - _GradientEnabled: 0
-    - _GradientSize: 10
+    - _GradientCenterY: 7.26
+    - _GradientEnabled: 1
+    - _GradientSize: 2
     - _LightContribution: 0.5
     - _LightFalloffSize: 0.0001
     - _LightmapDirectionPitch: 0
@@ -132,7 +133,7 @@ Material:
     - _OutlineDepthOffset: 0
     - _OutlineEnabled: 1
     - _OutlineScale: 1.001
-    - _OutlineWidth: 1
+    - _OutlineWidth: 0.8
     - _OverrideBakedGi: 0
     - _OverrideLightAttenuation: 1
     - _OverrideLightmapDir: 0
@@ -166,8 +167,8 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
-    - _DetailMapColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    - _ColorGradient: {r: 0.05428977, g: 0.18867922, b: 0.110678494, a: 0.85056}
+    - _DetailMapColor: {r: 0.6509434, g: 0.56189924, b: 0.56189924, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 0.6509434, g: 0.3297253, b: 0.095185116, a: 1}
     - _FlatSpecularColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 0.85056}

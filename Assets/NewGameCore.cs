@@ -875,10 +875,13 @@ public class NewGameCore : MonoBehaviour
         textCanvas.enabled = false;
         foreach (var choiseVariant in line.menu_label)
         {
-            ChoiseBox cb;
-            cb = Instantiate(choiseBox, choiseGroup.transform).GetComponent<ChoiseBox>();
-            cb.SetMenuItem(choiseVariant, line.menu_jump[line.menu_label.IndexOf(choiseVariant)], this);
-            choiseBoxes.Add(cb.gameObject);
+            if (choiseVariant!= ""){
+                ChoiseBox cb;
+                cb = Instantiate(choiseBox, choiseGroup.transform).GetComponent<ChoiseBox>();
+                cb.SetMenuItem(choiseVariant, line.menu_jump[line.menu_label.IndexOf(choiseVariant)], this);
+                choiseBoxes.Add(cb.gameObject);
+            }
+            
         }
     }
 

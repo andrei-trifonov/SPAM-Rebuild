@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,4 +12,27 @@ public class SimpleLabel : MonoBehaviour
     public GameObject ifobj;
     public GameObject chooseobj;
 
+
+    public void SetName(string text)
+    {
+        name.text = text;
+    }
+
+    public void SetMarker(GDB.LineType lt, string text)
+    {
+        Debug.Log(text);
+        if (lt == GDB.LineType.If)
+        {
+      //     Debug.Log("Прикол");
+            ifobj.SetActive(true);
+            ifname.text += text;
+        }
+        
+        if (lt == GDB.LineType.Menu)
+        {
+            chooseobj.SetActive(true);
+            if (choosename.text!=text)
+                choosename.text += text;
+        }
+    }
 }
