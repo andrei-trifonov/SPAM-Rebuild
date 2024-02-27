@@ -294,10 +294,10 @@ Material:
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25
     - _OutlineNoise: 0
-    - _OutlineScale: 1.18
+    - _OutlineScale: 1
     - _OutlineSize: 20
     - _OutlineTab: 1
-    - _OutlineWidth: -0.08
+    - _OutlineWidth: 1
     - _OverrideBakedGi: 0
     - _OverrideLightAttenuation: 0
     - _OverrideLightmapDir: 0

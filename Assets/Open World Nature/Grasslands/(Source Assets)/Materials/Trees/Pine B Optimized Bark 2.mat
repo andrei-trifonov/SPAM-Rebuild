@@ -380,7 +380,7 @@ Material:
     - _OutlineScale: 1
     - _OutlineSize: 70
     - _OutlineTab: 1
-    - _OutlineWidth: 2
+    - _OutlineWidth: 1
     - _OverrideBakedGi: 0
     - _OverrideLightAttenuation: 0
     - _OverrideLightmapDir: 0
@@ -470,7 +470,7 @@ Material:
     - _Color0: {r: 0.49803907, g: 0.49803907, b: 0.49803907, a: 0}
     - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
-    - _DetailMapColor: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
+    - _DetailMapColor: {r: 0.5943396, g: 0.5046252, b: 0.31118724, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}

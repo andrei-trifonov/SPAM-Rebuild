@@ -21,15 +21,26 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: T_Home_Garden_Tools_texture
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6c046203321edf34fb092959a05e5b4a, type: 3}
   m_ValidKeywords:
+  - _MK_ALBEDO_MAP
+  - _MK_ARTISTIC_PROJECTION_SCREEN_SPACE
+  - _MK_ENVIRONMENT_REFLECTIONS_AMBIENT
+  - _MK_LIGHT_BANDED
+  - _MK_NORMAL_MAP
+  - _MK_OUTLINE_HULL_CLIP
+  - _MK_RECEIVE_SHADOWS
+  - _MK_RIM_DEFAULT
+  - _MK_WRAPPED_DIFFUSE
+  m_InvalidKeywords:
   - _NORMALMAP
+  - _RECEIVESHADOWS_ON
   - _SPECULARHIGHLIGHTS_OFF
-  m_InvalidKeywords: []
+  - _WRAPPEDLIGHTING_ON
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     IGNOREPROJECTOR: False
     RenderType: Opaque
@@ -234,7 +245,7 @@ Material:
     - _DrawnClampMin: 0
     - _DrawnMapScale: 1
     - _DstBlend: 0
-    - _EnvironmentReflections: 2
+    - _EnvironmentReflections: 1
     - _FresnelHighlights: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -248,10 +259,10 @@ Material:
     - _IridescenceSize: 1
     - _IridescenceSmoothness: 0.5
     - _IridescenceThresholdOffset: 0
-    - _Light: 1
+    - _Light: 2
     - _LightBands: 4
-    - _LightBandsScale: 0.5
-    - _LightThreshold: 0.5
+    - _LightBandsScale: 0.193
+    - _LightThreshold: 0.625
     - _LightTransmission: 0
     - _LightTransmissionDistortion: 0.25
     - _LightTransmissionIntensity: 1
@@ -267,21 +278,22 @@ Material:
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25
     - _OutlineNoise: 0
-    - _OutlineSize: 5
+    - _OutlineSize: 10
+    - _OutlineTab: 1
     - _Parallax: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RenderFace: 2
     - _RenderPriority: 0
-    - _Rim: 0
-    - _RimSize: 1
+    - _Rim: 1
+    - _RimSize: 5
     - _RimSmoothness: 0.5
     - _RimThresholdOffset: 0.25
     - _Roughness: 0.5
     - _Saturation: 1
     - _Shininess: 1
     - _SketchMapScale: 1
-    - _Smoothness: 1
+    - _Smoothness: 0
     - _SmoothnessSource: 1
     - _SmoothnessTextureChannel: 0
     - _SpecSource: 0
@@ -299,7 +311,7 @@ Material:
     - _StencilRef: 0
     - _StencilWriteMask: 255
     - _StencilZFail: 0
-    - _StylizeTab: 0
+    - _StylizeTab: 1
     - _Surface: 0
     - _ThresholdMapScale: 1
     - _VertexAnimation: 0
@@ -318,13 +330,13 @@ Material:
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GoochBrightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GoochDarkColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GoochDarkColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
     - _IridescenceColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _LightTransmissionColor: {r: 1, g: 0.65, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectColor: {r: 0.21323532, g: 0.21323532, b: 0.21323532, a: 0.5019608}
     - _RimBrightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
     - _RimDarkColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _SpecularColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

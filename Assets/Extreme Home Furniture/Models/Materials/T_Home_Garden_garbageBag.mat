@@ -55,12 +55,24 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: T_Home_Garden_garbageBag
-  m_Shader: {fileID: 4800000, guid: 2a230514c860643f69b6a4d1871d3825, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6c046203321edf34fb092959a05e5b4a, type: 3}
   m_ValidKeywords:
+  - _MK_ALBEDO_MAP
+  - _MK_ARTISTIC_PROJECTION_SCREEN_SPACE
+  - _MK_LIGHT_BANDED
+  - _MK_NORMAL_MAP
+  - _MK_OUTLINE_HULL_CLIP
+  - _MK_RECEIVE_SHADOWS
+  - _MK_RIM_DEFAULT
+  - _MK_WRAPPED_DIFFUSE
+  m_InvalidKeywords:
+  - DR_OUTLINE_ON
   - _DETAILMAPBLENDINGMODE_MULTIPLY
+  - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
   - _NORMALMAP
+  - _RECEIVESHADOWS_ON
   - _TEXTUREBLENDINGMODE_MULTIPLY
-  m_InvalidKeywords: []
+  - _WRAPPEDLIGHTING_ON
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -68,8 +80,7 @@ Material:
   stringTagMap:
     IGNOREPROJECTOR: False
     RenderType: Opaque
-  disabledShaderPasses:
-  - SRPDEFAULTUNLIT
+  disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -282,7 +293,7 @@ Material:
     - _IridescenceSize: 1
     - _IridescenceSmoothness: 0.5
     - _IridescenceThresholdOffset: 0
-    - _Light: 1
+    - _Light: 2
     - _LightBands: 4
     - _LightBandsScale: 0.5
     - _LightContribution: 0.852
@@ -301,12 +312,13 @@ Material:
     - _Outline: 3
     - _OutlineData: 0
     - _OutlineDepthOffset: 0
-    - _OutlineEnabled: 0
+    - _OutlineEnabled: 1
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25
     - _OutlineNoise: 0
     - _OutlineScale: 1
     - _OutlineSize: 5
+    - _OutlineTab: 0
     - _OutlineWidth: 1
     - _OverrideBakedGi: 0
     - _OverrideLightAttenuation: 0

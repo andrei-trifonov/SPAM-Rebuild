@@ -305,10 +305,10 @@ Material:
     - _Blend: 0
     - _BlendDst: 0
     - _BlendSrc: 1
-    - _Brightness: 0.94
+    - _Brightness: 2.4
     - _BumpScale: 0.743
     - _ColorGrading: 1
-    - _Contrast: 5.42
+    - _Contrast: 5.27
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailBlend: 0
@@ -376,7 +376,7 @@ Material:
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25
     - _OutlineNoise: 0
-    - _OutlineSize: 70
+    - _OutlineSize: 30
     - _OutlineTab: 1
     - _Parallax: 0.02
     - _PureShadowColor: 1
@@ -398,7 +398,7 @@ Material:
     - _RimSmoothness: 0.5
     - _RimThresholdOffset: 0.25
     - _Roughness: 0.5
-    - _Saturation: 0.2
+    - _Saturation: 0.1
     - _ShadowMask: 0
     - _Shininess: 0.078125
     - _SketchMapScale: 1
@@ -451,7 +451,7 @@ Material:
     - __dirty: 0
     m_Colors:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
-    - _AlbedoColor: {r: 1, g: 1, b: 1, a: 1}
+    - _AlbedoColor: {r: 0.5, g: 0.37849116, b: 0.14386791, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 0.90899116, b: 0.6924528, a: 1}
     - _Color0: {r: 0.49803907, g: 0.49803907, b: 0.49803907, a: 0}

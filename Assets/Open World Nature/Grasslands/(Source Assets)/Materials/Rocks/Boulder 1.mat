@@ -21,38 +21,39 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Boulder 1
-  m_Shader: {fileID: 4800000, guid: 849dc4ff793a3f943ad21a3b6ee26456, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6c046203321edf34fb092959a05e5b4a, type: 3}
   m_ValidKeywords:
-  - _ADDITIONAL_LIGHTS_ENABLED
-  - _ENVIRONMENT_LIGHTING_ENABLED
-  - _FOG
-  - _NORMALMAP
-  - _SPECULAR
-  m_InvalidKeywords:
-  - _FRESNELHIGHLIGHTS_ON
-  - _METALLICSPECGLOSSMAP
   - _MK_ALBEDO_MAP
   - _MK_ARTISTIC_PROJECTION_SCREEN_SPACE
-  - _MK_DETAIL_BLEND_MIX
-  - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
-  - _MK_FRESNEL_HIGHLIGHTS
-  - _MK_LIGHT_CEL
+  - _MK_LIGHT_BANDED
   - _MK_NORMAL_MAP
-  - _MK_OCCLUSION_MAP
-  - _MK_PBS_MAP_0
+  - _MK_OUTLINE_HULL_CLIP
   - _MK_RECEIVE_SHADOWS
   - _MK_SPECULAR_ISOTROPIC
   - _MK_WRAPPED_DIFFUSE
+  m_InvalidKeywords:
+  - _ADDITIONAL_LIGHTS_ENABLED
+  - _ENVIRONMENT_LIGHTING_ENABLED
+  - _FOG
+  - _FRESNELHIGHLIGHTS_ON
+  - _METALLICSPECGLOSSMAP
+  - _MK_DETAIL_BLEND_MIX
+  - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
+  - _MK_FRESNEL_HIGHLIGHTS
+  - _MK_OCCLUSION_MAP
+  - _NORMALMAP
   - _OCCLUSIONMAP
   - _RECEIVESHADOWS_ON
+  - _SPECULAR
   - _WRAPPEDLIGHTING_ON
   - _ZWRITE_ON
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     IGNOREPROJECTOR: False
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -276,7 +277,7 @@ Material:
     - _IridescenceSize: 1
     - _IridescenceSmoothness: 0.5
     - _IridescenceThresholdOffset: 0
-    - _Light: 1
+    - _Light: 2
     - _LightBands: 4
     - _LightBandsScale: 0.5
     - _LightThreshold: 0.719
@@ -297,6 +298,7 @@ Material:
     - _OutlineFadeMin: 0.25
     - _OutlineNoise: 0
     - _OutlineSize: 5
+    - _OutlineTab: 0
     - _Parallax: 0.0443
     - _PureShadowColor: 0
     - _QueueOffset: 0
