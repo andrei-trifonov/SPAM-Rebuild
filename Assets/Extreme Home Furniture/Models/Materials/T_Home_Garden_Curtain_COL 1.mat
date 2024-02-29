@@ -439,7 +439,7 @@ Material:
     - _ColorGradient: {r: 0, g: 0, b: 0, a: 0.85056}
     - _ColorTop: {r: 0.5754717, g: 0.056461357, b: 0.056461357, a: 0.31764707}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
-    - _DetailMapColor: {r: 0.45882356, g: 0.34901962, b: 0.31764707, a: 1}
+    - _DetailMapColor: {r: 0.64269036, g: 0.7075472, b: 0.63746, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.13207549, g: 0.120238535, b: 0.120238535, a: 1}
     - _FlatRimColor: {r: 0, g: 0, b: 0, a: 0.85056}
