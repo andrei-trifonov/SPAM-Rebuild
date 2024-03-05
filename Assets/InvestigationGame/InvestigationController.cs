@@ -81,6 +81,9 @@ public class InvestigationController : MonoBehaviour
     List<MergeConnection> Merges = new List<MergeConnection>();
     private int drugsCount;
     private GameObject Scene;
+    [SerializeField] private GameObject MergeEffect;
+    [SerializeField] private GameObject DiffusionEffect;
+    private bool c;
     public void SetNewGame(string sceneName, List<int> Unlocks, int drugsCount)
     {
   
@@ -135,8 +138,16 @@ public class InvestigationController : MonoBehaviour
 
     public void AddThought(ThoughtSt obj)
     {
-        if (!Thoughts.Contains(obj))
-            Thoughts.Add(obj);
+        foreach (var item in Thoughts)
+        {
+            if (item.Content == obj.Content)
+            {
+                return;
+            }
+        }
+      
+        Thoughts.Add(obj);
+            
     }
 
     void DestroyAllThought() {
@@ -176,7 +187,7 @@ public class InvestigationController : MonoBehaviour
                                              new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y),
                                                  UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), 10);
                 spawnedObjects.Add(spawned.gameObject);
-                spawned.Initiate(item.Content, item.Level, item.Type, item.ID);
+                spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect);
                 foreach (MergeConnection connection in Merges)
                 {
                     if (item.ID == connection.Item1)
@@ -249,6 +260,19 @@ public class InvestigationController : MonoBehaviour
         
         
     }
+
+    IEnumerator DiffusionCoroutine()
+    {
+        if (!c)
+        {
+            c = true;
+            DiffusionEffect.SetActive(true);
+            yield return new WaitForSeconds(2);
+            DiffusionEffect.SetActive(false);
+            c = false;
+        }
+    }
+
     // Update is called once per frame
     public void UpdateCollisions(int ID)
     {
@@ -260,10 +284,13 @@ public class InvestigationController : MonoBehaviour
                 if ((connection.t1.toMerge[0].ID == connection.Item2 || connection.t2.toMerge[0].ID == connection.Item1) && (connection.Item2 == ID || connection.Item1 == ID))
                 {
 
-
+                    
+                   
                     Thought spawned = Instantiate(thoughtTemplate).GetComponent<Thought>();
-                    spawned.Initiate(connection.Result.Content, connection.Result.Level, connection.Result.Type, connection.Result.ID);
+                    spawned.Initiate(connection.Result.Content, connection.Result.Level, connection.Result.Type, connection.Result.ID, MergeEffect);
                     spawned.transform.position = new Vector3(connection.t1.gameObject.transform.position.x, connection.t1.gameObject.transform.position.y, connection.t1.gameObject.transform.position.z);
+                    DiffusionEffect.transform.position = spawned.transform.position;
+                    StartCoroutine(DiffusionCoroutine());
                     spawnedObjects.Add(spawned.gameObject);
                     spawnedObjects.Remove(connection.t1.gameObject);
                     spawnedObjects.Remove(connection.t2.gameObject);

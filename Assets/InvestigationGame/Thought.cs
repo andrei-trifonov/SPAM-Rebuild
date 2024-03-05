@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
+
 [System.Serializable]
 public enum ThoughtType
 {
@@ -21,13 +24,18 @@ public class Thought : MonoBehaviour
     [SerializeField] private TextMeshPro ContentField;
     [SerializeField] private List<GameObject> Decos  = new List<GameObject>();
     [SerializeField] private List<GameObject> Levels = new List<GameObject>();
-    public void Initiate(string Content, int Level, ThoughtType Type, int ID)
+    private GameObject tmpCloseEffect;
+    private GameObject MergeEffect;
+    private Collider2D col;
+    private bool replaceEffect;
+    public void Initiate(string Content, int Level, ThoughtType Type, int ID, GameObject MergeEffect)
     {
          this.Content = Content;
          this.Level = Level;
          this.Content = Content;
          this.Type = Type;
          this.ID = ID;
+         this.MergeEffect = MergeEffect;
         ContentField.text = Content;
         Decos[(int)Type].SetActive(true);
         Levels[Level].SetActive(true);
@@ -35,32 +43,54 @@ public class Thought : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (replaceEffect)  
+            MergeEffect.transform.position = transform.position +  new Vector3( col.transform.position.x - gameObject.transform.position.x, col.transform.position.y - gameObject.transform.position.y) / 2;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        try
+        if (collision.gameObject.name != "Brain")
         {
-            Thought colThought = collision.GetComponent<Thought>();
-            if (colThought && !toMerge.Contains(colThought))
+            MergeEffect.SetActive(true);
+            col = collision;
+            replaceEffect = true;
+            try
             {
-                toMerge.Add(colThought);
+                Thought colThought = collision.GetComponent<Thought>();
+                if (colThought && !toMerge.Contains(colThought))
+                {
+                    toMerge.Add(colThought);
 
+                }
+            }
+            catch
+            {
             }
         }
-        catch { }
+
 
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        try
+        if (collision.gameObject.name != "Brain")
         {
-            if (collision.GetComponent<Thought>() && toMerge.Contains(collision.GetComponent<Thought>()))
+            replaceEffect = false;
+            MergeEffect.SetActive(false);
+            try
             {
-                toMerge.Remove(collision.GetComponent<Thought>());
+                if (collision.GetComponent<Thought>() && toMerge.Contains(collision.GetComponent<Thought>()))
+                {
+                    toMerge.Remove(collision.GetComponent<Thought>());
 
+                }
+            }
+            catch
+            {
             }
         }
-        catch { }
     }
 
 }

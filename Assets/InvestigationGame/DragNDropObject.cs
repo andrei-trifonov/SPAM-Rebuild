@@ -9,6 +9,7 @@ public class DragNDropObject : MonoBehaviour
     private InvestigationController IC;
     bool prepped_to_drop;
     private Camera ThoCam;
+    [SerializeField] private GameObject TouchEffect;
     
     private void Start()
     {
@@ -17,12 +18,16 @@ public class DragNDropObject : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        transform.localScale *= 0.9f;
+        TouchEffect.SetActive(true);
         _isDragging = true;
         _offset = transform.position - GetWorldPosition();
     }
 
     private void OnMouseUp()
     {
+        transform.localScale /= 0.9f;
+        TouchEffect.SetActive(false);
         _isDragging = false;
         if (prepped_to_drop) {
             IC.FinishInvestigation(GetComponent<Thought>().ID);

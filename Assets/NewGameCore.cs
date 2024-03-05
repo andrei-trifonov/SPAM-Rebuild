@@ -414,7 +414,7 @@ public class NewGameCore : MonoBehaviour
             case GDB.Investigation.AddThought:
             {
                 
-                StartCoroutine(NewThoughtCoroutine("Я запомнила", cid++));
+                StartCoroutine(NewThoughtCoroutine("Идея!", cid++));
 
                 saveObj.unlockedInv.Add(new UnlockMessage(line.additionalPose, line.value));
                 
@@ -444,7 +444,7 @@ public class NewGameCore : MonoBehaviour
                 break;
             case GDB.Investigation.AddDrugs:
             {
-                StartCoroutine(NewThoughtCoroutine("+1 SPAM-V", cid++));
+                StartCoroutine(NewThoughtCoroutine("Еще один стимулятор", cid++));
                 saveObj.drugsCount++;
                 
              
@@ -962,8 +962,11 @@ public class NewGameCore : MonoBehaviour
         }
         
     }
+    
     void varAction(Item line)
     {
+        
+        StartCoroutine(NewThoughtCoroutine("Они это запомнят", cid++));
         //Debug.Log(line.value); 
         switch (line.signs)
         {
