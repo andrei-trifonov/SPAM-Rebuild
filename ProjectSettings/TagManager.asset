@@ -12,6 +12,7 @@ TagManager:
   - Brain
   - InvCam
   - ThoCam
+  - Interactive
   layers:
   - Default
   - TransparentFX

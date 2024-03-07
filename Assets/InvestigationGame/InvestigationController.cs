@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using System.Linq;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
@@ -55,7 +56,8 @@ public struct Result
 public class InvestigationController : MonoBehaviour
 {
     
-  
+    [SerializeField] private GameObject drugsButton1;
+    [SerializeField] private GameObject drugsButton2;
     [SerializeField] private Vector4 ScreenSpace;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] GameObject thoughtTemplate;
@@ -65,8 +67,8 @@ public class InvestigationController : MonoBehaviour
     [SerializeField] Canvas canInv;
     [SerializeField] Canvas canTho;
 
-    [SerializeField]  TMP_Text textDrugs;
-
+    [SerializeField]  TMP_Text textDrugs1;
+    [SerializeField]  TMP_Text textDrugs2;
 
     [SerializeField] private  GameObject cameraInvestigation;
     [SerializeField] private   GameObject cameraThought;
@@ -79,19 +81,21 @@ public class InvestigationController : MonoBehaviour
     List<ThoughtSt> Thoughts = new List<ThoughtSt>();
     List<Result> Results = new List<Result>();
     List<MergeConnection> Merges = new List<MergeConnection>();
-    private int drugsCount;
+    private int _drugsCount;
     private GameObject Scene;
     [SerializeField] private GameObject MergeEffect;
     [SerializeField] private GameObject DiffusionEffect;
     private bool c;
     public void SetNewGame(string sceneName, List<int> Unlocks, int drugsCount)
     {
-  
+        drugsButton1.SetActive(true);
+        drugsButton2.SetActive(true);
         StartCoroutine(LoadInv(sceneName, Unlocks));
-        this.drugsCount = drugsCount;
-        textDrugs.text = "SPAM-V: " + drugsCount;
-        canInv.enabled=true;
-    
+        _drugsCount = drugsCount;
+        Debug.Log(_drugsCount);
+        textDrugs1.text = "SPAM-V: " + drugsCount.ToString();
+        textDrugs2.text = "SPAM-V: " + drugsCount.ToString();
+        canInv.enabled = true;
     }
 
     IEnumerator LoadInv(string line, List<int> Unlocks)
@@ -135,6 +139,25 @@ public class InvestigationController : MonoBehaviour
     
    
     //TODO инкремент переменной
+
+    public void UseDrugs()
+    {
+        if (_drugsCount > 0)
+        {
+           
+            Core.UseDrugs();
+ 
+            List<GameObject> interactiveObjects = new List<GameObject>();
+            interactiveObjects = GameObject.FindGameObjectsWithTag("Interactive").ToList();
+
+            foreach (var item in interactiveObjects)
+            {
+                item.GetComponent<MeshRenderer>().material.SetColor("_OutlineColor", UnityEngine.Color.yellow);
+            }
+            drugsButton1.SetActive(false);
+            drugsButton2.SetActive(false);
+        }
+    }
 
     public void AddThought(ThoughtSt obj)
     {

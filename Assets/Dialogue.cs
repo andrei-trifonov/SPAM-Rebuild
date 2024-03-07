@@ -45,7 +45,7 @@ public class Item
     public ThoughtType ThoType;
 
     public GDB.SignsIf signsIf;
-
+    public GDB.Emoji emoji;
     public List<string> menu_label;
     public List<string> menu_jump;
     public Vector3 V3position;

@@ -31,7 +31,10 @@ public class ClueObject : MonoBehaviour
             IC.AddThought(Thought);
             startMove = true;
             Effect.SetActive(true);
-            gameObject.GetComponent<MeshRenderer>().material.SetColor("_AlbedoColor", UnityEngine.Color.gray);
+            Material            _mat = gameObject.GetComponent<MeshRenderer>().material;
+            _mat.SetColor("_AlbedoColor", UnityEngine.Color.gray);
+            _mat.SetColor("_OutlineColor", UnityEngine.Color.black);
+            
         }
     }
 

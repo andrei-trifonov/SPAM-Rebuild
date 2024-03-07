@@ -303,6 +303,17 @@ public class DialogueEditor : Editor
                                                          GUILayout.Space(700);
                                     }
                                     break;
+                                case (GDB.LineType.Emoji):
+                                {
+                                    GUI.backgroundColor = new Color(1,0.5f,1);
+                                    
+                                    EditorGUILayout.LabelField("Эмоджи", GUILayout.Height(20), GUILayout.Width(50));
+                                    item.emoji = (GDB.Emoji) EditorGUILayout.EnumPopup("", item.emoji,  GUILayout.Height(20), GUILayout.Width(90));
+                                    EditorGUILayout.LabelField("Актор", GUILayout.Height(20), GUILayout.Width(50));
+                                    item.name = (GDB.Name) EditorGUILayout.EnumPopup("", item.name,  GUILayout.Height(20), GUILayout.Width(50));
+                                    GUILayout.Space(600);
+                                }
+                                    break;
                                 case (GDB.LineType.Investigation):
                                 {
                                 GUI.backgroundColor = Color.red;

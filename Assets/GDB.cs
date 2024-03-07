@@ -39,6 +39,17 @@ public static class GDB
         Мама
        
     }
+    public enum Emoji
+    {
+        Heartpuff,
+        Heartbreak,
+        Stun,
+        Stars,
+        SleepZ,
+        Cutescull,
+        Evildeath
+
+    }
     public enum LineType
     {
         Line, 
@@ -53,7 +64,8 @@ public static class GDB
         If,
         Jump,
         CamEffect,
-        Investigation
+        Investigation,
+        Emoji
     }
     public enum BGName
     {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
@@ -23,6 +24,7 @@ public class SaveObject
         Actors = new List<Actor>();
     }
 
+    
     public int drugsCount =0 ;
     public List<UnlockMessage> unlockedInv;
     public GDB.BGName lastBG = GDB.BGName.None;
@@ -130,6 +132,10 @@ public class NewGameCore : MonoBehaviour
     int cid;
     public SaveObject saveObj = new SaveObject();
     private string saveJString = "";
+
+    private GameObject Emoji;
+    [SerializeField] private List<GameObject> emojiList = new List<GameObject>();
+    
     public void SetTextMarker(bool state)
     {   
         textCanvasAnimator.SetBool("Ready", !state);
@@ -165,6 +171,7 @@ public class NewGameCore : MonoBehaviour
         saveObj = new SaveObject();
         textCanvasAnimator = textCanvas.GetComponent<Animator>();
         scenario = scenarioComposer.Labels;
+        Load(PlayerPrefs.GetString("LastSave"));
     }
     public void ClearSprites()
     {
@@ -208,11 +215,16 @@ public class NewGameCore : MonoBehaviour
             ApplyTextEffects(GDB.Fonts.Regular);
             textContent.text = "";
             textAuthor.text = "";
-            
+                
 
             SaveObject loadedData = JsonUtility.FromJson<SaveObject>(PlayerPrefs.GetString(savenum+"Save"));
             saveObj = loadedData;
-            
+            if (saveObj == null)
+            {
+                saveObj = new SaveObject();
+                loading = false;
+                return;
+            }
             //Load music
             Item item = new Item();
             item.music = loadedData.lastMusic;
@@ -288,7 +300,6 @@ public class NewGameCore : MonoBehaviour
             PlayerPrefs.SetInt(savenum + "isSaved", 1);
             PlayerPrefs.SetString(savenum + "Save", saveJString);
             PlayerPrefs.Save();
-            
             BlinkSLMarker(0);
         }
     }
@@ -383,6 +394,9 @@ public class NewGameCore : MonoBehaviour
             case GDB.LineType.CamEffect:
                 cameraAction(line);
                 break;
+            case GDB.LineType.Emoji:
+                emojiAction(line);
+                break;
             case GDB.LineType.Investigation:
                 invAction(line);
                 break;
@@ -457,6 +471,10 @@ public class NewGameCore : MonoBehaviour
         }
     }
 
+    public void UseDrugs()
+    {
+        saveObj.drugsCount--;
+    }
     IEnumerator NewThoughtCoroutine(string text, int cid)
     {
         CoroutinesWorking.Add(cid);
@@ -484,8 +502,19 @@ public class NewGameCore : MonoBehaviour
 
     }
 
-
-
+    
+    void emojiAction(Item line)
+    {
+        if (Emoji!=null)
+            Destroy(Emoji);
+        GameObject ActorOnScene = FindActorOnScene(line.name.ToString());
+        if (ActorOnScene != null)
+        { 
+            Emoji = Instantiate(emojiList[(int)line.emoji], ActorOnScene.transform.position + Vector3.up * 3, transform.rotation);
+        }
+        lineNum++;
+        Step();
+    }
 
     IEnumerator EffectCoroutine(Item line, int cid)
     {
@@ -575,7 +604,7 @@ public class NewGameCore : MonoBehaviour
 
         lineNum++;
         CoroutinesWorking.Remove(id);
-        
+        //Step();
 
     }
 
@@ -1052,6 +1081,24 @@ public class NewGameCore : MonoBehaviour
     }
     void textAction(Item line)
     {
+        foreach (var actor in actorsOnScene)
+        {
+            actor.obj.GetComponentInChildren<SpriteRenderer>().color = UnityEngine.Color.gray;
+        }
+        GameObject ActorOnScene = FindActorOnScene(line.name.ToString());
+        if (ActorOnScene != null)
+        {
+            
+            ActorOnScene.GetComponentInChildren<SpriteRenderer>().color = UnityEngine.Color.white;
+        }
+        else
+        {
+            foreach (var actor in actorsOnScene)
+            {
+                actor.obj.GetComponentInChildren<SpriteRenderer>().color = UnityEngine.Color.gray;
+            }
+        }
+
         ApplyTextEffects(GDB.Fonts.Regular);
         saveObj.lastAuthor = line.name;
         saveObj.lastLine = line.line;
