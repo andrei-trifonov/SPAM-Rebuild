@@ -121,7 +121,7 @@ Material:
     - Fresnel_Sharpness: 0.5
     - Offset_Along_Normal: 0
     - Wind: 0
-    - Wind_Speed: 0.06
+    - Wind_Speed: 0.481
     - Wind_Strength: 0.046
     - Wind_Turbulence: 0.16
     - _AlphaClip: 0
