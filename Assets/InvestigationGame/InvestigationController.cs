@@ -52,6 +52,7 @@ public struct Result
     public string Content;
     public GDB.Variables Var;
     public string jumpLabel;
+    public bool isTrueResult;
 }
 public class InvestigationController : MonoBehaviour
 {
@@ -85,9 +86,17 @@ public class InvestigationController : MonoBehaviour
     private GameObject Scene;
     [SerializeField] private GameObject MergeEffect;
     [SerializeField] private GameObject DiffusionEffect;
+    [SerializeField] private GameObject TrueFinEffect;
+    [SerializeField] private GameObject FalseFinEffect;
+
+    [SerializeField] private GameObject drugOverlay;
     private bool c;
+    private bool usedDrug;
+    private List<int> hintIDs = new List<int>();
+    private bool State;
     public void SetNewGame(string sceneName, List<int> Unlocks, int drugsCount)
     {
+        usedDrug = false;
         drugsButton1.SetActive(true);
         drugsButton2.SetActive(true);
         StartCoroutine(LoadInv(sceneName, Unlocks));
@@ -133,7 +142,7 @@ public class InvestigationController : MonoBehaviour
             catch
             {
             }
-
+        
 
     }
     
@@ -144,7 +153,10 @@ public class InvestigationController : MonoBehaviour
     {
         if (_drugsCount > 0)
         {
-           
+            if (!State)  
+                drugOverlay.SetActive(true);
+            
+            usedDrug = true;
             Core.UseDrugs();
  
             List<GameObject> interactiveObjects = new List<GameObject>();
@@ -156,6 +168,25 @@ public class InvestigationController : MonoBehaviour
             }
             drugsButton1.SetActive(false);
             drugsButton2.SetActive(false);
+        }
+
+       
+            foreach (var result in Results)
+            {
+                int r_id;
+                if (result.isTrueResult)
+                {
+                    r_id = result.ID;
+                    hintIDs.Add(r_id);
+                    recMergeSearch(r_id);
+
+                    break;
+                }
+            }
+            if (State)
+            {
+            DestroyAllThought();
+            SpawnThoughts();
         }
     }
 
@@ -182,8 +213,13 @@ public class InvestigationController : MonoBehaviour
         } spawnedObjects.Clear();
     }
 
-    public void OpenThought() {
-
+    public void OpenThought()
+    {
+        State = true;
+        if (usedDrug)
+        {
+            drugOverlay.SetActive(false);
+        }
         DestroyAllThought();
         Scene.SetActive(false);
         cameraThought.SetActive(true);
@@ -195,8 +231,24 @@ public class InvestigationController : MonoBehaviour
      
     }
 
+    void recMergeSearch(int id)
+    {
+        if (Merges.Count>0)
+            foreach (var merge in Merges)
+            {
+
+                if (merge.Result.ID == id)
+                {
+                    hintIDs.Add(merge.Item1);
+                    hintIDs.Add(merge.Item2);
+                    recMergeSearch(merge.Item1);
+                    recMergeSearch(merge.Item2);
+                }
+            }
+    }
     private void SpawnThoughts()
     {
+   
         foreach (ThoughtSt item in Thoughts)
         {
             if (!item.Locked)
@@ -210,7 +262,10 @@ public class InvestigationController : MonoBehaviour
                                              new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y),
                                                  UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), 10);
                 spawnedObjects.Add(spawned.gameObject);
-                spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect);
+                if (hintIDs.Contains(item.ID))
+                    spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect, true);
+                else
+                    spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect, false);
                 foreach (MergeConnection connection in Merges)
                 {
                     if (item.ID == connection.Item1)
@@ -230,6 +285,11 @@ public class InvestigationController : MonoBehaviour
     
     public void CloseThought()
     {
+        if (usedDrug)
+        {
+            drugOverlay.SetActive(true);
+        }
+        State = false;
         Scene.SetActive(true);
         DestroyAllThought();
         cameraThought.SetActive(false);
@@ -241,28 +301,41 @@ public class InvestigationController : MonoBehaviour
 
   
 
-    public void FinishInvestigation(int ID)
+    public bool FinishInvestigation(int ID)
     {
        
         foreach(Result res in Results)
         {
             if (res.ID == ID)
             {
-
-                DestroyAllThought();
-                cameraThought.SetActive(false);
-                cameraInvestigation.SetActive(true);
-                canTho.enabled = false;
-                canInv.enabled = true;
-                resultPanel.SetActive(true); 
-                resultText.text = res.Content;
-                chosenResult = res;
-               
-
-              
+                StartCoroutine(FinishCoroutineT(res));
+                return true;
             }
         }
-       
+        StartCoroutine(FinishCoroutineF());
+        return false;
+    }
+
+    IEnumerator FinishCoroutineT(Result res)
+    {
+        TrueFinEffect.SetActive(true);
+        yield return new WaitForSeconds(1);
+        TrueFinEffect.SetActive(false);
+        DestroyAllThought();
+        cameraThought.SetActive(false);
+        cameraInvestigation.SetActive(true);
+        canTho.enabled = false;
+        canInv.enabled = true;
+        resultPanel.SetActive(true); 
+        resultText.text = res.Content;
+        chosenResult = res;
+    }
+    IEnumerator FinishCoroutineF()
+    {
+        FalseFinEffect.SetActive(true);
+        yield return new WaitForSeconds(1);
+        FalseFinEffect.SetActive(false);
+        
     }
     public void EndGame()
     {
@@ -306,11 +379,16 @@ public class InvestigationController : MonoBehaviour
             {
                 if ((connection.t1.toMerge[0].ID == connection.Item2 || connection.t2.toMerge[0].ID == connection.Item1) && (connection.Item2 == ID || connection.Item1 == ID))
                 {
-
+                    
                     
                    
                     Thought spawned = Instantiate(thoughtTemplate).GetComponent<Thought>();
-                    spawned.Initiate(connection.Result.Content, connection.Result.Level, connection.Result.Type, connection.Result.ID, MergeEffect);
+                    
+                    if (hintIDs.Contains(connection.Result.ID))
+                        spawned.Initiate(connection.Result.Content, connection.Result.Level, connection.Result.Type, connection.Result.ID, MergeEffect, true);
+                    else
+                        spawned.Initiate(connection.Result.Content, connection.Result.Level, connection.Result.Type, connection.Result.ID, MergeEffect, false);
+                    
                     spawned.transform.position = new Vector3(connection.t1.gameObject.transform.position.x, connection.t1.gameObject.transform.position.y, connection.t1.gameObject.transform.position.z);
                     DiffusionEffect.transform.position = spawned.transform.position;
                     StartCoroutine(DiffusionCoroutine());

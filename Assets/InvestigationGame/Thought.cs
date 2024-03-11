@@ -24,11 +24,14 @@ public class Thought : MonoBehaviour
     [SerializeField] private TextMeshPro ContentField;
     [SerializeField] private List<GameObject> Decos  = new List<GameObject>();
     [SerializeField] private List<GameObject> Levels = new List<GameObject>();
+    [SerializeField] private GameObject glowEffect;
     private GameObject tmpCloseEffect;
     private GameObject MergeEffect;
     private Collider2D col;
     private bool replaceEffect;
-    public void Initiate(string Content, int Level, ThoughtType Type, int ID, GameObject MergeEffect)
+    
+    
+    public void Initiate(string Content, int Level, ThoughtType Type, int ID, GameObject MergeEffect, bool glow)
     {
          this.Content = Content;
          this.Level = Level;
@@ -39,7 +42,10 @@ public class Thought : MonoBehaviour
         ContentField.text = Content;
         Decos[(int)Type].SetActive(true);
         Levels[Level].SetActive(true);
-
+        if (glow)
+        {
+            glowEffect.SetActive(true);
+        }
 
     }
 
@@ -49,25 +55,31 @@ public class Thought : MonoBehaviour
             MergeEffect.transform.position = transform.position +  new Vector3( col.transform.position.x - gameObject.transform.position.x, col.transform.position.y - gameObject.transform.position.y) / 2;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.name != "Brain")
         {
-            MergeEffect.SetActive(true);
-            col = collision;
-            replaceEffect = true;
-            try
+            if (GetComponent<DragNDropObject>().isClicked())
             {
-                Thought colThought = collision.GetComponent<Thought>();
-                if (colThought && !toMerge.Contains(colThought))
-                {
-                    toMerge.Add(colThought);
+                MergeEffect.SetActive(true);
+            }
 
+            col = collision;
+                replaceEffect = true;
+                try
+                {
+                    Thought colThought = collision.GetComponent<Thought>();
+                    if (colThought && !toMerge.Contains(colThought))
+                    {
+                        toMerge.Add(colThought);
+
+                    }
                 }
-            }
-            catch
-            {
-            }
+                catch
+                {
+                }
+            
+            
         }
 
 

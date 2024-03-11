@@ -13,6 +13,7 @@ TagManager:
   - InvCam
   - ThoCam
   - Interactive
+  - Thought
   layers:
   - Default
   - TransparentFX
