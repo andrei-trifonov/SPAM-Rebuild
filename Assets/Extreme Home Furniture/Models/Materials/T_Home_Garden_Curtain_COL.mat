@@ -431,7 +431,7 @@ Material:
     - _ZTest: 4
     - _ZWrite: 0
     m_Colors:
-    - Color_fa7bfd953c0f468faf964c3a5545c86d: {r: 0, g: 0, b: 0, a: 0.94509804}
+    - Color_fa7bfd953c0f468faf964c3a5545c86d: {r: 0.4528302, g: 0.36055535, b: 0.36055535, a: 0.94509804}
     - _AlbedoColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

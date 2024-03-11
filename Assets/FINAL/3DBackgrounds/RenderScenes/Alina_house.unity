@@ -8642,6 +8642,7 @@ MonoBehaviour:
     lastLineNum: 0
     lastLabelNum: 0
     previewName: 
+  emojiList: []
 --- !u!4 &1141920126
 Transform:
   m_ObjectHideFlags: 0
@@ -19582,6 +19583,140 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 679023558829490852, guid: eb1a7385720dea840bec459377474cc8, type: 3}
   m_PrefabInstance: {fileID: 407119704}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1982854720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982854725}
+  - component: {fileID: 1982854724}
+  - component: {fileID: 1982854723}
+  - component: {fileID: 1982854722}
+  - component: {fileID: 1982854721}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!328 &1982854721
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982854720}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 74a0eb4d224c6e64abfbf43544fcd464, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!64 &1982854722
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982854720}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1982854723
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982854720}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 536828039831b5041ae72c483a871a54, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1982854724
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982854720}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1982854725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982854720}
+  m_LocalRotation: {x: 0.0030854328, y: -0.7071001, z: 0.7071001, w: 0.0030854328}
+  m_LocalPosition: {x: 6.69, y: 6.33, z: 23.08}
+  m_LocalScale: {x: 0.5081969, y: 0.33267665, z: 0.33267665}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 90, y: -179.5, z: 0}
 --- !u!1001 &1985351472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21045,6 +21180,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21067,6 +21203,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21089,6 +21226,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21112,6 +21250,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21133,6 +21272,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21154,6 +21294,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21175,6 +21316,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21196,6 +21338,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21217,6 +21360,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21240,6 +21384,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21261,6 +21406,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 3, y: 0, z: 0}
@@ -21282,6 +21428,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21304,6 +21451,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21325,6 +21473,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21346,6 +21495,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21367,6 +21517,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21388,6 +21539,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21410,6 +21562,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21431,6 +21584,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 6, y: 1.86, z: 45}
@@ -21452,6 +21606,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21473,6 +21628,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0.15, y: 1.86, z: 45}
@@ -21494,6 +21650,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21517,6 +21674,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label:
       - "\u0412\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u043A \u044D\u0444\u0444\u0435\u043A\u0442\u0430\u043C"
       - "\u0418\u0434\u0442\u0438 \u0434\u0430\u043B\u044C\u0448\u0435"
@@ -21545,6 +21703,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21567,6 +21726,7 @@ MonoBehaviour:
       var: 0
       ThoType: 1
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21589,6 +21749,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -21610,6 +21771,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}

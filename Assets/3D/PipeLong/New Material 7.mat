@@ -10,6 +10,7 @@ Material:
   m_Name: New Material 7
   m_Shader: {fileID: 4800000, guid: 2a230514c860643f69b6a4d1871d3825, type: 3}
   m_ValidKeywords:
+  - DR_GRADIENT_ON
   - DR_LIGHT_ATTENUATION
   - DR_OUTLINE_ON
   - DR_RIM_ON
@@ -32,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 0668a712b19287f4e889a6c04528ad73, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6cebd62dadead034cac570c99e95f8fc, type: 3}
         m_Scale: {x: 54.88, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -107,23 +108,23 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailMapBlendingMode: 0
-    - _DetailMapImpact: 1
+    - _DetailMapImpact: 0.683
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FlatRimEdgeSmoothness: 0.371
-    - _FlatRimLightAlign: 0.842
-    - _FlatRimSize: 0.645
+    - _FlatRimEdgeSmoothness: 0.327
+    - _FlatRimLightAlign: 1
+    - _FlatRimSize: 0.74
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _GradientAngle: 0
+    - _GradientAngle: 130.3
     - _GradientCenterX: 0
-    - _GradientCenterY: 0
-    - _GradientEnabled: 0
-    - _GradientSize: 10
+    - _GradientCenterY: -15.02
+    - _GradientEnabled: 1
+    - _GradientSize: 21.96
     - _LightContribution: 1
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
@@ -140,7 +141,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimEnabled: 1
-    - _SelfShadingSize: 0.429
+    - _SelfShadingSize: 0.521
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularEnabled: 1
@@ -148,7 +149,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TextureBlendingMode: 0
-    - _TextureImpact: 0.913
+    - _TextureImpact: 1
     - _UnityShadowOcclusion: 0
     - _VertexColorsEnabled: 0
     - _WorkflowMode: 1
@@ -156,11 +157,11 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
-    - _DetailMapColor: {r: 0.2264151, g: 0.08613159, b: 0.03716624, a: 1}
+    - _ColorGradient: {r: 0.1509434, g: 0.09555795, b: 0.046137415, a: 0.85056}
+    - _DetailMapColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FlatRimColor: {r: 0.103773594, g: 0.029761482, b: 0.011258458, a: 0.85056}
-    - _FlatSpecularColor: {r: 1, g: 0.248857, b: 0, a: 0.85056}
+    - _FlatRimColor: {r: 0, g: 0, b: 0, a: 0.85056}
+    - _FlatSpecularColor: {r: 0.41509432, g: 0.20186895, b: 0.13079385, a: 0.85056}
     - _LightAttenuation: {r: 0, g: 1, b: 0, a: 0}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}

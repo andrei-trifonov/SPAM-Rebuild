@@ -886,7 +886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 790968568677830527, guid: 375f15be3261df94aa0a76eb7db76c93, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 790968568677830527, guid: 375f15be3261df94aa0a76eb7db76c93, type: 3}
       propertyPath: m_LocalScale.x
@@ -1941,7 +1941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a40a95819ad33cf4f9e47bca27d5419e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a40a95819ad33cf4f9e47bca27d5419e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3577,6 +3577,7 @@ MonoBehaviour:
     lastLineNum: 0
     lastLabelNum: 0
     previewName: 
+  emojiList: []
 --- !u!4 &1141920126
 Transform:
   m_ObjectHideFlags: 0
@@ -9329,7 +9330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0d50f2a0bdf9d854ba48c4d6ecf03985, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0d50f2a0bdf9d854ba48c4d6ecf03985, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10042,7 +10043,7 @@ Transform:
   m_Children:
   - {fileID: 837632433}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751380417
 GameObject:
@@ -10266,7 +10267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d005c2a493bf5404bb13acc000203ba0, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d005c2a493bf5404bb13acc000203ba0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11076,6 +11077,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11098,6 +11100,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11120,6 +11123,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11143,6 +11147,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11164,6 +11169,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11185,6 +11191,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11206,6 +11213,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11227,6 +11235,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11248,6 +11257,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11271,6 +11281,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11292,6 +11303,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 3, y: 0, z: 0}
@@ -11313,6 +11325,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11335,6 +11348,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11356,6 +11370,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11377,6 +11392,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11398,6 +11414,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11419,6 +11436,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11441,6 +11459,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11462,6 +11481,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 6, y: 1.86, z: 45}
@@ -11483,6 +11503,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11504,6 +11525,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0.15, y: 1.86, z: 45}
@@ -11525,6 +11547,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11548,6 +11571,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label:
       - "\u0412\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u043A \u044D\u0444\u0444\u0435\u043A\u0442\u0430\u043C"
       - "\u0418\u0434\u0442\u0438 \u0434\u0430\u043B\u044C\u0448\u0435"
@@ -11576,6 +11600,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11598,6 +11623,7 @@ MonoBehaviour:
       var: 0
       ThoType: 1
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11620,6 +11646,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -11641,6 +11668,7 @@ MonoBehaviour:
       var: 0
       ThoType: 0
       signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -12331,3 +12359,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 904767092638991706, guid: ae6d6f72d5d353f4f97ec8d900d85a3a, type: 3}
   m_PrefabInstance: {fileID: 9041580068218789514}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9041580068218789518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8195228587991873770, guid: ae6d6f72d5d353f4f97ec8d900d85a3a, type: 3}
+  m_PrefabInstance: {fileID: 9041580068218789514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9041580068218789519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9041580067696870504, guid: ae6d6f72d5d353f4f97ec8d900d85a3a, type: 3}
+  m_PrefabInstance: {fileID: 9041580068218789514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &9041580068218789520
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9041580068218789518}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49ea451d8fd655b409e2d2cac57315f9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &9041580068218789521
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9041580068218789519}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5de1a10dfcfc6054ea1a610b5b0ae940, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
