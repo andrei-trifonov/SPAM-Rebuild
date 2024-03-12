@@ -9,6 +9,7 @@ public class FirstLaunchSettings : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("NotFirstLaunch") == 0)
         {
+            PlayerPrefs.DeleteAll();
             PlayerPrefs.SetInt("NotFirstLaunch", 1);
             PlayerPrefs.SetFloat("MusicVolume", 1);
             PlayerPrefs.SetFloat("SoundVolume", 1);

@@ -118,6 +118,10 @@ public class NewGameCore : MonoBehaviour
     private AudioSource fadeInMusic;
     private AudioSource fadeOutMusic;
     [SerializeField] GameObject musicPlayer;
+    [SerializeField] private Animator musicIcon;
+    [SerializeField] private TMP_Text musicName;
+    [SerializeField] private TMP_Text musicAuthor;
+    private List<Track> TrackList;
     [SerializeField] private AudioSource sceneAudioPlayer;
     [SerializeField] private AudioSource soundPlayer;
 
@@ -168,6 +172,7 @@ public class NewGameCore : MonoBehaviour
     }
     private void Start()
     {
+        TrackList = GetComponent<OSTList>().GetTrackList();
         saveObj = new SaveObject();
         textCanvasAnimator = textCanvas.GetComponent<Animator>();
         scenario = scenarioComposer.Labels;
@@ -724,8 +729,16 @@ public class NewGameCore : MonoBehaviour
             
             Step();
         }
-
         Addressables.Release(handle);
+        
+        //Design
+        musicIcon.SetBool("Play", true);
+        musicName.text = TrackList[(int)line.music].Name;
+        musicAuthor.text = TrackList[(int)line.music].Author;
+        yield return new WaitForSeconds(0.5f);
+        musicIcon.SetBool("Play", false);   
+        //
+
         CoroutinesWorking.Remove(cid);
     }
     void bgAction(Item line)

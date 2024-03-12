@@ -94,8 +94,11 @@ public class InvestigationController : MonoBehaviour
     private bool usedDrug;
     private List<int> hintIDs = new List<int>();
     private bool State;
+    List<GameObject> interactiveObjects = new List<GameObject>();
+    
     public void SetNewGame(string sceneName, List<int> Unlocks, int drugsCount)
     {
+        
         usedDrug = false;
         drugsButton1.SetActive(true);
         drugsButton2.SetActive(true);
@@ -105,6 +108,7 @@ public class InvestigationController : MonoBehaviour
         textDrugs1.text = "SPAM-V: " + drugsCount.ToString();
         textDrugs2.text = "SPAM-V: " + drugsCount.ToString();
         canInv.enabled = true;
+        
     }
 
     IEnumerator LoadInv(string line, List<int> Unlocks)
@@ -119,6 +123,7 @@ public class InvestigationController : MonoBehaviour
             Scene = Instantiate(res, spawnPoint.position, spawnPoint.rotation);
 
         }
+        interactiveObjects = GameObject.FindGameObjectsWithTag("Interactive").ToList();
 
         Addressables.Release(handle);
 
@@ -158,10 +163,6 @@ public class InvestigationController : MonoBehaviour
             
             usedDrug = true;
             Core.UseDrugs();
- 
-            List<GameObject> interactiveObjects = new List<GameObject>();
-            interactiveObjects = GameObject.FindGameObjectsWithTag("Interactive").ToList();
-
             foreach (var item in interactiveObjects)
             {
                 item.GetComponent<MeshRenderer>().material.SetColor("_OutlineColor", UnityEngine.Color.yellow);
@@ -318,6 +319,8 @@ public class InvestigationController : MonoBehaviour
 
     IEnumerator FinishCoroutineT(Result res)
     {
+        Brain.SetActive(false);
+        State = false;
         TrueFinEffect.SetActive(true);
         yield return new WaitForSeconds(1);
         TrueFinEffect.SetActive(false);

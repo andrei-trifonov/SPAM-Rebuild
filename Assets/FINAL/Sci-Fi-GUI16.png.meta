@@ -119,10 +119,10 @@ TextureImporter:
       name: Sci-Fi-GUI16_0
       rect:
         serializedVersion: 2
-        x: 387
-        y: 112
-        width: 464
-        height: 447
+        x: 419
+        y: 154
+        width: 440
+        height: 440
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,7 +355,7 @@ TextureImporter:
         width: 326
         height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

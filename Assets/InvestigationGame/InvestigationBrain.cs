@@ -54,8 +54,8 @@ public class InvestigationBrain : MonoBehaviour
             if (IC.FinishInvestigation(obj.GetComponent<Thought>().ID)) ;
             Progress.value = 0;
             readyToDrop = false;
-        
-            Debug.Log("Пенис");
+              
+        //    Debug.Log("Пенис");
            // readyToSend = false;
 
         }
