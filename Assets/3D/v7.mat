@@ -166,7 +166,7 @@ Material:
     - _Flipbook: 0
     - _FogHeight: 10
     - _FogYStartPos: 0
-    - _Fuzz: 0.11
+    - _Fuzz: 0.12
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0

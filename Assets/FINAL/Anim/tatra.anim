@@ -350,7 +350,85 @@ AnimationClip:
     path: tatra_t3_UVc_low/Cube
     classID: 1
     script: {fileID: 0}
-  m_PPtrCurves: []
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 13.55
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 20.15
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: SparkLoopYellow
+    classID: 1
+    script: {fileID: 0}
+  m_PPtrCurves:
+  - curve:
+    - time: 4.383333
+      value: {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - time: 5.3
+      value: {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - time: 6.1833334
+      value: {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - time: 7.1
+      value: {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - time: 7.9333334
+      value: {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - time: 8.85
+      value: {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - time: 9.733334
+      value: {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - time: 10.65
+      value: {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - time: 11.516666
+      value: {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - time: 61.9
+      value: {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - time: 62.816666
+      value: {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - time: 63.7
+      value: {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - time: 64.61667
+      value: {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - time: 65.45
+      value: {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - time: 66.36667
+      value: {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - time: 67.25
+      value: {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - time: 68.166664
+      value: {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - time: 69.03333
+      value: {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    attribute: m_Materials.Array.data[3]
+    path: TrafficLights_Train_1
+    classID: 23
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -379,7 +457,39 @@ AnimationClip:
       typeID: 1
       customType: 0
       isPPtrCurve: 0
-    pptrCurveMapping: []
+    - serializedVersion: 2
+      path: 1311551560
+      attribute: 2086281974
+      script: {fileID: 0}
+      typeID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1816186484
+      attribute: 3
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
+    - {fileID: 2100000, guid: fda425dc3416c4d678aa122196fd9427, type: 2}
+    - {fileID: 2100000, guid: 8d2c011035600e64a8842b7c57b54a07, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -1061,6 +1171,43 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_IsActive
     path: tatra_t3_UVc_low/Cube
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 13.55
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 20.15
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: SparkLoopYellow
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []

@@ -2058,8 +2058,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520939652}
   m_LocalRotation: {x: 0, y: 0.1518646, z: 0, w: 0.9884013}
-  m_LocalPosition: {x: 1.368, y: 1.985, z: 1.877}
-  m_LocalScale: {x: 1.053514, y: 0.75251, z: 0.75251}
+  m_LocalPosition: {x: 1.4476, y: 1.9945, z: 1.852}
+  m_LocalScale: {x: 1.0260664, y: 0.75687456, z: 0.75251}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4917,6 +4917,9 @@ MonoBehaviour:
   CG: {fileID: 914636434}
   BG: {fileID: 0}
   musicPlayer: {fileID: 4361316659385064245, guid: 950654cc995391048b9477fdf5b0f9f3, type: 3}
+  musicIcon: {fileID: 0}
+  musicName: {fileID: 0}
+  musicAuthor: {fileID: 0}
   sceneAudioPlayer: {fileID: 0}
   soundPlayer: {fileID: 1257958567}
   saveLoadMarker: {fileID: 0}
