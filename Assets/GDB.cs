@@ -129,6 +129,14 @@ public static class GDB
         Custom
 
     }
+
+    public enum SpriteEffect
+    {
+        Dissolve,
+        Classic,
+        DissolveOut
+
+    }
     public enum Music
     {
         Krypton2,

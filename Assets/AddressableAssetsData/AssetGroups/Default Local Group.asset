@@ -51,6 +51,126 @@ MonoBehaviour:
     m_Address: InvScenario1
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c9b1a4aa5c3652747a9974f6005ea7eb
+    m_Address: Tolik_common
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9332e45b86db3a24980400b5509de7ff
+    m_Address: Ulia_common
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2c76442571550c143865c1a3fc3e39ca
+    m_Address: Alina
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6df7c0a41fda49e48b509580ec57fca0
+    m_Address: Kir
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 356c6ec6db3eecf468a044e953587180
+    m_Address: Kira
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 35c2e90b2b3d8d34ea76d701e5ac4583
+    m_Address: Mira
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bd5f59eead4455f419bbcc4cd81f2569
+    m_Address: Sonya
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: be5199e7c21a4aa44849b4d3a5961fb1
+    m_Address: Cat_normal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e315a834c786d0945ab1026e0ae5d3ee
+    m_Address: "\u0410\u043B\u0438\u043D\u0430Angry"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bdb09e682b2f08e4cb37b08d2ae7c5ff
+    m_Address: "\u0410\u043B\u0438\u043D\u0430Happy"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 64f8811727789a94fbf3703c8d7e86c3
+    m_Address: "\u0410\u043B\u0438\u043D\u0430Normal"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7605fb72afbb1d4469bb71cfa5073f69
+    m_Address: "\u041A\u0438\u0440Angry"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 853899c60955c814c945c64fd19342b2
+    m_Address: "\u041A\u0438\u0440Happy"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6b1cab4d160d1eb489df2dae208eda1d
+    m_Address: "\u041A\u0438\u0440Normal"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8c12a94dd07bd674784b495bf75f148e
+    m_Address: "\u041A\u0438\u0440Sad"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6c27f18d38ba3474193fd9dcaf18c5d7
+    m_Address: "\u041A\u0438\u0440\u0430Angry"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2c65b6de966676e4fb929527afc11247
+    m_Address: "\u041A\u0438\u0440\u0430Happy"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b197f75381f11da498d9242adf7ee772
+    m_Address: "\u041A\u0438\u0440\u0430Normal"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b8f9bb4d7b37aab428904bf844dfa3cb
+    m_Address: "\u041A\u0438\u0440\u0430Sad"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 20647d7363c8db748b18f771f0ccb3e5
+    m_Address: "\u041A\u043E\u0442Normal"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cd7c0457ced487340a16be927f475186
+    m_Address: "\u041C\u0438\u0440\u0430Angry"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4405426340cefeb4c8a9cb6359714a1b
+    m_Address: "\u041C\u0438\u0440\u0430Happy"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c331849f8370e0441bd8ec889e0cfaf5
+    m_Address: "\u041C\u0438\u0440\u0430Normal"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3b792df1a258c7a4d9ac99bdd882bfe5
+    m_Address: "\u041C\u0438\u0440\u0430Sad"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 55479c9d88c430b47874696fcb15990b
+    m_Address: "\u0421\u043E\u043D\u044FAngry"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9997301c1f7ada2418e53fb9cb6c0687
+    m_Address: "\u0421\u043E\u043D\u044FHappy"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2d57864141f7ddb4cb27d6d2367060f0
+    m_Address: "\u0421\u043E\u043D\u044FNormal"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a16a6759eeeb9ea4db862cdf8f857c7f
+    m_Address: "\u0421\u043E\u043D\u044FSad"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2fdfb63bc48df984b8af942754b587e1
+    m_Address: "\u0422\u043E\u043B\u044FNormal"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0faa3cc3399f66a439d4f9e92bec02b7
+    m_Address: "\u042E\u043B\u044FNormal"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 08e76260542fbaf4a91b4020b57cd37c, type: 2}
   m_SchemaSet:

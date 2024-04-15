@@ -22856,6 +22856,7 @@ MonoBehaviour:
       CGname: cg2
       show: 1
       pose: 1
+      spriteEffect: 0
       additionalPose: InvScenario1
       music: 0
       time: 0
@@ -22874,8 +22875,8 @@ MonoBehaviour:
       - 1
       - 1
       V3position: {x: 0, y: 0, z: 0}
-    - type: 0
-      name: 0
+    - type: 4
+      name: 6
       line: "\u043F\u0430"
       font: 0
       inv: 0
@@ -22883,8 +22884,32 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
-      pose: 0
+      pose: 2
+      spriteEffect: 0
       additionalPose: InvScenario1
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 4
+      name: 6
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 2
+      spriteEffect: 2
+      additionalPose: 
       music: 0
       time: 0
       value: 0
@@ -22908,6 +22933,7 @@ MonoBehaviour:
       CGname: 
       show: 0
       pose: 0
+      spriteEffect: 0
       additionalPose: 
       music: 0
       time: 0
@@ -22932,6 +22958,7 @@ MonoBehaviour:
       CGname: 
       show: 0
       pose: 0
+      spriteEffect: 0
       additionalPose: 
       music: 0
       time: 0
@@ -22958,6 +22985,7 @@ MonoBehaviour:
       CGname: 
       show: 0
       pose: 0
+      spriteEffect: 0
       additionalPose: 
       music: 0
       time: 0
@@ -22982,6 +23010,7 @@ MonoBehaviour:
       CGname: 
       show: 0
       pose: 0
+      spriteEffect: 0
       additionalPose: 
       music: 0
       time: 0
@@ -23019,10 +23048,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b952df50fe35b4fb4deb950cd25524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterPrefab: {fileID: 4559968953009046921, guid: f755472f754ec3041a1aa7fc4cf81e5d, type: 3}
-  linePrefab: {fileID: 17183471112862713, guid: b325ce6812230ea469a0a742738d889c, type: 3}
-  dialogueData: {fileID: 2106391946}
-  nodeSpacing: 10
+  chapterPrefab: {fileID: 0}
+  linePrefab: {fileID: 0}
+  dialogueData: {fileID: 0}
+  nodeSpacing: 2
 --- !u!1 &2109385664
 GameObject:
   m_ObjectHideFlags: 0

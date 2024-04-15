@@ -587,10 +587,13 @@ public class NewGameCore : MonoBehaviour
         }
         
         ActorOnScene.transform.position = line.V3position;
-        ActorOnScene.GetComponent<Animator>().WriteDefaultValues();
+        //ActorOnScene.GetComponent<Animator>().WriteDefaultValues();
        
-        ActorOnScene.GetComponent<Animator>().SetBool(line.pose.ToString(), true);
-        if (line.pose == GDB.Pose.Hide)
+        ActorOnScene.GetComponent<Animator>().SetBool(line.spriteEffect.ToString(), true);
+		yield return new WaitForSeconds(0.1f);
+        ActorOnScene.GetComponent<Animator>().SetBool(line.spriteEffect.ToString(), false);
+
+        if (line.pose == GDB.Pose.Hide || line.spriteEffect == GDB.SpriteEffect.DissolveOut)
         {
             actorsOnScene.Remove(FindActorOnScenePointer(line.name.ToString()));
             if (!skipping)

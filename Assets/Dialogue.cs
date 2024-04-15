@@ -32,6 +32,8 @@ public class Item
 
     public bool show;
     public GDB.Pose pose;
+
+    public GDB.SpriteEffect spriteEffect;
     public string additionalPose;
 
     public GDB.Music  music;

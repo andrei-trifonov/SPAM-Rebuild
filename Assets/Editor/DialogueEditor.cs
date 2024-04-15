@@ -144,15 +144,17 @@ public class DialogueEditor : Editor
                                         GUILayout.Height(20), GUILayout.Width(50));
                                     item.V3position = EditorGUILayout.Vector3Field("", item.V3position,
                                            GUILayout.Height(20), GUILayout.Width(150));
+                                    item.spriteEffect = (GDB.SpriteEffect) EditorGUILayout.EnumPopup("", item.spriteEffect,
+                                        GUILayout.Height(20), GUILayout.Width(50));
                                 if (item.pose == GDB.Pose.Custom)
                                     {
                                         
                                         item.additionalPose = EditorGUILayout.TextField("", item.additionalPose, GUILayout.Height(20), GUILayout.Width(50));
-                                        GUILayout.Space(485);
+                                        GUILayout.Space(435);
                                     }
                                     else
                                     
-                                       GUILayout.Space(540);
+                                       GUILayout.Space(490);
                                 }
                                     break;
                                 case (GDB.LineType.Music):
