@@ -35,6 +35,7 @@ public static class GDB
         Миша,
         Соня,
         Кир,
+        Кот,
         Толя,
         Мама
        
@@ -47,7 +48,8 @@ public static class GDB
         Stars,
         SleepZ,
         Cutescull,
-        Evildeath
+        Evildeath,
+        AuraBlack
 
     }
     public enum LineType
@@ -121,7 +123,7 @@ public static class GDB
         Sad,
         Normal,
         Happy,
-        Cry,
+        Angry,
         Custom
 
     }

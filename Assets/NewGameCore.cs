@@ -84,6 +84,7 @@ public class NewGameCore : MonoBehaviour
     
     private float maxVolumeMusic = 1; //TODO
     private Coroutine c;
+    private Coroutine sc;
     private float textDelay = 0.1f; //TODO 
     private bool skipping; 
     
@@ -136,7 +137,7 @@ public class NewGameCore : MonoBehaviour
     int cid;
     public SaveObject saveObj = new SaveObject();
     private string saveJString = "";
-
+    private bool firstLoad;
     private GameObject Emoji;
     [SerializeField] private List<GameObject> emojiList = new List<GameObject>();
     
@@ -172,11 +173,16 @@ public class NewGameCore : MonoBehaviour
     }
     private void Start()
     {
+        firstLoad = true;
         TrackList = GetComponent<OSTList>().GetTrackList();
         saveObj = new SaveObject();
         textCanvasAnimator = textCanvas.GetComponent<Animator>();
         scenario = scenarioComposer.Labels;
-        Load(PlayerPrefs.GetString("LastSave"));
+        string savename = PlayerPrefs.GetString("LastSave");
+        if (savename.Length>0)
+            Load(savename);
+        else
+            Step();
     }
     public void ClearSprites()
     {
@@ -205,7 +211,8 @@ public class NewGameCore : MonoBehaviour
     }
     public void Load(string savenum)
     {
-        if (!loading && CoroutinesWorking.Count == 0)
+        
+        if (!loading && CoroutinesWorking.Count == 0 )
         {
             //Clean scene
             StopAllCoroutines();
@@ -271,7 +278,11 @@ public class NewGameCore : MonoBehaviour
             
             BlinkSLMarker(1);
             loading = false;
-            
+            if (firstLoad)
+            {
+                firstLoad = false;
+                Step();
+            }
           
         }
     }
@@ -313,7 +324,7 @@ public class NewGameCore : MonoBehaviour
     public void SkipDown()
     {
         skipping = true;
-        StartCoroutine(SkipCoroutine());
+        sc = StartCoroutine(SkipCoroutine());
     }
 
 
@@ -582,6 +593,8 @@ public class NewGameCore : MonoBehaviour
 
             }
             Addressables.Release(handle); 
+            if (Emoji != null)
+                Destroy(Emoji);
            
             
         }
@@ -612,7 +625,7 @@ public class NewGameCore : MonoBehaviour
 
         lineNum++;
         CoroutinesWorking.Remove(id);
-        //Step();
+        Step();
 
     }
 
@@ -746,6 +759,9 @@ public class NewGameCore : MonoBehaviour
     }
     void bgAction(Item line)
     {
+    
+        if (Emoji != null)
+         Destroy(Emoji);
         Debug.Log(("Попытка загрузки BG"));  
         ClearSprites();
         if (loadingBG)
@@ -770,7 +786,7 @@ public class NewGameCore : MonoBehaviour
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
             ClearBG();
-            
+            CG.enabled = false;
             clipBG = handle.Result;
             BG.clip = clipBG;
             BG.Play();
@@ -789,6 +805,7 @@ public class NewGameCore : MonoBehaviour
         Addressables.Release(handle);
         loadingBG = false;
         CoroutinesWorking.Remove(cid);
+        Step();
       
 
     }
@@ -829,6 +846,8 @@ public class NewGameCore : MonoBehaviour
     
     void cgAction(Item line)
     {
+        if (Emoji != null)
+            Destroy(Emoji);
         PlayerPrefs.SetInt(line.CGname, 1);
 
         if (loadingCG)
@@ -837,7 +856,7 @@ public class NewGameCore : MonoBehaviour
             loadingCG = false;
         }
         lCGcoroutine = StartCoroutine(LoadSprite(line));
-     
+       // Step();
 
      //TODO Эффекты 
     }
@@ -888,10 +907,11 @@ public class NewGameCore : MonoBehaviour
             ApplyEffects(line.effects, false, line.time, line.V3position);
         }
         CoroutinesWorking.Remove(cid);
-        
+        Step();
     }
     public void decisionAction(string name)
     {
+        
         if (!choiseRoulette)
         {
             try
@@ -932,7 +952,8 @@ public class NewGameCore : MonoBehaviour
 
     IEnumerator MenuActionCoroutine()
     {
-       
+        skipping = false;
+        StopCoroutine(sc);
         menuTimerSlider.SetActive(true);
         Slider slider = menuTimerSlider.GetComponent<Slider>();
         float timer = 1.0f;
@@ -1097,15 +1118,15 @@ public class NewGameCore : MonoBehaviour
     }
     void textAction(Item line)
     {
-        foreach (var actor in actorsOnScene)
+        if (saveObj.lastLine != textContent.text)
         {
-            actor.obj.GetComponentInChildren<SpriteRenderer>().color = UnityEngine.Color.gray;
-        }
-        GameObject ActorOnScene = FindActorOnScene(line.name.ToString());
-        if (ActorOnScene != null)
-        {
-            
-            ActorOnScene.GetComponentInChildren<SpriteRenderer>().color = UnityEngine.Color.white;
+            textContent.text = saveObj.lastLine;
+            if (c != null)
+            {
+          
+                SetTextMarker(false);
+                StopCoroutine(c);
+            }
         }
         else
         {
@@ -1113,39 +1134,58 @@ public class NewGameCore : MonoBehaviour
             {
                 actor.obj.GetComponentInChildren<SpriteRenderer>().color = UnityEngine.Color.gray;
             }
-        }
-
-        ApplyTextEffects(GDB.Fonts.Regular);
-        saveObj.lastAuthor = line.name;
-        saveObj.lastLine = line.line;
-        if (c != null)
-        {
-            SetTextMarker(false);
-            StopCoroutine(c);
-        }
-
-        castingLine = "";
-        textContent.text = "";
-
-        textAuthor.color = GDB.CharColor((int)line.name);
+            GameObject ActorOnScene = FindActorOnScene(line.name.ToString());
+            if (ActorOnScene != null)
+            {
+                
+                ActorOnScene.GetComponentInChildren<SpriteRenderer>().color = UnityEngine.Color.white;
+            }
+            else
+            {
+                foreach (var actor in actorsOnScene)
+                {
+                    actor.obj.GetComponentInChildren<SpriteRenderer>().color = UnityEngine.Color.gray;
+                }
+            }
        
-        Log.RenewLog(line.name, line.line);
+     
+            ApplyTextEffects(GDB.Fonts.Regular);
+            saveObj.lastAuthor = line.name;
+            saveObj.lastLine = line.line;
+        
+            if (c != null)
+            {
+          
+                SetTextMarker(false);
+                StopCoroutine(c);
+            }
 
-        ApplyTextEffects(line.font);
+            castingLine = "";
+            textContent.text = "";
 
-        if (!skipping && textDelay > 0)
-        {
-            castingLine = line.line;
+            textAuthor.color = GDB.CharColor((int)line.name);
+       
+            Log.RenewLog(line.name, line.line);
+
+            ApplyTextEffects(line.font);
+
+            if (!skipping && textDelay > 0)
+            {
+                castingLine = line.line;
            
-           c = StartCoroutine(textCastEnum());
-        }
-        else
-        {
+                c = StartCoroutine(textCastEnum());
+            }
+            else
+            {
             
-            textContent.text = line.line;
+                textContent.text = line.line;
+            }
+            textAuthor.text = line.name.ToString();
+            lineNum++;
         }
-        textAuthor.text = line.name.ToString();
-        lineNum++;
+        
+        
+       
     }
     private IEnumerator textCastEnum()
     {
