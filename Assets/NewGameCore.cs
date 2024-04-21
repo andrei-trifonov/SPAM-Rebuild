@@ -526,7 +526,9 @@ public class NewGameCore : MonoBehaviour
         GameObject ActorOnScene = FindActorOnScene(line.name.ToString());
         if (ActorOnScene != null)
         { 
-            Emoji = Instantiate(emojiList[(int)line.emoji], ActorOnScene.transform.position + Vector3.up * 3, transform.rotation);
+            Emoji = Instantiate(emojiList[(int)line.emoji], ActorOnScene.transform.position + Vector3.up * 4, transform.rotation);
+            Debug.Log(Emoji.name + ActorOnScene.name);
+            
         }
         lineNum++;
         Step();
