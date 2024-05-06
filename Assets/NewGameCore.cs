@@ -179,6 +179,7 @@ public class NewGameCore : MonoBehaviour
         textCanvasAnimator = textCanvas.GetComponent<Animator>();
         scenario = scenarioComposer.Labels;
         string savename = PlayerPrefs.GetString("LastSave");
+        Debug.Log(savename);
         if (savename.Length>0)
             Load(savename);
         else
@@ -215,6 +216,8 @@ public class NewGameCore : MonoBehaviour
         if (!loading && CoroutinesWorking.Count == 0 )
         {
             //Clean scene
+            
+            menuTimerSlider.SetActive(false);
             StopAllCoroutines();
             loading = true;
             skipping = false;
@@ -228,8 +231,9 @@ public class NewGameCore : MonoBehaviour
             textContent.text = "";
             textAuthor.text = "";
                 
-
+            menuTimerSlider.SetActive(false);
             SaveObject loadedData = JsonUtility.FromJson<SaveObject>(PlayerPrefs.GetString(savenum+"Save"));
+         
             saveObj = loadedData;
             if (saveObj == null)
             {
@@ -244,45 +248,43 @@ public class NewGameCore : MonoBehaviour
             item.show = true;
 
             if (loadedData.lastMusic!= GDB.Music.None)
-                musicAction(item);
+                musicAction(item, true);
 
             //Get 
             foreach (var actor in loadedData.Actors)
             {
+                item = new Item();
                 item.pose = actor.Pose;
                 item.name = actor.Name;
                 item.V3position = actor.Position;
-                actorAction(item);
+              
+                actorAction(item, true);
             }
            
            
             //Spawn Scene
-            
+            item = new Item();
             item.BGname = loadedData.lastBG;
             if (loadedData.lastBG!= GDB.BGName.None)
-                bgAction(item);
-            
+                bgAction(item, true);
+            item = new Item();
             item.CGname = loadedData.lastCG;
             if (loadedData.lastCG!="")
-                cgAction(item);
+                cgAction(item, true);
             //Return line num label num
             lineNum = loadedData.lastLineNum;
             labelNum = loadedData.lastLabelNum;
 
 
             //return text to panelx 
-
+            item = new Item();
             item.line= loadedData.lastLine;
             item.name = loadedData.lastAuthor;
-            textAction(item);
+            textAction(item, true);
             
             BlinkSLMarker(1);
             loading = false;
-            if (firstLoad)
-            {
-                firstLoad = false;
-                Step();
-            }
+           
           
         }
     }
@@ -295,15 +297,21 @@ public class NewGameCore : MonoBehaviour
             foreach (Actor actor in actorsOnScene)
             {
                 actors.Add(new Actor(actor.obj.transform.position, actor.Name, actor.Pose));
-             }
+            }
 
             saveObj.Savetime = "" + System.DateTime.Now;
             saveObj.Actors = actors;
             saveObj.lastLineNum = lineNum;
             saveObj.lastLabelNum = labelNum;
             saveJString = JsonUtility.ToJson(saveObj);
-            
-            Debug.Log("Actors "  + saveObj.Actors);
+            Debug.Log("JSON " + saveJString );
+            Debug.Log("Actors " );
+            foreach (var actor in saveObj.Actors)
+            {
+                Debug.Log( actor.Name); 
+                Debug.Log( actor.Position);
+            }
+          
             Debug.Log("AuthorText "  + saveObj.lastAuthor);
             Debug.Log("LineText "  + saveObj.lastLine);
             Debug.Log("Scene "  + saveObj.lastBG);
@@ -375,7 +383,7 @@ public class NewGameCore : MonoBehaviour
         switch (line.type)
         {
             case GDB.LineType.Line:
-                textAction(line); 
+                textAction(line, false); 
                 break;
             case GDB.LineType.Jump:
                 jumpAction(line);
@@ -390,22 +398,22 @@ public class NewGameCore : MonoBehaviour
                 menuAction(line);
                 break;
             case GDB.LineType.CG:
-                cgAction(line);
+                cgAction(line, false);
                 break;
             case GDB.LineType.BG:
-                bgAction(line);
+                bgAction(line, false);
                 break;
             case GDB.LineType.Music:
-                musicAction(line);
+                musicAction(line, false);
                 break;
             case GDB.LineType.Sound:
-                soundAction(line);
+                soundAction(line, false);
                 break;
             case GDB.LineType.Pause:
                 pauseAction(line);
                 break;
             case GDB.LineType.Actor:
-                actorAction(line);
+                actorAction(line, false);
                 break;
             case GDB.LineType.CamEffect:
                 cameraAction(line);
@@ -527,7 +535,7 @@ public class NewGameCore : MonoBehaviour
         if (ActorOnScene != null)
         { 
             Emoji = Instantiate(emojiList[(int)line.emoji], ActorOnScene.transform.position + Vector3.up * 4, transform.rotation);
-            Debug.Log(Emoji.name + ActorOnScene.name);
+         
             
         }
         lineNum++;
@@ -545,10 +553,10 @@ public class NewGameCore : MonoBehaviour
         Step();
     }
 
-    void actorAction(Item line)
+    void actorAction(Item line, bool isLoad)
     {
        
-           StartCoroutine(LoadActor(line, cid++));
+           StartCoroutine(LoadActor(line, cid++, isLoad));
 
 
     }
@@ -576,36 +584,43 @@ public class NewGameCore : MonoBehaviour
 
         return null;
     }
-    IEnumerator LoadActor(Item line, int id)
+
+    IEnumerator LoadActor(Item line, int id, bool isLoad)
     {
         CoroutinesWorking.Add(id);
         GameObject ActorOnScene = FindActorOnScene(line.name.ToString());
         if (ActorOnScene == null)
         {
-            AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line.name.ToString()+line.pose.ToString());
+
+            AsyncOperationHandle<GameObject> handle =
+                Addressables.LoadAssetAsync<GameObject>(line.name.ToString() + line.pose.ToString());
             yield return handle;
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
                 GameObject res = handle.Result;
                 ActorOnScene = GameObject.Instantiate(res);
-                Actor actor = new Actor(Vector3.zero, line.name, line.pose);
+
+
+
+                Actor actor = new Actor(line.V3position, line.name, line.pose);
                 actor.obj = ActorOnScene;
-              
+
                 actorsOnScene.Add(actor);
 
             }
-            Addressables.Release(handle); 
+
+            Addressables.Release(handle);
             if (Emoji != null)
                 Destroy(Emoji);
-           
-            
+
+
         }
-        
+
         ActorOnScene.transform.position = line.V3position;
         //ActorOnScene.GetComponent<Animator>().WriteDefaultValues();
-       
+
         ActorOnScene.GetComponent<Animator>().SetBool(line.spriteEffect.ToString(), true);
-		yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.1f);
         ActorOnScene.GetComponent<Animator>().SetBool(line.spriteEffect.ToString(), false);
 
         if (line.pose == GDB.Pose.Hide || line.spriteEffect == GDB.SpriteEffect.DissolveOut)
@@ -617,19 +632,32 @@ public class NewGameCore : MonoBehaviour
                 yield return new WaitForSeconds(1);
 
             }
-            try { Destroy(ActorOnScene); }
-            catch { }
+
+            try
+            {
+                Destroy(ActorOnScene);
+            }
+            catch
+            {
+            }
         }
-        else {
+        else
+        {
             FindActorOnScenePointer(line.name.ToString()).Pose = line.pose;
         }
-
-
-        lineNum++;
         CoroutinesWorking.Remove(id);
-        Step();
+        if (!isLoad)
+        {
+            lineNum++;
+            Step();
+        }
 
+        
+        
+      
     }
+
+
 
 
 
@@ -662,7 +690,7 @@ public class NewGameCore : MonoBehaviour
             Step();
       
     }
-    void soundAction(Item line)
+    void soundAction(Item line, bool isLoad)
     {
 
         if (line.show) {
@@ -672,19 +700,22 @@ public class NewGameCore : MonoBehaviour
                 try { StopCoroutine(lScoroutine); } catch { }
                 loadingSound = false;
             }
-            lScoroutine = StartCoroutine(LoadSound(line, cid++));
+            lScoroutine = StartCoroutine(LoadSound(line, cid++, isLoad));
 
         }
             
         else
         {
             soundPlayer.Stop();
-            lineNum++;
-            Step();
+            if (!isLoad)
+            {
+                lineNum++;
+                Step();
+            }
         }
     
     }
-    IEnumerator LoadSound(Item line, int cid)
+    IEnumerator LoadSound(Item line, int cid, bool isLoad)
     {
         CoroutinesWorking.Add(cid);
         loadingSound = true;
@@ -695,16 +726,19 @@ public class NewGameCore : MonoBehaviour
             AudioClip res = handle.Result;
             
             soundPlayer.PlayOneShot(res);
-            lineNum++;
-            
-            Step();
+
+            if (!isLoad)
+            {
+                lineNum++;
+                Step();
+            }
         }
 
         Addressables.Release(handle);
         loadingSound = false;
         CoroutinesWorking.Remove(cid);
     }
-    void musicAction(Item line)
+    void musicAction(Item line, bool isLoad)
     {
         if (line.show) {
             if (loadingMusic)
@@ -712,7 +746,7 @@ public class NewGameCore : MonoBehaviour
                 try { StopCoroutine(lMcoroutine); } catch { }
                 loadingMusic = false;
             }
-            lMcoroutine = StartCoroutine(LoadMusic(line, cid++));
+            lMcoroutine = StartCoroutine(LoadMusic(line, cid++, isLoad));
         }
           
        else
@@ -721,11 +755,15 @@ public class NewGameCore : MonoBehaviour
             fadeInMusic = null;
             if (fadeOutMusic)
                 fadeOutMusic.GetComponent<Fader>().fadingOut = true;
-            lineNum++;
-            Step();
+
+            if (!isLoad)
+            {
+                lineNum++;
+                Step();
+            }
         }
     }
-    IEnumerator LoadMusic(Item line, int cid)
+    IEnumerator LoadMusic(Item line, int cid, bool isLoad)
     {
         CoroutinesWorking.Add(cid);
         saveObj.lastMusic = line.music;
@@ -743,9 +781,13 @@ public class NewGameCore : MonoBehaviour
             if (fadeOutMusic)
                 fadeOutMusic.GetComponent<Fader>().fadingOut = true;
             fadeInMusic.GetComponent<Fader>().fadingIn = true;
-            lineNum++;
-            
-            Step();
+
+            if (!isLoad)
+            {
+                lineNum++;
+                Step();
+            }
+                 
         }
         Addressables.Release(handle);
         
@@ -759,7 +801,7 @@ public class NewGameCore : MonoBehaviour
 
         CoroutinesWorking.Remove(cid);
     }
-    void bgAction(Item line)
+    void bgAction(Item line, bool isLoad)
     {
     
         if (Emoji != null)
@@ -771,11 +813,11 @@ public class NewGameCore : MonoBehaviour
             try { StopCoroutine(lBGcoroutine); } catch { }
             loadingBG = false;
         }
-        lBGcoroutine = StartCoroutine(LoadBackground(line, cid++));
+        lBGcoroutine = StartCoroutine(LoadBackground(line, cid++, isLoad));
 
     }
 
-    IEnumerator LoadBackground(Item line, int cid)
+    IEnumerator LoadBackground(Item line, int cid, bool isLoad)
     {
         CoroutinesWorking.Add(cid);
         Camera.SetBool("BlackOut", true);
@@ -792,7 +834,8 @@ public class NewGameCore : MonoBehaviour
             clipBG = handle.Result;
             BG.clip = clipBG;
             BG.Play();
-            lineNum++;
+            if (!isLoad)
+                lineNum++;
           
 
         }
@@ -807,7 +850,8 @@ public class NewGameCore : MonoBehaviour
         Addressables.Release(handle);
         loadingBG = false;
         CoroutinesWorking.Remove(cid);
-        Step();
+        if (!isLoad)
+            Step();
       
 
     }
@@ -846,7 +890,7 @@ public class NewGameCore : MonoBehaviour
      
     }
     
-    void cgAction(Item line)
+    void cgAction(Item line, bool isLoad)
     {
         if (Emoji != null)
             Destroy(Emoji);
@@ -857,13 +901,13 @@ public class NewGameCore : MonoBehaviour
             try { StopCoroutine(lCGcoroutine); } catch { }
             loadingCG = false;
         }
-        lCGcoroutine = StartCoroutine(LoadSprite(line));
+        lCGcoroutine = StartCoroutine(LoadSprite(line, isLoad));
        // Step();
 
      //TODO Эффекты 
     }
 
-    IEnumerator LoadSprite(Item line)
+    IEnumerator LoadSprite(Item line, bool isLoad)
     {
         CoroutinesWorking.Add(cid);
         Camera.SetBool("BlackOut", true);
@@ -885,7 +929,8 @@ public class NewGameCore : MonoBehaviour
             }
 
             Addressables.Release(handle);
-            lineNum++;
+            if (!isLoad)
+                lineNum++;
             loadingCG = false;
         }
         else
@@ -897,7 +942,8 @@ public class NewGameCore : MonoBehaviour
                             
             }
             saveObj.lastCG = "";
-            lineNum++;
+            if(!isLoad)
+                lineNum++;
             CG.enabled = false;
         }
         yield return new WaitForSeconds(1f);
@@ -909,7 +955,8 @@ public class NewGameCore : MonoBehaviour
             ApplyEffects(line.effects, false, line.time, line.V3position);
         }
         CoroutinesWorking.Remove(cid);
-        Step();
+        if (!isLoad)
+            Step();
     }
     public void decisionAction(string name)
     {
@@ -955,7 +1002,8 @@ public class NewGameCore : MonoBehaviour
     IEnumerator MenuActionCoroutine()
     {
         skipping = false;
-        StopCoroutine(sc);
+        if (sc!=null)
+            StopCoroutine(sc);
         menuTimerSlider.SetActive(true);
         Slider slider = menuTimerSlider.GetComponent<Slider>();
         float timer = 1.0f;
@@ -1118,9 +1166,9 @@ public class NewGameCore : MonoBehaviour
         textContent.GetComponent<TextEffects>().effect = font;
         
     }
-    void textAction(Item line)
+    void textAction(Item line, bool isLoad)
     {
-        if (saveObj.lastLine != textContent.text)
+        if (saveObj.lastLine != textContent.text && !isLoad)
         {
             textContent.text = saveObj.lastLine;
             if (c != null)
@@ -1182,8 +1230,10 @@ public class NewGameCore : MonoBehaviour
             
                 textContent.text = line.line;
             }
+            Debug.Log(line.name.ToString());
             textAuthor.text = line.name.ToString();
-            lineNum++;
+            if (!isLoad)
+                lineNum++;
         }
         
         

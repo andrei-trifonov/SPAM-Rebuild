@@ -43,10 +43,6 @@ MonoBehaviour:
     m_Address: BGTemp
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: f6959348144b7a44fb804705e011bd1a
-    m_Address: Locked
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: b94a6f764c095fc4ba15311b2017ced6
     m_Address: InvScenario1
     m_ReadOnly: 0
@@ -249,6 +245,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 51435c3c286b95d4cab3ab96c4d519f2
     m_Address: Placeholder
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cd0210a123c2ad047a11296434e8633c
+    m_Address: Lock_gal
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

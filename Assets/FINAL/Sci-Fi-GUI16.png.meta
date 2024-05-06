@@ -289,7 +289,7 @@ TextureImporter:
         serializedVersion: 2
         x: 964
         y: 496
-        width: 285
+        width: 250
         height: 65
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -331,7 +331,7 @@ TextureImporter:
         serializedVersion: 2
         x: 89
         y: 124
-        width: 124
+        width: 123
         height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -367,6 +367,237 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_12
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 307
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d25a43c5e1e2854284603e97ccd69c5
+      internalID: 2069047247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 397
+        width: 207
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b2a47bcef7cb246919302f4469be57
+      internalID: 915513535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 782
+        width: 318
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cd6638a16b2f44ab3631ea1aeb2d27
+      internalID: -1373435881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_15
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 624
+        width: 293
+        height: 336
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fe982df462d184d9729e657bf6c926
+      internalID: 1165448550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_16
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 423
+        width: 223
+        height: 228
+      alignment: 9
+      pivot: {x: 0.5271615, y: 0.50897294}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f623af5044b34e4c8c6eb0f1f22ac63
+      internalID: -1539886280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_17
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 601
+        width: 172
+        height: 167
+      alignment: 9
+      pivot: {x: 0.4946706, y: 0.48217553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc19dff4b960634896f822bc5118e74
+      internalID: 795102011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_18
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 512
+        width: 271
+        height: 256
+      alignment: 9
+      pivot: {x: 0.52287537, y: 0.46936822}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0025927bf200d46a5795f38d090779
+      internalID: -1883412497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_19
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 0
+        width: 146
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e7f3a4385ed3d46a6b12e064665cb7
+      internalID: -186224707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_20
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 247
+        width: 123
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece8d6c1b96919f42bddfb499cb8d0d4
+      internalID: 432865718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_21
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 678
+        width: 92
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66100f55a11a6624780cb31bd4c86490
+      internalID: -565629942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_22
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 386
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effa8ba43e7362b46992f48ccf491b1b
+      internalID: -962732777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -379,17 +610,28 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Sci-Fi-GUI16_9: -1963196552
+      Sci-Fi-GUI16_12: 2069047247
+      Sci-Fi-GUI16_18: -1883412497
       Sci-Fi-GUI16_0: -2055167884
       Sci-Fi-GUI16_6: -533337814
       Sci-Fi-GUI16_3: 700212435
+      Sci-Fi-GUI16_20: 432865718
       Sci-Fi-GUI16_5: 520282902
       Sci-Fi-GUI16_11: -947421825
       Sci-Fi-GUI16_4: 684148176
+      Sci-Fi-GUI16_16: -1539886280
       Sci-Fi-GUI16_8: -815258066
+      Sci-Fi-GUI16_14: -1373435881
+      Sci-Fi-GUI16_13: 915513535
+      Sci-Fi-GUI16_17: 795102011
+      Sci-Fi-GUI16_22: -962732777
+      Sci-Fi-GUI16_15: 1165448550
       Sci-Fi-GUI16_10: 1188529597
       Sci-Fi-GUI16_7: 516863545
       Sci-Fi-GUI16_1: 1259504727
       Sci-Fi-GUI16_2: 522429860
+      Sci-Fi-GUI16_19: -186224707
+      Sci-Fi-GUI16_21: -565629942
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

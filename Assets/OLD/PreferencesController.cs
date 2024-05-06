@@ -16,7 +16,7 @@ public class PreferencesController : MonoBehaviour
     public bool text;
     public bool sound;
     public bool scene;
-
+    public bool mainMenu;
     private void SetSettings()
     {
         if (music)
@@ -31,12 +31,14 @@ public class PreferencesController : MonoBehaviour
     private void Start()
     {
         valueSlider.value = PlayerPrefs.GetFloat(playerPrefsValue);
-        SetSettings();
+        if (!mainMenu)
+            SetSettings();
     }
 
     public void OnValueChanged()
     {
         PlayerPrefs.SetFloat(playerPrefsValue, valueSlider.value);
-        SetSettings();
+        if (!mainMenu)
+            SetSettings();
     }
 }

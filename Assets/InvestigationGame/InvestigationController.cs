@@ -56,7 +56,8 @@ public struct Result
 }
 public class InvestigationController : MonoBehaviour
 {
-    
+
+    [SerializeField] private GameObject sliderFromMainGame;
     [SerializeField] private GameObject drugsButton1;
     [SerializeField] private GameObject drugsButton2;
     [SerializeField] private Vector4 ScreenSpace;
@@ -98,7 +99,7 @@ public class InvestigationController : MonoBehaviour
     
     public void SetNewGame(string sceneName, List<int> Unlocks, int drugsCount)
     {
-        
+        sliderFromMainGame.SetActive(false);
         usedDrug = false;
         drugsButton1.SetActive(true);
         drugsButton2.SetActive(true);
@@ -169,7 +170,7 @@ public class InvestigationController : MonoBehaviour
             }
             drugsButton1.SetActive(false);
             drugsButton2.SetActive(false);
-        }
+        
 
        
             foreach (var result in Results)
@@ -188,6 +189,7 @@ public class InvestigationController : MonoBehaviour
             {
             DestroyAllThought();
             SpawnThoughts();
+        }
         }
     }
 
