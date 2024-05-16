@@ -106,6 +106,28 @@ public class DialogueEditor : Editor
 
                                 }
                                     break;
+                                case (GDB.LineType.FScreen):
+                                {
+
+                                    item.line = EditorGUILayout.TextArea(item.line, GUILayout.Width(600),
+                                        GUILayout.ExpandHeight(true));
+                                    EditorGUILayout.LabelField("Шрифт", GUILayout.Height(20), GUILayout.Width(40));
+                                    item.font = (GDB.Fonts) EditorGUILayout.EnumPopup("", item.font,
+                                        GUILayout.Height(20), GUILayout.Width(100));
+                                    GUILayout.Space(100);
+                                }
+                                    break;
+                                case (GDB.LineType.Chat):
+                                {
+
+                                    item.line = EditorGUILayout.TextArea(item.line, GUILayout.Width(600),
+                                        GUILayout.ExpandHeight(true));
+                                    item.name = (GDB.Name) EditorGUILayout.EnumPopup("", item.name,
+                                        GUILayout.Height(20), GUILayout.Width(100));
+                                       
+                                    GUILayout.Space(100);
+                                }
+                                    break;
                                 case (GDB.LineType.BG):
                                 {
                                     GUI.backgroundColor = new Color(1,0.5f,1);

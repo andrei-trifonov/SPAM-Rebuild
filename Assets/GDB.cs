@@ -62,12 +62,20 @@ public static class GDB
         Sound,
         Music,
         Pause,
+        FScreen,
         Var,
         If,
         Jump,
         CamEffect,
         Investigation,
-        Emoji
+        Emoji,
+        Chat
+    }
+    public enum TextDisplay
+    {
+        Dialogue,
+        Fullscreen,
+        Chat
     }
     public enum BGName
     {

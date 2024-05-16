@@ -22,9 +22,10 @@ public class SaveObject
         unlockedInv = new List<UnlockMessage>();
         Variables = new List<VarItem>();
         Actors = new List<Actor>();
+       
     }
 
-    
+    public GDB.TextDisplay textDisplay = GDB.TextDisplay.Dialogue;
     public int drugsCount =0 ;
     public List<UnlockMessage> unlockedInv;
     public GDB.BGName lastBG = GDB.BGName.None;
@@ -77,6 +78,8 @@ public class NewGameCore : MonoBehaviour
     [SerializeField] private GameObject investigationLabel;
     [SerializeField] private TextMeshProUGUI textAuthor;
     [SerializeField] private TextMeshProUGUI textContent;
+    [SerializeField] private TextMeshProUGUI textFS;
+    [SerializeField] private GameObject FSPanel;
     [SerializeField] private Animator Camera;
     
     [SerializeField] private Dialogue scenarioComposer;
@@ -140,7 +143,7 @@ public class NewGameCore : MonoBehaviour
     private bool firstLoad;
     private GameObject Emoji;
     [SerializeField] private List<GameObject> emojiList = new List<GameObject>();
-    
+    [SerializeField] private ChatManager chatManager;
     public void SetTextMarker(bool state)
     {   
         textCanvasAnimator.SetBool("Ready", !state);
@@ -229,6 +232,7 @@ public class NewGameCore : MonoBehaviour
             
             ApplyTextEffects(GDB.Fonts.Regular);
             textContent.text = "";
+            textFS.text = "";
             textAuthor.text = "";
                 
             menuTimerSlider.SetActive(false);
@@ -250,7 +254,8 @@ public class NewGameCore : MonoBehaviour
             if (loadedData.lastMusic!= GDB.Music.None)
                 musicAction(item, true);
 
-            //Get 
+            
+            //Get actors
             foreach (var actor in loadedData.Actors)
             {
                 item = new Item();
@@ -275,13 +280,23 @@ public class NewGameCore : MonoBehaviour
             lineNum = loadedData.lastLineNum;
             labelNum = loadedData.lastLabelNum;
 
-
-            //return text to panelx 
-            item = new Item();
-            item.line= loadedData.lastLine;
-            item.name = loadedData.lastAuthor;
-            textAction(item, true);
             
+            item = new Item();
+            item.line = loadedData.lastLine;
+            item.name = loadedData.lastAuthor;
+            if (loadedData.textDisplay == GDB.TextDisplay.Dialogue)
+            {
+                //return text to panel
+                textAction(item, true);
+            }
+            if (loadedData.textDisplay == GDB.TextDisplay.Fullscreen)
+            {
+                FSTextAction(item, true);
+            }
+            if (loadedData.textDisplay == GDB.TextDisplay.Chat)
+            {
+                chatAction(item, true);
+            }
             BlinkSLMarker(1);
             loading = false;
            
@@ -385,6 +400,12 @@ public class NewGameCore : MonoBehaviour
             case GDB.LineType.Line:
                 textAction(line, false); 
                 break;
+            case GDB.LineType.FScreen:
+                FSTextAction(line, false); 
+                break;
+            case GDB.LineType.Chat:
+                chatAction(line, false); 
+                break;
             case GDB.LineType.Jump:
                 jumpAction(line);
                 break;
@@ -428,6 +449,8 @@ public class NewGameCore : MonoBehaviour
     }
     void invAction(Item line)
     {
+        chatManager.Disable();
+        FSPanel.SetActive(false);
         switch (line.inv)
         {
             case GDB.Investigation.Open:
@@ -520,7 +543,8 @@ public class NewGameCore : MonoBehaviour
     
     void cameraAction(Item line)
     {
-
+        chatManager.Disable();
+        FSPanel.SetActive(false);
         StartCoroutine(EffectCoroutine(line, cid++));
 
 
@@ -529,6 +553,8 @@ public class NewGameCore : MonoBehaviour
     
     void emojiAction(Item line)
     {
+        chatManager.Disable();
+        FSPanel.SetActive(false);
         if (Emoji!=null)
             Destroy(Emoji);
         GameObject ActorOnScene = FindActorOnScene(line.name.ToString());
@@ -740,6 +766,7 @@ public class NewGameCore : MonoBehaviour
     }
     void musicAction(Item line, bool isLoad)
     {
+        
         if (line.show) {
             if (loadingMusic)
             {
@@ -892,6 +919,9 @@ public class NewGameCore : MonoBehaviour
     
     void cgAction(Item line, bool isLoad)
     {
+        if (line.CGname != ""){
+        chatManager.Disable();
+        FSPanel.SetActive(false);
         if (Emoji != null)
             Destroy(Emoji);
         PlayerPrefs.SetInt(line.CGname, 1);
@@ -904,7 +934,8 @@ public class NewGameCore : MonoBehaviour
         lCGcoroutine = StartCoroutine(LoadSprite(line, isLoad));
        // Step();
 
-     //TODO Эффекты 
+     //TODO Эффекты
+        }
     }
 
     IEnumerator LoadSprite(Item line, bool isLoad)
@@ -960,7 +991,8 @@ public class NewGameCore : MonoBehaviour
     }
     public void decisionAction(string name)
     {
-        
+        chatManager.Disable();
+        FSPanel.SetActive(false);
         if (!choiseRoulette)
         {
             try
@@ -985,6 +1017,8 @@ public class NewGameCore : MonoBehaviour
     }
     void menuAction(Item line)
     {
+        chatManager.Disable();
+        FSPanel.SetActive(false);
         menuCoroutine = StartCoroutine(MenuActionCoroutine());
         textCanvas.enabled = false;
         foreach (var choiseVariant in line.menu_label)
@@ -1001,6 +1035,7 @@ public class NewGameCore : MonoBehaviour
 
     IEnumerator MenuActionCoroutine()
     {
+        
         skipping = false;
         if (sc!=null)
             StopCoroutine(sc);
@@ -1053,6 +1088,8 @@ public class NewGameCore : MonoBehaviour
     
     void ifAction(Item line)
     {
+        chatManager.Disable();
+        FSPanel.SetActive(false);
         int var = PlayerPrefs.GetInt(line.var.ToString());
         switch (line.signsIf)
         {
@@ -1151,12 +1188,14 @@ public class NewGameCore : MonoBehaviour
     }
     void jumpAction(Item line)
     {
+       
         labelNum = FindLabel(line.additionalPose);
         lineNum = 0;
         Step();
     }
     public void jumpAction(string name)
     {
+       
         labelNum = FindLabel(name);
         lineNum = 0;
         Step();
@@ -1166,8 +1205,31 @@ public class NewGameCore : MonoBehaviour
         textContent.GetComponent<TextEffects>().effect = font;
         
     }
+     void chatAction(Item line, bool isLoad)
+    {
+        textContent.text = "";
+        textFS.text = "";
+        textAuthor.text = "";
+        FSPanel.SetActive(false);
+        Log.RenewLog(line.name, line.line);
+        saveObj.lastAuthor = line.name;
+        saveObj.lastLine = line.line;
+        saveObj.textDisplay = GDB.TextDisplay.Chat;
+        if (line.name == GDB.Name.Мира)
+            chatManager.SendMessage(line.line, false);
+        else
+            chatManager.SendMessage(line.line, true);
+    
+        if (!isLoad)
+            lineNum++;
+
+       
+    }
     void textAction(Item line, bool isLoad)
     {
+        saveObj.textDisplay = GDB.TextDisplay.Dialogue;
+        chatManager.Disable();
+        FSPanel.SetActive(false);
         if (saveObj.lastLine != textContent.text && !isLoad)
         {
             textContent.text = saveObj.lastLine;
@@ -1223,7 +1285,7 @@ public class NewGameCore : MonoBehaviour
             {
                 castingLine = line.line;
            
-                c = StartCoroutine(textCastEnum());
+                c = StartCoroutine(textCastEnum(textContent));
             }
             else
             {
@@ -1239,7 +1301,42 @@ public class NewGameCore : MonoBehaviour
         
        
     }
-    private IEnumerator textCastEnum()
+    void FSTextAction(Item line, bool isLoad)
+    {
+        FSPanel.SetActive(true);
+        saveObj.textDisplay = GDB.TextDisplay.Fullscreen;
+        chatManager.Disable();
+        
+        textContent.text = "";
+        textFS.text = "";
+        textAuthor.text = "";
+
+        saveObj.lastAuthor = line.name;
+        saveObj.lastLine = line.line;
+
+        castingLine = "";
+
+        Log.RenewLog(line.name, line.line);
+
+        if (!skipping && textDelay > 0)
+        {
+            castingLine = line.line;
+            c = StartCoroutine(textCastEnum(textFS));
+        }
+        else
+        {
+        
+            textFS.text = line.line;
+        }
+        Debug.Log(line.name.ToString());
+        if (!isLoad)
+            lineNum++;
+        
+        
+        
+       
+    }
+    private IEnumerator textCastEnum(TextMeshProUGUI textContent)
     {
         SetTextMarker(true);
         foreach (var _char in castingLine)
