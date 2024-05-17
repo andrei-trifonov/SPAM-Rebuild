@@ -49,7 +49,8 @@ public static class GDB
         SleepZ,
         Cutescull,
         Evildeath,
-        AuraBlack
+        AuraBlack,
+        Lines
 
     }
     public enum LineType

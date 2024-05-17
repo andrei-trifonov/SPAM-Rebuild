@@ -24,7 +24,7 @@ public class SaveObject
         Actors = new List<Actor>();
        
     }
-
+    
     public GDB.TextDisplay textDisplay = GDB.TextDisplay.Dialogue;
     public int drugsCount =0 ;
     public List<UnlockMessage> unlockedInv;
@@ -144,6 +144,7 @@ public class NewGameCore : MonoBehaviour
     private GameObject Emoji;
     [SerializeField] private List<GameObject> emojiList = new List<GameObject>();
     [SerializeField] private ChatManager chatManager;
+    
     public void SetTextMarker(bool state)
     {   
         textCanvasAnimator.SetBool("Ready", !state);
@@ -289,11 +290,11 @@ public class NewGameCore : MonoBehaviour
                 //return text to panel
                 textAction(item, true);
             }
-            if (loadedData.textDisplay == GDB.TextDisplay.Fullscreen)
+            else if (loadedData.textDisplay == GDB.TextDisplay.Fullscreen)
             {
                 FSTextAction(item, true);
             }
-            if (loadedData.textDisplay == GDB.TextDisplay.Chat)
+            else if (loadedData.textDisplay == GDB.TextDisplay.Chat)
             {
                 chatAction(item, true);
             }
@@ -1226,12 +1227,13 @@ public class NewGameCore : MonoBehaviour
        
     }
     void textAction(Item line, bool isLoad)
-    {
-        saveObj.textDisplay = GDB.TextDisplay.Dialogue;
+    {               
+        
         chatManager.Disable();
         FSPanel.SetActive(false);
-        if (saveObj.lastLine != textContent.text && !isLoad)
+        if (saveObj.lastLine != textContent.text && !isLoad && saveObj.textDisplay == GDB.TextDisplay.Dialogue)
         {
+            saveObj.textDisplay = GDB.TextDisplay.Dialogue;
             textContent.text = saveObj.lastLine;
             if (c != null)
             {
@@ -1242,6 +1244,7 @@ public class NewGameCore : MonoBehaviour
         }
         else
         {
+            saveObj.textDisplay = GDB.TextDisplay.Dialogue;
             foreach (var actor in actorsOnScene)
             {
                 actor.obj.GetComponentInChildren<SpriteRenderer>().color = UnityEngine.Color.gray;
