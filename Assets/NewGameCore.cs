@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
-using UnityEditor.Searcher;
+
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -254,28 +254,31 @@ public class NewGameCore : MonoBehaviour
 
             if (loadedData.lastMusic!= GDB.Music.None)
                 musicAction(item, true);
-
-            
-            //Get actors
-            foreach (var actor in loadedData.Actors)
+            if (loadedData.lastCG == "")
             {
+
+                //Get actors
+                foreach (var actor in loadedData.Actors)
+                {
+                    item = new Item();
+                    item.pose = actor.Pose;
+                    item.name = actor.Name;
+                    item.V3position = actor.Position;
+
+                    actorAction(item, true);
+                }
+
+
+                //Spawn Scene
                 item = new Item();
-                item.pose = actor.Pose;
-                item.name = actor.Name;
-                item.V3position = actor.Position;
-              
-                actorAction(item, true);
+                item.BGname = loadedData.lastBG;
+                if (loadedData.lastBG != GDB.BGName.None)
+                    bgAction(item, true);
+                item = new Item();
+                item.CGname = loadedData.lastCG;
             }
-           
-           
-            //Spawn Scene
-            item = new Item();
-            item.BGname = loadedData.lastBG;
-            if (loadedData.lastBG!= GDB.BGName.None)
-                bgAction(item, true);
-            item = new Item();
-            item.CGname = loadedData.lastCG;
-            if (loadedData.lastCG!="")
+
+            else 
                 cgAction(item, true);
             //Return line num label num
             lineNum = loadedData.lastLineNum;
@@ -599,6 +602,19 @@ public class NewGameCore : MonoBehaviour
 
         return null;
     }
+    void RemoveActor(string name)
+    {
+        foreach(Actor obj in actorsOnScene)
+        {
+            if (obj.Name.ToString() == name)
+            {
+                actorsOnScene.Remove(obj);
+                return;
+            }
+        }
+
+    
+    }
     Actor FindActorOnScenePointer(string name)
     {
         foreach (Actor obj in actorsOnScene)
@@ -616,10 +632,13 @@ public class NewGameCore : MonoBehaviour
     {
         CoroutinesWorking.Add(id);
         GameObject ActorOnScene = FindActorOnScene(line.name.ToString());
-        if (ActorOnScene == null)
+        if (ActorOnScene != null)
         {
+            Destroy(ActorOnScene);
+        }
 
-            AsyncOperationHandle<GameObject> handle =
+        RemoveActor(line.name.ToString());
+        AsyncOperationHandle<GameObject> handle =
                 Addressables.LoadAssetAsync<GameObject>(line.name.ToString() + line.pose.ToString());
             yield return handle;
             if (handle.Status == AsyncOperationStatus.Succeeded)
@@ -635,13 +654,17 @@ public class NewGameCore : MonoBehaviour
                 actorsOnScene.Add(actor);
 
             }
-
+            else
+            {
+                Debug.LogError("Failed to load actor: " + handle.DebugName);
+            }
+            
             Addressables.Release(handle);
             if (Emoji != null)
                 Destroy(Emoji);
 
 
-        }
+        
 
         ActorOnScene.transform.position = line.V3position;
         //ActorOnScene.GetComponent<Animator>().WriteDefaultValues();
@@ -920,6 +943,7 @@ public class NewGameCore : MonoBehaviour
     
     void cgAction(Item line, bool isLoad)
     {
+        
         if (line.CGname != ""){
         chatManager.Disable();
         FSPanel.SetActive(false);
@@ -941,57 +965,68 @@ public class NewGameCore : MonoBehaviour
 
     IEnumerator LoadSprite(Item line, bool isLoad)
     {
-        CoroutinesWorking.Add(cid);
-        Camera.SetBool("BlackOut", true);
-        yield return new WaitForSeconds(0.5f);
-
-       
-        if (line.show)
+        if (line.CGname != "")
         {
-            //TODO ЭФфекты
-            loadingCG = true;
-            AsyncOperationHandle<Sprite> handle = Addressables.LoadAssetAsync<Sprite>(line.CGname);
-            yield return handle;
-            if (handle.Status == AsyncOperationStatus.Succeeded)
-            {
-                saveObj.lastCG = line.CGname;
-                saveObj.lastBG = GDB.BGName.None;
-                CG.enabled = true;
-                CG.sprite = handle.Result;
-            }
+            CoroutinesWorking.Add(cid);
+            Camera.SetBool("BlackOut", true);
+            yield return new WaitForSeconds(0.5f);
 
-            Addressables.Release(handle);
-            if (!isLoad)
-                lineNum++;
-            loadingCG = false;
-        }
-        else
-        {
-            if (!skipping)
+
+            if (line.show)
             {
                 //TODO ЭФфекты
-                yield return new WaitForSeconds(1);
-                            
+                loadingCG = true;
+                AsyncOperationHandle<Sprite> handle = Addressables.LoadAssetAsync<Sprite>(line.CGname);
+                yield return handle;
+                if (handle.Status == AsyncOperationStatus.Succeeded)
+                {
+                    saveObj.lastCG = line.CGname;
+                    saveObj.lastBG = GDB.BGName.None;
+                    CG.enabled = true;
+                    CG.sprite = handle.Result;
+                }
+                else
+                {
+                    Debug.LogError("Failed to load cg: " + handle.DebugName);
+                }
+
+                Addressables.Release(handle);
+                if (!isLoad)
+                    lineNum++;
+                loadingCG = false;
             }
-            saveObj.lastCG = "";
-            if(!isLoad)
-                lineNum++;
-            CG.enabled = false;
+            else
+            {
+                if (!skipping)
+                {
+                    //TODO ЭФфекты
+                    yield return new WaitForSeconds(1);
+
+                }
+
+                saveObj.lastCG = "";
+                if (!isLoad)
+                    lineNum++;
+                CG.enabled = false;
+            }
+
+            yield return new WaitForSeconds(1f);
+            Camera.SetBool("BlackOut", false);
+            if (line.effects != GDB.Effects.BlackOut)
+            {
+                ApplyEffects(line.effects, true, line.time, line.V3position);
+                yield return new WaitForSeconds(1.5f);
+                ApplyEffects(line.effects, false, line.time, line.V3position);
+            }
+
+            CoroutinesWorking.Remove(cid);
+            if (!isLoad)
+                Step();
         }
-        yield return new WaitForSeconds(1f);
-        Camera.SetBool("BlackOut", false);
-        if (line.effects != GDB.Effects.BlackOut)
-        {
-            ApplyEffects(line.effects, true, line.time, line.V3position);
-            yield return new WaitForSeconds(1.5f);
-            ApplyEffects(line.effects, false, line.time, line.V3position);
-        }
-        CoroutinesWorking.Remove(cid);
-        if (!isLoad)
-            Step();
     }
     public void decisionAction(string name)
     {
+        menuTimerSlider.SetActive(false);
         chatManager.Disable();
         FSPanel.SetActive(false);
         if (!choiseRoulette)
