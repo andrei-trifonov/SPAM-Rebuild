@@ -1252,9 +1252,9 @@ public class NewGameCore : MonoBehaviour
         saveObj.lastLine = line.line;
         saveObj.textDisplay = GDB.TextDisplay.Chat;
         if (line.name == GDB.Name.Мира)
-            chatManager.SendMessage(line.line, false);
+            chatManager.SendMessage(line.line, line.name, false);
         else
-            chatManager.SendMessage(line.line, true);
+            chatManager.SendMessage(line.line, line.name, true);
     
         if (!isLoad)
             lineNum++;
