@@ -155,7 +155,9 @@ public static class GDB
     {
         APoints,
         KPoints,
-        MPoints
+        MPoints,
+        Sonya_support,
+        Day1_choose_person
     }
 
     public enum Signs
