@@ -20,7 +20,13 @@ public class TextEffects : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if (effect == GDB.Fonts.Computer){
+        textComponent.enableAutoSizing=(true);
+        }
+        else{
+        textComponent.fontSize = 36;
+         textComponent.enableAutoSizing =(false);
+        }
         if (effect == GDB.Fonts.Rainbow && redraw || effect != GDB.Fonts.Rainbow)
             textComponent.ForceMeshUpdate();
         var textInfo = textComponent.textInfo;

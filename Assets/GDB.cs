@@ -105,7 +105,8 @@ public static class GDB
         Regular,
         Wave,
         Scared,
-        Rainbow
+        Rainbow,
+        Computer
       
     }
     public enum Effects
