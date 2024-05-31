@@ -117,7 +117,8 @@ public static class GDB
         Punch,
         PointTo,
         Zoom,
-        PointToAndZoom
+        PointToAndZoom,
+        HSlide
 
     }
     public enum Investigation

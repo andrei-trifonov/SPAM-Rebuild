@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameMenuController : MonoBehaviour
 {
     public Animator Anim;
@@ -29,7 +29,9 @@ public class GameMenuController : MonoBehaviour
         LogComp.gameObject.SetActive(true);
         LogComp.Compose();
     }
-    public void ExitToMenu(){}
+    public void ExitToMenu(){
+        SceneManager.LoadScene("MainMenuScene");
+    }
 
     public void ShowSaves()
     {

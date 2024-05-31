@@ -140,7 +140,7 @@ public class NewGameCore : MonoBehaviour
     int cid;
     public SaveObject saveObj = new SaveObject();
     private string saveJString = "";
-    private bool firstLoad;
+  
     private GameObject Emoji;
     [SerializeField] private List<GameObject> emojiList = new List<GameObject>();
     [SerializeField] private ChatManager chatManager;
@@ -177,15 +177,17 @@ public class NewGameCore : MonoBehaviour
     }
     private void Start()
     {
-        firstLoad = true;
+       
         TrackList = GetComponent<OSTList>().GetTrackList();
         saveObj = new SaveObject();
         textCanvasAnimator = textCanvas.GetComponent<Animator>();
         scenario = scenarioComposer.Labels;
         string savename = PlayerPrefs.GetString("LastSave");
-        Debug.Log(savename);
-        if (savename.Length>0)
+        
+        if (savename.Length>0){
+            Debug.Log(savename);
             Load(savename);
+            }
         else
             Step();
     }
@@ -246,12 +248,14 @@ public class NewGameCore : MonoBehaviour
                 loading = false;
                 return;
             }
+            
             //Load music
             Item item = new Item();
             item.music = loadedData.lastMusic;
     
             item.show = true;
 
+            
             if (loadedData.lastMusic!= GDB.Music.None)
                 musicAction(item, true);
             if (loadedData.lastCG == "")
@@ -279,7 +283,13 @@ public class NewGameCore : MonoBehaviour
             }
 
             else 
+            {
+            Debug.Log(loadedData.lastCG);
+                item = new Item();
+                item.show = true;
+                item.CGname = loadedData.lastCG;
                 cgAction(item, true);
+            }
             //Return line num label num
             lineNum = loadedData.lastLineNum;
             labelNum = loadedData.lastLabelNum;
@@ -301,6 +311,12 @@ public class NewGameCore : MonoBehaviour
             {
                 chatAction(item, true);
             }
+            
+         GetComponent<CameraMoveZoom>().NewMove(new Vector3 (0.14f, 1.86f,  45f),45.45f );
+
+          // ApplyEffects( GDB.Effects.PointToAndZoom, false, 45.45f, );
+           
+            
             BlinkSLMarker(1);
             loading = false;
            
@@ -917,19 +933,21 @@ public class NewGameCore : MonoBehaviour
         switch (effect){
             case GDB.Effects.Zoom:
                 {
-                    GetComponent<CameraMoveZoom>().destZoom = zoom;
+                    GetComponent<CameraMoveZoom>().NewMove(new Vector3 (0, 0, 0),zoom );
+
                 } break;
             case GDB.Effects.PointTo:
                 {
                     Camera.GetComponent<Animator>().enabled = false;
-                    GetComponent<CameraMoveZoom>().destPos = dest;
+                             GetComponent<CameraMoveZoom>().NewMove(dest,45.45f );
+
                 }
                 break;
             case GDB.Effects.PointToAndZoom:
                 {
                     Camera.GetComponent<Animator>().enabled = false;
-                    GetComponent<CameraMoveZoom>().destPos = dest;
-                    GetComponent<CameraMoveZoom>().destZoom = zoom;
+                             GetComponent<CameraMoveZoom>().NewMove(dest,zoom);
+
                 }
                 break;
             default: 
@@ -965,8 +983,8 @@ public class NewGameCore : MonoBehaviour
 
     IEnumerator LoadSprite(Item line, bool isLoad)
     {
-        if (line.CGname != "")
-        {
+      
+       
             CoroutinesWorking.Add(cid);
             Camera.SetBool("BlackOut", true);
             yield return new WaitForSeconds(0.5f);
@@ -976,6 +994,7 @@ public class NewGameCore : MonoBehaviour
             {
                 //TODO ЭФфекты
                 loadingCG = true;
+             
                 AsyncOperationHandle<Sprite> handle = Addressables.LoadAssetAsync<Sprite>(line.CGname);
                 yield return handle;
                 if (handle.Status == AsyncOperationStatus.Succeeded)
@@ -1012,17 +1031,24 @@ public class NewGameCore : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
             Camera.SetBool("BlackOut", false);
-            if (line.effects != GDB.Effects.BlackOut)
+            if (line.effects != GDB.Effects.BlackOut && line.effects != GDB.Effects.HSlide)
             {
                 ApplyEffects(line.effects, true, line.time, line.V3position);
                 yield return new WaitForSeconds(1.5f);
                 ApplyEffects(line.effects, false, line.time, line.V3position);
             }
-
+            if (line.effects == GDB.Effects.HSlide)
+            {
+           
+                ApplyEffects(line.effects, true, line.time, line.V3position);
+                yield return new WaitForSeconds(3f);
+                ApplyEffects(line.effects, false, line.time, line.V3position);
+            
+            }
             CoroutinesWorking.Remove(cid);
             if (!isLoad)
                 Step();
-        }
+        
     }
     public void decisionAction(string name)
     {
