@@ -904,16 +904,16 @@ public class NewGameCore : MonoBehaviour
             if (!isLoad)
                 lineNum++;
           
+            yield return new WaitForSeconds(1f);
+            Camera.SetBool("BlackOut", false);
+            if (line.effects != GDB.Effects.BlackOut)
+            {
+                ApplyEffects(line.effects, true, line.time, line.V3position);
+                yield return new WaitForSeconds(1.5f);
+                ApplyEffects(line.effects, false, line.time, line.V3position);
+            }
+        }
 
-        }
-        yield return new WaitForSeconds(1f);
-        Camera.SetBool("BlackOut", false);
-        if (line.effects != GDB.Effects.BlackOut)
-        {
-            ApplyEffects(line.effects, true, line.time, line.V3position);
-            yield return new WaitForSeconds(1.5f);
-            ApplyEffects(line.effects, false, line.time, line.V3position);
-        }
         Addressables.Release(handle);
         loadingBG = false;
         CoroutinesWorking.Remove(cid);

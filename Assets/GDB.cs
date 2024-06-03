@@ -118,7 +118,8 @@ public static class GDB
         PointTo,
         Zoom,
         PointToAndZoom,
-        HSlide
+        HSlide,
+        VSlide
 
     }
     public enum Investigation
