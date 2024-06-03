@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class LoadButton : MonoBehaviour
 {
-    public GameObject GMC;
+    public GameMenuController GMC;
     public TextMeshProUGUI Savename;
     public TextMeshProUGUI Savetime;
     public Image Preview;
@@ -56,7 +56,8 @@ public class LoadButton : MonoBehaviour
         if (isSaved)
         {
             m_Core.Load(Savenum);
-            GMC.SetActive(false);
+            GMC.Fold();
+            GMC.Return();
         }
     }
 
@@ -64,7 +65,8 @@ public class LoadButton : MonoBehaviour
     {
         m_Core.Save(Savenum);
         Renew();
-        GMC.SetActive(false);
+        GMC.Fold();
+        GMC.Return();
     }
 
     public void Save()

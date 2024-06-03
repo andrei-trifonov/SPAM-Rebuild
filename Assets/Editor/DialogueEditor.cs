@@ -10,7 +10,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class DialogueEditor : Editor
 {
-
+    int editing= -1;
     private DialogueManager DM;
     private Dialogue sample;
     private void OnEnable()
@@ -63,6 +63,16 @@ public class DialogueEditor : Editor
                             sample.Labels.Remove(label);
                         Repaint();
                     }
+                      if (GUILayout.Button("Edit", GUILayout.Height(20),GUILayout.Width(100)))
+                                        {
+                                            if (editing == sample.Labels.IndexOf(label))
+                                            {
+                                                editing = -1;
+                                            }
+                                            else
+                                            editing = sample.Labels.IndexOf(label);    
+                                     Repaint();   
+                                        }
                 EditorGUILayout.EndHorizontal();
                 GUI.backgroundColor = Color.gray;
   
@@ -74,6 +84,7 @@ public class DialogueEditor : Editor
                 EditorGUILayout.EndVertical();
           
                     bool color= false;
+                    if (sample.Labels.IndexOf(label) == editing)
                     try
                     {
                         foreach (var item in label.lines)

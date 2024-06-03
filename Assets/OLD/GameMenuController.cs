@@ -11,6 +11,8 @@ public class GameMenuController : MonoBehaviour
     public GameObject Preferences;
     public GameObject Menu;
 
+    public Canvas Preloader;
+
     public void ShowGameMenu(){}
 
     public void Return()
@@ -29,8 +31,10 @@ public class GameMenuController : MonoBehaviour
         LogComp.gameObject.SetActive(true);
         LogComp.Compose();
     }
-    public void ExitToMenu(){
-        SceneManager.LoadScene("MainMenuScene");
+    public void ExitToMenu()
+    {
+        Preloader.enabled = true;
+        SceneManager.LoadSceneAsync("MainMenuScene");
     }
 
     public void ShowSaves()

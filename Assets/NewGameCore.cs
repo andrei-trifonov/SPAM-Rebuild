@@ -114,7 +114,7 @@ public class NewGameCore : MonoBehaviour
     private bool choiseRoulette;
 
     [SerializeField] private InvestigationController invController;
-    
+    private bool isGameRunning = false;
     [SerializeField] private SpriteRenderer CG;
     [SerializeField] private VideoPlayer BG;
     private VideoClip clipBG;
@@ -184,6 +184,14 @@ public class NewGameCore : MonoBehaviour
         scenario = scenarioComposer.Labels;
         string savename = PlayerPrefs.GetString("LastSave");
         
+        SetMusicSettings(PlayerPrefs.GetFloat("MusicVolume"));
+   
+        SetSoundSettings(PlayerPrefs.GetFloat("SoundVolume"));
+    
+        SetSceneAudioSettings(PlayerPrefs.GetFloat("SceneVolume"));
+  
+        SetTextDelay(PlayerPrefs.GetFloat("TextDelay"));
+    
         if (savename.Length>0){
             Debug.Log(savename);
             Load(savename);
@@ -469,72 +477,75 @@ public class NewGameCore : MonoBehaviour
     }
     void invAction(Item line)
     {
-        chatManager.Disable();
-        FSPanel.SetActive(false);
-        switch (line.inv)
+        if (!isGameRunning)
         {
-            case GDB.Investigation.Open:
+            isGameRunning = true;
+            chatManager.Disable();
+            FSPanel.SetActive(false);
+            switch (line.inv)
             {
-                Camera.gameObject.SetActive(false);
-                textCanvas.enabled = false;
-                List<int> unlockedThoughts = new List<int>();
-                if (saveObj.unlockedInv.Count>0)
-                foreach (UnlockMessage item in saveObj.unlockedInv)
+                case GDB.Investigation.Open:
                 {
-                    if (item.InvName == line.additionalPose)
-                    {
-                        unlockedThoughts.Add(item.ID);
-                    }
+                    Camera.gameObject.SetActive(false);
+                    textCanvas.enabled = false;
+                    List<int> unlockedThoughts = new List<int>();
+                    if (saveObj.unlockedInv.Count > 0)
+                        foreach (UnlockMessage item in saveObj.unlockedInv)
+                        {
+                            if (item.InvName == line.additionalPose)
+                            {
+                                unlockedThoughts.Add(item.ID);
+                            }
+                        }
+
+                    invController.SetNewGame(line.additionalPose, unlockedThoughts, saveObj.drugsCount);
+                    Debug.Log("SETTED");
                 }
+                    break;
+                case GDB.Investigation.AddThought:
+                {
 
-            
-                invController.SetNewGame(line.additionalPose, unlockedThoughts, saveObj.drugsCount);
-                 //TODO
+                    StartCoroutine(NewThoughtCoroutine("Идея!", cid++));
+
+                    saveObj.unlockedInv.Add(new UnlockMessage(line.additionalPose, line.value));
+
+                    //Debug.Log(saveObj.unlockedInv[0]);
+
+                    /*
+                     SaveObject saveData;
+                    saveData = new SaveObject();
+                    saveData.unlockedInv.Add(new UnlockMessage("Unlocked feature A", 1));
+                    saveData.unlockedInv.Add(new UnlockMessage("Unlocked feature B", 2));
+    
+                    string jsonData = JsonUtility.ToJson(saveData);
+                    Debug.Log("Serialized SaveObject to JSON:\n" + jsonData);
+    
+                    // Здесь можно сохранить jsonData в файл или другое хранилище
+                    // Предположим, что у вас уже есть JSON-строка с данными
+    
+                    SaveObject loadedData = JsonUtility.FromJson<SaveObject>(jsonData);
+                    saveData = loadedData;
+                    Debug.Log(saveData.unlockedInv[0]);
+                  
+                */
+
+
+
+                }
+                    break;
+                case GDB.Investigation.AddDrugs:
+                {
+                    StartCoroutine(NewThoughtCoroutine("Еще один стимулятор", cid++));
+                    saveObj.drugsCount++;
+
+
+                }
+                    break;
+
+
+
+
             }
-                break;
-            case GDB.Investigation.AddThought:
-            {
-                
-                StartCoroutine(NewThoughtCoroutine("Идея!", cid++));
-
-                saveObj.unlockedInv.Add(new UnlockMessage(line.additionalPose, line.value));
-                
-                //Debug.Log(saveObj.unlockedInv[0]);
-                
-                /*
-                 SaveObject saveData;
-                saveData = new SaveObject();
-                saveData.unlockedInv.Add(new UnlockMessage("Unlocked feature A", 1));
-                saveData.unlockedInv.Add(new UnlockMessage("Unlocked feature B", 2));
-
-                string jsonData = JsonUtility.ToJson(saveData);
-                Debug.Log("Serialized SaveObject to JSON:\n" + jsonData);
-
-                // Здесь можно сохранить jsonData в файл или другое хранилище
-                // Предположим, что у вас уже есть JSON-строка с данными
-
-                SaveObject loadedData = JsonUtility.FromJson<SaveObject>(jsonData);
-                saveData = loadedData;
-                Debug.Log(saveData.unlockedInv[0]);
-              
-            */
-                
-                
-                   
-            } 
-                break;
-            case GDB.Investigation.AddDrugs:
-            {
-                StartCoroutine(NewThoughtCoroutine("Еще один стимулятор", cid++));
-                saveObj.drugsCount++;
-                
-             
-            }
-                break;
-
-
-
-
         }
     }
 
@@ -559,6 +570,7 @@ public class NewGameCore : MonoBehaviour
     {
         Camera.gameObject.SetActive(true);
         textCanvas.enabled = true;
+        isGameRunning = false;
     }
     
     void cameraAction(Item line)
@@ -1079,6 +1091,7 @@ public class NewGameCore : MonoBehaviour
     }
     void menuAction(Item line)
     {
+        Save("Auto");
         chatManager.Disable();
         FSPanel.SetActive(false);
         menuCoroutine = StartCoroutine(MenuActionCoroutine());
@@ -1152,29 +1165,49 @@ public class NewGameCore : MonoBehaviour
     {
         chatManager.Disable();
         FSPanel.SetActive(false);
-        int var = PlayerPrefs.GetInt(line.var.ToString());
+
+        int var = saveObj.Variables[FindVariable(line.var)].varValue;
+        Debug.Log(line.var);
+        Debug.Log(var);
         switch (line.signsIf)
         {
             case GDB.SignsIf.greater:
             {
                if (var > line.value)
                    jumpAction(line);
+               else
+               {
+                   lineNum++;
+                   Step();
+               }
             }
                 break;
             case GDB.SignsIf.less:
             {
                 if (var < line.value)
                     jumpAction(line);
+                else
+                {
+                    lineNum++;
+                    Step();
+                }
             }
                 break;
             case GDB.SignsIf.equal:
             {
                 if (var == line.value)
                     jumpAction(line);
+                else
+                {
+                    lineNum++;
+                    Step();
+                }
+                   
             }
                 break;
             default: Step(); break;
         }
+        
         
     }
     
@@ -1208,6 +1241,7 @@ public class NewGameCore : MonoBehaviour
                 break;
             case GDB.Signs.equal:
             {
+               
                 int i = FindVariable(line.var);
                 if (i > -1)
                     saveObj.Variables[i].varValue = line.value;

@@ -19,14 +19,16 @@ public class RaycastObject : MonoBehaviour
     public List<RaycastObject> RaycastObjects;
 
     public GameObject Settings;
+    public Canvas Preloader;
     public void Activate()
     {
         switch (b_enum)
         {
             case buttons.Ep1:
             {
-                SceneManager.LoadScene("FinalGameplayScene");
-
+                Preloader.enabled = true;
+                SceneManager.LoadSceneAsync("FinalGameplayScene");
+                
             }
                 break;
             case buttons.Gallery:

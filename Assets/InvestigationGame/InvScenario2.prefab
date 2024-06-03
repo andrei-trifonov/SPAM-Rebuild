@@ -280,7 +280,7 @@ MonoBehaviour:
   - ID: 2
     Content: "\u0423\u0440\u0430"
     Var: 0
-    jumpLabel: 0.2.7.2
+    jumpLabel: 0.2.x.1 cont
     isTrueResult: 1
   Merges:
   - Item1: 0
