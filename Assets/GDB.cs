@@ -70,7 +70,8 @@ public static class GDB
         CamEffect,
         Investigation,
         Emoji,
-        Chat
+        Chat,
+        Event
     }
     public enum TextDisplay
     {

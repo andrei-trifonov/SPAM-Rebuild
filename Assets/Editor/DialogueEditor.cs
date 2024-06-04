@@ -135,14 +135,14 @@ public class DialogueEditor : Editor
                                         GUILayout.ExpandHeight(true));
                                     item.name = (GDB.Name) EditorGUILayout.EnumPopup("", item.name,
                                         GUILayout.Height(20), GUILayout.Width(100));
-                                       
+
                                     GUILayout.Space(100);
                                 }
                                     break;
                                 case (GDB.LineType.BG):
                                 {
-                                    GUI.backgroundColor = new Color(1,0.5f,1);
-                                    
+                                    GUI.backgroundColor = new Color(1, 0.5f, 1);
+
                                     EditorGUILayout.LabelField("Фон", GUILayout.Height(20), GUILayout.Width(50));
                                     item.BGname = (GDB.BGName) EditorGUILayout.EnumPopup("", item.BGname,
                                         GUILayout.Height(20), GUILayout.Width(100));
@@ -154,8 +154,8 @@ public class DialogueEditor : Editor
                                     break;
                                 case (GDB.LineType.CG):
                                 {
-                                    GUI.backgroundColor = new Color(1,0.5f,1);
-                                    
+                                    GUI.backgroundColor = new Color(1, 0.5f, 1);
+
                                     EditorGUILayout.LabelField("Фон", GUILayout.Height(20), GUILayout.Width(50));
                                     item.CGname = EditorGUILayout.TextField("", item.CGname,
                                         GUILayout.Height(20), GUILayout.Width(100));
@@ -163,63 +163,70 @@ public class DialogueEditor : Editor
                                     item.effects = (GDB.Effects) EditorGUILayout.EnumPopup("", item.effects,
                                         GUILayout.Height(20), GUILayout.Width(100));
                                     EditorGUILayout.LabelField("Вкл", GUILayout.Height(20), GUILayout.Width(50));
-                                    item.show = EditorGUILayout.Toggle(item.show, GUILayout.Height(20), GUILayout.Width(50));
-                                  GUILayout.Space(440);
+                                    item.show = EditorGUILayout.Toggle(item.show, GUILayout.Height(20),
+                                        GUILayout.Width(50));
+                                    GUILayout.Space(440);
                                 }
                                     break;
                                 case (GDB.LineType.Actor):
                                 {
-                                    GUI.backgroundColor = new Color(1,0.5f,0.4f);
-                                    
-                                    item.name = (GDB.Name) EditorGUILayout.EnumPopup("", item.name,  GUILayout.Height(20), GUILayout.Width(50));
+                                    GUI.backgroundColor = new Color(1, 0.5f, 0.4f);
+
+                                    item.name = (GDB.Name) EditorGUILayout.EnumPopup("", item.name,
+                                        GUILayout.Height(20), GUILayout.Width(50));
                                     EditorGUILayout.LabelField("Поза", GUILayout.Height(20), GUILayout.Width(50));
                                     item.pose = (GDB.Pose) EditorGUILayout.EnumPopup("", item.pose,
                                         GUILayout.Height(20), GUILayout.Width(50));
                                     item.V3position = EditorGUILayout.Vector3Field("", item.V3position,
-                                           GUILayout.Height(20), GUILayout.Width(150));
-                                    item.spriteEffect = (GDB.SpriteEffect) EditorGUILayout.EnumPopup("", item.spriteEffect,
+                                        GUILayout.Height(20), GUILayout.Width(150));
+                                    item.spriteEffect = (GDB.SpriteEffect) EditorGUILayout.EnumPopup("",
+                                        item.spriteEffect,
                                         GUILayout.Height(20), GUILayout.Width(50));
-                                if (item.pose == GDB.Pose.Custom)
+                                    if (item.pose == GDB.Pose.Custom)
                                     {
-                                        
-                                        item.additionalPose = EditorGUILayout.TextField("", item.additionalPose, GUILayout.Height(20), GUILayout.Width(50));
+
+                                        item.additionalPose = EditorGUILayout.TextField("", item.additionalPose,
+                                            GUILayout.Height(20), GUILayout.Width(50));
                                         GUILayout.Space(435);
                                     }
                                     else
-                                    
-                                       GUILayout.Space(490);
+
+                                        GUILayout.Space(490);
                                 }
                                     break;
                                 case (GDB.LineType.Music):
                                 {
                                     GUI.backgroundColor = Color.green;
-                                    
+
                                     EditorGUILayout.LabelField("Трек", GUILayout.Height(20), GUILayout.Width(50));
                                     item.music = (GDB.Music) EditorGUILayout.EnumPopup("", item.music,
                                         GUILayout.Height(20), GUILayout.Width(100));
                                     EditorGUILayout.LabelField("Вкл", GUILayout.Height(20), GUILayout.Width(50));
-                                    item.show = EditorGUILayout.Toggle(item.show,GUILayout.Height(20), GUILayout.Width(50));
+                                    item.show = EditorGUILayout.Toggle(item.show, GUILayout.Height(20),
+                                        GUILayout.Width(50));
                                     GUILayout.Space(590);
                                 }
                                     break;
                                 case (GDB.LineType.Sound):
                                 {
                                     GUI.backgroundColor = Color.green;
-                                    
+
                                     EditorGUILayout.LabelField("Трек", GUILayout.Height(20), GUILayout.Width(50));
                                     item.additionalPose = EditorGUILayout.TextField("", item.additionalPose,
                                         GUILayout.Height(20), GUILayout.Width(100));
                                     EditorGUILayout.LabelField("Вкл", GUILayout.Height(20), GUILayout.Width(50));
-                                    item.show = EditorGUILayout.Toggle(item.show,GUILayout.Height(20), GUILayout.Width(50));
+                                    item.show = EditorGUILayout.Toggle(item.show, GUILayout.Height(20),
+                                        GUILayout.Width(50));
                                     GUILayout.Space(590);
                                 }
                                     break;
                                 case (GDB.LineType.Pause):
                                 {
                                     GUI.backgroundColor = Color.red;
-                                    
+
                                     EditorGUILayout.LabelField("Задержка", GUILayout.Height(20), GUILayout.Width(50));
-                                    item.time = EditorGUILayout.FloatField(item.time,GUILayout.Height(20), GUILayout.Width(50));
+                                    item.time = EditorGUILayout.FloatField(item.time, GUILayout.Height(20),
+                                        GUILayout.Width(50));
                                     GUILayout.Space(750);
                                 }
                                     break;
@@ -227,12 +234,15 @@ public class DialogueEditor : Editor
                                 case (GDB.LineType.Var):
                                 {
                                     GUI.backgroundColor = Color.blue;
-                                    
-                                    EditorGUILayout.LabelField("Переменная", GUILayout.Height(20), GUILayout.Width(50));
-                                    item.var = (GDB.Variables) EditorGUILayout.EnumPopup("", item.var,  GUILayout.Height(20), GUILayout.Width(100));
-                                    item.signs = (GDB.Signs) EditorGUILayout.EnumPopup("", item.signs,  GUILayout.Height(20), GUILayout.Width(50));
 
-                                    item.value = EditorGUILayout.IntField(item.value,GUILayout.Height(20), GUILayout.Width(50));
+                                    EditorGUILayout.LabelField("Переменная", GUILayout.Height(20), GUILayout.Width(50));
+                                    item.var = (GDB.Variables) EditorGUILayout.EnumPopup("", item.var,
+                                        GUILayout.Height(20), GUILayout.Width(100));
+                                    item.signs = (GDB.Signs) EditorGUILayout.EnumPopup("", item.signs,
+                                        GUILayout.Height(20), GUILayout.Width(50));
+
+                                    item.value = EditorGUILayout.IntField(item.value, GUILayout.Height(20),
+                                        GUILayout.Width(50));
                                     GUILayout.Space(590);
                                 }
                                     break;
@@ -240,20 +250,25 @@ public class DialogueEditor : Editor
                                 {
                                     GUI.backgroundColor = Color.blue;
                                     EditorGUILayout.LabelField("Переменная", GUILayout.Height(20), GUILayout.Width(50));
-                                    item.var = (GDB.Variables) EditorGUILayout.EnumPopup("", item.var,  GUILayout.Height(20), GUILayout.Width(100));
-                                    item.signsIf = (GDB.SignsIf) EditorGUILayout.EnumPopup("", item.signsIf,  GUILayout.Height(20), GUILayout.Width(50));
-                                    item.value = EditorGUILayout.IntField(item.value,GUILayout.Height(20), GUILayout.Width(50));
+                                    item.var = (GDB.Variables) EditorGUILayout.EnumPopup("", item.var,
+                                        GUILayout.Height(20), GUILayout.Width(100));
+                                    item.signsIf = (GDB.SignsIf) EditorGUILayout.EnumPopup("", item.signsIf,
+                                        GUILayout.Height(20), GUILayout.Width(50));
+                                    item.value = EditorGUILayout.IntField(item.value, GUILayout.Height(20),
+                                        GUILayout.Width(50));
                                     EditorGUILayout.LabelField("Прыжок", GUILayout.Height(20), GUILayout.Width(50));
-                                    item.additionalPose = EditorGUILayout.TextField("", item.additionalPose, GUILayout.Height(20), GUILayout.Width(50));
-                                   
+                                    item.additionalPose = EditorGUILayout.TextField("", item.additionalPose,
+                                        GUILayout.Height(20), GUILayout.Width(50));
+
                                     GUILayout.Space(490);
                                 }
                                     break;
                                 case (GDB.LineType.Jump):
-                                {   
+                                {
                                     GUI.backgroundColor = Color.red;
                                     EditorGUILayout.LabelField("Прыжок", GUILayout.Height(20), GUILayout.Width(50));
-                                    item.additionalPose = EditorGUILayout.TextField("", item.additionalPose, GUILayout.Height(20), GUILayout.Width(50));
+                                    item.additionalPose = EditorGUILayout.TextField("", item.additionalPose,
+                                        GUILayout.Height(20), GUILayout.Width(50));
                                     GUILayout.Space(750);
                                 }
                                     break;
@@ -276,17 +291,19 @@ public class DialogueEditor : Editor
                                             item.menu_jump[i] = EditorGUILayout.TextArea(item.menu_jump[i],
                                                 GUILayout.Width(300));
                                             EditorGUILayout.EndHorizontal();
-                                            
+
 
                                         }
                                     }
                                     catch
                                     {
-                                        
+
                                         item.menu_label = new List<string>();
                                         item.menu_jump = new List<string>();
 
-                                    }Repaint();
+                                    }
+
+                                    Repaint();
                                     UnityEditor.EditorApplication.RepaintHierarchyWindow();
                                     EditorGUILayout.BeginHorizontal();
                                     if (GUILayout.Button("+", GUILayout.Height(20), GUILayout.Width(50)))
@@ -296,87 +313,109 @@ public class DialogueEditor : Editor
                                         Repaint();
 
                                     }
-                                    
+
                                     if (GUILayout.Button("-", GUILayout.Height(20), GUILayout.Width(50)))
                                     {
                                         item.menu_label.Remove(item.menu_label.Last());
                                         item.menu_jump.Remove(item.menu_jump.Last());
                                         Repaint();
                                     }
+
                                     EditorGUILayout.EndHorizontal();
                                     EditorGUILayout.EndVertical();
                                     GUILayout.Space(440);
                                     UnityEditor.EditorApplication.RepaintHierarchyWindow();
-                                } break;
+                                }
+                                    break;
                                 case (GDB.LineType.CamEffect):
+                                {
+                                    GUI.backgroundColor = new Color(1, 0.5f, 1);
+                                    EditorGUILayout.LabelField("Эффект", GUILayout.Height(20), GUILayout.Width(50));
+                                    item.effects = (GDB.Effects) EditorGUILayout.EnumPopup("", item.effects,
+                                        GUILayout.Height(20), GUILayout.Width(100));
+
+                                    if (item.effects == GDB.Effects.PointToAndZoom)
                                     {
-                                        GUI.backgroundColor = new Color(1,0.5f,1);
-                                        EditorGUILayout.LabelField("Эффект", GUILayout.Height(20), GUILayout.Width(50));
-                                        item.effects = (GDB.Effects)EditorGUILayout.EnumPopup("", item.effects,
-                                         GUILayout.Height(20), GUILayout.Width(100));
-                             
-                                        if (item.effects == GDB.Effects.PointToAndZoom)
-                                        {
-                                            item.V3position = EditorGUILayout.Vector3Field("", item.V3position, GUILayout.Height(20), GUILayout.Width(150));
-                                            EditorGUILayout.LabelField("Зум", GUILayout.Height(20), GUILayout.Width(50));
-                                            item.time = EditorGUILayout.FloatField("", item.time, GUILayout.Height(20), GUILayout.Width(50));
-                                             GUILayout.Space(440);
-                                        }
-                                        else
-                                                if (item.effects == GDB.Effects.PointTo)
-                                                {
-                                                    item.V3position = EditorGUILayout.Vector3Field("", item.V3position, GUILayout.Height(20), GUILayout.Width(150));     
-                                                     GUILayout.Space(545);
-                                                }     
-                                                else
-                                                    if (item.effects == GDB.Effects.Zoom)
-                                                    {
-                                                        item.time = EditorGUILayout.FloatField("", item.time, GUILayout.Height(20), GUILayout.Width(50));
-                                                        GUILayout.Space(645);
-                                                    }
-                                                    else
-                                                         GUILayout.Space(700);
+                                        item.V3position = EditorGUILayout.Vector3Field("", item.V3position,
+                                            GUILayout.Height(20), GUILayout.Width(150));
+                                        EditorGUILayout.LabelField("Зум", GUILayout.Height(20), GUILayout.Width(50));
+                                        item.time = EditorGUILayout.FloatField("", item.time, GUILayout.Height(20),
+                                            GUILayout.Width(50));
+                                        GUILayout.Space(440);
                                     }
+                                    else if (item.effects == GDB.Effects.PointTo)
+                                    {
+                                        item.V3position = EditorGUILayout.Vector3Field("", item.V3position,
+                                            GUILayout.Height(20), GUILayout.Width(150));
+                                        GUILayout.Space(545);
+                                    }
+                                    else if (item.effects == GDB.Effects.Zoom)
+                                    {
+                                        item.time = EditorGUILayout.FloatField("", item.time, GUILayout.Height(20),
+                                            GUILayout.Width(50));
+                                        GUILayout.Space(645);
+                                    }
+                                    else
+                                        GUILayout.Space(700);
+                                }
                                     break;
                                 case (GDB.LineType.Emoji):
                                 {
-                                    GUI.backgroundColor = new Color(1,0.5f,1);
-                                    
+                                    GUI.backgroundColor = new Color(1, 0.5f, 1);
+
                                     EditorGUILayout.LabelField("Эмоджи", GUILayout.Height(20), GUILayout.Width(50));
-                                    item.emoji = (GDB.Emoji) EditorGUILayout.EnumPopup("", item.emoji,  GUILayout.Height(20), GUILayout.Width(90));
+                                    item.emoji = (GDB.Emoji) EditorGUILayout.EnumPopup("", item.emoji,
+                                        GUILayout.Height(20), GUILayout.Width(90));
                                     EditorGUILayout.LabelField("Актор", GUILayout.Height(20), GUILayout.Width(50));
-                                    item.name = (GDB.Name) EditorGUILayout.EnumPopup("", item.name,  GUILayout.Height(20), GUILayout.Width(50));
+                                    item.name = (GDB.Name) EditorGUILayout.EnumPopup("", item.name,
+                                        GUILayout.Height(20), GUILayout.Width(50));
                                     GUILayout.Space(600);
                                 }
                                     break;
                                 case (GDB.LineType.Investigation):
                                 {
-                                GUI.backgroundColor = Color.red;
-                                EditorGUILayout.LabelField("Сцена", GUILayout.Height(20), GUILayout.Width(50));
-                                item.inv = (GDB.Investigation)EditorGUILayout.EnumPopup("", item.inv, GUILayout.Height(20), GUILayout.Width(100));
-                                
-
-                                if (item.inv == GDB.Investigation.Open)
-                                {
-                                    item.additionalPose = EditorGUILayout.TextField("", item.additionalPose, GUILayout.Height(20), GUILayout.Width(100));
-                                    GUILayout.Space(600);
-                                }
-                                if (item.inv == GDB.Investigation.AddThought)
-                                {
-                                   
+                                    GUI.backgroundColor = Color.red;
                                     EditorGUILayout.LabelField("Сцена", GUILayout.Height(20), GUILayout.Width(50));
-                                    item.additionalPose = EditorGUILayout.TextField("", item.additionalPose, GUILayout.Height(20), GUILayout.Width(200));
-                                    EditorGUILayout.LabelField("ID", GUILayout.Height(20), GUILayout.Width(20));
-                                    item.value = EditorGUILayout.IntField("", item.value, GUILayout.Height(20), GUILayout.Width(100));
+                                    item.inv = (GDB.Investigation) EditorGUILayout.EnumPopup("", item.inv,
+                                        GUILayout.Height(20), GUILayout.Width(100));
 
-                                    GUILayout.Space(330);
+
+                                    if (item.inv == GDB.Investigation.Open)
+                                    {
+                                        item.additionalPose = EditorGUILayout.TextField("", item.additionalPose,
+                                            GUILayout.Height(20), GUILayout.Width(100));
+                                        GUILayout.Space(600);
+                                    }
+
+                                    if (item.inv == GDB.Investigation.AddThought)
+                                    {
+
+                                        EditorGUILayout.LabelField("Сцена", GUILayout.Height(20), GUILayout.Width(50));
+                                        item.additionalPose = EditorGUILayout.TextField("", item.additionalPose,
+                                            GUILayout.Height(20), GUILayout.Width(200));
+                                        EditorGUILayout.LabelField("ID", GUILayout.Height(20), GUILayout.Width(20));
+                                        item.value = EditorGUILayout.IntField("", item.value, GUILayout.Height(20),
+                                            GUILayout.Width(100));
+
+                                        GUILayout.Space(330);
+                                    }
+
+                                    if (item.inv == GDB.Investigation.AddDrugs)
+                                    {
+                                        GUILayout.Space(700);
+                                    }
                                 }
-                                if (item.inv == GDB.Investigation.AddDrugs)
+                                    break;
+                                case (GDB.LineType.Event):
                                 {
+                                    GUI.backgroundColor = Color.red;
+                                    EditorGUILayout.LabelField("Событие", GUILayout.Height(20), GUILayout.Width(50));
+                                    item.additionalPose = EditorGUILayout.TextField("", item.additionalPose,
+                                        GUILayout.Height(20), GUILayout.Width(100));
                                     GUILayout.Space(700);
-                                }
-                            }break;
 
+                                }
+                                    break;
                             }
 
                             if (GUILayout.Button("Add", GUILayout.Height(20), GUILayout.Width(50)))

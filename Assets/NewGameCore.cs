@@ -144,7 +144,7 @@ public class NewGameCore : MonoBehaviour
     private GameObject Emoji;
     [SerializeField] private List<GameObject> emojiList = new List<GameObject>();
     [SerializeField] private ChatManager chatManager;
-    
+    [SerializeField] private Transform EventCanvas;
     public void SetTextMarker(bool state)
     {   
         textCanvasAnimator.SetBool("Ready", !state);
@@ -473,19 +473,24 @@ public class NewGameCore : MonoBehaviour
             case GDB.LineType.Investigation:
                 invAction(line);
                 break;
+            case GDB.LineType.Event:
+                eventAction(line);
+                break;
         }
     }
     void invAction(Item line)
     {
-        if (!isGameRunning)
-        {
-            isGameRunning = true;
+       
+           
             chatManager.Disable();
             FSPanel.SetActive(false);
             switch (line.inv)
             {
                 case GDB.Investigation.Open:
                 {
+ 				if (!isGameRunning)
+                 {
+ 					isGameRunning = true;
                     Camera.gameObject.SetActive(false);
                     textCanvas.enabled = false;
                     List<int> unlockedThoughts = new List<int>();
@@ -500,7 +505,7 @@ public class NewGameCore : MonoBehaviour
 
                     invController.SetNewGame(line.additionalPose, unlockedThoughts, saveObj.drugsCount);
                     Debug.Log("SETTED");
-                }
+                }}
                     break;
                 case GDB.Investigation.AddThought:
                 {
@@ -545,10 +550,43 @@ public class NewGameCore : MonoBehaviour
 
 
 
-            }
+            
         }
     }
 
+
+	void eventAction(Item line)
+    {
+	   chatManager.Disable();
+       FSPanel.SetActive(false);
+       StartCoroutine(EventCoroutine(line, cid++));
+    }
+
+	IEnumerator EventCoroutine (Item line , int id){
+		CoroutinesWorking.Add(id);
+      
+        AsyncOperationHandle<GameObject> handle =
+                Addressables.LoadAssetAsync<GameObject>(line.additionalPose.ToString());
+            yield return handle;
+            if (handle.Status == AsyncOperationStatus.Succeeded)
+            {
+                GameObject res = handle.Result;
+                GameObject.Instantiate(res, EventCanvas);
+                
+            }
+            else
+            {
+                Debug.LogError("Failed to load event: " + handle.DebugName);
+            }
+            
+            Addressables.Release(handle);
+           CoroutinesWorking.Remove(id);
+       
+            lineNum++;
+
+        
+
+	}
     public void UseDrugs()
     {
         saveObj.drugsCount--;
@@ -1253,8 +1291,7 @@ public class NewGameCore : MonoBehaviour
             }
                 break;
         }
-        lineNum++;
-        Step();
+    
         
     }
     int FindVariable(GDB.Variables name)

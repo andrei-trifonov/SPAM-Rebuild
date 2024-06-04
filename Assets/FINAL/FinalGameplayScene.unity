@@ -809,7 +809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4734146358265895268, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4734146358265895268, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6425,7 +6425,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &279353987
 GameObject:
@@ -7483,7 +7483,7 @@ Transform:
   m_Children:
   - {fileID: 2008554973028455979}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &370982003
 GameObject:
@@ -8932,6 +8932,7 @@ GameObject:
   - component: {fileID: 519420037}
   - component: {fileID: 519420038}
   - component: {fileID: 519420039}
+  - component: {fileID: 519420040}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9004,7 +9005,7 @@ Transform:
   m_Children:
   - {fileID: 969393079}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &519420035
 MonoBehaviour:
@@ -9089,6 +9090,18 @@ MonoBehaviour:
   blendDistance: 0
   weight: 0.706
   sharedProfile: {fileID: 11400000, guid: 1d0d74e29b62dd541903546e230cb0d6, type: 2}
+--- !u!114 &519420040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d23629079f92e6408c1fd0d1cf92d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &526607510 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 679023558829490852, guid: eb1a7385720dea840bec459377474cc8, type: 3}
@@ -10757,7 +10770,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4
 --- !u!114 &757530813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10823,7 +10836,7 @@ RectTransform:
   - {fileID: 248380111}
   - {fileID: 53135239}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11276,7 +11289,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &813059540
 GameObject:
@@ -12206,7 +12219,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12710,7 +12723,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &934297621
 GameObject:
@@ -14391,6 +14404,7 @@ MonoBehaviour:
   - {fileID: 2164050767051723156, guid: 7fdcd5ed12477534f9331be724dbe4fc, type: 3}
   - {fileID: 3509731525855586045, guid: c22bcbf2c9c3a47428d7f9fd1eee0c5b, type: 3}
   chatManager: {fileID: 248380112}
+  EventCanvas: {fileID: 1686482236}
 --- !u!4 &1141920126
 Transform:
   m_ObjectHideFlags: 0
@@ -14404,7 +14418,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1141920127
 MonoBehaviour:
@@ -20172,7 +20186,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1268578157
 PrefabInstance:
@@ -20784,7 +20798,7 @@ RectTransform:
   m_Children:
   - {fileID: 1754938359}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21998,7 +22012,7 @@ RectTransform:
   - {fileID: 1926733181}
   - {fileID: 398611316}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -22090,7 +22104,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2368023941371143454, guid: b94a6f764c095fc4ba15311b2017ced6, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 2368023941371143454, guid: b94a6f764c095fc4ba15311b2017ced6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24544,6 +24558,106 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683848190}
   m_CullTransparentMesh: 1
+--- !u!1 &1686482235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1686482236}
+  - component: {fileID: 1686482239}
+  - component: {fileID: 1686482238}
+  - component: {fileID: 1686482237}
+  m_Layer: 5
+  m_Name: EventCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1686482236
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686482235}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1686482237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686482235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1686482238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686482235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1686482239
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686482235}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 3
+  m_TargetDisplay: 0
 --- !u!1 &1693147877
 GameObject:
   m_ObjectHideFlags: 0
@@ -24574,7 +24688,7 @@ Transform:
   m_Children:
   - {fileID: 837632433}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1693389522
 GameObject:
@@ -25004,7 +25118,7 @@ RectTransform:
   - {fileID: 139540672}
   - {fileID: 1476689707}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -26264,6 +26378,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843414108}
   m_CullTransparentMesh: 1
+--- !u!1001 &1847442967
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 270940466795962106, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 270940466795962106, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5817
+      objectReference: {fileID: 0}
+    - target: {fileID: 270940466795962106, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 270940466795962106, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 270940466795962106, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 270940466795962106, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 270940466795962106, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 270940466795962106, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 270940466795962106, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 270940466795962106, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 270940466795962106, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 283044437719166167, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025131204744505984, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_Name
+      value: Message
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025131204744505984, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155339864371948542, guid: 68465872c865158489be02f7854f8eea, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68465872c865158489be02f7854f8eea, type: 3}
 --- !u!224 &1849852402 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 679023558829490852, guid: eb1a7385720dea840bec459377474cc8, type: 3}
@@ -28781,7 +28964,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2106391943
 GameObject:
@@ -28814,7 +28997,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2106391946
 MonoBehaviour:
@@ -28842,7 +29025,7 @@ MonoBehaviour:
       show: 1
       pose: 0
       spriteEffect: 0
-      additionalPose: 
+      additionalPose: ErrorEvent
       music: 0
       time: 0
       value: 0
@@ -34316,6 +34499,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 16
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: ErrorEvent
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 5
       line: "-\u0418\u0437\u0432\u0438\u043D\u0438, \u0447\u0442\u043E \u043D\u0430\u043F\u0443\u0433\u0430\u043B.
@@ -36731,6 +36937,52 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 0
+      line: ...
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 4
+      name: 2
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 2
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: -1.2, y: -1.3, z: -3.6}
     - type: 4
       name: 4
       line: 
@@ -36753,7 +37005,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
     - type: 0
       name: 2
       line: "-\u0417\u0434\u043E\u0440\u043E\u0432\u0430! - \u042F \u0442\u043E\u043B\u043A\u0430\u044E
@@ -36963,7 +37215,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
     - type: 0
       name: 4
       line: "-\u0414\u0430 \u043B\u0430\u0434\u043D\u043E! \u0412\u0440\u0435\u0448\u044C!"
@@ -37014,7 +37266,7 @@ MonoBehaviour:
       name: 2
       line: "\u041C\u044B \u043F\u0440\u0438\u0442\u0438\u0445\u043B\u0438 \u0438
         \u043D\u0430\u0447\u0430\u043B\u0438 \u0440\u0430\u0437\u0433\u043E\u0432\u0430\u0440\u0438\u0432\u0430\u0442\u044C
-        \u043F\u043E\u043B\u0443\u0448\u0435\u043F\u043E\u0442\u043E\u043C"
+        \u043F\u043E\u043B\u0443\u0448\u0435\u043F\u043E\u0442\u043E\u043C."
       font: 0
       inv: 0
       BGname: 0
@@ -37105,7 +37357,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
     - type: 0
       name: 4
       line: "-\u041D\u0443, \u043D\u0435 \u0437\u043D\u0430\u044E...\r\n"
@@ -37230,7 +37482,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
+      V3position: {x: -1.2, y: -1.3, z: -3.6}
     - type: 0
       name: 2
       line: "-\u0422\u044B \u044D\u0442\u043E... \u0417\u0430\u0432\u0438\u0434\u0443\u0435\u0448\u044C
@@ -37277,7 +37529,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
     - type: 14
       name: 4
       line: 
@@ -37397,7 +37649,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
     - type: 0
       name: 4
       line: "-\u0414\u0430 \u0431\u043B\u0438\u043D, \u043C\u044B \u0436\u0435 \u0442\u0438\u0445\u043E
@@ -37739,7 +37991,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
     - type: 14
       name: 4
       line: 
@@ -41174,6 +41426,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 9
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 2
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 10
       name: 0
       line: 
@@ -41211,11 +41486,11 @@ MonoBehaviour:
       additionalPose: "\u0432\u044B\u0432\u043E\u04342"
       music: 0
       time: 0
-      value: 0
+      value: 1
       signs: 0
       var: 0
       ThoType: 0
-      signsIf: 0
+      signsIf: 1
       emoji: 0
       menu_label: []
       menu_jump: []
@@ -41238,7 +41513,7 @@ MonoBehaviour:
       signs: 0
       var: 0
       ThoType: 0
-      signsIf: 0
+      signsIf: 2
       emoji: 0
       menu_label: []
       menu_jump: []
@@ -41737,6 +42012,29 @@ MonoBehaviour:
       value: 0
       signs: 2
       var: 3
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 4
+      line: ...
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
       ThoType: 0
       signsIf: 0
       emoji: 0
@@ -46886,7 +47184,30 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
+    - type: 4
+      name: 2
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 2
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: -1.2, y: -1.3, z: -3.6}
     - type: 9
       name: 0
       line: 
@@ -47631,7 +47952,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
     - type: 14
       name: 1
       line: 
@@ -48575,7 +48896,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 0
+      name: 2
       line: "\u0421\u0435\u0433\u043E\u0434\u043D\u044F \u0410\u043B\u0438\u043D\u0430
         \u0432\u044B\u0433\u043B\u044F\u0434\u0435\u043B\u0430 \u043A\u0430\u043A
         \u0438 \u0432\u0441\u0435\u0433\u0434\u0430 - \u0437\u0430\u0441\u0442\u0438\u0440\u0430\u043D\u043D\u0430\u044F
@@ -48634,9 +48955,7 @@ MonoBehaviour:
       name: 2
       line: "\u042D\u0442\u043E \u0432\u0441\u0435 \u0441\u0442\u0440\u043E\u0433\u043E\u0441\u0442\u044C
         \u043E\u0442\u0446\u0430, \u0438\u043B\u0438 \u043E\u043D\u0430 \u0441\u0430\u043C\u0430
-        \u0442\u0430\u043A\u0430\u044F \u0430\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u0430\u044F?
-        \u041B\u0435\u0432\u0443\u044E \u0440\u0443\u043A\u0443 \u0437\u0430\u043A\u0440\u044B\u0432\u0435\u0442
-        \u0441\u0432\u0435\u0436\u0438\u0439 \u0431\u0438\u043D\u0442.\r"
+        \u0442\u0430\u043A\u0430\u044F \u0430\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u0430\u044F? "
       font: 0
       inv: 0
       BGname: 0
@@ -49065,7 +49384,7 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u042F \u0434\u043E\u0441\u0442\u0430\u043B\u0430 \u0438\u0437 \u0430\u043F\u0442\u0435\u0447\u043A\u0438
-        \u0431\u043B\u0438\u0441\u0442\u0435\u0440 \u0441 \u043E\u0431\u0435\u0437\u0431\u043E\u043B\u0438\u0432\u0430\u044E\u0449\u0438\u043C"
+        \u0431\u043B\u0438\u0441\u0442\u0435\u0440 \u0441 \u043E\u0431\u0435\u0437\u0431\u043E\u043B\u0438\u0432\u0430\u044E\u0449\u0438\u043C."
       font: 0
       inv: 0
       BGname: 0
@@ -49229,7 +49548,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 0
+      name: 2
       line: "\u042F \u043F\u0440\u043E\u0442\u044F\u043D\u0443\u043B\u0430 \u0442\u0430\u0431\u043B\u0435\u0442\u043A\u0443
         \u0438 \u0441\u0442\u0430\u043A\u0430\u043D \u0432\u043E\u0434\u044B. \u0410\u043B\u0438\u043D\u0430
         \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u043F\u043E\u0434\u0443\u043C\u0430\u0432,
@@ -49259,7 +49578,7 @@ MonoBehaviour:
       line: 
       font: 0
       inv: 0
-      BGname: 14
+      BGname: 12
       effects: 0
       CGname: 
       show: 0
@@ -50419,7 +50738,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 0
+      name: 1
       line: "-\u041E\u0433\u043E... \u0410 \u0437\u0430\u0447\u0435\u043C \u043E\u043D\u0430
         \u0442\u0430\u043A\u0430\u044F \u043D\u0443\u0436\u043D\u0430?"
       font: 0
@@ -50606,7 +50925,7 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
-      pose: 1
+      pose: 3
       spriteEffect: 0
       additionalPose: 
       music: 0
@@ -50852,7 +51171,7 @@ MonoBehaviour:
   - name: alina film
     lines:
     - type: 0
-      name: 0
+      name: 2
       line: "-\u0418\u0437\u0432\u0438\u043D\u0438, \u0435\u0441\u043B\u0438 \u0431\u044B
         \u044F \u0437\u0430\u0440\u0430\u043D\u0435\u0435 \u0441\u043F\u043B\u0430\u043D\u0438\u0440\u043E\u0432\u0430\u043B\u0430,
         \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u043B\u0430 \u0431\u044B \u0444\u0438\u043B\u044C\u043C...
@@ -53351,7 +53670,7 @@ MonoBehaviour:
         \u0447\u0430\u0449\u0435 \u043E\u0442 \u0441\u0442\u0440\u0430\u043D\u043D\u043E\u0433\u043E
         \u0447\u0443\u0432\u0441\u0442\u0432\u0430, \u0430 \u044F\u0437\u044B\u043A
         \u043D\u0438\u043A\u0430\u043A \u043D\u0435 \u043C\u043E\u0433 \u043F\u0440\u043E\u0438\u0437\u043D\u0435\u0441\u0442\u0438
-        \u0447\u0442\u043E\u0442\u043E \u043E\u0441\u043C\u044B\u0441\u043B\u0435\u043D\u043D\u043E\u0435.\r\n"
+        \u0447\u0442\u043E-\u0442\u043E \u043E\u0441\u043C\u044B\u0441\u043B\u0435\u043D\u043D\u043E\u0435.\r\n"
       font: 0
       inv: 0
       BGname: 0
@@ -53703,29 +54022,6 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
-    - type: 14
-      name: 1
-      line: 
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 1
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
     - type: 4
       name: 1
       line: 
@@ -53749,6 +54045,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 1, y: 0, z: 0}
+    - type: 14
+      name: 1
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 3
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "-\u0422\u044B... \u0422\u044B \u043C\u0438\u043B\u0430\u0448\u043A\u0430.\r\n"
@@ -53773,7 +54092,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 0
+      name: 2
       line: "\u041E\u043D\u0430 \u0441\u043C\u0443\u0442\u0438\u043B\u0430\u0441\u044C."
       font: 0
       inv: 0
@@ -54090,7 +54409,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 0.2, y: 0, z: 0}
+      V3position: {x: -0.86, y: -1.2, z: -4.74}
     - type: 4
       name: 2
       line: 
@@ -54113,7 +54432,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: -0.2, y: 0, z: 0}
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0412\u043D\u0435\u0437\u0430\u043F\u043D\u043E \u043E\u043D\u0430
@@ -54188,7 +54507,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 0
+      name: 2
       line: "-\u0414\u0430. \u041D\u0430 \u0441\u0430\u043C\u043E\u043C \u0434\u0435\u043B\u0435,
         \u043C\u043D\u0435 \u043D\u0435\u043B\u044C\u0437\u044F \u0433\u0443\u043B\u044F\u0442\u044C
         \u043F\u043E\u0441\u043B\u0435 \u0448\u043A\u043E\u043B\u044B. \u041F\u0440\u043E\u0441\u0442\u043E...
@@ -54287,7 +54606,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 0
+      name: 2
       line: "\u0410\u043B\u0438\u043D\u0430 \u0440\u0430\u0434\u043E\u0441\u0442\u043D\u043E
         \u043A\u0438\u0432\u043D\u0443\u043B\u0430 \u0438 \u043F\u043E\u0431\u0435\u0436\u0430\u043B\u0430
         \u0432\u043D\u0438\u0437."
@@ -54333,7 +54652,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 0.2, y: 0, z: 0}
+      V3position: {x: -0.86, y: -1.2, z: -4.74}
     - type: 4
       name: 6
       line: 
@@ -54429,8 +54748,8 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: -0.2, y: 0, z: 0}
-    - type: 15
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
       name: 2
       line: "-\u0410 \u043C\u043E\u0436\u0435\u0442... \u0410 \u043F\u043E\u0447\u0435\u043C\u0443
         \u0431\u044B \u0438 \u043D\u0435\u0442? \u041E\u043D\u0430 \u043A\u0440\u0430\u0441\u0438\u0432\u0430\u044F.
@@ -54483,7 +54802,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 0
+      name: 2
       line: "-\u041D\u0435\u0430."
       font: 0
       inv: 0
@@ -54604,7 +54923,30 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
+    - type: 4
+      name: 2
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 2
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: -1.2, y: -1.3, z: -3.6}
     - type: 9
       name: 0
       line: 
@@ -55018,7 +55360,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
     - type: 0
       name: 2
       line: "\u041A\u0438\u0440 \u043F\u0440\u0438\u0432\u0435\u0442\u043B\u0438\u0432\u043E
@@ -55065,7 +55407,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
     - type: 0
       name: 2
       line: "-\u041A\u0430\u043A \u0442\u0432\u043E\u0438 \u043F\u0440\u0435\u0434\u043A\u0438?\r\n"
@@ -55195,7 +55537,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
+      V3position: {x: -1.2, y: -1.3, z: -3.6}
     - type: 0
       name: 2
       line: -...
@@ -55241,7 +55583,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
+      V3position: {x: -1.2, y: -1.3, z: -3.6}
     - type: 0
       name: 5
       line: "-\u041D\u0435 \u0445\u043E\u0447\u0435\u0448\u044C \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C?
@@ -55955,7 +56297,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
+      V3position: {x: -1.2, y: -1.3, z: -3.6}
     - type: 4
       name: 5
       line: 
@@ -55978,7 +56320,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1.5, y: 0, z: 0}
+      V3position: {x: 1.2, y: -1.3, z: -3.6}
     - type: 0
       name: 2
       line: "-\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0430... \u042D\u0442\u043E
@@ -58045,7 +58387,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -270, y: 270, z: -270}
 --- !u!82 &2109385670
 AudioSource:
@@ -58656,6 +58998,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1726064807}
     m_Modifications:
+    - target: {fileID: 724566409966680473, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 56182bf97ad9a5c4189f0607c8bdf7e4, type: 3}
     - target: {fileID: 1090890285064040365, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
       propertyPath: m_Name
       value: PREF
@@ -59290,7 +59636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9073167089436062512, guid: b2533f454849682429a82fe597784f81, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9073167089436062512, guid: b2533f454849682429a82fe597784f81, type: 3}
       propertyPath: m_AnchorMax.x
@@ -59490,7 +59836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5710843138764364551, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5710843138764364551, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -59628,7 +59974,7 @@ Transform:
   m_Children:
   - {fileID: 2058171223}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8063751363323390306
 MonoBehaviour:
@@ -59697,7 +60043,7 @@ Transform:
   - {fileID: 213742493}
   - {fileID: 8063751364268345366}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &8063751363614114725
 Camera:

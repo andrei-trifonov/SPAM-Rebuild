@@ -20,7 +20,7 @@ public class RaycastObject : MonoBehaviour
 
     public GameObject Settings;
     public Canvas Preloader;
-    public void Activate()
+    public virtual void Activate()
     {
         switch (b_enum)
         {
