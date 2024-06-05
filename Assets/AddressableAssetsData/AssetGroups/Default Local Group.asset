@@ -259,6 +259,78 @@ MonoBehaviour:
     m_Address: ErrorEvent
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 9d5ad29c70a9e8a458708ba32ccc043b
+    m_Address: Alina_housePrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0b75deed58a9fd244a22edee55a90039
+    m_Address: Alina_roomPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4a76a7ea08666ce418be5d4a214a9e8a
+    m_Address: BankPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e2896ad536563de4caf884451edc65fc
+    m_Address: BunkerPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 34e234a128f37e9409bd46b86269b48e
+    m_Address: ClassroomPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cdb974536d30df244a5913a93f44e360
+    m_Address: ClubPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ce109dcf20882f748baab2c1a1c0bd61
+    m_Address: ConstructPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 90b35b9bc67646b488c8cf0eb8245f88
+    m_Address: GaragesPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 708c8d7bf0e88db41a1b2f4e61a50bd0
+    m_Address: Kir_roomPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 01d0b3511559f3645b85ffda5b6ffc34
+    m_Address: Mira_housePrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b6e253e5a2ead184d894bf74696d39c7
+    m_Address: Mira_roomPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 82b269d9ff09460419ac84ffa9d8abe7
+    m_Address: ParkPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 707a7dd541847604ea4746f17d71be2f
+    m_Address: ScenePrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7e37e5b1b9db71247b4e4ff4fc58172b
+    m_Address: SchoolPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e38f6256c37724c4d9bf0201b46ab7e1
+    m_Address: Sonya_roomPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 18aee81736d54a1469873817cfbf9cff
+    m_Address: TowerPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 61e25c5f677e10d46a9cfe6ab83a0f96
+    m_Address: Tram_stopPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d9393c1c312cf56408f34ef8eed8c596
+    m_Address: TramPrev
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 08e76260542fbaf4a91b4020b57cd37c, type: 2}
   m_SchemaSet:
