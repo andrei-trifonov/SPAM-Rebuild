@@ -21,6 +21,8 @@ public static class GDB
                return new Color(1, 0.86f, 0.35f);
            case (int)Name.Кир:
                return new Color(0.77f, 0.24f, 1);
+            case (int)Name.Наташа:
+                return new Color(1f, 0.3f, 1f);
       
 
         }
@@ -37,8 +39,9 @@ public static class GDB
         Кир,
         Кот,
         Толя,
-        Мама
-       
+        Мама,
+        Наташа
+
     }
     public enum Emoji
     {
@@ -99,7 +102,8 @@ public static class GDB
         Kir_room,
         Sonya_room,
         Tower,
-        BGTemp
+        BGTemp,
+        Bunker
     }
     public enum Fonts
     {
