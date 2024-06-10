@@ -33,7 +33,7 @@ Material:
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     IGNOREPROJECTOR: False
     RenderType: Opaque
@@ -248,9 +248,9 @@ Material:
     - _EnvironmentReflections: 2
     - _FlatRimEdgeSmoothness: 1
     - _FlatRimLightAlign: 0
-    - _FlatRimSize: 0.306
+    - _FlatRimSize: 0.329
     - _FlatSpecularEdgeSmoothness: 1
-    - _FlatSpecularSize: 0.826
+    - _FlatSpecularSize: 1
     - _FresnelHighlights: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -311,7 +311,7 @@ Material:
     - _RimThresholdOffset: 0.25
     - _Roughness: 0.5
     - _Saturation: 1
-    - _SelfShadingSize: 0
+    - _SelfShadingSize: 0.232
     - _Shininess: 0.29483852
     - _SketchMapScale: 1
     - _Smoothness: 0.29483852

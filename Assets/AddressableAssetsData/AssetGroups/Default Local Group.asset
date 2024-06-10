@@ -331,6 +331,26 @@ MonoBehaviour:
     m_Address: TramPrev
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b40eb9b23895c55469c16a5a23080ad9
+    m_Address: FuckYouEvent
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ccf942a207c17d64db07f91e2ee55daf
+    m_Address: "\u041C\u0438\u0448\u0430Angry"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6394c6ef04932334caca72a83767922d
+    m_Address: "\u041C\u0438\u0448\u0430Happy"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 94cd285f48918bf4884aa90a8a014531
+    m_Address: "\u041C\u0438\u0448\u0430Normal"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 16dfc3451a2d8c64a841cd639747fa3c
+    m_Address: "\u041C\u0438\u0448\u0430Sad"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 08e76260542fbaf4a91b4020b57cd37c, type: 2}
   m_SchemaSet:
