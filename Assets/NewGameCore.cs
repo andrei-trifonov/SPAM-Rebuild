@@ -346,6 +346,12 @@ public class NewGameCore : MonoBehaviour
             saveObj.Actors = actors;
             saveObj.lastLineNum = lineNum;
             saveObj.lastLabelNum = labelNum;
+            if (saveObj.lastCG!="")
+                saveObj.previewName = saveObj.lastCG;
+            else if (saveObj.lastBG != GDB.BGName.None)
+                saveObj.previewName = saveObj.lastBG + "Prev";
+            else 
+                saveObj.previewName = "Black";
             saveJString = JsonUtility.ToJson(saveObj);
             Debug.Log("JSON " + saveJString );
             Debug.Log("Actors " );
@@ -358,7 +364,7 @@ public class NewGameCore : MonoBehaviour
             Debug.Log("AuthorText "  + saveObj.lastAuthor);
             Debug.Log("LineText "  + saveObj.lastLine);
             Debug.Log("Scene "  + saveObj.lastBG);
-            Debug.Log("CG "  + saveObj.lastBG);
+            Debug.Log("CG "  + saveObj.lastCG);
             Debug.Log("Music "  + saveObj.lastMusic);
             Debug.Log("Line " + saveObj.lastLineNum);
             Debug.Log("Label "  + saveObj.lastLabelNum);

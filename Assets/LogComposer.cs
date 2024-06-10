@@ -43,6 +43,9 @@ public class LogComposer : MonoBehaviour
             inst.Name.text = logName[i].ToString();
             inst.Name.color = GDB.CharColor((int)logName[i]);
             inst.Text.text = logLine[i];
+            Debug.Log(logName[i]);
+            Debug.Log(i);
+            Debug.Log(logLine[i]);
             Logs.Add(inst);
         }
     }

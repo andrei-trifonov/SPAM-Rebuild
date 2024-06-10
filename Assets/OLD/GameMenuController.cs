@@ -68,11 +68,17 @@ public class GameMenuController : MonoBehaviour
 
     public void Fold()
     {
-        Anim.SetBool("Fold", false);
+        if (Anim.GetBool("Fold")){
+            Anim.SetBool("Fold", false);
         Preferences.SetActive(false);
         LogComp.gameObject.SetActive(false);
         SaveMan.SetActive(false);
         LoadMan.gameObject.SetActive(true);
         LoadMan.gameObject.SetActive(false);
     }
+        else {
+            Return();
+        
+        }
+        }
 }
