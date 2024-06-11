@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class ClueObject : MonoBehaviour
 {
+    public Shader BlackMat;
+    public float Height;
+    public float Speed;
     public ThoughtSt Thought;
     private InvestigationController IC;
     private Vector3 startPos;
@@ -14,8 +17,16 @@ public class ClueObject : MonoBehaviour
     
     private void Start()
     {
-        mat = gameObject.GetComponent<MeshRenderer>().material;
-        gameObject.GetComponent<MeshRenderer>().material = Instantiate(mat);
+        try
+        {
+            mat = gameObject.GetComponent<MeshRenderer>().material;
+            gameObject.GetComponent<MeshRenderer>().material = Instantiate(mat);
+        }
+        catch
+        {
+            
+        }
+
         IC = GameObject.FindObjectOfType<InvestigationController>();
     }
 
@@ -28,10 +39,15 @@ public class ClueObject : MonoBehaviour
             IC.AddThought(Thought);
             startMove = true;
             Effect.SetActive(true);
-            Material            _mat = gameObject.GetComponent<MeshRenderer>().material;
-            _mat.SetColor("_AlbedoColor", UnityEngine.Color.gray);
-            _mat.SetColor("_OutlineColor", UnityEngine.Color.black);
-            
+           
+                for(int i =0; i < GetComponent<MeshRenderer>().materials.Length; i++)
+                {
+                    GetComponent<MeshRenderer>().materials[i].shader = BlackMat;
+                    GetComponent<MeshRenderer>().materials[i].SetColor("_Color", Color.black);
+
+                }
+              
+           
         }
     }
 
@@ -40,11 +56,11 @@ public class ClueObject : MonoBehaviour
         if (startMove)
         {
             float distance = Vector3.Distance(startPos, finishPos.position);
-            float duration = distance / 4f; // distance / speed
+            float duration = distance / Speed; // distance / speed
             float t = (Time.time - startTime) / duration;
             if (t <= 1)
             {
-                Vector3 newPos = CalculateParabolicPosition(startPos, finishPos.position, 3f, t); //3f is height
+                Vector3 newPos = CalculateParabolicPosition(startPos, finishPos.position, Height, t); //3f is height
                 Effect.transform.position = newPos;
             }
 
