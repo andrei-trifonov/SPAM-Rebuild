@@ -51,6 +51,7 @@ public struct Result
     public int ID;
     public string Content;
     public GDB.Variables Var;
+    public int Value;
     public string jumpLabel;
     public bool isTrueResult;
 }
@@ -96,7 +97,7 @@ public class InvestigationController : MonoBehaviour
     private List<int> hintIDs = new List<int>();
     private bool State;
     List<GameObject> interactiveObjects = new List<GameObject>();
-    
+    private bool FirstTime = true;
     public void SetNewGame(string sceneName, List<int> Unlocks, int drugsCount)
     {
         sliderFromMainGame.SetActive(false);
@@ -166,8 +167,30 @@ public class InvestigationController : MonoBehaviour
             Core.UseDrugs();
             foreach (var item in interactiveObjects)
             {
-                item.GetComponent<MeshRenderer>().material.SetColor("_OutlineColor", UnityEngine.Color.yellow);
-            }
+                if (item.GetComponentInChildren<MeshRenderer>())
+                    foreach (Material _mat in item.GetComponentInChildren<MeshRenderer>().materials)
+                        try
+                        {
+                            _mat.SetColor("_OutlineColor", UnityEngine.Color.yellow);
+
+                        }
+                        catch
+                        {
+                        }
+
+
+                else if (item.GetComponent<SpriteRenderer>())
+                {
+                    Material _mat_s = item.GetComponent<SpriteRenderer>().material;
+                    if (_mat_s.GetColor("_Color") != Color.black)
+                       _mat_s.SetColor("_OutlineColor", UnityEngine.Color.yellow);
+
+                }
+        
+
+
+
+        }
             drugsButton1.SetActive(false);
             drugsButton2.SetActive(false);
         
@@ -223,14 +246,16 @@ public class InvestigationController : MonoBehaviour
         {
             drugOverlay.SetActive(false);
         }
-        DestroyAllThought();
+        if (FirstTime)
+             DestroyAllThought();
         Scene.SetActive(false);
         cameraThought.SetActive(true);
         cameraInvestigation.SetActive(false);
         canTho.enabled = true;
         canInv.enabled = false;
         Brain.SetActive(true);
-        SpawnThoughts();
+        if (FirstTime)
+            SpawnThoughts();
      
     }
 
@@ -251,7 +276,8 @@ public class InvestigationController : MonoBehaviour
     }
     private void SpawnThoughts()
     {
-   
+
+        FirstTime = false;
         foreach (ThoughtSt item in Thoughts)
         {
             if (!item.Locked)
@@ -294,7 +320,7 @@ public class InvestigationController : MonoBehaviour
         }
         State = false;
         Scene.SetActive(true);
-        DestroyAllThought();
+        //DestroyAllThought();
         cameraThought.SetActive(false);
         canTho.enabled = false;
         canInv.enabled = true;
@@ -349,7 +375,7 @@ public class InvestigationController : MonoBehaviour
         resultPanel.SetActive(false);
         
         //TODO start
-        PlayerPrefs.SetInt(chosenResult.Var.ToString(), 1);
+        PlayerPrefs.SetInt(chosenResult.Var.ToString(), chosenResult.Value);
         //TODO finish
         
         Core.jumpAction(chosenResult.jumpLabel);
@@ -375,52 +401,58 @@ public class InvestigationController : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void UpdateCollisions(int ID)
+    public void UpdateCollisions(int myID, int otherID)
     {
-       
-        try
-        {
+
+
+        
             foreach (MergeConnection connection in Merges)
             {
-                if ((connection.t1.toMerge[0].ID == connection.Item2 || connection.t2.toMerge[0].ID == connection.Item1) && (connection.Item2 == ID || connection.Item1 == ID))
+                if (connection.Item1 == myID && connection.Item2 == otherID ||
+                    connection.Item1 == otherID && connection.Item2 == myID)
                 {
-                    
-                    
-                   
+                    Debug.Log("Pair found" + myID + " " + otherID);
+
+
                     Thought spawned = Instantiate(thoughtTemplate).GetComponent<Thought>();
-                    
+
                     if (hintIDs.Contains(connection.Result.ID))
-                        spawned.Initiate(connection.Result.Content, connection.Result.Level, connection.Result.Type, connection.Result.ID, MergeEffect, true);
+                        spawned.Initiate(connection.Result.Content, connection.Result.Level, connection.Result.Type,
+                            connection.Result.ID, MergeEffect, true);
                     else
-                        spawned.Initiate(connection.Result.Content, connection.Result.Level, connection.Result.Type, connection.Result.ID, MergeEffect, false);
-                    
-                    spawned.transform.position = new Vector3(connection.t1.gameObject.transform.position.x, connection.t1.gameObject.transform.position.y, connection.t1.gameObject.transform.position.z);
+                        spawned.Initiate(connection.Result.Content, connection.Result.Level, connection.Result.Type,
+                            connection.Result.ID, MergeEffect, false);
+
+                    spawned.transform.position = new Vector3(connection.t1.gameObject.transform.position.x,
+                        connection.t1.gameObject.transform.position.y, connection.t1.gameObject.transform.position.z);
                     DiffusionEffect.transform.position = spawned.transform.position;
                     StartCoroutine(DiffusionCoroutine());
                     spawnedObjects.Add(spawned.gameObject);
                     spawnedObjects.Remove(connection.t1.gameObject);
                     spawnedObjects.Remove(connection.t2.gameObject);
-                    Destroy(connection.t1.gameObject);
-                    Destroy(connection.t2.gameObject);
-                        
                     foreach (MergeConnection connection2 in Merges)
                     {
                         if (connection.Result.ID == connection2.Item1)
                         {
                             connection2.t1 = spawned.GetComponent<Thought>();
                         }
+
                         if (connection.Result.ID == connection.Item2)
                         {
                             connection2.t2 = spawned.GetComponent<Thought>();
                         }
 
                     }
+                    Destroy(connection.t1.gameObject);
+                    Destroy(connection.t2.gameObject);
+
                    
+
                     break;
                 }
             }
-        }
-        catch { }
+        
+      
         }
 
     

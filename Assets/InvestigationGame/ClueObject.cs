@@ -34,20 +34,28 @@ public class ClueObject : MonoBehaviour
     {
         if (!startMove)
         {
+            
             startPos = transform.position;
             startTime = Time.time;
             IC.AddThought(Thought);
             startMove = true;
             Effect.SetActive(true);
-           
-                for(int i =0; i < GetComponent<MeshRenderer>().materials.Length; i++)
-                {
-                    GetComponent<MeshRenderer>().materials[i].shader = BlackMat;
-                    GetComponent<MeshRenderer>().materials[i].SetColor("_Color", Color.black);
+           if (GetComponentInChildren<MeshRenderer>())
+            for(int i =0; i < GetComponentInChildren<MeshRenderer>().materials.Length; i++)
+            {
+                GetComponentInChildren<MeshRenderer>().materials[i].shader = BlackMat;
+                GetComponentInChildren<MeshRenderer>().materials[i].SetColor("_Color", Color.black);
 
-                }
-              
-           
+            }
+           else if (GetComponent<SpriteRenderer>())
+           {
+               Material _mat_s = GetComponent<SpriteRenderer>().material;
+               _mat_s.SetColor("_OutlineColor", UnityEngine.Color.black);
+               _mat_s.SetColor("_Color", UnityEngine.Color.black);
+           }
+        
+
+
         }
     }
 

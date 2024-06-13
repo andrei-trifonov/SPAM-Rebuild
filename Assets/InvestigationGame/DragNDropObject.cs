@@ -42,7 +42,11 @@ public class DragNDropObject : MonoBehaviour
         transform.localScale /= 0.9f;
         TouchEffect.SetActive(false);
         _isDragging = false;
-        IC.UpdateCollisions(GetComponent<Thought>().ID);
+        if (GetComponent<Thought>().toMerge.Count > 0)
+        {
+            IC.UpdateCollisions(GetComponent<Thought>().ID, GetComponent<Thought>().toMerge[0].ID);
+            Debug.Log(GetComponent<Thought>().toMerge.Count );
+        }
     }
 
     private void Update()

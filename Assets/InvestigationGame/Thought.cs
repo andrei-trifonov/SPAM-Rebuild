@@ -3,17 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 
 [System.Serializable]
 public enum ThoughtType
 {
-    Обычная,
-    Мощная,
-    Безумная,
-    Пугающая
+    РћР±С‹С‡РЅР°СЏ,
+    Р‘РµР·СѓРјРЅР°СЏ,
+    РџСѓРіР°СЋС‰Р°СЏ,
+    РњРѕС‰РЅР°СЏ
 
 }
+
+
 public class Thought : MonoBehaviour
 {
     public int ID;
@@ -30,10 +33,12 @@ public class Thought : MonoBehaviour
     private Collider2D col;
     private bool replaceEffect;
     
-    
+
     public void Initiate(string Content, int Level, ThoughtType Type, int ID, GameObject MergeEffect, bool glow)
     {
-         this.Content = Content;
+       this.ContentField.sortingOrder =  ID;
+       this.GetComponent<SpriteRenderer>().sortingOrder = ID;
+       this.Content = Content;
          this.Level = Level;
          this.Content = Content;
          this.Type = Type;
@@ -64,7 +69,7 @@ public class Thought : MonoBehaviour
                 MergeEffect.SetActive(true);
             }
 
-            col = collision;
+                 col = collision;
                 replaceEffect = true;
                 try
                 {

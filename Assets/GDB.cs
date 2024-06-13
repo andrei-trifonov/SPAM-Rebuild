@@ -165,7 +165,8 @@ public static class GDB
         KPoints,
         MPoints,
         Sonya_support,
-        Day1_choose_person
+        Day1_choose_person,
+        inv1
     }
 
     public enum Signs
