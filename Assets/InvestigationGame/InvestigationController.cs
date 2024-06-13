@@ -409,6 +409,11 @@ public class InvestigationController : MonoBehaviour
         }
     }
 
+    public void ResetProgress()
+    {
+        DestroyAllThought();
+        SpawnAllThoughts();
+    }
     // Update is called once per frame
     public void UpdateCollisions(int myID, int otherID)
     {
