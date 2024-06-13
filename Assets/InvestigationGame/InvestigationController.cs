@@ -211,7 +211,7 @@ public class InvestigationController : MonoBehaviour
             if (State)
             {
             DestroyAllThought();
-            SpawnThoughts();
+            SpawnAllThoughts();
         }
         }
     }
@@ -225,7 +225,7 @@ public class InvestigationController : MonoBehaviour
                 return;
             }
         }
-      
+        SpawnOneThought(obj);
         Thoughts.Add(obj);
             
     }
@@ -241,6 +241,7 @@ public class InvestigationController : MonoBehaviour
 
     public void OpenThought()
     {
+        cameraThought.SetActive(true);
         State = true;
         if (usedDrug)
         {
@@ -249,13 +250,13 @@ public class InvestigationController : MonoBehaviour
         if (FirstTime)
              DestroyAllThought();
         Scene.SetActive(false);
-        cameraThought.SetActive(true);
+       
         cameraInvestigation.SetActive(false);
         canTho.enabled = true;
         canInv.enabled = false;
         Brain.SetActive(true);
         if (FirstTime)
-            SpawnThoughts();
+            SpawnAllThoughts();
      
     }
 
@@ -274,44 +275,52 @@ public class InvestigationController : MonoBehaviour
                 }
             }
     }
-    private void SpawnThoughts()
+    private void SpawnAllThoughts()
     {
 
         FirstTime = false;
         foreach (ThoughtSt item in Thoughts)
         {
-            if (!item.Locked)
-            {
-                Thought spawned = Instantiate(thoughtTemplate,
-                    cameraThought.transform.position +
-                    new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y),
-                        UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), gameObject.transform.position.z),
-                    gameObject.transform.rotation).GetComponent<Thought>();
-                spawned.transform.position = cameraThought.transform.position +
-                                             new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y),
-                                                 UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), 10);
-                spawnedObjects.Add(spawned.gameObject);
-                if (hintIDs.Contains(item.ID))
-                    spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect, true);
-                else
-                    spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect, false);
-                foreach (MergeConnection connection in Merges)
-                {
-                    if (item.ID == connection.Item1)
-                    {
-                        connection.t1 = spawned.GetComponent<Thought>();
-                    }
-
-                    if (item.ID == connection.Item2)
-                    {
-                        connection.t2 = spawned.GetComponent<Thought>();
-                    }
-
-                }
-            }
+            SpawnOneThought(item);
         }
     }
+      private void SpawnOneThought(ThoughtSt item )
+        {
     
+         
+                if (!item.Locked)
+                {
+                    Thought spawned = Instantiate(thoughtTemplate,
+                        cameraThought.transform.position +
+                        new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y),
+                            UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), gameObject.transform.position.z),
+                        gameObject.transform.rotation).GetComponent<Thought>();
+                    spawned.transform.position = cameraThought.transform.position +
+                                                 new Vector3(UnityEngine.Random.Range(ScreenSpace.x, ScreenSpace.y),
+                                                     UnityEngine.Random.Range(ScreenSpace.z, ScreenSpace.w), 10);
+                    spawnedObjects.Add(spawned.gameObject);
+                    spawned.gameObject.GetComponent<DragNDropObject>().ThoCam = cameraThought.GetComponent<Camera>();
+                    spawned.gameObject.GetComponent<DragNDropObject>().IC = this;
+                    if (hintIDs.Contains(item.ID))
+                        spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect, true);
+                    else
+                        spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect, false);
+                    foreach (MergeConnection connection in Merges)
+                    {
+                        if (item.ID == connection.Item1)
+                        {
+                            connection.t1 = spawned.GetComponent<Thought>();
+                        }
+    
+                        if (item.ID == connection.Item2)
+                        {
+                            connection.t2 = spawned.GetComponent<Thought>();
+                        }
+    
+                    }
+                }
+            
+        }
     public void CloseThought()
     {
         if (usedDrug)
@@ -443,6 +452,8 @@ public class InvestigationController : MonoBehaviour
                         }
 
                     }
+                    spawned.gameObject.GetComponent<DragNDropObject>().ThoCam = cameraThought.GetComponent<Camera>();
+                    spawned.gameObject.GetComponent<DragNDropObject>().IC = this;
                     Destroy(connection.t1.gameObject);
                     Destroy(connection.t2.gameObject);
 

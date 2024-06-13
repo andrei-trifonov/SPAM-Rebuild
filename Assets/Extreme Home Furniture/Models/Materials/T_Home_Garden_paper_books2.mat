@@ -208,7 +208,7 @@ Material:
     - _BlendSrc: 1
     - _Brightness: 1
     - _BumpScale: 1
-    - _CameraDistanceImpact: 0.558
+    - _CameraDistanceImpact: 0.09
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _ColorGrading: 0
@@ -276,14 +276,14 @@ Material:
     - _OptionsTab: 1
     - _Outline: 3
     - _OutlineData: 0
-    - _OutlineDepthOffset: 0.409
+    - _OutlineDepthOffset: 0.15
     - _OutlineEnabled: 0
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25
     - _OutlineNoise: 0
-    - _OutlineScale: 1
+    - _OutlineScale: -27.2
     - _OutlineSize: 5
-    - _OutlineWidth: 5.09
+    - _OutlineWidth: 17.8
     - _OverrideBakedGi: 0
     - _OverrideLightAttenuation: 0
     - _OverrideLightmapDir: 0
@@ -353,7 +353,7 @@ Material:
     - _LightAttenuation: {r: 0, g: 1, b: 0, a: 0}
     - _LightTransmissionColor: {r: 1, g: 0.65, b: 0, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 1, g: 0.59621054, b: 0, a: 1}
     - _RimBrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimDarkColor: {r: 0, g: 0, b: 0, a: 1}

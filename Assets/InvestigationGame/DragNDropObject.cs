@@ -9,9 +9,9 @@ public class DragNDropObject : MonoBehaviour
     private Vector3 _offset;
     private bool _isDragging;
     private bool Clicked;
-    private InvestigationController IC;
+    public InvestigationController IC;
 
-    private Camera ThoCam;
+    public Camera ThoCam;
     [SerializeField] private GameObject TouchEffect;
 
     public bool isDragging()
@@ -22,11 +22,7 @@ public class DragNDropObject : MonoBehaviour
     {
         return Clicked;
     }
-    private void Start()
-    {
-        IC = GameObject.FindObjectOfType<InvestigationController>();
-        ThoCam = GameObject.FindGameObjectWithTag("ThoCam").GetComponent<Camera>();
-    }
+
     private void OnMouseDown()
     {
         Clicked = true;
