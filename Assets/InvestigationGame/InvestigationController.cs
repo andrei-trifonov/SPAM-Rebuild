@@ -305,19 +305,7 @@ public class InvestigationController : MonoBehaviour
                         spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect, true);
                     else
                         spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect, false);
-                    foreach (MergeConnection connection in Merges)
-                    {
-                        if (item.ID == connection.Item1)
-                        {
-                            connection.t1 = spawned.GetComponent<Thought>();
-                        }
-    
-                        if (item.ID == connection.Item2)
-                        {
-                            connection.t2 = spawned.GetComponent<Thought>();
-                        }
-    
-                    }
+                   
                 }
             
         }
@@ -414,6 +402,16 @@ public class InvestigationController : MonoBehaviour
         DestroyAllThought();
         SpawnAllThoughts();
     }
+    
+   Thought FindThought(int id){
+    
+    foreach (GameObject obj in spawnedObjects){
+    
+    if (obj.GetComponent<Thought>().ID == id)
+    return obj.GetComponent<Thought>();
+    }
+    return new Thought();
+    }
     // Update is called once per frame
     public void UpdateCollisions(int myID, int otherID)
     {
@@ -427,7 +425,9 @@ public class InvestigationController : MonoBehaviour
                 {
                     Debug.Log("Pair found" + myID + " " + otherID);
 
-
+                    
+                    connection.t1 = FindThought(myID);
+                    connection.t2 = FindThought(otherID);
                     Thought spawned = Instantiate(thoughtTemplate).GetComponent<Thought>();
 
                     if (hintIDs.Contains(connection.Result.ID))
@@ -439,29 +439,21 @@ public class InvestigationController : MonoBehaviour
 
                     spawned.transform.position = new Vector3(connection.t1.gameObject.transform.position.x,
                         connection.t1.gameObject.transform.position.y, connection.t1.gameObject.transform.position.z);
+                   
+                   
+                    Destroy(connection.t1.gameObject);
+                    Destroy(connection.t2.gameObject);
+                    spawnedObjects.Remove(connection.t1.gameObject);
+                    spawnedObjects.Remove(connection.t2.gameObject);
+                    
                     DiffusionEffect.transform.position = spawned.transform.position;
                     StartCoroutine(DiffusionCoroutine());
                     spawnedObjects.Add(spawned.gameObject);
-                    spawnedObjects.Remove(connection.t1.gameObject);
-                    spawnedObjects.Remove(connection.t2.gameObject);
-                    foreach (MergeConnection connection2 in Merges)
-                    {
-                        if (connection.Result.ID == connection2.Item1)
-                        {
-                            connection2.t1 = spawned.GetComponent<Thought>();
-                        }
-
-                        if (connection.Result.ID == connection.Item2)
-                        {
-                            connection2.t2 = spawned.GetComponent<Thought>();
-                        }
-
-                    }
+                  
                     spawned.gameObject.GetComponent<DragNDropObject>().ThoCam = cameraThought.GetComponent<Camera>();
                     spawned.gameObject.GetComponent<DragNDropObject>().IC = this;
-                    Destroy(connection.t1.gameObject);
-                    Destroy(connection.t2.gameObject);
-
+                    
+                    
                    
 
                     break;

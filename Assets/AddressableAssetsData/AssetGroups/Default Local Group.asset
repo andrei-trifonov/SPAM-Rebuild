@@ -17,16 +17,14 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 0043e8f6aaf2d1344a2f854d3dacceb3
   m_SerializeEntries:
-  - m_GUID: 0ac342f1904a85249a39bfd48ce43108
-    m_Address: cg3
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - CG
-  - m_GUID: 936228b24e13d9f44a1906cd7666c376
+  - m_GUID: ff73c0f7e5899f2418911698e3020eed
     m_Address: cg2
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - CG
+    m_SerializedLabels: []
+  - m_GUID: e7cb618488ef2b24f97c20f7a2acf29d
+    m_Address: cg1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 83d3116bb838fb440a8c6d7b4aa56821
     m_Address: Krypton2
     m_ReadOnly: 0
@@ -349,6 +347,34 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 16dfc3451a2d8c64a841cd639747fa3c
     m_Address: "\u041C\u0438\u0448\u0430Sad"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5407acec7c69b9d4e85a442b780c42f8
+    m_Address: cg3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9e8e3e640a7cc4f4f83353fd25fe4070
+    m_Address: cg4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bba093fafe52efb48b2ba7c398f10b12
+    m_Address: cg5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 02e856f5a248f91479ecf0218c6c3378
+    m_Address: cg6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 90cc96cf783c380418064c5e35626360
+    m_Address: cg7
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6ba3b0cc0ecfa00479db6c2ffad0721f
+    m_Address: cg8
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fb1ee8455609d474dbd385ee359527e0
+    m_Address: InvScenario3
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
