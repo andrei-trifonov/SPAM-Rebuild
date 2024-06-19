@@ -32,12 +32,14 @@ public class ClueObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!startMove)
+        if (!startMove && !IC.inAction)
         {
             
             startPos = transform.position;
             startTime = Time.time;
             IC.AddThought(Thought);
+            IC.inAction = true;
+            Effect.transform.position = startPos;
             startMove = true;
             Effect.SetActive(true);
            if (GetComponentInChildren<MeshRenderer>())
@@ -75,6 +77,7 @@ public class ClueObject : MonoBehaviour
             else
             {
                 startMove = false;
+                IC.inAction = false;
                 Effect.SetActive(false);
                 Destroy(this);
             }

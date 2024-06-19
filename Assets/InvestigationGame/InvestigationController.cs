@@ -98,6 +98,7 @@ public class InvestigationController : MonoBehaviour
     private bool State;
     List<GameObject> interactiveObjects = new List<GameObject>();
     private bool FirstTime = true;
+    public bool inAction;
     public void SetNewGame(string sceneName, List<int> Unlocks, int drugsCount)
     {
         sliderFromMainGame.SetActive(false);
