@@ -40,7 +40,8 @@ public static class GDB
         Кот,
         Толя,
         Мама,
-        Наташа
+        Наташа,
+        Женя
 
     }
     public enum Emoji
@@ -167,7 +168,10 @@ public static class GDB
         MPoints,
         Sonya_support,
         Day1_choose_person,
-        inv1
+        inv1,
+        inv2,
+        inv3,
+        inv4
     }
 
     public enum Signs
