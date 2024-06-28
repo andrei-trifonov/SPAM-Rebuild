@@ -32,7 +32,7 @@ Material:
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     IGNOREPROJECTOR: False
     RenderType: Opaque
@@ -50,7 +50,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: aa4f88a941d26cd4a96cf9176a7c2fe2, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0.13, y: 0.19}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 88e9d1cb66ef2ab4e9932e0832e74113, type: 3}

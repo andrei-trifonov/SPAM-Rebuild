@@ -377,6 +377,42 @@ MonoBehaviour:
     m_Address: InvScenario3
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 65431b37837be3a49a73a9d08043c11b
+    m_Address: InvScenario4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 24ae6d8277f4e30489911c842dafa978
+    m_Address: Hallucinacion1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e4d6c7f95c28e5b4bb446aff72e7fb17
+    m_Address: cg9
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f47eb38a5ead4894f9c0bce3c4dac6ac
+    m_Address: cg10
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9403428457ff36649a4e513a9a1589dd
+    m_Address: cg11
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 155c890d5f54b1547986824512d51001
+    m_Address: cg12
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0e8f82a965d4b0e4ca9213b1dbbaf7fa
+    m_Address: cg13
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fd9429f32df46b14fae3955ba389ca28
+    m_Address: White
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 345416dfd9b0da84ba2c7be4a345aa7d
+    m_Address: Petrenko
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 08e76260542fbaf4a91b4020b57cd37c, type: 2}
   m_SchemaSet:

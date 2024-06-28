@@ -26,7 +26,6 @@ Material:
   - DR_GRADIENT_ON
   - DR_OUTLINE_ON
   - DR_RIM_ON
-  - DR_SPECULAR_ON
   - _DETAILMAPBLENDINGMODE_ADD
   - _TEXTUREBLENDINGMODE_MULTIPLY
   m_InvalidKeywords: []
@@ -120,7 +119,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailMapBlendingMode: 1
-    - _DetailMapImpact: 0.25
+    - _DetailMapImpact: 0.067
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
@@ -146,7 +145,7 @@ Material:
     - _OutlineDepthOffset: 0
     - _OutlineEnabled: 1
     - _OutlineScale: 1
-    - _OutlineWidth: 0.3
+    - _OutlineWidth: 0.2
     - _OverrideBakedGi: 0
     - _OverrideLightAttenuation: 0
     - _OverrideLightmapDir: 0
@@ -157,7 +156,7 @@ Material:
     - _SelfShadingSize: 0.943
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
-    - _SpecularEnabled: 1
+    - _SpecularEnabled: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
@@ -172,7 +171,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorGradient: {r: 0, g: 0, b: 0, a: 0.85056}
-    - _DetailMapColor: {r: 0.5427554, g: 0.6226415, b: 0.6063382, a: 1}
+    - _DetailMapColor: {r: 0.7264151, g: 0.5838093, b: 0.42077252, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _FlatRimColor: {r: 0, g: 0, b: 0, a: 0.85056}
     - _FlatSpecularColor: {r: 0.33962262, g: 0.30566037, b: 0.30566037, a: 0.85056}

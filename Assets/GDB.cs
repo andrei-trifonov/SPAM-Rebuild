@@ -103,7 +103,8 @@ public static class GDB
         Sonya_room,
         Tower,
         BGTemp,
-        Bunker
+        Bunker,
+        Hallucinacion1
     }
     public enum Fonts
     {
