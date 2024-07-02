@@ -7,6 +7,7 @@ public class DisableAfterTime : MonoBehaviour
 {
     public GameObject toDelete;
     public float Time;
+    public bool enable;
     void Start()
     {
         StartCoroutine(SomeCoroutine());
@@ -17,8 +18,13 @@ public class DisableAfterTime : MonoBehaviour
     }
     private IEnumerator SomeCoroutine()
     {
-      
-        yield return new WaitForSeconds (Time);
-        Destroy(toDelete);
+
+        yield return new WaitForSeconds(Time);
+        if (!enable)
+            Destroy(toDelete);
+        else
+        {
+            toDelete.SetActive(true);
+        }    
     }
 }

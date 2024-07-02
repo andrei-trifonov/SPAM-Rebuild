@@ -1841,7 +1841,27 @@ PrefabInstance:
       value: MagicMissileGreen
       objectReference: {fileID: 0}
     - target: {fileID: 146404, guid: 41fc6e40715949e47aa61f8001df94fe, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146404, guid: 41fc6e40715949e47aa61f8001df94fe, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149728, guid: 41fc6e40715949e47aa61f8001df94fe, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 153202, guid: 41fc6e40715949e47aa61f8001df94fe, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 185248, guid: 41fc6e40715949e47aa61f8001df94fe, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 187594, guid: 41fc6e40715949e47aa61f8001df94fe, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 486800, guid: 41fc6e40715949e47aa61f8001df94fe, type: 3}
@@ -1964,9 +1984,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5775760633087018348}
     m_Modifications:
+    - target: {fileID: 114760, guid: 9422ab977ff79274080fe65db5ed82c9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 120994, guid: 9422ab977ff79274080fe65db5ed82c9, type: 3}
       propertyPath: m_Name
       value: SoftPortalGreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 120994, guid: 9422ab977ff79274080fe65db5ed82c9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129928, guid: 9422ab977ff79274080fe65db5ed82c9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 172132, guid: 9422ab977ff79274080fe65db5ed82c9, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432092, guid: 9422ab977ff79274080fe65db5ed82c9, type: 3}
       propertyPath: m_RootOrder

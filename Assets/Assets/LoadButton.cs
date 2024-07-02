@@ -23,7 +23,7 @@ public class LoadButton : MonoBehaviour
     IEnumerator LoadPreview(string line)
     {
 
-        ResourceRequest request = Resources.LoadAsync<GameObject>("Previews/"+ line);
+        ResourceRequest request = Resources.LoadAsync<Sprite>("Previews/"+ line);
 
         while (!request.isDone)
         {
@@ -32,7 +32,23 @@ public class LoadButton : MonoBehaviour
                    
         if (request.asset == null)
         {
-            Debug.LogError("Failed to load CG at path: Previews/" + line);
+            Debug.LogError("Failed to load priview at path: Previews/" + line);
+            request = Resources.LoadAsync<Sprite>("CG/"+ line);
+            
+            while (!request.isDone)
+            {
+                yield return null;
+            }
+                       
+            if (request.asset == null)
+            {
+                Debug.LogError("Failed to load preview at path: CG/" + line);
+            }
+            else
+            {
+                Sprite sprite = request.asset as Sprite;
+                Preview.sprite = sprite;
+            }
         }
         else
         {

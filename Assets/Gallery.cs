@@ -19,49 +19,22 @@ public class Gallery : MonoBehaviour
     [SerializeField] private GameObject galleryObject;
     void Start()
     {
-        StartCoroutine(AsyncResourceLoad());
-        
-    }
-
-    IEnumerator AsyncResourceLoad()
-    {
-       
-        ResourceRequest request = Resources.LoadAsync<GameObject>("CG/"+ labelName);
-                   
-        while (!request.isDone)
+        Sprite[] sprites = Resources.LoadAll<Sprite>("CG/");
+        int spriteCount = sprites.Length - 4;
+        for (int i = 0; i < sprites.Length; i++)
         {
-            yield return null;
-        }
-                   
-        if (request.asset == null)
-        {
-            Debug.LogError("Failed to load CG at path: CG/" + labelName);
-        }
-        else
-        {
-            Sprite sprite = request.asset as Sprite;
-
-                if (!cgName.Contains(labelName))
-                {
-                  
-                    cgName.Add(labelName);
-                  
-                }
-            
-
-            for (int i =0; i<  cgName.Count; i++)
+            cgName.Add("cg" + (i + 1));
+            if (PlayerPrefs.GetInt(cgName.Last()) == 0)
             {
-                if (PlayerPrefs.GetInt(cgName[i]) == 0)
-                {
-                    cgName[i] = lockedImage;
-                }
+                cgName[i] = lockedImage;
             }
         }
-        
-      
+
+
         UpdatePage(0);
+        
     }
-    
+
 
     public void NextPage()
     {
@@ -91,21 +64,14 @@ public class Gallery : MonoBehaviour
         {
             int spriteIndex = page * buttons.Count  + i;
             //Debug.Log(spriteIndex);
-            if (spriteIndex < cgName.Count)
-            {
-                
-                StartCoroutine(LoadCG(cgName[spriteIndex], buttons[i]));
-            }
-            else
-            {
-                buttons[i].image.sprite = placeholderImage;
-            }
+            buttons[i].image.sprite = placeholderImage; 
+            StartCoroutine(LoadCG(cgName[spriteIndex], buttons[i]));
         }
     }
     IEnumerator LoadCG(string name, Button button)
     {
         
-        ResourceRequest request = Resources.LoadAsync<GameObject>("CG/"+ name);
+        ResourceRequest request = Resources.LoadAsync<Sprite>("CG/"+ name);
                    
         while (!request.isDone)
         {

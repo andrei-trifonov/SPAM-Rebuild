@@ -106,8 +106,8 @@ public class InvestigationController : MonoBehaviour
         StartCoroutine(LoadInv(sceneName, Unlocks));
         _drugsCount = drugsCount;
         Debug.Log(_drugsCount);
-        textDrugs1.text = "SPAM-V: " + drugsCount.ToString();
-        textDrugs2.text = "SPAM-V: " + drugsCount.ToString();
+        textDrugs1.text = "SPAM: " + drugsCount.ToString();
+        textDrugs2.text = "SPAM: " + drugsCount.ToString();
         canInv.enabled = true;
         
     }
