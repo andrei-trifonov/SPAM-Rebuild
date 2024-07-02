@@ -1017,6 +1017,7 @@ public class NewGameCore : MonoBehaviour
         {
              VideoClip res = request.asset as VideoClip;
             ClearBG();
+            BG.gameObject.GetComponent<MeshRenderer>().enabled = true;
             CG.enabled = false;
             clipBG = res;
             BG.clip = clipBG;
@@ -1113,7 +1114,7 @@ public class NewGameCore : MonoBehaviour
     IEnumerator LoadSprite(Item line, bool isLoad)
     {
       
-       
+            
             CoroutinesWorking.Add(cid);
             Camera.SetBool("BlackOut", true);
             yield return new WaitForSeconds(0.5f);
@@ -1145,6 +1146,7 @@ public class NewGameCore : MonoBehaviour
                          
                     saveObj.lastCG = line.CGname;
                     saveObj.lastBG = GDB.BGName.None;
+                    BG.gameObject.GetComponent<MeshRenderer>().enabled = false;
                     CG.enabled = true;
                     CG.sprite = sprite;
                          Debug.Log("Sprite loaded successfully!");
@@ -1176,13 +1178,13 @@ public class NewGameCore : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
             Camera.SetBool("BlackOut", false);
-            if (line.effects != GDB.Effects.BlackOut && line.effects != GDB.Effects.HSlide)
+            if (line.effects != GDB.Effects.BlackOut && line.effects != GDB.Effects.HSlide && line.effects != GDB.Effects.VSlide)
             {
                 ApplyEffects(line.effects, true, line.time, line.V3position);
                 yield return new WaitForSeconds(1.5f);
                 ApplyEffects(line.effects, false, line.time, line.V3position);
             }
-            if (line.effects == GDB.Effects.HSlide)
+            if (line.effects == GDB.Effects.HSlide || line.effects == GDB.Effects.VSlide)
             {
            
                 ApplyEffects(line.effects, true, line.time, line.V3position);
