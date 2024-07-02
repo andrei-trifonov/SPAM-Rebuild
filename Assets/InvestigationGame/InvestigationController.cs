@@ -4,8 +4,6 @@ using UnityEngine;
 using TMPro;
 using System;
 using System.Linq;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 
 
@@ -118,17 +116,30 @@ public class InvestigationController : MonoBehaviour
     {
 
 
-        AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(line);
-        yield return handle;
-        if (handle.Status == AsyncOperationStatus.Succeeded)
+        
+        ResourceRequest request = Resources.LoadAsync<GameObject>("Investigations/"+line);
+                   
+        while (!request.isDone)
         {
-            GameObject res = handle.Result;
-            Scene = Instantiate(res, spawnPoint.position, spawnPoint.rotation);
-
+            yield return null;
         }
-        interactiveObjects = GameObject.FindGameObjectsWithTag("Interactive").ToList();
 
-        Addressables.Release(handle);
+        if (request.asset == null)
+        {
+            Debug.LogError("Failed to load evevnt at path:Investigations/"+line);
+        }
+        else
+        {
+            GameObject obj = request.asset as GameObject;
+            // Делаем что-то с загруженным спрайтом
+           
+       
+            Scene = Instantiate(obj, spawnPoint.position, spawnPoint.rotation);
+            Debug.Log("Inv loaded successfully!");
+        }
+        
+       
+        interactiveObjects = GameObject.FindGameObjectsWithTag("Interactive").ToList();
 
         InvestigationScenario scenario = Scene.GetComponent<InvestigationScenario>();
         Thoughts = scenario.Thoughts;

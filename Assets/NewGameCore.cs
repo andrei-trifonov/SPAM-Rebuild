@@ -7,8 +7,6 @@ using Unity.VisualScripting;
 using UnityEditor.Rendering;
 
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using Random = UnityEngine.Random;
@@ -175,6 +173,7 @@ public class NewGameCore : MonoBehaviour
     {
         sceneAudioPlayer.volume = value;
     }
+
     private void Start()
     {
        
@@ -571,21 +570,30 @@ public class NewGameCore : MonoBehaviour
 	IEnumerator EventCoroutine (Item line , int id){
 		CoroutinesWorking.Add(id);
       
-        AsyncOperationHandle<GameObject> handle =
-                Addressables.LoadAssetAsync<GameObject>(line.additionalPose.ToString());
-            yield return handle;
-            if (handle.Status == AsyncOperationStatus.Succeeded)
-            {
-                GameObject res = handle.Result;
-                GameObject.Instantiate(res, EventCanvas);
-                
-            }
-            else
-            {
-                Debug.LogError("Failed to load event: " + handle.DebugName);
-            }
-            
-            Addressables.Release(handle);
+      
+      ResourceRequest request = Resources.LoadAsync<GameObject>("Events/"+line.additionalPose.ToString());
+                   
+       while (!request.isDone)
+       {
+           yield return null;
+       }
+
+       if (request.asset == null)
+       {
+           Debug.LogError("Failed to load evevnt at path: Events/" + line.additionalPose.ToString());
+       }
+       else
+       {
+           GameObject obj = request.asset as GameObject;
+           // Делаем что-то с загруженным спрайтом
+           
+       
+           GameObject.Instantiate(obj, EventCanvas);
+           Debug.Log("Event loaded successfully!");
+       }
+      
+      
+       
            CoroutinesWorking.Remove(id);
        
             lineNum++;
@@ -710,28 +718,32 @@ public class NewGameCore : MonoBehaviour
         }
 
         RemoveActor(line.name.ToString());
-        AsyncOperationHandle<GameObject> handle =
-                Addressables.LoadAssetAsync<GameObject>(line.name.ToString() + line.pose.ToString());
-            yield return handle;
-            if (handle.Status == AsyncOperationStatus.Succeeded)
-            {
-                GameObject res = handle.Result;
-                ActorOnScene = GameObject.Instantiate(res);
 
 
-
-                Actor actor = new Actor(line.V3position, line.name, line.pose);
-                actor.obj = ActorOnScene;
-
-                actorsOnScene.Add(actor);
-
-            }
-            else
-            {
-                Debug.LogError("Failed to load actor: " + handle.DebugName);
-            }
+        ResourceRequest request = Resources.LoadAsync<GameObject>("Actors/"+line.name.ToString() + line.pose.ToString());
+                               
+        while (!request.isDone)
+        {
+             yield return null;
+        }
+                               
+        if (request.asset == null)
+        {                                       
+             Debug.LogError("Failed to load actor at path: Actors/" + line.name.ToString() + line.pose.ToString());
+        }
+        else
+        {
+             GameObject obj = request.asset as GameObject;
+             ActorOnScene = GameObject.Instantiate(obj);
+             Actor actor = new Actor(line.V3position, line.name, line.pose);
+             actor.obj = ActorOnScene;
+             actorsOnScene.Add(actor);
+             Debug.Log("Actor loaded successfully!");
+         }
+                  
             
-            Addressables.Release(handle);
+            
+            
             if (Emoji != null)
                 Destroy(Emoji);
 
@@ -841,24 +853,45 @@ public class NewGameCore : MonoBehaviour
     {
         CoroutinesWorking.Add(cid);
         loadingSound = true;
-        AsyncOperationHandle<AudioClip> handle = Addressables.LoadAssetAsync<AudioClip>(line.additionalPose);
-        yield return handle;
-        if (handle.Status == AsyncOperationStatus.Succeeded)
-        {
-            AudioClip res = handle.Result;
-            
-            soundPlayer.PlayOneShot(res);
+        
+        
+        
+        
+         ResourceRequest request = Resources.LoadAsync<AudioClip>("Sounds/"+line.additionalPose);
+                                       
+                                               while (!request.isDone)
+                                               {
+                                                   yield return null;
+                                               }
+                                       
+                                               if (request.asset == null)
+                                               {
+                                                   Debug.LogError("Failed to load sound at path: Sounds/" +line.additionalPose);
+                                               }
+                                               else
+                                               {
+                                               AudioClip res = request.asset as AudioClip;
+                                               soundPlayer.PlayOneShot(res);
+                                               
+                                                           
+                                               }
+        
+        
 
-            if (!isLoad)
-            {
-                lineNum++;
-                Step();
-            }
-        }
-
-        Addressables.Release(handle);
+        
+        if (!isLoad)
+                                                                   {
+                                                                       lineNum++;
+                                                                       Step();
+                                                                   }
+        
+        
+        
+        
+        
+        
         loadingSound = false;
-        CoroutinesWorking.Remove(cid);
+              CoroutinesWorking.Remove(cid);
     }
     void musicAction(Item line, bool isLoad)
     {
@@ -893,11 +926,25 @@ public class NewGameCore : MonoBehaviour
         if (fadeInMusic)
             fadeOutMusic = fadeInMusic;
         fadeInMusic = Instantiate(musicPlayer, transform).GetComponent<AudioSource>();
-        AsyncOperationHandle<AudioClip> handle = Addressables.LoadAssetAsync<AudioClip>(line.music.ToString());
-        yield return handle;
-        if (handle.Status == AsyncOperationStatus.Succeeded)
+
+
+
+
+ ResourceRequest request = Resources.LoadAsync<GameObject>("Music/"+line.music.ToString());
+                               
+        while (!request.isDone)
         {
-            AudioClip res = handle.Result;
+             yield return null;
+        }
+                               
+        if (request.asset == null)
+        {                                       
+             Debug.LogError("Failed to load music at path: Music/" + line.music.ToString());
+        }
+        else
+        {
+             AudioClip res = request.asset as AudioClip;
+         
             fadeInMusic.clip = res;
             fadeInMusic.Play();
             fadeInMusic.GetComponent<Fader>().maxVolumeMusic = maxVolumeMusic;
@@ -905,14 +952,19 @@ public class NewGameCore : MonoBehaviour
                 fadeOutMusic.GetComponent<Fader>().fadingOut = true;
             fadeInMusic.GetComponent<Fader>().fadingIn = true;
 
-            if (!isLoad)
+             Debug.Log("Music loaded successfully!");
+         }
+
+
+
+       if (!isLoad)
             {
                 lineNum++;
                 Step();
             }
-                 
-        }
-        Addressables.Release(handle);
+
+
+       
         
         //Design
         musicIcon.SetBool("Play", true);
@@ -948,13 +1000,25 @@ public class NewGameCore : MonoBehaviour
         saveObj.lastBG = line.BGname;
         saveObj.lastCG = "";
         loadingBG = true;
-        AsyncOperationHandle<VideoClip> handle = Addressables.LoadAssetAsync<VideoClip>(line.BGname.ToString());
-        yield return handle;
-        if (handle.Status == AsyncOperationStatus.Succeeded)
+
+
+ ResourceRequest request = Resources.LoadAsync<VideoClip>("3DBG/"+line.BGname.ToString());
+                               
+        while (!request.isDone)
         {
+             yield return null;
+        }
+                               
+        if (request.asset == null)
+        {                                       
+             Debug.LogError("Failed to load video at path: 3DBG/" + line.BGname.ToString());
+        }
+        else
+        {
+             VideoClip res = request.asset as VideoClip;
             ClearBG();
             CG.enabled = false;
-            clipBG = handle.Result;
+            clipBG = res;
             BG.clip = clipBG;
             BG.Play();
             if (!isLoad)
@@ -968,9 +1032,18 @@ public class NewGameCore : MonoBehaviour
                 yield return new WaitForSeconds(1.5f);
                 ApplyEffects(line.effects, false, line.time, line.V3position);
             }
-        }
+             Debug.Log("Video loaded successfully!");
+         }
 
-        Addressables.Release(handle);
+
+
+
+  
+
+
+
+
+
         loadingBG = false;
         CoroutinesWorking.Remove(cid);
         if (!isLoad)
@@ -1051,21 +1124,37 @@ public class NewGameCore : MonoBehaviour
                 //TODO ЭФфекты
                 loadingCG = true;
              
-                AsyncOperationHandle<Sprite> handle = Addressables.LoadAssetAsync<Sprite>(line.CGname);
-                yield return handle;
-                if (handle.Status == AsyncOperationStatus.Succeeded)
-                {
+             
+             
+             
+                     ResourceRequest request = Resources.LoadAsync<Sprite>("CG/"+line.CGname);
+             
+                     while (!request.isDone)
+                     {
+                         yield return null;
+                     }
+             
+                     if (request.asset == null)
+                     {
+                         Debug.LogError("Failed to load sprite at path: CG/" + line.CGname);
+                     }
+                     else
+                     {
+                         Sprite sprite = request.asset as Sprite;
+                         // Делаем что-то с загруженным спрайтом
+                         
                     saveObj.lastCG = line.CGname;
                     saveObj.lastBG = GDB.BGName.None;
                     CG.enabled = true;
-                    CG.sprite = handle.Result;
-                }
-                else
-                {
-                    Debug.LogError("Failed to load cg: " + handle.DebugName);
-                }
-
-                Addressables.Release(handle);
+                    CG.sprite = sprite;
+                         Debug.Log("Sprite loaded successfully!");
+                     }
+             
+             
+             
+             
+            
+          
                 if (!isLoad)
                     lineNum++;
                 loadingCG = false;

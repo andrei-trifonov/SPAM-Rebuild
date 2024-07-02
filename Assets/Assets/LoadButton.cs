@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 
 public class LoadButton : MonoBehaviour
@@ -25,16 +23,25 @@ public class LoadButton : MonoBehaviour
     IEnumerator LoadPreview(string line)
     {
 
-        Debug.Log(line);
-        AsyncOperationHandle<Sprite> handle = Addressables.LoadAssetAsync<Sprite>(line);
-        yield return handle;
-        if (handle.Status == AsyncOperationStatus.Succeeded)
+        ResourceRequest request = Resources.LoadAsync<GameObject>("Previews/"+ line);
+
+        while (!request.isDone)
         {
-            Sprite res = handle.Result;
-            Preview.sprite = res;
+            yield return null;
+        }
+                   
+        if (request.asset == null)
+        {
+            Debug.LogError("Failed to load CG at path: Previews/" + line);
+        }
+        else
+        {
+            Sprite sprite = request.asset as Sprite;
+            Preview.sprite = sprite;
         }
 
-        Addressables.Release(handle);
+      
+       
     }
 
 

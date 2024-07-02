@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.ResourceManagement.ResourceLocations;
 
 public class Gallery : MonoBehaviour
 {
     private  List<string> cgName = new List<string>();
-    private  List<string> cgUnlocked = new List<string>();
     [SerializeField] private string labelName; // Имя метки, которую вы хотите загрузить
     [SerializeField] private Sprite placeholderImage; // Картинка-заглушка
     [SerializeField] private string lockedImage;
@@ -30,19 +26,28 @@ public class Gallery : MonoBehaviour
     IEnumerator AsyncResourceLoad()
     {
        
-        var handle =  Addressables.LoadResourceLocationsAsync(labelName);
-        yield return handle;
-        if (handle.Status == AsyncOperationStatus.Succeeded)
+        ResourceRequest request = Resources.LoadAsync<GameObject>("CG/"+ labelName);
+                   
+        while (!request.isDone)
         {
-            foreach (var item in handle.Result)
-            {
-                if (!cgName.Contains(item.PrimaryKey))
+            yield return null;
+        }
+                   
+        if (request.asset == null)
+        {
+            Debug.LogError("Failed to load CG at path: CG/" + labelName);
+        }
+        else
+        {
+            Sprite sprite = request.asset as Sprite;
+
+                if (!cgName.Contains(labelName))
                 {
                   
-                        cgName.Add(item.PrimaryKey);
+                    cgName.Add(labelName);
                   
                 }
-            }
+            
 
             for (int i =0; i<  cgName.Count; i++)
             {
@@ -52,6 +57,8 @@ public class Gallery : MonoBehaviour
                 }
             }
         }
+        
+      
         UpdatePage(0);
     }
     
@@ -97,14 +104,24 @@ public class Gallery : MonoBehaviour
     }
     IEnumerator LoadCG(string name, Button button)
     {
-       // Debug.Log(name + " "  + button.name);
-        AsyncOperationHandle<Sprite> handle = Addressables.LoadAssetAsync<Sprite>(name);
-        yield return handle;
-        if (handle.Status == AsyncOperationStatus.Succeeded)
+        
+        ResourceRequest request = Resources.LoadAsync<GameObject>("CG/"+ name);
+                   
+        while (!request.isDone)
         {
-            button.image.sprite = handle.Result;
+            yield return null;
         }
-        Addressables.Release(handle);
+                   
+        if (request.asset == null)
+        {
+            Debug.LogError("Failed to load CG at path: CG/" + name);
+        }
+        else
+        {
+            Sprite sprite = request.asset as Sprite;
+            button.image.sprite = sprite;
+        }
+
       
 
 
