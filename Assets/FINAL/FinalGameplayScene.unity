@@ -9856,6 +9856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 587754478}
   - component: {fileID: 587754479}
+  - component: {fileID: 587754480}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -9908,11 +9909,23 @@ VideoPlayer:
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
-  m_Looping: 1
+  m_SkipOnDrop: 0
+  m_Looping: 0
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &587754480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587754477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015dcfb2329d5174a990f165fa78fd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &595058951
 GameObject:
   m_ObjectHideFlags: 0
@@ -12459,6 +12472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 893968153}
   - component: {fileID: 893968154}
+  - component: {fileID: 893968155}
   m_Layer: 5
   m_Name: 'Video Player '
   m_TagString: Untagged
@@ -12516,11 +12530,23 @@ VideoPlayer:
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
-  m_Looping: 1
+  m_SkipOnDrop: 0
+  m_Looping: 0
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &893968155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893968152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015dcfb2329d5174a990f165fa78fd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &899062170
 GameObject:
   m_ObjectHideFlags: 0
@@ -66842,6 +66868,7 @@ GameObject:
   - component: {fileID: 2109385667}
   - component: {fileID: 2109385666}
   - component: {fileID: 2109385665}
+  - component: {fileID: 2109385671}
   - component: {fileID: 2109385670}
   m_Layer: 0
   m_Name: BG
@@ -66878,9 +66905,9 @@ VideoPlayer:
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
-  m_Looping: 1
-  m_WaitForFirstFrame: 1
+  m_SkipOnDrop: 0
+  m_Looping: 0
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!64 &2109385666
@@ -67058,6 +67085,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2109385671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109385664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015dcfb2329d5174a990f165fa78fd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2119683774
 GameObject:
   m_ObjectHideFlags: 0
