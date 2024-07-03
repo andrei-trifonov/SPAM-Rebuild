@@ -68426,13 +68426,29 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5710843138297468254, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -28.727814
+      objectReference: {fileID: 0}
     - target: {fileID: 5710843138764364547, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
       propertyPath: m_Name
       value: ThoughtsCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 5710843138764364549, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
       propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710843138764364550, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 8063751363614114725}
+    - target: {fileID: 5710843138764364550, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
+      propertyPath: m_RenderMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710843138764364550, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5710843138764364551, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
       propertyPath: m_Pivot.x
