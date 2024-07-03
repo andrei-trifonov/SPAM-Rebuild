@@ -43,6 +43,7 @@ public class Gallery : MonoBehaviour
         {
             currentPage = 0;
         }
+        Debug.Log("Page: " + currentPage);
         UpdatePage(currentPage);
     }
 
@@ -53,19 +54,25 @@ public class Gallery : MonoBehaviour
         {
             currentPage = Mathf.CeilToInt((float)cgName.Count / buttons.Count ) - 1;
         }
+        Debug.Log("Page: " + currentPage);
         UpdatePage(currentPage);
     }
 
     private void UpdatePage(int page)
     {
-        
-        
-        for (int i = 0; i < buttons.Count; i++)
+
+        try
         {
-            int spriteIndex = page * buttons.Count  + i;
-            //Debug.Log(spriteIndex);
-            buttons[i].image.sprite = placeholderImage; 
-            StartCoroutine(LoadCG(cgName[spriteIndex], buttons[i]));
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                int spriteIndex = page * buttons.Count + i;
+                //Debug.Log(spriteIndex);
+                buttons[i].image.sprite = placeholderImage;
+                StartCoroutine(LoadCG(cgName[spriteIndex], buttons[i]));
+            }
+        }
+        catch
+        {
         }
     }
     IEnumerator LoadCG(string name, Button button)
