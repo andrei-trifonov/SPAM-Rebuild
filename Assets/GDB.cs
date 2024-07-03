@@ -41,7 +41,9 @@ public static class GDB
         Толя,
         Мама,
         Наташа,
-        Женя
+        Женя,
+        Левая,
+        Правая
 
     }
     public enum Emoji
