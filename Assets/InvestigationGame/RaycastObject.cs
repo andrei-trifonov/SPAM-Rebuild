@@ -1,4 +1,5 @@
 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,14 +21,23 @@ public class RaycastObject : MonoBehaviour
 
     public GameObject Settings;
     public Canvas Preloader;
+
+    IEnumerator LoadSceneCoroutine()
+    {
+        Preloader.enabled = true;
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync("FinalGameplayScene");
+    }
+
     public virtual void Activate()
     {
         switch (b_enum)
         {
             case buttons.Ep1:
             {
-                Preloader.enabled = true;
-                SceneManager.LoadSceneAsync("FinalGameplayScene");
+                
+                StartCoroutine(LoadSceneCoroutine());
+                
                 
             }
                 break;

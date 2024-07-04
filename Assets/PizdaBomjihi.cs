@@ -20,19 +20,25 @@ public class PizdaBomjihi : MonoBehaviour
 
     void Update()
     {
+    if (videoPlayer.clip!= null){ 
+        videoDuration = (float)videoPlayer.clip.length;
         // Обновляем таймер
         float currentTime = (float)videoPlayer.time;
        
-        Debug.Log("Time " +videoPlayer.time );
-        Debug.Log("Duration " + videoDuration );
+        //Debug.Log("Time " +videoPlayer.time );
+        //Debug.Log("Duration " + videoDuration );
         // Проверяем, закончилось ли видео
-        videoDuration = (float)videoPlayer.clip.length;
-        if (videoPlayer.time >= videoDuration-0.5f && Block == false)
+       
+        if (videoPlayer.time >= videoDuration-0.2f && Block == false)
         {
             Block = true;
-            // Отключаем компонент Video Player
-            StartCoroutine(BomzhCoroutine());
+            videoPlayer.enabled = false;
+           
+            videoPlayer.enabled = true;
+            
+            Block = false;
 
+        }
         }
     }
 
