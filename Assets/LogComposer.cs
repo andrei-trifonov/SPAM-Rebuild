@@ -18,8 +18,10 @@ public class LogComposer : MonoBehaviour
         logName.Add(name);
         logLine.Add(line);
         
-        if (logLine.Count >= maxLogSize)
+        if (logLine.Count >= maxLogSize){
             logLine.Remove(logLine[0]);
+            logName.Remove(logName[0]);
+        }
     }
     
     void Flush()

@@ -383,9 +383,9 @@ public class InvestigationController : MonoBehaviour
         
         resultPanel.SetActive(false);
         
-        //TODO start
-        PlayerPrefs.SetInt(chosenResult.Var.ToString(), chosenResult.Value);
-        //TODO finish
+        
+        Core.UpdateVar(chosenResult.Var, chosenResult.Value);
+        
         
         Core.jumpAction(chosenResult.jumpLabel);
        

@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 
 public class ClueObject : MonoBehaviour
@@ -14,6 +15,8 @@ public class ClueObject : MonoBehaviour
     [SerializeField] private GameObject Effect;
     private bool startMove;
     private Material mat;
+
+    [SerializeField] AudioClip clueSound;
     
     private void Start()
     {
@@ -34,7 +37,15 @@ public class ClueObject : MonoBehaviour
     {
         if (!startMove && !IC.inAction)
         {
-            
+            try
+            {
+
+                GetComponent<AudioSource>().PlayOneShot(clueSound);
+            }
+            catch
+            {
+            }
+
             startPos = transform.position;
             startTime = Time.time;
             IC.AddThought(Thought);

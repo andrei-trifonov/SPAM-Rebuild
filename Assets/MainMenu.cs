@@ -11,4 +11,9 @@ public class MainMenu : MonoBehaviour
     a.SetBool("CU", true);
     }
     }
+
+    public void ResetProgress()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

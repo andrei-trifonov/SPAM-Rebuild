@@ -281,7 +281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -198.47913, y: -92.04471}
+  m_AnchoredPosition: {x: -198.47913, y: -92.04468}
   m_SizeDelta: {x: 375.0259, y: 163.0896}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22968453
@@ -811,9 +811,45 @@ PrefabInstance:
       propertyPath: m_ScreenMatchMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1571067692121162503, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571067692121162503, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571067692121162503, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571067692121162503, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571067692121162503, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571067692121162503, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571067692121162503, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.19995117
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571067692121162503, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0022583008
+      objectReference: {fileID: 0}
     - target: {fileID: 3508780942461400130, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
       propertyPath: m_Name
       value: Preloader
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508780942461400130, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4734146358265895268, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
       propertyPath: m_Pivot.x
@@ -898,6 +934,30 @@ PrefabInstance:
     - target: {fileID: 4734146358265895268, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453554389381141369, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453554389381141369, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453554389381141369, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453554389381141369, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453554389381141369, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -216
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453554389381141369, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 215
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6635602803016969968, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
@@ -996,6 +1056,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: f9f4ce9ee579a58499df68d9f320ea2d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1264,6 +1336,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: c683431b0b99a1e41866b2e8598e05b0, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6482,8 +6566,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250.15, y: -0.71301}
-  m_SizeDelta: {x: 337.3, y: 125.01}
+  m_AnchoredPosition: {x: -717.4, y: -0.71301}
+  m_SizeDelta: {x: 1271.8, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279353989
 MonoBehaviour:
@@ -8198,8 +8282,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176.99992, y: -40.1}
-  m_SizeDelta: {x: 548.834, y: 50}
+  m_AnchoredPosition: {x: -347.1, y: -40.1}
+  m_SizeDelta: {x: 1596.9, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &417963060
 MonoBehaviour:
@@ -8284,7 +8368,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 9.6258545, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9072,6 +9156,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: c683431b0b99a1e41866b2e8598e05b0, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &517496295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9309,6 +9405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fcbe6e99e83bc4583890abd2f52c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 519420031}
 --- !u!65 &519420042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11018,6 +11115,7 @@ GameObject:
   - component: {fileID: 757530813}
   - component: {fileID: 757530812}
   - component: {fileID: 757530816}
+  - component: {fileID: 757530817}
   m_Layer: 5
   m_Name: TextCanvas
   m_TagString: Untagged
@@ -11134,6 +11232,102 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &757530817
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757530811}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.771
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &783037150
 GameObject:
   m_ObjectHideFlags: 0
@@ -11438,6 +11632,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Quick
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: c683431b0b99a1e41866b2e8598e05b0, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &795409235
@@ -12190,6 +12396,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 6b6aa093f01616646a60af149c2d42c9, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -14370,6 +14588,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: f9f4ce9ee579a58499df68d9f320ea2d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1129141156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14772,7 +15002,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackList:
+  - Name: "\u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043D"
+    Author: "\u0411\u0435\u0437 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u044F"
+  - Name: 2010
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u0411\u043E\u0434\u0445\u0438"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u0411\u043E\u043B\u0435\u0437\u043D\u044C XXI \u0432\u0435\u043A\u0430"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u0414\u0438\u0441\u043A\u043E \u043E\u043A\u0440\u0430\u0438\u043D"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u0414\u043E\u043B\u0433\u0430\u044F \u0434\u043E\u0440\u043E\u0433\u0430
+      \u0434\u043E\u043C\u043E\u0439"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u041A\u043E\u0433\u0434\u0430 \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0441\u044F
+      \u0443\u0442\u0440\u043E"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
   - Name: "\u041A\u0440\u0438\u043F\u0442\u043E\u043D"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u041A\u0440\u0438\u043F\u0442\u043E\u043D ver. 2"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u041E\u0434\u0438\u043D\u043E\u043A"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u041E\u0442\u0440\u0430\u0436\u0435\u043D\u0438\u0435"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u041E\u0442\u0441\u044E\u0434\u0430"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u041F\u0430\u0440\u0430\u043D\u043E\u0439\u044F"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u041F\u0435\u0447\u0430\u043B\u044C \u0431\u0443\u0434\u0435\u0442 \u0434\u043B\u0438\u0442\u044C\u0441\u044F
+      \u0432\u0435\u0447\u043D\u043E"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u0420\u0430\u0441\u043F\u0430\u0434\u0430\u044F\u0441\u044C"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u0420\u043E\u0436\u0434\u0435\u043D\u0438\u0435 \u0441\u0432\u0435\u0440\u0445\u043D\u043E\u0432\u043E\u0439"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u0410\u0431\u0441\u0442\u0438\u043D\u0435\u043D\u0442\u043D\u044B\u0439
+      \u0441\u0438\u043D\u0434\u0440\u043E\u043C"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u0422\u0432\u043E\u0435 \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u0435!"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u0423\u043C\u0438\u0440\u0430\u0442\u044C \u043E\u0442 \u0442\u043E\u0433\u043E,
+      \u0447\u0442\u043E \u0442\u044B \u043D\u0435 \u0443\u043C\u0438\u0440\u0430\u0435\u0448\u044C"
+    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: "\u0417\u0430\u0432\u0442\u0440\u0430 \u0431\u0443\u0434\u0435\u0448\u044C
+      \u0443\u0431\u0438\u0432\u0430\u0442\u044C \u043C\u0435\u043D\u044F"
     Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
 --- !u!1 &1143977905
 GameObject:
@@ -24369,6 +24645,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: f9f4ce9ee579a58499df68d9f320ea2d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1637718570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25726,6 +26014,18 @@ MonoBehaviour:
           m_StringArgument: Quick
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: c683431b0b99a1e41866b2e8598e05b0, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1751380420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26068,6 +26368,30 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: f9f4ce9ee579a58499df68d9f320ea2d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameMenuController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27324,7 +27648,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -164.1875, y: -145.78125}
+  m_AnchoredPosition: {x: -164.1875, y: -221}
   m_SizeDelta: {x: 163, y: 126.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1916668645
@@ -27604,6 +27928,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: f9f4ce9ee579a58499df68d9f320ea2d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -28192,6 +28528,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: c683431b0b99a1e41866b2e8598e05b0, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -29255,7 +29603,7 @@ GameObject:
   - component: {fileID: 2106391946}
   - component: {fileID: 2106391948}
   m_Layer: 7
-  m_Name: ' ScenarioComposer '
+  m_Name: 'ScenarioComposer '
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -29303,6 +29651,52 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: ErrorEvent
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 3
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: noise,_broken_radio_
       music: 0
       time: 0
       value: 0
@@ -29862,6 +30256,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 4
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 3
       name: 0
       line: 
@@ -29874,6 +30291,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: my_heart_is_beating_
       music: 0
       time: 0
       value: 0
@@ -31269,6 +31709,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 11
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 14
       name: 2
       line: 
@@ -31745,6 +32208,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 12
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041C\u0435\u043D\u044F \u0441\u0442\u043E\u0448\u043D\u0438\u043B\u043E
@@ -32158,6 +32644,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 5
       time: 0
       value: 0
       signs: 0
@@ -32879,6 +33388,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 15
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041D\u0435\u0441\u043C\u043E\u0442\u0440\u044F \u043D\u0430 \u043E\u0433\u0440\u043E\u043C\u043D\u0443\u044E
@@ -32918,6 +33450,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: girl_fall_with_a_hea
       music: 0
       time: 0
       value: 0
@@ -33220,6 +33775,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: old_lamp-based_analo
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041D\u0443\u0436\u043D\u043E \u043F\u0440\u043E\u0441\u0442\u043E
@@ -33238,6 +33816,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: old_modem_sounds_90x
       music: 0
       time: 0
       value: 0
@@ -33776,6 +34377,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 18
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041B\u0430\u0434\u043D\u043E, \u043A \u0447\u0435\u0440\u0442\u0443,
@@ -34114,6 +34738,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: cat_jumps_throught_t
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 3
       name: 0
       line: 
@@ -34211,6 +34858,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: -0.7, z: -3}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 17
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0427\u0442\u043E? \u0411\u0443\u0434\u0438\u043B\u044C\u043D\u0438\u043A?
@@ -34665,6 +35335,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 0a488e72a56b1a8
       music: 0
       time: 0
       value: 0
@@ -36316,6 +37009,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 20
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 4
       name: 6
       line: 
@@ -37081,6 +37797,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 2
       time: 0
       value: 0
       signs: 0
@@ -38398,6 +39137,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 13
       time: 0
       value: 0
       signs: 0
@@ -40699,6 +41461,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 19
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 4
       name: 2
       line: 
@@ -41003,7 +41788,7 @@ MonoBehaviour:
       inv: 0
       BGname: 0
       effects: 0
-      CGname: Placeholder
+      CGname: cg14
       show: 1
       pose: 0
       spriteEffect: 0
@@ -41446,6 +42231,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 12
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 3
       name: 0
       line: 
@@ -41601,7 +42409,7 @@ MonoBehaviour:
       show: 0
       pose: 0
       spriteEffect: 0
-      additionalPose: transF
+      additionalPose: TransF
       music: 0
       time: 0
       value: 0
@@ -41628,6 +42436,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 12
       time: 0
       value: 0
       signs: 0
@@ -41768,7 +42599,7 @@ MonoBehaviour:
       inv: 0
       BGname: 0
       effects: 0
-      CGname: Placeholder
+      CGname: cg15
       show: 1
       pose: 0
       spriteEffect: 0
@@ -42301,6 +43132,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 1
       time: 0
       value: 0
       signs: 0
@@ -42860,29 +43714,6 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 3
-      name: 0
-      line: 
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: Placeholder
-      show: 1
       pose: 0
       spriteEffect: 0
       additionalPose: 
@@ -44769,6 +45600,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 12
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F, \u044D\u0442\u043E \u0435\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439
@@ -45426,6 +46280,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 11
       time: 0
       value: 0
       signs: 0
@@ -49264,6 +50141,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 10
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u042F \u043E\u0441\u0442\u043E\u0440\u043E\u0436\u043D\u043E \u043F\u0440\u0438\u0441\u0435\u043B\u0430
@@ -50128,6 +51028,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 13
       time: 0
       value: 0
       signs: 0
@@ -52648,6 +53571,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 14
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "-\u0425\u043E\u0447\u0435\u0448\u044C, \u043F\u043E\u043A\u0430\u0436\u0443
@@ -53591,6 +54537,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 3
       time: 0
       value: 0
       signs: 0
@@ -54752,6 +55721,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 3
       time: 0
       value: 0
       signs: 0
@@ -57024,6 +58016,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 2
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 5
       line: "\u0418 \u0432\u0441\u0451-\u0442\u0430\u043A\u0438, \u043C\u043D\u0435
@@ -58473,6 +59488,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 2
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 4
       name: 2
       line: 
@@ -58616,7 +59654,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "-\u041D\u0435 \u0441\u043E\u0432\u0441\u0435\u043C\u2026 \u041F\u0440\u043E\u0441\u0442\u043E
+      line: "-\u041D\u0435 \u0441\u043E\u0432\u0441\u0435\u043C... \u041F\u0440\u043E\u0441\u0442\u043E
         \u0434\u0443\u043C\u0430\u043B\u0430, \u0447\u0442\u043E \u0442\u044B \u043F\u0440\u0438\u0433\u043B\u0430\u0441\u0438\u0448\u044C
         \u043F\u043E\u0433\u0443\u043B\u044F\u0442\u044C \u0438\u043B\u0438\u2026
         \u041D\u0435\u0432\u0430\u0436\u043D\u043E \u0432 \u043E\u0431\u0449\u0435\u043C.\r\n"
@@ -58953,7 +59991,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 15
-      name: 8
+      name: 2
       line: "\u042F \u0434\u043E\u043C\u0430.\r\n"
       font: 0
       inv: 0
@@ -59000,7 +60038,7 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
-    - type: 0
+    - type: 15
       name: 2
       line: "-\u041F\u0440\u044F\u043C\u043E\u2026 \u041D\u0430 \u0433\u043E\u043B\u043E\u0432\u0443?
         \u041D\u043E \u043E\u043D \u0437\u0430\u043A\u0440\u043E\u0435\u0442 \u043C\u043E\u0438
@@ -59025,7 +60063,7 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
-    - type: 0
+    - type: 15
       name: 5
       line: "-\u0422\u0443\u0434\u0430, \u043A\u0443\u0434\u0430 \u043C\u044B \u0438\u0434\u0435\u043C,
         \u0433\u043B\u0430\u0437\u0430 \u043D\u0435 \u043D\u0443\u0436\u043D\u044B.\r\n"
@@ -59285,6 +60323,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 10
       time: 0
       value: 0
       signs: 0
@@ -59793,6 +60854,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 12
       time: 0
       value: 0
       signs: 0
@@ -60442,6 +61526,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 18
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 4
       name: 5
       line: 
@@ -60978,6 +62085,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 2, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 15
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041E\u0442\u043E\u0432\u0441\u044E\u0434\u0443 \u0440\u0430\u0437\u0434\u0430\u043B\u0438\u0441\u044C
@@ -62095,6 +63225,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: guy_bumps_into_girl_
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 12
       name: 0
       line: 
@@ -62967,6 +64120,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: Cave_crush
       music: 0
       time: 0
       value: 0
@@ -64018,6 +65194,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 9
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 4
       name: 2
       line: 
@@ -64336,6 +65535,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: door_kicks_loud_long (1)
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0410?"
@@ -64437,6 +65659,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: door_kicks_loud_long
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0421\u043D\u043E\u0432\u0430 \u0437\u0432\u0443\u043A \u0443\u0434\u0430\u0440\u043E\u0432
@@ -64451,7 +65696,7 @@ MonoBehaviour:
         \u043F\u0440\u044F\u043C\u043E \u043D\u0430 \u043C\u0435\u043D\u044F.  \u041D\u0435\u0443\u0436\u0435\u043B\u0438
         \u043E\u043D \u043F\u0440\u0438\u0448\u0435\u043B \u0438\u0437-\u0437\u0430
         \u0442\u043E\u0433\u043E \u0442\u0440\u0443\u043F\u0430 \u0432 \u0442\u0443\u0430\u043B\u0435\u0442\u0435?
-        \u0422\u043E\u043B\u044C\u043A\u043E \u043D\u0435 \u044D\u0442\u043E\u2026\r\n"
+        \u0422\u043E\u043B\u044C\u043A\u043E \u043D\u0435 \u044D\u0442\u043E...\n"
       font: 0
       inv: 0
       BGname: 0
@@ -64505,7 +65750,7 @@ MonoBehaviour:
       name: 2
       line: "\u042F \u0440\u0435\u0448\u0438\u043B\u0430 \u043E\u0442\u043A\u0440\u044B\u0442\u044C.
         \u041D\u0430\u0432\u0435\u0440\u043D\u043E\u0435, \u044F \u043E\u0431 \u044D\u0442\u043E\u043C
-        \u0435\u0449\u0435 \u043F\u043E\u0436\u0430\u043B\u0435\u044E...\r\n\u041A\u043E\u043B\u0435\u0431\u0430\u044F\u0441\u044C,
+        \u0435\u0449\u0435 \u043F\u043E\u0436\u0430\u043B\u0435\u044E...\n\u041A\u043E\u043B\u0435\u0431\u0430\u044F\u0441\u044C,
         \u044F \u0441\u0434\u0432\u0438\u043D\u0443\u043B\u0430 \u0449\u0435\u043A\u043E\u043B\u0434\u0443
         \u0432\u0441\u0442\u043E\u0440\u043E\u043D\u0443. \u041D\u0435 \u0434\u043E\u0436\u0438\u0434\u0430\u044F\u0441\u044C
         \u043F\u0440\u0438\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u044F, \u0422\u043E\u043B\u0438\u043A
@@ -64975,31 +66220,6 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 2
-      line: "-\u0414\u0430, \u043C\u044B \u043F\u0440\u043E\u0441\u0442\u043E \u0434\u0430\u0432\u043D\u043E
-        \u043D\u0435 \u0432\u0438\u0434\u0435\u043B\u0438\u0441\u044C, \u0438 \u044F
-        \u0441\u043E\u0441\u043A\u0443\u0447\u0438\u043B\u0430\u0441\u044C.\r\n"
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 0
       name: 7
       line: "-\u0425\u043E\u0440\u043E\u0448\u043E... \u0415\u0439 \u043F\u043E\u043B\u0435\u0437\u043D\u043E
         \u0438\u043D\u043E\u0433\u0434\u0430 \u0433\u0443\u043B\u044F\u0442\u044C.
@@ -65123,7 +66343,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "-\u0411\u0440\u0440\u0440.... \u041A\u0430\u0442\u0438\u0441\u044C \u0442\u044B
+      line: "-\u0411\u0440\u0440\u0440... \u041A\u0430\u0442\u0438\u0441\u044C \u0442\u044B
         \u043E\u0442\u0441\u044E\u0434\u0430 \u043D\u0430\u0445\u0443\u0439..."
       font: 0
       inv: 0
@@ -65147,11 +66367,10 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "\u041E\u0442 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u044F
-        \u0443 \u043C\u0435\u043D\u044F \u0437\u0430\u0431\u043E\u043B\u0435\u043B\u0438
-        \u0438 \u043E\u0441\u043B\u0430\u0431\u043B\u0438 \u043D\u043E\u0433\u0438.
-        \u0414\u0440\u043E\u0436\u0430\u0449\u0438\u043C\u0438 \u043F\u0430\u043B\u044C\u0446\u0430\u043C\u0438
-        \u044F \u0437\u0430\u043C\u043A\u043D\u0443\u043B\u0430 \u0434\u0432\u0435\u0440\u044C.\r\n"
+      line: "-\u0422\u0430\u043C... \u0422\u0440\u0443\u043F \u043D\u0430\u0448\u043B\u0438.
+        \u0412 \"\u041B\u0438\u0441\u044C\u0435\u0439 \u041F\u0435\u0442\u043B\u0435\".
+        \u041C\u043E\u0436\u0435\u0442... \u0422\u044B \u0447\u0442\u043E-\u0442\u043E
+        \u043E\u0431 \u044D\u0442\u043E\u043C \u0437\u043D\u0430\u0435\u0448\u044C?\r\n"
       font: 0
       inv: 0
       BGname: 0
@@ -65181,8 +66400,7 @@ MonoBehaviour:
         \u0436\u043E\u043F\u0435. \u041C\u043E\u0436\u0435\u0442, \u043C\u043D\u0435
         \u043A\u0443\u0434\u0430-\u043D\u0438\u0431\u0443\u0434\u044C \u0441\u0431\u0435\u0436\u0430\u0442\u044C,
         \u043C\u043E\u0436\u0435\u0442... \n\u042F \u043D\u0435 \u0437\u043D\u0430\u044E,
-        \u0447\u0442\u043E \u043C\u043D\u0435 \u0434\u0435\u043B\u0430\u0442\u044C!
-        \n"
+        \u0447\u0442\u043E \u043C\u043D\u0435 \u0434\u0435\u043B\u0430\u0442\u044C! "
       font: 0
       inv: 0
       BGname: 0
@@ -65270,6 +66488,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 20
       time: 0
       value: 0
       signs: 0
@@ -65385,6 +66626,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: door_kicks_loud_long (2)
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: door_kicks_loud_long (2)
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0410 \u0442\u0435\u043F\u0435\u0440\u044C \u043A \u0441\u043A\u0440\u0435\u0436\u0435\u0442\u0443
@@ -65450,6 +66714,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: door_kicks_loud_long
       music: 0
       time: 0
       value: 0
@@ -65545,6 +66832,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: door_kicks_swat_soun
       music: 0
       time: 0
       value: 0
@@ -65904,6 +67214,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 5
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 2
       name: 0
       line: 
@@ -66042,6 +67375,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: syrenbird_song
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 12
       name: 0
       line: 
@@ -66154,6 +67510,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: guy_bumps_into_girl_
       music: 0
       time: 0
       value: 0
@@ -66572,29 +67951,6 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 4
-      name: 3
-      line: 
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 2
-      spriteEffect: 2
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 1, y: 0, z: 0}
-    - type: 4
       name: 2
       line: 
       font: 0
@@ -66606,6 +67962,29 @@ MonoBehaviour:
       pose: 2
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: girl_fall_with_a_hea
       music: 0
       time: 0
       value: 0
@@ -66859,6 +68238,29 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 4
+      name: 13
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 2
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: -2, y: 0, z: 0}
+    - type: 4
       name: 2
       line: 
       font: 0
@@ -66881,6 +68283,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 2, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 5
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 0
       line: "-\u041D\u0430\u043C \u0431\u044B,  \u0447\u0442\u043E\u0431\u044B \u043A\u0442\u043E-\u043D\u0438\u0431\u0443\u0434\u044C
@@ -67692,6 +69117,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 0
+      line: "/\u041A\u043E\u043D\u0435\u0446 \u0434\u0435\u043C\u043E\u0432\u0435\u0440\u0441\u0438\u0438/"
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
 --- !u!114 &2106391948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68416,6 +69864,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 757530817}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 6b6aa093f01616646a60af149c2d42c9, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2146254820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68569,6 +70029,10 @@ PrefabInstance:
       propertyPath: m_Core
       value: 
       objectReference: {fileID: 1141920125}
+    - target: {fileID: 6224467813022042983, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
+      propertyPath: m_MaxValue
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
 --- !u!4 &2008554973028455979
@@ -69183,18 +70647,22 @@ PrefabInstance:
     - target: {fileID: 9073167089436062513, guid: b2533f454849682429a82fe597784f81, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8063751363323390304}
     - target: {fileID: 9073167089436062513, guid: b2533f454849682429a82fe597784f81, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9073167089436062513, guid: b2533f454849682429a82fe597784f81, type: 3}
       propertyPath: m_RenderMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9073167089436062513, guid: b2533f454849682429a82fe597784f81, type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073167089436062513, guid: b2533f454849682429a82fe597784f81, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 9073167089436062514, guid: b2533f454849682429a82fe597784f81, type: 3}
       propertyPath: m_UiScaleMode
@@ -69202,7 +70670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9073167089436062514, guid: b2533f454849682429a82fe597784f81, type: 3}
       propertyPath: m_ScreenMatchMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9073167089436062514, guid: b2533f454849682429a82fe597784f81, type: 3}
       propertyPath: m_ReferenceResolution.x
@@ -69342,6 +70810,10 @@ PrefabInstance:
       objectReference: {fileID: 8063751363614114725}
     - target: {fileID: 5710843138764364550, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
       propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710843138764364550, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5710843138764364550, guid: e08dbe74e125bcc458e294ac041ef43b, type: 3}
@@ -69547,6 +71019,7 @@ GameObject:
   - component: {fileID: 8063751363323390311}
   - component: {fileID: 8063751363323390312}
   - component: {fileID: 8063751363323390313}
+  - component: {fileID: 8063751363323390314}
   m_Layer: 0
   m_Name: investigationCamera
   m_TagString: InvCam
@@ -69603,6 +71076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fcbe6e99e83bc4583890abd2f52c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 8063751363323390304}
 --- !u!65 &8063751363323390313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69616,6 +71090,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!81 &8063751363323390314
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8063751363323390309}
+  m_Enabled: 1
 --- !u!4 &8063751363614114722
 Transform:
   m_ObjectHideFlags: 0
@@ -69689,6 +71171,7 @@ GameObject:
   - component: {fileID: 8063751363614114725}
   - component: {fileID: 8063751363614114727}
   - component: {fileID: 8063751363614114728}
+  - component: {fileID: 8063751363614114729}
   m_Layer: 0
   m_Name: ThoughtCamera
   m_TagString: ThoCam
@@ -69741,6 +71224,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fcbe6e99e83bc4583890abd2f52c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 8063751363614114725}
+--- !u!81 &8063751363614114729
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8063751363614114726}
+  m_Enabled: 1
 --- !u!4 &8063751364268345366
 Transform:
   m_ObjectHideFlags: 0
