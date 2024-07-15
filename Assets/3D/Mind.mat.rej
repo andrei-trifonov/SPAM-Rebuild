@@ -1,0 +1,10 @@
+diff a/Assets/3D/Mind.mat b/Assets/3D/Mind.mat	(rejected hunks)
+@@ -85,7 +85,7 @@ Material:
+         m_Scale: {x: 1, y: 1}
+         m_Offset: {x: 0, y: 0}
+     - _MainTex:
+-        m_Texture: {fileID: 2800000, guid: c885b3e241a9b854e9bdc55cf7559087, type: 3}
++        m_Texture: {fileID: 8400000, guid: 6bb7bef09da71344cbc392c6bf91ab95, type: 2}
+         m_Scale: {x: 1, y: 1}
+         m_Offset: {x: 0, y: 0}
+     - _MainTexture:
