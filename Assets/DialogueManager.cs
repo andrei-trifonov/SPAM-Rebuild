@@ -20,12 +20,13 @@ using System.Collections.Generic;
    [ExecuteInEditMode]
    public class DialogueManager : MonoBehaviour
    {
-        private string filePath = "C:\\SPAM_Restored\\Assets\\dialogue.json";
+        private string filePath = "C:\\SPAM_Restored\\Assets\\dialogue";
    
        public Dialogue dialogue; // This should be assigned in Unity Inspector
       
        public void SaveDialogueToFile()
        {
+           Debug.Log("Запись");
            DialogueSaveData saveData = new DialogueSaveData();
            saveData.Labels = new LabelSampleWrapper[dialogue.Labels.Count];
    
@@ -39,14 +40,15 @@ using System.Collections.Generic;
            }                           
    
            string json = JsonUtility.ToJson(saveData);
-           File.WriteAllText(filePath, json);
+           File.WriteAllText(filePath + gameObject.name + ".json", json);
+           Debug.Log("Запись окончена");
        }
    
        public void LoadDialogueFromFile()
        {
-           if (File.Exists(filePath))
+           if (File.Exists(filePath +gameObject.name + ".json"))
            {
-               string json = File.ReadAllText(filePath);
+               string json = File.ReadAllText(filePath + gameObject.name + ".json");
                DialogueSaveData saveData = JsonUtility.FromJson<DialogueSaveData>(json);
    
                // Reconstruct the dialogue object from the loaded data
@@ -65,7 +67,7 @@ using System.Collections.Generic;
            }
            else
            {
-               Debug.LogError("Dialogue file not found at path: " + filePath);
+               Debug.LogError("Dialogue file not found at path: " + gameObject.name  + ".json");
            }
        }
    

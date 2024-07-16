@@ -418,13 +418,18 @@ public class DialogueEditor : Editor
                                     break;
                             }
 
-                            if (GUILayout.Button("Add", GUILayout.Height(20), GUILayout.Width(50)))
+                            if (GUILayout.Button("/\\", GUILayout.Height(20), GUILayout.Width(25)))
+                            {
+                                label.lines.Insert(label.lines.IndexOf(item) , new Item());
+
+                            }
+                            if (GUILayout.Button("\\/", GUILayout.Height(20), GUILayout.Width(25)))
                             {
                                 label.lines.Insert(label.lines.IndexOf(item) + 1, new Item());
 
                             }
 
-                            if (GUILayout.Button("Remove", GUILayout.Height(20), GUILayout.Width(100)))
+                            if (GUILayout.Button("X", GUILayout.Height(20), GUILayout.Width(25)))
                             {
                                 if (label.lines.Count > 1)
                                     label.lines.Remove(item);
