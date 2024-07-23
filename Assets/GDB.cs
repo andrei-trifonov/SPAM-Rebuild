@@ -58,7 +58,8 @@ public static class GDB
         Cutescull,
         Evildeath,
         AuraBlack,
-        Lines
+        Lines,
+        Ball
 
     }
     public enum LineType

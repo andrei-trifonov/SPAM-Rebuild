@@ -11,13 +11,15 @@ using UnityEngine;
 public class DialogueEditor : Editor
 {
     int editing= -1;
-    private DialogueManager DM;
+    private DialogueSaver DS;
+    private DialogueLoader DL;
     private Dialogue sample;
     private void OnEnable()
     {
-     
+        DS = FindObjectOfType<DialogueSaver>();
+        DL = FindObjectOfType<DialogueLoader>();
         sample = (Dialogue) target;
-        DM = FindObjectOfType<DialogueManager>();
+        
     }
     
     [ExecuteInEditMode]
@@ -26,12 +28,14 @@ public class DialogueEditor : Editor
         
         if (GUILayout.Button("SAVE TO JSON", GUILayout.Height(30),GUILayout.Width(160)))
         {
-            DM.SaveDialogueToFile();
+       
+            DS.SaveDialogueToFile();
             Repaint();
         }
         if (GUILayout.Button("LOAD FROM JSON", GUILayout.Height(30),GUILayout.Width(160)))
         {
-            DM.LoadDialogueFromFile();
+       
+            DL.LoadDialogueFromFile();
             Repaint();
         }
 
