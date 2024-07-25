@@ -81,6 +81,8 @@ public class NewGameCore : MonoBehaviour
     [SerializeField] private Animator Camera;
     
     [SerializeField] private Dialogue scenarioComposer;
+
+    [SerializeField] private List<Dialogue> extensionScenarios;
     private List<LabelSample> scenario;
     
     private float maxVolumeMusic = 1; //TODO
@@ -180,6 +182,14 @@ public class NewGameCore : MonoBehaviour
         TrackList = GetComponent<OSTList>().GetTrackList();
         saveObj = new SaveObject();
         textCanvasAnimator = textCanvas.GetComponent<Animator>();
+        for (int i = 0; i < extensionScenarios.Count; i++)
+        {
+            foreach (var label in extensionScenarios[i].Labels)
+            {
+                scenarioComposer.Labels.Add(label);
+
+            } 
+        }
         scenario = scenarioComposer.Labels;
         string savename = PlayerPrefs.GetString("LastSave");
         

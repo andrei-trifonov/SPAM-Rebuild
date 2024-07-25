@@ -11,13 +11,15 @@ using UnityEngine;
 public class DialogueEditor : Editor
 {
     int editing= -1;
-    private DialogueManager DM;
+    private DialogueSaver DS;
+    private DialogueLoader DL;
     private Dialogue sample;
     private void OnEnable()
     {
-     
+        DS = FindObjectOfType<DialogueSaver>();
+        DL = FindObjectOfType<DialogueLoader>();
         sample = (Dialogue) target;
-        DM = FindObjectOfType<DialogueManager>();
+        
     }
     
     [ExecuteInEditMode]
@@ -26,12 +28,14 @@ public class DialogueEditor : Editor
         
         if (GUILayout.Button("SAVE TO JSON", GUILayout.Height(30),GUILayout.Width(160)))
         {
-            DM.SaveDialogueToFile();
+       
+            DS.SaveDialogueToFile();
             Repaint();
         }
         if (GUILayout.Button("LOAD FROM JSON", GUILayout.Height(30),GUILayout.Width(160)))
         {
-            DM.LoadDialogueFromFile();
+       
+            DL.LoadDialogueFromFile();
             Repaint();
         }
 
@@ -418,13 +422,18 @@ public class DialogueEditor : Editor
                                     break;
                             }
 
-                            if (GUILayout.Button("Add", GUILayout.Height(20), GUILayout.Width(50)))
+                            if (GUILayout.Button("/\\", GUILayout.Height(20), GUILayout.Width(25)))
+                            {
+                                label.lines.Insert(label.lines.IndexOf(item) , new Item());
+
+                            }
+                            if (GUILayout.Button("\\/", GUILayout.Height(20), GUILayout.Width(25)))
                             {
                                 label.lines.Insert(label.lines.IndexOf(item) + 1, new Item());
 
                             }
 
-                            if (GUILayout.Button("Remove", GUILayout.Height(20), GUILayout.Width(100)))
+                            if (GUILayout.Button("X", GUILayout.Height(20), GUILayout.Width(25)))
                             {
                                 if (label.lines.Count > 1)
                                     label.lines.Remove(item);
