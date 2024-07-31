@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2ad2e7d5ce30e234a9f67beb3c27eec3
+guid: 8600fefc59d83f14d94dff247e72fd19
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -50,7 +50,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 2
+  alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -100,29 +100,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sci-Fi-GUI16_0
+      name: dotmask_0
       rect:
         serializedVersion: 2
-        x: 930
-        y: 125
-        width: 171
-        height: 119
+        x: 1283
+        y: 0
+        width: 637
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3558e2a80eceb31479993bd718d94ae5
-      internalID: -1735785523
+      spriteID: dfaf96b6a5b47d14eb857f828a1d6d5f
+      internalID: -1386268051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sci-Fi-GUI16_1
+      name: dotmask_1
       rect:
         serializedVersion: 2
-        x: 1096
-        y: 124
-        width: 169
-        height: 121
+        x: 642
+        y: 0
+        width: 640
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df0930defb6b3b447bbaef5f399bfd76
-      internalID: 656767574
+      spriteID: 45a41f6b4879f9044b6e007b9cc49aa2
+      internalID: 1515638061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sci-Fi-GUI16_2
+      name: dotmask_2
       rect:
         serializedVersion: 2
-        x: 1261
-        y: 125
-        width: 168
-        height: 125
+        x: 0
+        y: 0
+        width: 642
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,50 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34d62a96fb57da84ba170964def739dd
-      internalID: 1971151066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sci-Fi-GUI16_3
-      rect:
-        serializedVersion: 2
-        x: 922
-        y: 121
-        width: 518
-        height: 131
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3eae495eb101dc74f9b4ebfe00970c1f
-      internalID: 1079871447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sci-Fi-GUI16_4
-      rect:
-        serializedVersion: 2
-        x: 725
-        y: 474
-        width: 43
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b718cf2921c80bc4d8bdac3e4ff4e50d
-      internalID: -1429044601
+      spriteID: a8614e8fcd7f7604bb1b80644f5f9dce
+      internalID: -2008708179
       vertices: []
       indices: 
       edges: []
@@ -231,11 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sci-Fi-GUI16_0: -1735785523
-      Sci-Fi-GUI16_3: 1079871447
-      Sci-Fi-GUI16_4: -1429044601
-      Sci-Fi-GUI16_1: 656767574
-      Sci-Fi-GUI16_2: 1971151066
+      dotmask_2: -2008708179
+      dotmask_0: -1386268051
+      dotmask_1: 1515638061
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

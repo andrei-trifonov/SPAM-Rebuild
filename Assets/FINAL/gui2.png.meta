@@ -367,6 +367,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: gui2_7
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 121
+        width: 261
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399a8aca5bc46ff4c9a73f04c36ea218
+      internalID: 2073394002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui2_13
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 39
+        width: 209
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef72db624fdcfd4896f2f2d1ed1c02d
+      internalID: -2103528081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -390,6 +432,7 @@ TextureImporter:
       gui2_12: -327884145
       gui2_0: -1477190978
       gui2_3: -1158781389
+      gui2_13: -2103528081
       gui2_7: 2073394002
   spritePackingTag: 
   pSDRemoveMatte: 0

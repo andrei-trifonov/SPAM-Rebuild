@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DragNDropObject : MonoBehaviour
 {
- 
+    [SerializeField] private Vector4 Borders;
     private Vector3 _offset;
     private bool _isDragging;
     private bool Clicked;
@@ -49,7 +49,10 @@ public class DragNDropObject : MonoBehaviour
     {
         if (_isDragging)
         {
-            transform.position = GetWorldPosition() + _offset;
+            Vector3 newPos = GetWorldPosition() + _offset;
+            transform.position = new Vector3(Mathf.Clamp(newPos.x, Borders.x, Borders.y),
+                Mathf.Clamp(newPos.y, Borders.z, Borders.w), transform.position.z);
+
         }
     }
 

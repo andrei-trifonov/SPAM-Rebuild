@@ -11575,7 +11575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 502.5, y: 403.5}
+  m_AnchoredPosition: {x: 470, y: 403.5}
   m_SizeDelta: {x: 99.2311, y: 74.003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &795409234
@@ -32519,9 +32519,10 @@ MonoBehaviour:
   textFS: {fileID: 790341783}
   FSPanel: {fileID: 3248880}
   Camera: {fileID: 519420037}
-  scenarioComposer: {fileID: 857773804}
-  extensionScenarios:
+  extensionScenarios_RU:
   - {fileID: 2106391946}
+  - {fileID: 857773804}
+  extensionScenarios_EN: []
   Log: {fileID: 1916718079}
   choiseBox: {fileID: 5746164450407689610, guid: 797798d42e1b76b41bdd9eb5603c7116, type: 3}
   choiseGroup: {fileID: 1926733182}
@@ -41341,6 +41342,7 @@ GameObject:
   - component: {fileID: 1574358210}
   - component: {fileID: 1574358209}
   - component: {fileID: 1574358208}
+  - component: {fileID: 1574358212}
   m_Layer: 5
   m_Name: Skip
   m_TagString: Untagged
@@ -41381,30 +41383,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1141920125}
-          m_TargetAssemblyTypeName: NewGameCore, Assembly-CSharp
-          m_MethodName: SkipDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1141920125}
-          m_TargetAssemblyTypeName: NewGameCore, Assembly-CSharp
-          m_MethodName: SkipUp
-          m_Mode: 1
+        - m_Target: {fileID: 1574358212}
+          m_TargetAssemblyTypeName: SkipButton, Assembly-CSharp
+          m_MethodName: PointerState
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -41412,6 +41398,22 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1574358212}
+          m_TargetAssemblyTypeName: SkipButton, Assembly-CSharp
+          m_MethodName: PointerState
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
 --- !u!114 &1574358209
 MonoBehaviour:
@@ -41495,6 +41497,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574358206}
   m_CullTransparentMesh: 1
+--- !u!114 &1574358212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574358206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ee29a6a1daed746ada43baa4248901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Core: {fileID: 1141920125}
+  timeInterval: 0.3
 --- !u!1 &1576319928
 GameObject:
   m_ObjectHideFlags: 0
@@ -43572,8 +43588,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 412, y: 393.05002}
-  m_SizeDelta: {x: 101.1909, y: 75.893}
+  m_AnchoredPosition: {x: 366.69998, y: 388.5}
+  m_SizeDelta: {x: 101.19, y: 80.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1751380419
 MonoBehaviour:
@@ -45142,7 +45158,7 @@ GameObject:
   - component: {fileID: 1892622406}
   - component: {fileID: 1892622407}
   m_Layer: 0
-  m_Name: Scenario
+  m_Name: 'Scenario '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46092,7 +46108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 619.80005, y: 406.50287}
+  m_AnchoredPosition: {x: 594, y: 406.50287}
   m_SizeDelta: {x: 73, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2023574363
@@ -87558,10 +87574,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1726064807}
     m_Modifications:
-    - target: {fileID: 724566409966680473, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 139540673, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
+      propertyPath: m_Core
       value: 
-      objectReference: {fileID: 21300000, guid: 56182bf97ad9a5c4189f0607c8bdf7e4, type: 3}
+      objectReference: {fileID: 1141920125}
     - target: {fileID: 1090890285064040365, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
       propertyPath: m_Name
       value: PREF
@@ -87649,26 +87665,6 @@ PrefabInstance:
     - target: {fileID: 1090890285064040402, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1090890286079093780, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
-      propertyPath: m_Core
-      value: 
-      objectReference: {fileID: 1141920125}
-    - target: {fileID: 1846973746667277965, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
-      propertyPath: m_Core
-      value: 
-      objectReference: {fileID: 1141920125}
-    - target: {fileID: 3186114551338021346, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
-      propertyPath: m_Core
-      value: 
-      objectReference: {fileID: 1141920125}
-    - target: {fileID: 5743207608560732142, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
-      propertyPath: m_Core
-      value: 
-      objectReference: {fileID: 1141920125}
-    - target: {fileID: 6224467813022042983, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
-      propertyPath: m_MaxValue
-      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37be464eb82039a41a27c82b40f989a5, type: 3}
@@ -88071,7 +88067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9073167088927508842, guid: b2533f454849682429a82fe597784f81, type: 3}
       propertyPath: m_text
-      value: "\u041C\u043E\u0438 \u043C\u044B\u0441\u043B\u0438"
+      value: My thoughts
       objectReference: {fileID: 0}
     - target: {fileID: 9073167088927508842, guid: b2533f454849682429a82fe597784f81, type: 3}
       propertyPath: m_fontSize

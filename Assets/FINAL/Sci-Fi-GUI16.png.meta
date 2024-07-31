@@ -206,7 +206,7 @@ TextureImporter:
         x: 1170
         y: 767
         width: 80
-        height: 87
+        height: 86
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -586,7 +586,7 @@ TextureImporter:
         width: 95
         height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -594,6 +594,48 @@ TextureImporter:
       bones: []
       spriteID: effa8ba43e7362b46992f48ccf491b1b
       internalID: -962732777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_23
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 409
+        width: 51
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8c4d9bc72a58a48b13a2f38b24a568
+      internalID: -1467663643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_24
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 848
+        width: 72
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d592a2c3cabc8d40867fb17a3eb8ccc
+      internalID: 773305161
       vertices: []
       indices: 
       edges: []
@@ -612,6 +654,7 @@ TextureImporter:
       Sci-Fi-GUI16_9: -1963196552
       Sci-Fi-GUI16_12: 2069047247
       Sci-Fi-GUI16_18: -1883412497
+      Sci-Fi-GUI16_24: 773305161
       Sci-Fi-GUI16_0: -2055167884
       Sci-Fi-GUI16_6: -533337814
       Sci-Fi-GUI16_3: 700212435
@@ -632,6 +675,7 @@ TextureImporter:
       Sci-Fi-GUI16_2: 522429860
       Sci-Fi-GUI16_19: -186224707
       Sci-Fi-GUI16_21: -565629942
+      Sci-Fi-GUI16_23: -1467663643
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
