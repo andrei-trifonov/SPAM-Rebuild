@@ -194,6 +194,7 @@ public static class GDB
         inv2,
         inv3,
         inv4,
+        inv5,
         Cookie,
         Meds
     }
