@@ -23,6 +23,7 @@ public class ThoughtSt
     
     public int ID;
     public string Content;
+    public string Content_EN;
     public int Level;
     public ThoughtType Type;
 
@@ -48,6 +49,7 @@ public struct Result
 {
     public int ID;
     public string Content;
+    public string Content_EN;
     public GDB.Variables Var;
     public int Value;
     public string jumpLabel;
@@ -97,8 +99,10 @@ public class InvestigationController : MonoBehaviour
     List<GameObject> interactiveObjects = new List<GameObject>();
     private bool FirstTime = true;
     public bool inAction;
+    private int curLocalization;
     public void SetNewGame(string sceneName, List<int> Unlocks, int drugsCount)
     {
+        curLocalization = Core.GetLocalization();
         sliderFromMainGame.SetActive(false);
         usedDrug = false;
         drugsButton1.SetActive(true);
@@ -145,6 +149,10 @@ public class InvestigationController : MonoBehaviour
         Thoughts = scenario.Thoughts;
         Results = scenario.Results;
         Merges = scenario.Merges;
+        foreach (var thought in Thoughts)
+        {
+            thought.Content = thought.Content_EN;
+        }
         if (Unlocks.Count > 0)
             try
             {
@@ -237,6 +245,7 @@ public class InvestigationController : MonoBehaviour
                 return;
             }
         }
+
         SpawnOneThought(obj);
         Thoughts.Add(obj);
             
@@ -293,12 +302,13 @@ public class InvestigationController : MonoBehaviour
         FirstTime = false;
         foreach (ThoughtSt item in Thoughts)
         {
+
             SpawnOneThought(item);
         }
     }
       private void SpawnOneThought(ThoughtSt item )
         {
-    
+
          
                 if (!item.Locked)
                 {
@@ -314,9 +324,9 @@ public class InvestigationController : MonoBehaviour
                     spawned.gameObject.GetComponent<DragNDropObject>().ThoCam = cameraThought.GetComponent<Camera>();
                     spawned.gameObject.GetComponent<DragNDropObject>().IC = this;
                     if (hintIDs.Contains(item.ID))
-                        spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect, true);
+                        spawned.Initiate(curLocalization==0?item.Content:item.Content_EN, item.Level, item.Type, item.ID, MergeEffect, true);
                     else
-                        spawned.Initiate(item.Content, item.Level, item.Type, item.ID, MergeEffect, false);
+                        spawned.Initiate(curLocalization==0?item.Content:item.Content_EN, item.Level, item.Type, item.ID, MergeEffect, false);
                    
                 }
             
@@ -367,7 +377,7 @@ public class InvestigationController : MonoBehaviour
         canTho.enabled = false;
         canInv.enabled = true;
         resultPanel.SetActive(true); 
-        resultText.text = res.Content;
+        resultText.text = curLocalization==0?res.Content:res.Content_EN;
         chosenResult = res;
     }
     IEnumerator FinishCoroutineF()
@@ -443,10 +453,10 @@ public class InvestigationController : MonoBehaviour
                     Thought spawned = Instantiate(thoughtTemplate).GetComponent<Thought>();
 
                     if (hintIDs.Contains(connection.Result.ID))
-                        spawned.Initiate(connection.Result.Content, connection.Result.Level, connection.Result.Type,
+                        spawned.Initiate(curLocalization==0?connection.Result.Content:connection.Result.Content_EN, connection.Result.Level, connection.Result.Type,
                             connection.Result.ID, MergeEffect, true);
                     else
-                        spawned.Initiate(connection.Result.Content, connection.Result.Level, connection.Result.Type,
+                        spawned.Initiate(curLocalization==0?connection.Result.Content:connection.Result.Content_EN, connection.Result.Level, connection.Result.Type,
                             connection.Result.ID, MergeEffect, false);
 
                     spawned.transform.position = new Vector3(connection.t1.gameObject.transform.position.x,

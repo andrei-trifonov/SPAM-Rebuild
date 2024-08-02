@@ -143,12 +143,17 @@ public class NewGameCore : MonoBehaviour
     int cid;
     public SaveObject saveObj = new SaveObject();
     private string saveJString = "";
-  
+
+    private int curLocalization;
     private GameObject Emoji;
     [SerializeField] private List<GameObject> emojiList = new List<GameObject>();
     [SerializeField] private ChatManager chatManager;
     [SerializeField] private Transform EventCanvas;
 
+    public int GetLocalization()
+    {
+        return curLocalization;
+    }
     public void ChangeLocalization(int num)
     {
         if (!loading && CoroutinesWorking.Count == 0)
@@ -162,8 +167,7 @@ public class NewGameCore : MonoBehaviour
                 extensionScenarios = extensionScenarios_EN;
             }
 
-
-            
+            curLocalization = num;
             scenarioComposer = extensionScenarios[0];
             for (int i = 1; i < extensionScenarios.Count; i++)
             {
@@ -214,13 +218,15 @@ public class NewGameCore : MonoBehaviour
             if (Application.systemLanguage == SystemLanguage.Russian ||
                 Application.systemLanguage == SystemLanguage.Ukrainian ||
                 Application.systemLanguage == SystemLanguage.Belarusian)
-                {    
+            {
+                    curLocalization = 0;
                     PlayerPrefs.SetString("Localization", "Russian");
                     Debug.Log("Installed RUS locale");
                     extensionScenarios = extensionScenarios_RU;
                 }
             else
-                {
+            {
+                    curLocalization = 1;
                     PlayerPrefs.SetString("Localization", "English");
                     Debug.Log("Installed ENG locale");
                     extensionScenarios = extensionScenarios_EN;
@@ -230,10 +236,12 @@ public class NewGameCore : MonoBehaviour
       
         if (PlayerPrefs.GetString("Localization") == "Russian")
         {
+            curLocalization = 0;
             extensionScenarios = extensionScenarios_RU;
         }
         else
         {
+            curLocalization = 1;
             extensionScenarios = extensionScenarios_EN;
         }
 
