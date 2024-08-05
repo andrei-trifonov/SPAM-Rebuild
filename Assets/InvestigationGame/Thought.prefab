@@ -1214,6 +1214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506794a075c8dd646acd95cf70998d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Borders: {x: 153, y: 172, z: -5.5, w: 5}
   IC: {fileID: 0}
   ThoCam: {fileID: 0}
   TouchEffect: {fileID: 129322394924853319}

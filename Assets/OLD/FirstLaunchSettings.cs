@@ -13,6 +13,7 @@ public class FirstLaunchSettings : MonoBehaviour
             PlayerPrefs.SetInt("NotFirstLaunch", 1);
             PlayerPrefs.SetFloat("MusicVolume", 1);
             PlayerPrefs.SetFloat("SoundVolume", 1);
+            PlayerPrefs.SetFloat("SceneVolume", 1);
             PlayerPrefs.SetFloat("TextDelay", 0.1f);
         }
     }

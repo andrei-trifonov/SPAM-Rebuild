@@ -187,7 +187,7 @@ TextureImporter:
         width: 518
         height: 131
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -195,6 +195,27 @@ TextureImporter:
       bones: []
       spriteID: 3eae495eb101dc74f9b4ebfe00970c1f
       internalID: 1079871447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-Fi-GUI16_4
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 474
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b718cf2921c80bc4d8bdac3e4ff4e50d
+      internalID: -1429044601
       vertices: []
       indices: 
       edges: []
@@ -212,6 +233,7 @@ TextureImporter:
     nameFileIdTable:
       Sci-Fi-GUI16_0: -1735785523
       Sci-Fi-GUI16_3: 1079871447
+      Sci-Fi-GUI16_4: -1429044601
       Sci-Fi-GUI16_1: 656767574
       Sci-Fi-GUI16_2: 1971151066
   spritePackingTag: 

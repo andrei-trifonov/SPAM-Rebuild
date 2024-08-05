@@ -80,9 +80,11 @@ public class NewGameCore : MonoBehaviour
     [SerializeField] private GameObject FSPanel;
     [SerializeField] private Animator Camera;
     
-    [SerializeField] private Dialogue scenarioComposer;
-
-    [SerializeField] private List<Dialogue> extensionScenarios;
+    private Dialogue scenarioComposer;
+    
+    [SerializeField] private List<Dialogue> extensionScenarios_RU;
+    [SerializeField] private List<Dialogue> extensionScenarios_EN;
+    private List<Dialogue> extensionScenarios;
     private List<LabelSample> scenario;
     
     private float maxVolumeMusic = 1; //TODO
@@ -135,16 +137,49 @@ public class NewGameCore : MonoBehaviour
     
     private bool loading;
     private bool hideText;
+    private bool menu;
     
     public List<int> CoroutinesWorking;
     int cid;
     public SaveObject saveObj = new SaveObject();
     private string saveJString = "";
-  
+
+    private int curLocalization;
     private GameObject Emoji;
     [SerializeField] private List<GameObject> emojiList = new List<GameObject>();
     [SerializeField] private ChatManager chatManager;
     [SerializeField] private Transform EventCanvas;
+
+    public int GetLocalization()
+    {
+        return curLocalization;
+    }
+    public void ChangeLocalization(int num)
+    {
+        if (!loading && CoroutinesWorking.Count == 0)
+        {
+            if (num == 0)
+            {
+                extensionScenarios = extensionScenarios_RU;
+            }
+            else
+            {
+                extensionScenarios = extensionScenarios_EN;
+            }
+
+            curLocalization = num;
+            scenarioComposer = extensionScenarios[0];
+            for (int i = 1; i < extensionScenarios.Count; i++)
+            {
+                foreach (var label in extensionScenarios[i].Labels)
+                {
+                    scenarioComposer.Labels.Add(label);
+
+                }
+            }
+        }
+    }
+
     public void SetTextMarker(bool state)
     {   
         textCanvasAnimator.SetBool("Ready", !state);
@@ -178,11 +213,46 @@ public class NewGameCore : MonoBehaviour
 
     private void Start()
     {
-       
+        if (PlayerPrefs.GetString("Localization") == "")
+        {
+            if (Application.systemLanguage == SystemLanguage.Russian ||
+                Application.systemLanguage == SystemLanguage.Ukrainian ||
+                Application.systemLanguage == SystemLanguage.Belarusian)
+            {
+                    curLocalization = 0;
+                    PlayerPrefs.SetString("Localization", "Russian");
+                    Debug.Log("Installed RUS locale");
+                    extensionScenarios = extensionScenarios_RU;
+                }
+            else
+            {
+                    curLocalization = 1;
+                    PlayerPrefs.SetString("Localization", "English");
+                    Debug.Log("Installed ENG locale");
+                    extensionScenarios = extensionScenarios_EN;
+                }
+
+        }
+      
+        if (PlayerPrefs.GetString("Localization") == "Russian")
+        {
+            curLocalization = 0;
+            extensionScenarios = extensionScenarios_RU;
+        }
+        else
+        {
+            curLocalization = 1;
+            extensionScenarios = extensionScenarios_EN;
+        }
+
+
+        
+
         TrackList = GetComponent<OSTList>().GetTrackList();
         saveObj = new SaveObject();
         textCanvasAnimator = textCanvas.GetComponent<Animator>();
-        for (int i = 0; i < extensionScenarios.Count; i++)
+        scenarioComposer = extensionScenarios[0];
+        for (int i = 1; i < extensionScenarios.Count; i++)
         {
             foreach (var label in extensionScenarios[i].Labels)
             {
@@ -227,6 +297,10 @@ public class NewGameCore : MonoBehaviour
     IEnumerator BlinkSLMarkerCoroutine(int state)
     {
         saveLoadMarker.SetActive(true);
+        foreach (Transform label in saveLoadMarker.transform)
+        {
+            label.gameObject.SetActive(false);
+        }
         saveLoadMarker.transform.GetChild(state).gameObject.SetActive(true);
         yield return new WaitForSeconds(2.5f);
         saveLoadMarker.SetActive(false);
@@ -396,7 +470,7 @@ public class NewGameCore : MonoBehaviour
 
     IEnumerator SkipCoroutine()
     {
-        while (skipping && CoroutinesWorking.Count == 0 && !loading)
+        while (skipping && CoroutinesWorking.Count == 0 && !loading && !menu)
         {
             Step();
             yield return new WaitForSeconds(0.25f);
@@ -572,9 +646,12 @@ public class NewGameCore : MonoBehaviour
 
 	void eventAction(Item line)
     {
-	   chatManager.Disable();
-       FSPanel.SetActive(false);
-       StartCoroutine(EventCoroutine(line, cid++));
+    
+        if(!skipping){
+           chatManager.Disable();
+           FSPanel.SetActive(false);
+           StartCoroutine(EventCoroutine(line, cid++));
+        }
     }
 
 	IEnumerator EventCoroutine (Item line , int id){
@@ -977,12 +1054,14 @@ public class NewGameCore : MonoBehaviour
        
         
         //Design
-        musicIcon.SetBool("Play", true);
-        musicName.text = TrackList[(int)line.music].Name;
-        musicAuthor.text = TrackList[(int)line.music].Author;
-        yield return new WaitForSeconds(0.5f);
-        musicIcon.SetBool("Play", false);   
-        //
+        if (!skipping)
+        {
+            musicIcon.SetBool("Play", true);
+            musicName.text = TrackList[(int) line.music].Name;
+            musicAuthor.text = TrackList[(int) line.music].Author;
+            yield return new WaitForSeconds(0.5f);
+            musicIcon.SetBool("Play", false);
+        } 
 
         CoroutinesWorking.Remove(cid);
     }
@@ -1233,9 +1312,12 @@ public class NewGameCore : MonoBehaviour
             item.additionalPose = name;
             jumpAction(item);
         }
+
+        menu = false;
     }
     void menuAction(Item line)
     {
+        menu = true;
         Save("Auto");
         chatManager.Disable();
         FSPanel.SetActive(false);

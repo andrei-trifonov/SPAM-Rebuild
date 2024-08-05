@@ -106,7 +106,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: c57af37ac0e40ba47a477dddb01133b3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2cc05070c67fb7745a914cb968a84ff0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VertexAnimationMap:

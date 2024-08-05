@@ -6,39 +6,127 @@ using UnityEngine.UI;
 
 public class PreferencesController : MonoBehaviour
 {
-    public string playerPrefsValue;
 
-    public Slider valueSlider;
+
+    
 
     public NewGameCore m_Core;
     // Start is called before the first frame update
-    public bool music;
-    public bool text;
-    public bool sound;
-    public bool scene;
+    public  Slider  music;
+    public  Slider  text;
+    public  Slider  sound;
+    public  Slider  scene;
+    public Toggle textCheck;
+    public TMPro.TMP_Dropdown language;
     public bool mainMenu;
-    private void SetSettings()
+    private void SetSettings(int sliderNum)
     {
-        if (music)
-            m_Core.SetMusicSettings(valueSlider.value);
-        if (sound)
-            m_Core.SetSoundSettings(valueSlider.value);
-        if (scene)
-            m_Core.SetSceneAudioSettings(valueSlider.value);
-        if (text)
-            m_Core.SetTextDelay(valueSlider.value);
+        switch (sliderNum){
+            case 0: m_Core.SetMusicSettings(music.value); break;
+            case 1: m_Core.SetSoundSettings(sound.value); break;
+            case 2: m_Core.SetSceneAudioSettings(scene.value); break;
+            case 3: m_Core.SetTextDelay(text.value); break;
+        }
+
     }
     private void Start()
     {
-        valueSlider.value = PlayerPrefs.GetFloat(playerPrefsValue);
+        music.value = PlayerPrefs.GetFloat("MusicVolume");
+        text.value = PlayerPrefs.GetFloat("TextDelay");
+        sound.value = PlayerPrefs.GetFloat("SoundVolume");
+        scene.value = PlayerPrefs.GetFloat("SceneVolume");
+        if (PlayerPrefs.GetFloat("TextDelay") == 0)
+        {
+            text.value = 0;
+            text.interactable = false;
+            textCheck.isOn = false;
+        }
+        else
+        {
+            textCheck.isOn = true;
+        }
+
+        if (PlayerPrefs.GetString("Localization") == "Russian")
+        {
+            language.value = 0;
+        }
+        
+        if (PlayerPrefs.GetString("Localization") == "English")
+        {
+            language.value = 1;
+        }
         if (!mainMenu)
-            SetSettings();
+        {
+            SetSettings(0);
+            SetSettings(1);
+            SetSettings(2);
+            SetSettings(3);
+            
+        }
     }
 
-    public void OnValueChanged()
+    public void OnMusicValueChanged()
     {
-        PlayerPrefs.SetFloat(playerPrefsValue, valueSlider.value);
+        PlayerPrefs.SetFloat("MusicVolume", music.value);
         if (!mainMenu)
-            SetSettings();
+            SetSettings(0);
+        PlayerPrefs.Save();
+    }
+    
+    public void OnSoundValueChanged()
+    {
+        PlayerPrefs.SetFloat("SoundVolume", sound.value);
+        if (!mainMenu)
+            SetSettings(2);
+        PlayerPrefs.Save();
+    }
+    
+    public void OnTextValueChanged()
+    {
+        if (textCheck.isOn)
+        {
+           
+            PlayerPrefs.SetFloat("TextDelay", text.value);
+            if (!mainMenu)
+                SetSettings(3);
+        }
+        PlayerPrefs.Save();
+        
+    }
+    
+    public void OnTextCheckValueChanged()
+    {
+        if (!textCheck.isOn)
+        {
+            PlayerPrefs.SetFloat("TextDelay", 0);
+            text.interactable = false;
+            text.value = 0;
+        }
+        else
+        {
+            text.interactable = true;
+        }
+
+        if (!mainMenu)
+            SetSettings(3);
+        PlayerPrefs.Save();
+    }
+    public void OnSceneValueChanged()
+    {
+        PlayerPrefs.SetFloat("SceneVolume", scene.value);
+        if (!mainMenu)
+            SetSettings(3);
+        PlayerPrefs.Save();
+    }
+    
+    public void OnLangValueChanged()
+    {
+        if (language.value == 0)
+            PlayerPrefs.SetString("Localization", "Russian");
+        if (language.value == 1)
+            PlayerPrefs.SetString("Localization", "English");
+        if (!mainMenu)
+            m_Core.ChangeLocalization(language.value);
+        PlayerPrefs.Save();
     }
 }
