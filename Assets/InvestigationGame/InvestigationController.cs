@@ -151,7 +151,7 @@ public class InvestigationController : MonoBehaviour
         Merges = scenario.Merges;
         foreach (var thought in Thoughts)
         {
-            thought.Content = thought.Content_EN;
+            thought.Content = curLocalization==0?thought.Content:thought.Content_EN;
         }
         if (Unlocks.Count > 0)
             try
