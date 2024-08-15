@@ -146,9 +146,22 @@ public class NewGameCore : MonoBehaviour
 
     private int curLocalization;
     private GameObject Emoji;
+    
     [SerializeField] private List<GameObject> emojiList = new List<GameObject>();
     [SerializeField] private ChatManager chatManager;
     [SerializeField] private Transform EventCanvas;
+
+    private bool QTE;
+    public void SetQTE(bool state)
+    {
+        if (!textCanvasAnimator)
+        {
+            textCanvasAnimator = textCanvas.GetComponent<Animator>();
+        }
+
+        QTE = state;
+        EnableText(!state);
+    }
 
     public int GetLocalization()
     {
@@ -184,10 +197,14 @@ public class NewGameCore : MonoBehaviour
     {   
         textCanvasAnimator.SetBool("Ready", !state);
     }
-    public void EnableText()
+    public void EnableText(bool state)
     {
-        hideText = !textCanvasAnimator.GetBool("Hide");
-        textCanvasAnimator.SetBool("Hide", hideText);
+        
+        hideText = !state;
+        if (QTE)
+	     hideText = true;
+	textCanvasAnimator.SetBool("Hide", hideText);
+        
     }
     public void SetTextDelay(float speed)
     {
@@ -416,7 +433,7 @@ public class NewGameCore : MonoBehaviour
     }
     public void Save(string savenum)
     {
-        if (!loading && CoroutinesWorking.Count == 0)
+        if (!QTE && !loading && CoroutinesWorking.Count == 0)
         {
 
             List<Actor> actors = new List<Actor>();
@@ -485,7 +502,7 @@ public class NewGameCore : MonoBehaviour
     }
     public void Step()
     {
-        if (!hideText && !loading && CoroutinesWorking.Count==0)
+        if (!QTE && !hideText && !loading && CoroutinesWorking.Count==0)
         {
             if (labelNum >= scenario.Count)
             {

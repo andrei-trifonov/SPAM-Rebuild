@@ -45,7 +45,8 @@ public static class GDB
         Левая,
         Правая,
         Инспектор,
-        Кира
+        Кира, 
+	Училка
 
     }
     public enum Emoji
@@ -110,7 +111,8 @@ public static class GDB
         Tower,
         BGTemp,
         Bunker,
-        Hallucinacion1
+        Hallucinacion1,
+	Hallucinacion2
     }
     public enum Fonts
     {

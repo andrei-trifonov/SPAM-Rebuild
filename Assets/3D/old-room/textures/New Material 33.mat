@@ -144,7 +144,7 @@ Material:
     - _OutlineDepthOffset: 0.056
     - _OutlineEnabled: 1
     - _OutlineScale: 1
-    - _OutlineWidth: 1.79
+    - _OutlineWidth: 1.08
     - _OverrideBakedGi: 0
     - _OverrideLightAttenuation: 1
     - _OverrideLightmapDir: 0
