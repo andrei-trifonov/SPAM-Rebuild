@@ -47340,7 +47340,7 @@ GameObject:
   - component: {fileID: 380409891}
   - component: {fileID: 380409892}
   m_Layer: 7
-  m_Name: Day2_En
+  m_Name: 'Day2_En '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47366,7 +47366,7 @@ MonoBehaviour:
       line: 
       font: 0
       inv: 0
-      BGname: 3
+      BGname: 4
       effects: 0
       CGname: 
       show: 0
@@ -47466,6 +47466,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 13
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: InvScenario7
       music: 0
       time: 0
       value: 0
