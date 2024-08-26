@@ -69212,7 +69212,7 @@ GameObject:
   - component: {fileID: 857773804}
   - component: {fileID: 857773805}
   m_Layer: 7
-  m_Name: Day2_Ru
+  m_Name: 'Day2_Ru '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69248,6 +69248,52 @@ MonoBehaviour:
   Labels:
   - name: "\u0414\u0435\u043D\u044C2 \u041D\u0430\u0447\u0430\u043B\u043E"
     lines:
+    - type: 13
+      name: 0
+      line: 
+      font: 0
+      inv: 2
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 13
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: InvScenario8
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 9
       name: 0
       line: 
