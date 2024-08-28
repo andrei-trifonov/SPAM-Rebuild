@@ -46,7 +46,8 @@ public static class GDB
         Правая,
         Инспектор,
         Кира, 
-	Училка
+	Училка,
+	Поп
 
     }
     public enum Emoji
@@ -197,6 +198,10 @@ public static class GDB
         inv3,
         inv4,
         inv5,
+	inv6,
+	inv7,
+	inv8,
+	inv9,
         Cookie,
         Meds
     }
