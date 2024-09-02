@@ -46,8 +46,10 @@ public static class GDB
         Правая,
         Инспектор,
         Кира, 
-	Училка,
-	Поп
+	Учитель,
+	Поп,
+	Директор
+	
 
     }
     public enum Emoji
@@ -61,7 +63,9 @@ public static class GDB
         Evildeath,
         AuraBlack,
         Lines,
-        Ball
+        Ball,
+	DustDirtyPoofSoft,
+	Pigeon
 
     }
     public enum LineType
@@ -159,7 +163,8 @@ public static class GDB
     {
         Dissolve,
         Classic,
-        DissolveOut
+        DissolveOut,
+	Glitch
 
     }
     public enum Music
