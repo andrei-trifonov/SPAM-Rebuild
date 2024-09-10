@@ -12,17 +12,21 @@ public static class GDB
             case (int)Name.Никто: 
                 return Color.clear;
            case (int)Name.Алина:
-               return new Color(0.16f, 0.97f, 0.93f);
+               return new Color(0.16f, 0.67f, 0.83f);
            case (int)Name.Мира:
-               return new Color(0, 0.86f, 0.42f);
+               return new Color(0.1f, 0.5f, 0.3f);
            case (int)Name.Миша:
-               return new Color(0.84f, 0.71f, 0.36f);
+               return new Color(0.2f, 0.2f, 1f);
            case (int)Name.Соня:
-               return new Color(1, 0.86f, 0.35f);
+               return new Color(1, 0.2f, 0.35f);
            case (int)Name.Кир:
-               return new Color(0.77f, 0.24f, 1);
+               return new Color(1f, 0.7f, 0);
+            case (int)Name.Кот:
+                return new Color(0.77f, 0.24f, 1);
+            case (int)Name.Пурр_пур:
+                return new Color(0.77f, 0.24f, 1);
             case (int)Name.Наташа:
-                return new Color(1f, 0.3f, 1f);
+                return new Color(1f, 0.6f, 1f);
       
 
         }
@@ -46,9 +50,12 @@ public static class GDB
         Правая,
         Инспектор,
         Кира, 
-	Учитель,
-	Поп,
-	Директор
+	    Учитель,
+	    Поп,
+	    Директор,
+        Ангел,
+        Пурр_пур,
+        Мира_травма
 	
 
     }
@@ -64,8 +71,8 @@ public static class GDB
         AuraBlack,
         Lines,
         Ball,
-	DustDirtyPoofSoft,
-	Pigeon
+	    DustDirtyPoofSoft,
+	    Pigeon
 
     }
     public enum LineType
@@ -203,12 +210,13 @@ public static class GDB
         inv3,
         inv4,
         inv5,
-	inv6,
-	inv7,
-	inv8,
-	inv9,
+	    inv6,
+	    inv7,
+	    inv8,
+	    inv9,
         Cookie,
-        Meds
+        Meds,
+        Injure
     }
 
     public enum Signs

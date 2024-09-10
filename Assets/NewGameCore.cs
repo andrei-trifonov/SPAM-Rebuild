@@ -839,7 +839,16 @@ public class NewGameCore : MonoBehaviour
         {
              GameObject obj = request.asset as GameObject;
              ActorOnScene = GameObject.Instantiate(obj);
-             Actor actor = new Actor(line.V3position, line.name, line.pose);
+
+
+
+             Actor actor;
+             if (line.name == GDB.Name.Мира && FindVariable(GDB.Variables.Injure) >=0 && saveObj.Variables[FindVariable(GDB.Variables.Injure)].varValue > 0)
+                 actor = new Actor(line.V3position, GDB.Name.Мира_травма, line.pose);
+             else
+             {
+                 actor = new Actor(line.V3position, line.name, line.pose);
+             }
              actor.obj = ActorOnScene;
              actorsOnScene.Add(actor);
              Debug.Log("Actor loaded successfully!");
@@ -1404,57 +1413,61 @@ public class NewGameCore : MonoBehaviour
 
         
     }
-    
+
     void ifAction(Item line)
     {
-        chatManager.Disable();
-        FSPanel.SetActive(false);
+        //chatManager.Disable();
+        //FSPanel.SetActive(false);
+        int foundVar = FindVariable(line.var);
+        if (foundVar >= 0){
+            int var = saveObj.Variables[foundVar].varValue;
+            Debug.Log(line.var);
+            Debug.Log(var);
+            switch (line.signsIf)
+            {
+                case GDB.SignsIf.greater:
+                {
+                    if (var > line.value)
+                        jumpAction(line);
+                    else
+                    {
+                        lineNum++;
+                        Step();
+                    }
+                }
+                    break;
+                case GDB.SignsIf.less:
+                {
+                    if (var < line.value)
+                        jumpAction(line);
+                    else
+                    {
+                        lineNum++;
+                        Step();
+                    }
+                }
+                    break;
+                case GDB.SignsIf.equal:
+                {
+                    if (var == line.value)
+                        jumpAction(line);
+                    else
+                    {
+                        lineNum++;
+                        Step();
+                    }
 
-        int var = saveObj.Variables[FindVariable(line.var)].varValue;
-        Debug.Log(line.var);
-        Debug.Log(var);
-        switch (line.signsIf)
-        {
-            case GDB.SignsIf.greater:
-            {
-               if (var > line.value)
-                   jumpAction(line);
-               else
-               {
-                   lineNum++;
-                   Step();
-               }
-            }
-                break;
-            case GDB.SignsIf.less:
-            {
-                if (var < line.value)
-                    jumpAction(line);
-                else
-                {
-                    lineNum++;
-                    Step();
                 }
-            }
-                break;
-            case GDB.SignsIf.equal:
-            {
-                if (var == line.value)
-                    jumpAction(line);
-                else
-                {
-                    lineNum++;
+                    break;
+                default:
                     Step();
-                }
-                   
+                    break;
             }
-                break;
-            default: Step(); break;
+
+
         }
-        
-        
     }
-    
+
     void varAction(Item line)
     {
         
@@ -1600,6 +1613,11 @@ public class NewGameCore : MonoBehaviour
                 actor.obj.GetComponentInChildren<SpriteRenderer>().color = UnityEngine.Color.gray;
             }
             GameObject ActorOnScene = FindActorOnScene(line.name.ToString());
+            if (line.name==GDB.Name.Мира && ActorOnScene == null)
+            {
+               ActorOnScene = FindActorOnScene(GDB.Name.Мира_травма.ToString());
+            }
+
             if (ActorOnScene != null)
             {
                 
@@ -1646,7 +1664,7 @@ public class NewGameCore : MonoBehaviour
                 textContent.text = line.line;
             }
             Debug.Log(line.name.ToString());
-            textAuthor.text = line.name.ToString();
+            textAuthor.text = line.name.ToString().Replace("_", "-").Replace("Мира-травма", "Мира");
             if (!isLoad)
                 lineNum++;
         }
