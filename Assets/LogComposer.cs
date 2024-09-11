@@ -42,7 +42,7 @@ public class LogComposer : MonoBehaviour
         for (int i = logLine.Count-1; i>= 0; i--)
         {
             LogElement inst = Instantiate(Prefab, Group.transform).GetComponent<LogElement>();
-            inst.Name.text = logName[i].ToString();
+            inst.Name.text = logName[i].ToString().Replace("_", "-");
             inst.Name.color = GDB.CharColor((int)logName[i]);
             inst.Text.text = logLine[i];
             Debug.Log(logName[i]);
