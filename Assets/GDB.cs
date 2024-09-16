@@ -19,7 +19,8 @@ public static class GDB
                return new Color(0.2f, 0.2f, 1f);
            case (int)Name.Соня:
                return new Color(1, 0.2f, 0.35f);
-           case (int)Name.Кир:
+  	   case (int)Name.Женя:
+               return new Color(1, 0.2f, 0.35f);        	    case (int)Name.Кир:
                return new Color(1f, 0.7f, 0);
             case (int)Name.Кот:
                 return new Color(0.77f, 0.24f, 1);
@@ -50,9 +51,9 @@ public static class GDB
         Правая,
         Инспектор,
         Кира, 
-	    Учитель,
-	    Поп,
-	    Директор,
+	Учитель,
+	Поп,
+	Директор,
         Ангел,
         Пурр_пур,
         Мира_травма

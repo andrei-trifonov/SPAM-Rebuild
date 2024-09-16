@@ -843,6 +843,8 @@ public class NewGameCore : MonoBehaviour
 
 
              Actor actor;
+ if (line.name == GDB.Name.Женя){
+ actor = new Actor(line.V3position, GDB.Name.Соня, line.pose);}
              if (line.name == GDB.Name.Мира && FindVariable(GDB.Variables.Injure) >=0 && saveObj.Variables[FindVariable(GDB.Variables.Injure)].varValue > 0)
                  actor = new Actor(line.V3position, GDB.Name.Мира_травма, line.pose);
              else
