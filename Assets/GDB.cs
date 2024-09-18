@@ -217,7 +217,8 @@ public static class GDB
 	    inv9,
         Cookie,
         Meds,
-        Injure
+        Injure,
+	Secret1
     }
 
     public enum Signs

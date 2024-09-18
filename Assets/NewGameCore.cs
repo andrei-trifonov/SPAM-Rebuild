@@ -1619,7 +1619,10 @@ public class NewGameCore : MonoBehaviour
             {
                ActorOnScene = FindActorOnScene(GDB.Name.Мира_травма.ToString());
             }
-
+            if (line.name==GDB.Name.Женя && ActorOnScene == null)
+            {
+               ActorOnScene = FindActorOnScene(GDB.Name.Соня.ToString());
+            }
             if (ActorOnScene != null)
             {
                 
