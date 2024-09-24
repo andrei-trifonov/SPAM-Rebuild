@@ -822,10 +822,17 @@ public class NewGameCore : MonoBehaviour
         }
 
         RemoveActor(line.name.ToString());
+        ResourceRequest request;
+        if (line.pose == GDB.Pose.Custom)
+        {
+            request = Resources.LoadAsync<GameObject>("Actors/"+line.name.ToString() + line.additionalPose.ToString());
+        }
+        else
+        {
+             request =
+                Resources.LoadAsync<GameObject>("Actors/" + line.name.ToString() + line.pose.ToString());
+        }
 
-
-        ResourceRequest request = Resources.LoadAsync<GameObject>("Actors/"+line.name.ToString() + line.pose.ToString());
-                               
         while (!request.isDone)
         {
              yield return null;
@@ -1467,6 +1474,12 @@ public class NewGameCore : MonoBehaviour
             }
 
 
+        }
+        else
+        {
+            lineNum++;
+            Step();
+           
         }
     }
 

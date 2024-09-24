@@ -69248,75 +69248,6 @@ MonoBehaviour:
   Labels:
   - name: "\u0414\u0435\u043D\u044C2 \u041D\u0430\u0447\u0430\u043B\u043E"
     lines:
-    - type: 13
-      name: 0
-      line: 
-      font: 0
-      inv: 2
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 13
-      name: 0
-      line: 
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: InvScenario8
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 9
-      name: 0
-      line: 
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 2
-      var: 10
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
     - type: 2
       name: 0
       line: 
@@ -70013,7 +69944,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 0
+      name: 2
       line: "\u0422\u0443\u0442 \u043A\u0442\u043E-\u0442\u043E \u0432\u044B\u043A\u043B\u0430\u0434\u044B\u0432\u0430\u043B
         \u0432\u044B\u0434\u0435\u0440\u0436\u043A\u0438 \u0438\u0437 \u0447\u044C\u0435\u0439-\u0442\u043E
         \u043D\u0430\u0443\u0447\u043D\u043E\u0439 \u0440\u0430\u0431\u043E\u0442\u044B
@@ -70260,7 +70191,7 @@ MonoBehaviour:
       BGname: 0
       effects: 0
       CGname: cg22
-      show: 0
+      show: 1
       pose: 0
       spriteEffect: 0
       additionalPose: 
@@ -70390,8 +70321,8 @@ MonoBehaviour:
       line: " \u041A\u0430\u043A-\u0442\u043E \u0432 \u043F\u043E\u0434\u0432\u043E\u0440\u043E\u0442\u043D\u0435
         \u0433\u043E\u043F\u043D\u0438\u043A \u0441\u0443\u043D\u0443\u043B \u043F\u043E\u0434
         \u0440\u0435\u0431\u0440\u043E \u043D\u043E\u0436 - \u0443 \u043D\u0435\u0433\u043E
-        \u0440\u0443\u043A\u0430 \u043F\u043E\u0440\u0443\u043A\u043E\u044F\u0442\u0438
-        \u0441\u043E\u0441\u043B\u043A\u043E\u043B\u044C\u0437\u043D\u0443\u043B\u0430:
+        \u0440\u0443\u043A\u0430 \u043F\u043E \u0440\u0443\u043A\u043E\u044F\u0442\u0438
+        \u0441\u043E\u0441\u043A\u043E\u043B\u044C\u0437\u043D\u0443\u043B\u0430:
         \u043D\u0435 \u043F\u0440\u043E\u0431\u0438\u0432\u0430\u0435\u0442 \u043A\u043E\u0436\u0443
         - \u0436\u0435\u043B\u0435\u043C\u044B\u0448\u0435\u043C \u0434\u0443\u0431\u043B\u0451\u043D\u0430. "
       font: 0
@@ -70656,9 +70587,8 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 0
-      line: "\"\u041B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0439
-        \u0431\u043B\u0438\u0436\u043D\u0435\u0432\u043E\u0441\u0442\u043E\u0447\u043D\u044B\u0439
-        \u0433\u043E\u0432\u043D\u044F\u043A.\""
+      line: "\u041B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0439 \u0431\u043B\u0438\u0436\u043D\u0435\u0432\u043E\u0441\u0442\u043E\u0447\u043D\u044B\u0439
+        \u0433\u043E\u0432\u043D\u044F\u043A."
       font: 0
       inv: 0
       BGname: 0
@@ -70681,13 +70611,13 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 0
-      line: "\"\u041F\u043E \u041F\u0420\u0410\u0412\u0418\u041B\u042C\u041D\u041E\u041C\u0423
+      line: "\u041F\u043E \u041F\u0420\u0410\u0412\u0418\u041B\u042C\u041D\u041E\u041C\u0423
         \u0421\u041E\u0412\u0415\u0422\u0421\u041A\u041E\u041C\u0423 \u0413\u041E\u0421\u0422\u0443
         \u0432 \u043D\u0435\u043C \u0431\u044B\u043B\u043E \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u043C
         \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0435
         \u0432 \u043F\u0435\u0440\u0435\u0441\u0447\u0435\u0442\u0435 \u043D\u0430
         \u043C\u0430\u0441\u0441\u0443 \u043D\u0435 \u043C\u0435\u043D\u0435\u0435
-        20% \u043C\u0430\u043A\u043E\u0432\u043E\u0439 \u0441\u043E\u043B\u043E\u043C\u044B...\""
+        20% \u043C\u0430\u043A\u043E\u0432\u043E\u0439 \u0441\u043E\u043B\u043E\u043C\u044B..."
       font: 0
       inv: 0
       BGname: 0
@@ -70715,7 +70645,7 @@ MonoBehaviour:
         \u0434\u043E\u043B\u044F \u043A\u0443\u0440\u0438\u043D\u043E\u0433\u043E
         \u043F\u043E\u043C\u0435\u0442\u0430 \u043F\u0440\u0435\u0432\u044B\u0448\u0430\u043B\u0430
         4.5% \u043E\u0442 \u043A\u043E\u043D\u0435\u0447\u043D\u043E\u0439 \u043C\u0430\u0441\u0441\u044B
-        \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u0430.\""
+        \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u0430."
       font: 0
       inv: 0
       BGname: 0
@@ -70738,8 +70668,8 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 0
-      line: "\"\u042D\u0445, \u0442\u0435\u043F\u0435\u0440\u044C, \u043A\u043E\u043D\u0435\u0447\u043D\u043E,
-        \u0442\u0430\u043A\u043E\u0433\u043E \u043D\u0435 \u0432\u044B\u043F\u0443\u0441\u043A\u0430\u044E\u0442.\""
+      line: "\u042D\u0445, \u0442\u0435\u043F\u0435\u0440\u044C \u0442\u0430\u043A\u043E\u0433\u043E
+        \u043D\u0435 \u0432\u044B\u043F\u0443\u0441\u043A\u0430\u044E\u0442"
       font: 0
       inv: 0
       BGname: 0
@@ -70762,11 +70692,11 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 0
-      line: "\"\u0421\u0442\u0430\u0440\u0438\u043A\u0438 \u0434\u043E \u0441\u0438\u0445
+      line: "\u0421\u0442\u0430\u0440\u0438\u043A\u0438 \u0434\u043E \u0441\u0438\u0445
         \u043F\u043E\u0440 \u0432\u0441\u043F\u043E\u043C\u0438\u043D\u0430\u044E\u0442
         \u0441\u043E \u0441\u043B\u0435\u0437\u0430\u043C\u0438 \u043D\u0430 \u0433\u043B\u0430\u0437\u0430\u0445
         \u0422\u041E\u0422 \u0421\u0410\u041C\u042B\u0419 \u0432\u043A\u0443\u0441
-        \u0434\u043E\u0432\u043E\u0435\u043D\u043D\u043E\u0433\u043E \u0433\u043E\u0432\u043D\u044F\u043A\u0430.\""
+        \u0434\u043E\u0432\u043E\u0435\u043D\u043D\u043E\u0433\u043E \u0433\u043E\u0432\u043D\u044F\u043A\u0430."
       font: 0
       inv: 0
       BGname: 0
@@ -70789,11 +70719,11 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 0
-      line: "\"\u041D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043F\u043E\u043A\u043E\u043B\u0435\u043D\u0438\u0439
+      line: "\u041D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043F\u043E\u043A\u043E\u043B\u0435\u043D\u0438\u0439
         \u0441\u043E\u0432\u0435\u0442\u0441\u043A\u0438\u0445 \u0432\u044B\u0440\u043E\u0441\u043B\u043E
         \u043D\u0430 \u043D\u0435\u0437\u0430\u0431\u044B\u0432\u0430\u0435\u043C\u043E\u043C
         \u0432\u043A\u0443\u0441\u0435, \u044F\u0440\u043A\u043E\u043C \u0430\u0440\u043E\u043C\u0430\u0442\u0435
-        \u0438 \u0415\u0411\u0415\u0419\u0428\u0415\u041C \u043F\u0440\u0438\u0445\u043E\u0434\u0435\""
+        \u0438 \u0415\u0411\u0415\u0419\u0428\u0415\u041C \u043F\u0440\u0438\u0445\u043E\u0434\u0435."
       font: 0
       inv: 0
       BGname: 0
@@ -73084,7 +73014,7 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u042F \u0435\u0434\u0432\u0430 \u0443\u0441\u0442\u043E\u044F\u043B\u0430
-        \u043E\u0442 \u0442\u0430\u043A\u043E\u0439 \u043F\u0435\u0440\u0435\u0434\u0430\u0447\u0438,
+        \u043E\u0442 \u0442\u0430\u043A\u043E\u0439 \u043F\u0435\u0440\u0435\u0434\u0430\u0447\u0438
         \u0438 \u043A\u043E\u0435-\u043A\u0430\u043A \u043F\u0435\u0440\u0435\u043A\u0438\u043D\u0443\u043B\u0430
         \u0435\u0433\u043E \u0447\u0435\u0440\u0435\u0437 \u0441\u0435\u0442\u043A\u0443.
         \u041C\u0435\u043D\u044F \u0440\u0430\u0437\u0434\u0440\u0430\u0436\u0430\u0435\u0442
@@ -73139,7 +73069,7 @@ MonoBehaviour:
       name: 2
       line: "\u0417\u0430\u043F\u043D\u0443\u0432\u0448\u0438\u0441\u044C, \u043E\u043D\u0430
         \u043F\u0440\u043E\u043B\u0435\u0442\u0435\u043B\u0430 \u043F\u0430\u0440\u0443
-        \u043C\u0435\u0442\u0440\u043E\u0432, \u0438 \u0443\u043F\u0430\u043B\u0430
+        \u043C\u0435\u0442\u0440\u043E\u0432 \u0438 \u0443\u043F\u0430\u043B\u0430
         \u043D\u0430 \u0433\u0440\u044F\u0437\u043D\u0443\u044E \u0437\u0435\u043C\u043B\u044E.
         \u041A\u043E\u043C\u043F\u043E\u0437\u0438\u0446\u0438\u044F \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u043B\u0430\u0441\u044C
         \u043C\u044F\u0447\u043E\u043C, \u043F\u0440\u0438\u0437\u0435\u043C\u043B\u0438\u0432\u0448\u0438\u043C\u0441\u044F
@@ -73192,7 +73122,7 @@ MonoBehaviour:
       line: "\u0414\u0435\u0432\u043E\u0447\u043A\u0443 \u043E\u043A\u0440\u0443\u0436\u0438\u043B\u0438
         \u043E\u0434\u043D\u043E\u043A\u043B\u0430\u0441\u0441\u043D\u0438\u043A\u0438,
         \u0431\u0435\u0441\u043F\u043E\u043A\u043E\u044F\u0441\u044C \u0437\u0430
-        \u0435\u0435 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435 \u0438 \u043F\u0435\u0440\u0435\u0448\u0451\u043F\u0442\u044B\u0432\u0430\u043B\u0438\u0441\u044C."
+        \u0435\u0435 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435 \u0438 \u043F\u0435\u0440\u0435\u0448\u0451\u043F\u0442\u044B\u0432\u0430\u044F\u0441\u044C."
       font: 0
       inv: 0
       BGname: 0
@@ -73622,6 +73552,52 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 3
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: Black
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 7
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 4
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 2
       name: 0
       line: 
@@ -73826,10 +73802,11 @@ MonoBehaviour:
         \u0443\u043A\u0440\u0430\u0448\u0435\u043D\u0438\u044F, \u0434\u0430 \u0438
         \u0432 \u0446\u0435\u043B\u043E\u043C, \u0435\u0441\u043B\u0438 \u0431\u044B
         \u043E\u043D\u0430 \u043D\u0435 \u0432\u044B\u0433\u043B\u044F\u0434\u0435\u043B\u0430
-        \u043D\u0430 \u0441\u0432\u043E\u0438 16 \u043B\u0435\u0442, \u043C\u043E\u0436\u043D\u043E
-        \u0431\u044B\u043B\u043E \u0431\u044B \u043F\u043E\u0434\u0443\u043C\u0430\u0442\u044C,
-        \u0447\u0442\u043E \u043F\u0435\u0440\u0435\u0434 \u043D\u0430\u043C\u0438
-        \u0447\u044C\u044F-\u0442\u043E \u043C\u0430\u043C\u0430.\n"
+        \u043D\u0430 \u0441\u0432\u043E\u0438 \u0448\u0435\u0441\u0442\u043D\u0430\u0434\u0446\u0430\u0442\u044C
+        \u043B\u0435\u0442, \u043C\u043E\u0436\u043D\u043E \u0431\u044B\u043B\u043E
+        \u0431\u044B \u043F\u043E\u0434\u0443\u043C\u0430\u0442\u044C, \u0447\u0442\u043E
+        \u043F\u0435\u0440\u0435\u0434 \u043D\u0430\u043C\u0438 \u0447\u044C\u044F-\u0442\u043E
+        \u043C\u0430\u043C\u0430.\n"
       font: 0
       inv: 0
       BGname: 0
@@ -73886,7 +73863,7 @@ MonoBehaviour:
         \u0438\u043B\u0438 \u043E\u043D\u0430 \u043D\u0430\u0434\u043E\u0435\u0441\u0442
         \u0432\u0441\u0435\u043C \u0447\u0435\u0440\u0435\u0437 \u043F\u0430\u0440\u0443
         \u0434\u043D\u0435\u0439...\n\u041E\u043D\u0430 \u0437\u0430\u043C\u0435\u0442\u0438\u043B\u0430
-        \u043D\u0430\u0441 \u0441 \u0421\u043E\u043D\u0435\u0439, \u0438 \u043F\u0440\u043E\u0442\u043E\u043B\u043A\u043D\u0443\u043B\u0430\u0441\u044C
+        \u043D\u0430\u0441 \u0441 \u0421\u043E\u043D\u0435\u0439 \u0438 \u043F\u0440\u043E\u0442\u043E\u043B\u043A\u043D\u0443\u043B\u0430\u0441\u044C
         \u043A \u043D\u0430\u0448\u0435\u0439 \u043F\u0430\u0440\u0442\u0435."
       font: 0
       inv: 0
@@ -73963,7 +73940,7 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u041C\u0435\u043D\u044F \u043F\u043E\u0447\u0435\u043C\u0443-\u0442\u043E
-        \u0432\u0441\u0435 \u044D\u0442\u043E \u043E\u0447\u0435\u043D\u044C \u0440\u0430\u0441\u0441\u0442\u0440\u043E\u0433\u0430\u043B\u043E. 
+        \u0432\u0441\u0435 \u044D\u0442\u043E \u043E\u0447\u0435\u043D\u044C \u0440\u0430\u0441\u0442\u0440\u043E\u0433\u0430\u043B\u043E. 
         \u041B\u0430\u0434\u044B, \u0440\u0430\u0437 \u044D\u0442\u043E \u0434\u043B\u044F
         \u043D\u0435\u0435 \u0442\u0430\u043A \u0432\u0430\u0436\u043D\u043E, \u043F\u043E\u0447\u0435\u043C\u0443
         \u0431\u044B \u0438 \u043D\u0435\u0442? "
@@ -75031,7 +75008,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 1
+      name: 2
       line: "-\u0410 \u043C\u0435\u043D\u044F \u0432\u044B\u0434\u0435\u0440\u0436\u0438\u0442?"
       font: 0
       inv: 0
@@ -75054,7 +75031,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 2
+      name: 1
       line: "-\u0422\u044B \u0441\u0442\u0440\u043E\u0439\u043D\u0430\u044F, \u0432\u044B\u0434\u0435\u0440\u0436\u0438\u0442."
       font: 0
       inv: 0
@@ -78821,8 +78798,7 @@ MonoBehaviour:
         \u041E\u0449\u0443\u0449\u0435\u043D\u0438\u0435, \u0447\u0442\u043E \u0435\u0441\u043B\u0438
         \u0438\u0445 \u043F\u0440\u0438\u043B\u043E\u0436\u0438\u0442\u044C \u0434\u0440\u0443\u0433
         \u043A \u0434\u0440\u0443\u0433\u0443, \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F
-        \u043E\u0434\u043D\u043E \u0446\u0435\u043B\u043E\u0435. \u0427\u0442\u043E-\u0442\u043E
-        \u0431\u043E\u043B\u044C\u0448\u043E\u0435 \u0438 \u0433\u0440\u0430\u043D\u0434\u0438\u043E\u0437\u043D\u043E\u0435."
+        \u043E\u0434\u0438\u043D \u0446\u0435\u043B\u044B\u0439 \u043C\u0430\u0433\u043D\u0438\u0442."
       font: 0
       inv: 0
       BGname: 0
@@ -80166,6 +80142,31 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
+      name: 4
+      line: "-\u0422\u044B \u0442\u0430\u043A \u0437\u0434\u043E\u0440\u043E\u0432\u043E
+        \u0438\u0433\u0440\u0430\u0435\u0448\u044C! \u0413\u0434\u0435 \u0442\u044B
+        \u043D\u0430\u0443\u0447\u0438\u043B\u0430\u0441\u044C?"
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
       name: 14
       line: "-\u042F... \u041D\u0435 \u0437\u043D\u0430\u044E, \u0442\u0430\u043A\u043E\u0435
         \u0447\u0443\u0432\u0441\u0442\u0432\u043E, \u0431\u0443\u0434\u0442\u043E
@@ -80193,7 +80194,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 14
+      name: 2
       line: "\u041A\u0438\u0440\u0430 \u0437\u0430\u0441\u043C\u0443\u0449\u0430\u043B\u0430\u0441\u044C
         \u043E\u0442 \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0445
         \u0441\u043B\u043E\u0432. \u0414\u0443\u043C\u0430\u044E, \u0435\u0439 \u0441\u0430\u043C\u043E\u0439
@@ -82519,29 +82520,6 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
-    - type: 16
-      name: 0
-      line: 
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: QTEEvent
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "-\u0421\u043E\u043D\u044F, \u043C\u043D\u0435 \u043E\u0447\u0435\u043D\u044C,
@@ -82920,7 +82898,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 3
+      name: 2
       line: "-\u0427\u0442\u043E \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u0438\u0442?"
       font: 0
       inv: 0
@@ -83305,7 +83283,7 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u042F \u0440\u0430\u0437\u0432\u044F\u0437\u0430\u043B\u0430 \u0443\u0437\u0435\u043B\u043E\u043A
-        \u043D\u0430 \u0437\u0430\u043F\u044F\u0441\u0442\u044C\u0438 \u0438 \u0440\u0430\u0437\u043C\u0435\u0440\u043D\u0443\u043B\u0430
+        \u043D\u0430 \u0437\u0430\u043F\u044F\u0441\u0442\u044C\u0435 \u0438 \u0440\u0430\u0437\u043C\u0435\u0440\u043D\u0443\u043B\u0430
         \u043F\u0435\u0440\u0432\u044B\u0439 \u0441\u043B\u043E\u0439 \u0431\u0438\u043D\u0442\u0430.
         \u041F\u043E\u0434 \u043D\u0438\u043C \u043E\u043A\u0430\u0437\u0430\u043B\u0441\u044F
         \u0435\u0449\u0435 \u0431\u043E\u043B\u0435\u0435 \u0432\u043B\u0430\u0436\u043D\u044B\u0439
@@ -83412,7 +83390,7 @@ MonoBehaviour:
         \u0437\u0430\u0441\u043E\u0445\u0448\u0435\u0439 \u043A\u0440\u043E\u0432\u044C\u044E
         \u0438 \u0433\u043D\u043E\u0435\u043C \u0441 \u043A\u043E\u0436\u0435\u0439.
         \u041F\u043E\u0434 \u043C\u0430\u0440\u043B\u0435\u0432\u043E\u0439 \u0442\u043A\u0430\u043D\u044C\u044E
-        \u043E\u043A\u0430\u0437\u0430\u043B\u0430\u043B\u0430\u0441\u044C \u0433\u043D\u0438\u044E\u0449\u0430\u044F
+        \u043E\u043A\u0430\u0437\u0430\u043B\u0430\u0441\u044C \u0433\u043D\u0438\u044E\u0449\u0430\u044F
         \u043F\u043B\u043E\u0442\u044C, \u043F\u043E\u043A\u0440\u044B\u0442\u0430\u044F
         \u0436\u0435\u043B\u0442\u044B\u043C\u0438 \u0432\u043E\u043B\u0434\u044B\u0440\u044F\u043C\u0438. "
       font: 0
@@ -83577,7 +83555,7 @@ MonoBehaviour:
     - type: 0
       name: 1
       line: "-\u041D\u043E... \u041D\u0430 \u044D\u0442\u043E\u0439 \u043D\u0435\u0434\u0435\u043B\u0435
-        \u0435\u0435 \u0435\u0435 \u0431\u0443\u0434\u0435\u0442..."
+        \u0435\u0435 \u043D\u0435 \u0431\u0443\u0434\u0435\u0442..."
       font: 0
       inv: 0
       BGname: 0
@@ -87196,7 +87174,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 0
+      name: 2
       line: "\u041F\u043E\u043F\u044B\u0442\u043A\u0438 \u043E\u0442\u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C
         \u0435\u0435 \u0441\u043D\u043E\u0432\u0430 \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u043B\u0438\u0441\u044C
         \u043D\u0438\u0447\u0435\u043C. \u0411\u0435\u0441\u043F\u043E\u043B\u0435\u0437\u043D\u043E."
@@ -87396,8 +87374,8 @@ MonoBehaviour:
         - \u0444\u0440\u0430\u0433\u043C\u0435\u043D\u0442\u044B \u043E\u0433\u0440\u043E\u043C\u043D\u043E\u0433\u043E
         \u043F\u0430\u0437\u043B\u0430, \u043A\u0443\u0441\u043E\u0447\u043A\u0438
         \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438, \u043F\u043E\u0433\u0440\u0443\u0436\u0435\u043D\u043D\u044B\u0435
-        \u0432 \u0431\u0435\u0437\u0434\u043E\u043D\u043D\u0443\u044E \u043F\u0443\u0447\u0438\u043D\u0443,
-        \u0435\u043F\u0442\u0430 \u0431\u043B\u044F."
+        \u0432 \u0431\u0435\u0437\u0434\u043E\u043D\u043D\u0443\u044E \u0432\u0441\u0435\u043B\u0435\u043D\u0441\u043A\u0443\u044E
+        \u043F\u0443\u0447\u0438\u043D\u0443, \u0435\u043F\u0442\u0430 \u0431\u043B\u044F."
       font: 0
       inv: 0
       BGname: 0
@@ -87444,7 +87422,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 6
-      line: "-\u041C\u043E\u043D\u0441\u0442\u0440\u043E\u0432?"
+      line: "-\u041C\u043E\u043D\u0441\u0442\u0440\u043E\u0432 \u043B\u0438?"
       font: 0
       inv: 0
       BGname: 0
@@ -87496,7 +87474,7 @@ MonoBehaviour:
     - type: 0
       name: 6
       line: "-\u042F - \u043E\u0442\u0440\u0430\u0436\u0435\u043D\u0438\u0435. \u0422\u0432\u043E\u0438\u0445
-        \u0444\u0430\u043D\u0442\u0430\u0437\u0438\u0439, \u0442\u0432\u043E\u0438
+        \u0444\u0430\u043D\u0442\u0430\u0437\u0438\u0439 \u0438\u043B\u0438 \u0442\u0432\u043E\u0438\u0445
         \u0441\u0442\u0440\u0430\u0445\u043E\u0432."
       font: 0
       inv: 0
@@ -88909,7 +88887,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -88927,8 +88905,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914636433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: 1.85, z: -8.26}
-  m_LocalScale: {x: 0.085, y: 0.08, z: 0.08}
+  m_LocalPosition: {x: 0.1486, y: 1.8537, z: -8.26}
+  m_LocalScale: {x: 0.07847455, y: 0.0786046, z: 0.08}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -90600,11 +90578,11 @@ MonoBehaviour:
   FSPanel: {fileID: 3248880}
   Camera: {fileID: 519420037}
   extensionScenarios_RU:
-  - {fileID: 1635867695}
   - {fileID: 2106391946}
   - {fileID: 857773804}
   - {fileID: 1952994835}
   - {fileID: 1497932535}
+  - {fileID: 1635867695}
   extensionScenarios_EN:
   - {fileID: 97775411}
   - {fileID: 380409891}
@@ -98763,7 +98741,7 @@ GameObject:
   - component: {fileID: 1497932535}
   - component: {fileID: 1497932534}
   m_Layer: 7
-  m_Name: Day4_Ru
+  m_Name: 'Day4_Ru '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100970,7 +100948,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "\u0421\u043E\u043D\u044F \u043C\u043E\u043B\u0447\u0430 \u043A\u0438\u0432\u043D\u0443\u043B\u0430
+      line: "\u0421\u043E\u043D\u044F \u043C\u043E\u043B\u0447\u0430 \u043A\u0438\u0432\u043D\u0443\u043B\u0430,
         \u0438 \u044F \u0443\u0441\u043B\u044B\u0448\u0430\u043B\u0430, \u043A\u0430\u043A
         \u043E\u043D\u0430 \u0441\u0433\u043B\u043E\u0442\u043D\u0443\u043B\u0430
         \u0441\u043B\u044E\u043D\u0443."
@@ -102119,7 +102097,8 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u041D\u0430\u0440\u0435\u0437\u0430\u0432 \u0442\u043E\u043D\u043A\u0438\u0445
-        \u0432\u0435\u0442\u0432\u0435\u0439 \u0438\u0432\u044B, \u043C\u044B \u0440\u0430\u0441\u043F\u043E\u043B\u043E\u0436\u0438\u043B\u0438\u0441\u044C
+        \u043C\u0435\u0442\u0430\u043B\u043B\u0438\u0447\u0435\u0441\u043A\u0438\u0445
+        \u043F\u0440\u0443\u0442\u044C\u0435\u0432, \u043C\u044B \u0440\u0430\u0441\u043F\u043E\u043B\u043E\u0436\u0438\u043B\u0438\u0441\u044C
         \u0443 \u0441\u0430\u043C\u043E\u0433\u043E \u0432\u0445\u043E\u0434\u0430.
         \u0421\u043E\u043D\u044F \u043F\u043E\u0434\u0441\u0435\u043B\u0430 \u043A
         \u041A\u0438\u0440\u0435, \u044F \u0441\u0435\u043B\u0430 \u043D\u0430\u043F\u0440\u043E\u0442\u0438\u0432,
@@ -102148,7 +102127,7 @@ MonoBehaviour:
       name: 4
       line: "-\u0412\u043E\u0442, \u0441\u043C\u043E\u0442\u0440\u0438. \u0421\u043D\u0430\u0447\u0430\u043B\u0430
         \u043C\u044B \u0434\u0435\u043B\u0430\u0435\u043C \u043A\u0430\u0440\u043A\u0430\u0441
-        \u0438 \u043B\u0430\u043C\u043F\u0430\u0434\u043A\u0443"
+        \u0438 \u043B\u0430\u043C\u043F\u0430\u0434\u043A\u0443."
       font: 0
       inv: 0
       BGname: 0
@@ -102352,7 +102331,7 @@ MonoBehaviour:
         \u043A\u0443\u0434\u0430 \u043F\u043B\u043E\u0442\u043D\u0435\u0435 \u0438
         \u0440\u043E\u0432\u043D\u0435\u0435, \u0432 \u043E\u0431\u0449\u0435\u043C,
         \u0438\u0434\u0435\u0430\u043B\u044C\u043D\u044B\u0439 \u043F\u0440\u0430\u0437\u0434\u043D\u0438\u0447\u043D\u044B\u0439
-        \u0444\u043E\u043D\u0430\u0440\u0438\u043A"
+        \u0444\u043E\u043D\u0430\u0440\u0438\u043A."
       font: 0
       inv: 0
       BGname: 0
@@ -102888,7 +102867,7 @@ MonoBehaviour:
       name: 2
       line: "\u0421\u0435\u0433\u043E\u0434\u043D\u044F \u0441\u0430\u043C\u044B\u0439
         \u0440\u0430\u0437\u0433\u0430\u0440 \u043F\u0440\u0430\u0437\u0434\u043D\u0438\u043A\u0430.
-        \u0425\u043E\u0440\u043E\u0432\u043E\u0434\u044B \u0443 \u041A\u043E\u0441\u0442\u0440\u043E\u0432,
+        \u0425\u043E\u0440\u043E\u0432\u043E\u0434\u044B \u0443 \u043A\u043E\u0441\u0442\u0440\u043E\u0432,
         \u0444\u043E\u043D\u0430\u0440\u0438, \u043C\u0435\u0441\u0442\u043D\u0430\u044F
         \u043C\u0443\u0437\u044B\u043A\u0430, \u0441\u043B\u043E\u043D\u044F\u044E\u0449\u0438\u0435\u0441\u044F
         \u043F\u044C\u044F\u043D\u044B\u0435 \u0441\u0442\u0430\u0438, \u0431\u043B\u0435\u0432\u043E\u0442\u0438\u043D\u0430,
@@ -103443,6 +103422,31 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
+      line: "-\u0415\u0441\u043B\u0438 \u043D\u0435 \u0431\u0443\u0434\u0435\u0448\u044C
+        \u0435\u0441\u0442\u044C \u043A\u0430\u043F\u0443\u0441\u0442\u0443, \u0441\u0438\u0441\u044C\u043A\u0438
+        \u043D\u0435 \u0432\u044B\u0440\u0430\u0441\u0442\u0443\u0442."
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 2
       line: "\u0412 \u043C\u0435\u043D\u044F \u0432\u0440\u0435\u0437\u0430\u043B\u0430\u0441\u044C
         \u0421\u043E\u043D\u044F, \u0441\u0431\u0438\u0432 \u0441 \u043D\u043E\u0433.\n"
       font: 0
@@ -103773,7 +103777,7 @@ MonoBehaviour:
         \u043F\u0435\u0440\u0435\u0434 \u0442\u043E\u0440\u0442\u043E\u043C \u0441
         \u0440\u0430\u0437\u043D\u043E\u0446\u0432\u0435\u0442\u043D\u044B\u043C\u0438
         \u0441\u0432\u0435\u0447\u043A\u0430\u043C\u0438 \u043D\u0430 \u0441\u0432\u043E\u0435
-        \u0434\u044D-\u0440\u044D \u0434\u0443\u043C\u0430\u0435\u0448\u044C, \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u043E
+        \u0434\u044D-\u0440\u044D, \u0434\u0443\u043C\u0430\u0435\u0448\u044C, \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u043E
         \u0442\u044B \u0437\u0430\u0433\u0430\u0434\u0430\u043B \u0436\u0435\u043B\u0430\u043D\u0438\u0435,
         \u0438\u043B\u0438 \u043D\u0435\u0442. \u0411\u0443\u0434\u0442\u043E \u0431\u044B
         \u044D\u0442\u043E \u0440\u0435\u0430\u043B\u044C\u043D\u043E \u0447\u0442\u043E-\u0442\u043E
@@ -104086,7 +104090,7 @@ MonoBehaviour:
       name: 2
       line: "\u042F \u0441\u0436\u0430\u043B\u0430 \u0437\u0443\u0431\u044B, \u0447\u0442\u043E\u0431\u044B
         \u043D\u0435 \u0440\u0430\u0437\u0440\u044B\u0434\u0430\u0442\u044C\u0441\u044F,
-        \u0438 \u0443\u0442\u0435\u0440\u043B\u0430\u0441\u044C \u0440\u0443\u043A\u043E\u0432\u043E\u043C."
+        \u0438 \u0443\u0442\u0435\u0440\u043B\u0430\u0441\u044C \u0440\u0443\u043A\u0430\u0432\u043E\u043C."
       font: 0
       inv: 0
       BGname: 0
@@ -104524,7 +104528,7 @@ MonoBehaviour:
         \u0442\u043E \u0441\u043D\u043E\u0432\u0430 \u0437\u0430\u043C\u044B\u043A\u0430\u043B\u0441\u044F,
         \u0438 \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u043B\u043E\u0441\u044C
         \u0441\u043E \u0432\u0441\u0435\u0439 \u0441\u0438\u043B\u044B \u043E\u0442\u0442\u0430\u043B\u043A\u0438\u0432\u0430\u0442\u044C
-        \u0442\u0443\u0448\u0443, \u0447\u0442\u043E\u0431\u044B \u0442\u044B \u0445\u043E\u0442\u044C
+        \u0442\u0443\u0448\u0443, \u0447\u0442\u043E\u0431\u044B \u0442\u0430 \u0445\u043E\u0442\u044C
         \u0447\u0443\u0442\u043E\u0447\u043A\u0443 \u0441\u0434\u0432\u0438\u043D\u0443\u043B\u0430\u0441\u044C,
         \u043F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0432 \u043D\u0430\u0448
         \u0442\u0438\u043F\u0430 \u043F\u0430\u0440\u0430\u0432\u043E\u0437\u0438\u043A."
@@ -105232,8 +105236,8 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "\u0421\u043E\u043D\u044F \u043D\u0430\u0441\u0442\u0443\u043F\u0438\u043B\u0430\u043D\u0430
-        \u043A\u0440\u0430\u0439 \u0438 \u0441\u043F\u0440\u044B\u0433\u043D\u0443\u043B\u0430 
+      line: "\u0421\u043E\u043D\u044F \u043D\u0430\u0441\u0442\u0443\u043F\u0438\u043B\u0430
+        \u043D\u0430 \u043A\u0440\u0430\u0439 \u0438 \u0441\u043F\u0440\u044B\u0433\u043D\u0443\u043B\u0430 
         \u0432\u043D\u0438\u0437, \u0432 \u043A\u0440\u0443\u0433 \u0438\u0437 \u043E\u0431\u043B\u0438\u0442\u043E\u0439
         \u0431\u0435\u043D\u0437\u0438\u043D\u043E\u043C \u0441\u043E\u043B\u043E\u043C\u044B.
         \u042D\u0442\u043E\u0442 \u043A\u0430\u0434\u0440 \u044F \u0432\u0438\u0436\u0443
@@ -105436,7 +105440,7 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u0427\u044C\u0438-\u0442\u043E \u043C\u0435\u043B\u044C\u0442\u0435\u0448\u0430\u0449\u0438\u0435
-        \u0444\u0438\u0433\u0443\u0440\u044B \u043D\u043E\u0441\u0438\u0442\u0441\u044F
+        \u0444\u0438\u0433\u0443\u0440\u044B \u043D\u043E\u0441\u044F\u0442\u0441\u044F
         \u0441 \u0432\u0435\u0434\u0440\u0430\u043C\u0438 \u043F\u0435\u0441\u043A\u0430
         \u0438 \u0432\u043E\u0434\u044B, \u043F\u044B\u0442\u0430\u044F\u0441\u044C
         \u0437\u0430\u043B\u0438\u0442\u044C \u0441\u043E\u043B\u043E\u043C\u0443
@@ -106083,10 +106087,8 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "- \u0440\u044F\u0432\u043A\u043D\u0443\u043B\u0430 \u043C\u0430\u043C\u0430,
-        \u0441\u0436\u0438\u043C\u0430\u044F \u0432 \u0440\u0443\u043A\u0430\u0445
-        \u043F\u0443\u0441\u0442\u0443\u044E \u0431\u0430\u043D\u043A\u0443 \u0438\u0437-\u043F\u043E\u0434
-        \u043A\u043E\u0444\u0435."
+      line: "\u041C\u0430\u043C\u0430 \u043E\u043F\u044F\u0442\u044C \u0440\u044B\u0447\u0438\u0442
+        \u043D\u0430 \u043C\u0435\u043D\u044F."
       font: 0
       inv: 0
       BGname: 0
@@ -106134,9 +106136,8 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "\u042F \u0441\u0442\u0430\u0440\u0430\u043B\u0430\u0441\u044C \u0435\u0435
-        \u0438\u0433\u043D\u043E\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C
-        \u043A\u0430\u043A \u043C\u043E\u0433\u043B\u0430, \u0443\u0442\u043A\u043D\u0443\u0432\u0448\u0438\u0441\u044C
+      line: "\u042F \u0441\u0442\u0430\u0440\u0430\u043B\u0430\u0441\u044C \u0438\u0433\u043D\u043E\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C
+        \u0435\u0435 \u043A\u0430\u043A \u043C\u043E\u0433\u043B\u0430, \u0443\u0442\u043A\u043D\u0443\u0432\u0448\u0438\u0441\u044C
         \u0432 \u043F\u043B\u0435\u0435\u0440."
       font: 0
       inv: 0
@@ -106211,17 +106212,16 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 8
-      line: "-\u041C\u0438\u0440\u0430, \u044F \u0442\u043E\u0436\u0435 \u0441\u043A\u043E\u0440\u0431\u043B\u044E.
-        \u041C\u043D\u0435 \u0442\u043E\u0436\u0435 \u043F\u043B\u043E\u0445\u043E.
-        \u042D\u0442\u043E \u043D\u0435 \u043F\u043E\u0432\u043E\u0434 \u0442\u0430\u043A
-        \u0443\u0431\u0438\u0432\u0430\u0442\u044C\u0441\u044F! \u041D\u0443\u0436\u043D\u043E
-        \u0436\u0438\u0442\u044C \u044D\u0442\u0443 \u0436\u0438\u0437\u043D\u044C 
-        \u0434\u0430\u043B\u044C\u0448\u0435. \u041D\u0438\u043A\u0442\u043E \u043D\u0435
-        \u0432\u0435\u0440\u043D\u0435\u0442 \u0442\u0435\u0431\u0435 \u043B\u044E\u0434\u0435\u0439,
-        \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0443\u0445\u043E\u0434\u044F\u0442.
-        \u041D\u0443\u0436\u043D\u043E \u043F\u0440\u043E\u0441\u0442\u043E \u0441
-        \u044D\u0442\u0438\u043C \u0441\u043C\u0438\u0440\u0438\u0442\u044C\u0441\u044F
-        .\n"
+      line: "-\u041C\u0438\u0440\u0430, \u044F \u0442\u043E\u0436\u0435 \u0441\u043A\u043E\u0440\u0431\u043B\u044E
+        \u043F\u043E \u043E\u0442\u0446\u0443. \u041C\u043D\u0435 \u0442\u043E\u0436\u0435
+        \u043F\u043B\u043E\u0445\u043E. \u042D\u0442\u043E \u043D\u0435 \u043F\u043E\u0432\u043E\u0434
+        \u0442\u0430\u043A \u0443\u0431\u0438\u0432\u0430\u0442\u044C\u0441\u044F!
+        \u041D\u0443\u0436\u043D\u043E \u0436\u0438\u0442\u044C \u044D\u0442\u0443
+        \u0436\u0438\u0437\u043D\u044C  \u0434\u0430\u043B\u044C\u0448\u0435. \u041D\u0438\u043A\u0442\u043E
+        \u043D\u0435 \u0432\u0435\u0440\u043D\u0435\u0442 \u0442\u0435\u0431\u0435
+        \u043B\u044E\u0434\u0435\u0439, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
+        \u0443\u0445\u043E\u0434\u044F\u0442. \u041D\u0443\u0436\u043D\u043E \u043F\u0440\u043E\u0441\u0442\u043E
+        \u0441 \u044D\u0442\u0438\u043C \u0441\u043C\u0438\u0440\u0438\u0442\u044C\u0441\u044F.\n"
       font: 0
       inv: 0
       BGname: 0
@@ -106244,14 +106244,11 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "\u042F \u0432\u0441\u0442\u0430\u043B\u0430 \u0438 \u043D\u0430\u043F\u0440\u0430\u0432\u0438\u043B\u0430\u0441\u044C
-        \u043A \u0434\u0432\u0435\u0440\u0438. \u041C\u043D\u0435 \u0431\u044B\u043B\u043E
-        \u0432\u0441\u0451 \u0440\u0430\u0432\u043D\u043E, \u043A\u0443\u0434\u0430
-        \u0438\u0434\u0442\u0438. \u0413\u043B\u0430\u0432\u043D\u043E\u0435 - \u0443\u0439\u0442\u0438,
-        \u043E\u0441\u0442\u0430\u0442\u044C\u0441\u044F \u043E\u0434\u043D\u043E\u0439
-        \u043D\u0430\u0435\u0434\u0438\u043D\u0435 \u0441 \u044D\u0442\u0438\u043C
-        \u0441\u0442\u0440\u0430\u043D\u043D\u044B\u043C \u0447\u0443\u0432\u0441\u0442\u0432\u043E\u043C
-        \u0432 \u0433\u0440\u0443\u0434\u0438."
+      line: "\u0425\u043E\u0447\u0443 \u0441\u0432\u0430\u043B\u0438\u0442\u044C
+        \u043E\u0442 \u043D\u0435\u0435 \u043F\u043E\u0434\u0430\u043B\u044C\u0448\u0435,
+        \u0447\u0442\u043E\u0431\u044B \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0438\u043A\u043E\u0433\u0434\u0430
+        \u043D\u0435 \u0432\u0438\u0434\u0435\u0442\u044C. \u0412\u0441\u0435 \u0440\u0430\u0432\u043D\u043E,
+        \u043A\u0443\u0434\u0430."
       font: 0
       inv: 0
       BGname: 0
@@ -106261,6 +106258,30 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 11
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: "\u0414\u0435\u043D\u044C5 \u041D\u0430\u0447\u0430\u043B\u043E
+        1"
       music: 0
       time: 0
       value: 0
@@ -108589,8 +108610,7 @@ MonoBehaviour:
       name: 10
       line: "-\u042D\u0439, \u0442\u044B \u043A\u0430\u043A? \u041C\u044B \u0443\u0436\u0435
         \u0442\u0440\u0435\u0442\u044C \u043E\u0442\u044B\u0433\u0440\u0430\u043B\u0438.
-        \u041D\u0435 \u0442\u0430\u043A \u0438 \u043C\u043D\u043E\u0433\u043E \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C
-        ...."
+        \u041D\u0435 \u0442\u0430\u043A \u0438 \u043C\u043D\u043E\u0433\u043E \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C..."
       font: 0
       inv: 0
       BGname: 0
@@ -109371,66 +109391,22 @@ MonoBehaviour:
         \u043E\u0431\u044B\u0447\u043D\u043E \u044F \u0441\u043B\u0438\u0448\u043A\u043E\u043C
         \u0441\u0438\u043B\u044C\u043D\u043E \u0445\u043B\u043E\u043F\u043D\u0443\u043B\u0430
         \u0434\u0432\u0435\u0440\u044C\u044E, \u0437\u0430 \u0447\u0442\u043E \u0431\u044B\u043B\u0430
-        \u043E\u0442\u0447\u0438\u0442\u0430\u043D\u0430."
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u0415\u0445\u0430\u0442\u044C \u0432 \u0433\u043E\u0441\u043F\u0438\u0442\u0430\u043B\u044C
-        \u043D\u0435\u0434\u0430\u043B\u0435\u043A\u043E. \u041D\u0435\u0441\u043C\u043E\u0442\u0440\u044F
-        \u043D\u0430 \u0442\u043E, \u0447\u0442\u043E \u044F \u0443\u0436\u0435 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E
+        \u043E\u0442\u0447\u0438\u0442\u0430\u043D\u0430.\n\n\u0415\u0445\u0430\u0442\u044C
+        \u0432 \u0433\u043E\u0441\u043F\u0438\u0442\u0430\u043B\u044C \u043D\u0435\u0434\u0430\u043B\u0435\u043A\u043E.
+        \u041D\u0435\u0441\u043C\u043E\u0442\u0440\u044F \u043D\u0430 \u0442\u043E,
+        \u0447\u0442\u043E \u044F \u0443\u0436\u0435 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E
         \u0440\u0430\u0437 \u043D\u0430\u0432\u0435\u0449\u0430\u043B\u0430 \u0421\u043E\u043D\u044E,
         \u044F \u043D\u0435 \u043C\u043E\u0433\u0443 \u043A \u044D\u0442\u043E\u043C\u0443
         \u043F\u0440\u0438\u0432\u044B\u043A\u043D\u0443\u0442\u044C. \u042F \u0432\u0435\u0434\u044C
-        \u0441\u043F\u0440\u0430\u0432\u043B\u044E\u0441\u044C?"
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u0418 \u043F\u0443\u0441\u0442\u044C \u043C\u043D\u0435 \u0442\u044F\u0436\u0435\u043B\u043E
-        \u0435\u0435 \u0432\u0438\u0434\u0435\u0442\u044C \u0442\u0430\u043A\u043E\u0439...
-        \u042F \u0432\u0441\u0435 \u0440\u0430\u0432\u043D\u043E \u0433\u043E\u0442\u043E\u0432\u0430
-        \u0441\u0434\u0435\u043B\u0430\u0442\u044C \u0432\u0441\u0435, \u0447\u0442\u043E
-        \u0442\u043E\u043B\u044C\u043A\u043E \u043C\u043E\u0436\u043D\u043E, \u0442\u043E\u043B\u044C\u043A\u043E
-        \u0431\u044B \u0443\u0432\u0438\u0434\u0435\u0442\u044C \u0435\u0435 \u0441\u043D\u043E\u0432\u0430,
+        \u0441\u043F\u0440\u0430\u0432\u043B\u044E\u0441\u044C?\n\n\u0418 \u043F\u0443\u0441\u0442\u044C
+        \u043C\u043D\u0435 \u0442\u044F\u0436\u0435\u043B\u043E \u0435\u0435 \u0432\u0438\u0434\u0435\u0442\u044C
+        \u0442\u0430\u043A\u043E\u0439... \u042F \u0432\u0441\u0435 \u0440\u0430\u0432\u043D\u043E
+        \u0433\u043E\u0442\u043E\u0432\u0430 \u0441\u0434\u0435\u043B\u0430\u0442\u044C
+        \u0432\u0441\u0435, \u0447\u0442\u043E \u0442\u043E\u043B\u044C\u043A\u043E
+        \u043C\u043E\u0436\u043D\u043E, \u0442\u043E\u043B\u044C\u043A\u043E \u0431\u044B
+        \u0443\u0432\u0438\u0434\u0435\u0442\u044C \u0435\u0435 \u0441\u043D\u043E\u0432\u0430,
         \u0445\u043E\u0442\u044C \u0447\u0435\u0440\u0435\u0437 \u043E\u043A\u043E\u0448\u043A\u043E.
-        \u0421\u043E\u043D\u044F...\n"
+        \u0421\u043E\u043D\u044F..."
       font: 0
       inv: 0
       BGname: 0
@@ -109459,30 +109435,7 @@ MonoBehaviour:
         \u043E\u043D\u0430 \u0432\u0434\u0440\u0443\u0433  \u0432\u043E\u0437\u044C\u043C\u0435\u0442
         \u0438... \u0418 \u0435\u0435 \u043D\u0435 \u0441\u0442\u0430\u043D\u0435\u0442!
         \u041F\u0440\u043E\u0441\u0442\u043E \u0432\u043E\u0442... \u0411\u044B\u043B\u0430
-        \u0438 \u043D\u0435\u0442."
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u041D\u0435\u043C\u043E\u0435 \u0438 \u0433\u043B\u0443\u0445\u043E\u0435
+        \u0438 \u043D\u0435\u0442.\n\n\u041D\u0435\u043C\u043E\u0435 \u0438 \u0433\u043B\u0443\u0445\u043E\u0435
         \u0442\u0435\u043B\u043E, \u0441 \u043E\u0441\u0442\u0440\u044B\u043C\u0438
         \u0447\u0435\u0440\u0442\u0430\u043C\u0438 \u043B\u0438\u0446\u0430. \u0427\u0442\u043E
         \u044F \u0441\u043C\u043E\u0433\u0443 \u0441\u0434\u0435\u043B\u0430\u0442\u044C?
@@ -109515,122 +109468,33 @@ MonoBehaviour:
         \u041D\u0435 \u043F\u043E\u0442\u043E\u043C\u0443 \u0447\u0442\u043E \u0442\u0430\u043A\u043E\u0439
         \u0432\u0435\u0436\u043B\u0438\u0432\u044B\u0439... \u041E\u043D \u043D\u0435
         \u0445\u043E\u0447\u0435\u0442, \u0447\u0442\u043E\u0431\u044B \u044F \u043E\u0442
-        \u043D\u0435\u0433\u043E \u0441\u0431\u0435\u0436\u0430\u043B\u0430. "
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u0416\u0443\u0442\u043A\u0438\u0439, \u043F\u0440\u043E\u0431\u0438\u0440\u0430\u044E\u0449\u0438\u0439
-        \u0434\u043E \u0433\u043B\u0443\u0431\u0438\u043D\u044B \u0434\u0443\u0448\u0438
-        \u0441\u0442\u0435\u0440\u0438\u043B\u044C\u043D\u044B\u0439 \u0432\u043E\u0437\u0434\u0443\u0445
-        \u0441\u043E \u0432\u043A\u0443\u0441\u043E\u043C \u043B\u0435\u043A\u0430\u0440\u0441\u0442\u0432
-        \u0438 \u0441\u043F\u0438\u0440\u0442\u0430. \u041E\u043D \u043C\u0435\u043D\u044F
-        \u0434\u0443\u0448\u0438\u0442 \u0438 \u0432\u044B\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0435\u0442
-        \u043D\u0430\u0438\u0437\u043D\u0430\u043D\u043A\u0443. "
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u041F\u0443\u0442\u044C \u0434\u043E \u043A\u0430\u0431\u0438\u043D\u0435\u0442\u0430
-        \u044F \u0431\u044B \u043C\u043E\u0433\u043B\u0430 \u043F\u0440\u043E\u0439\u0442\u0438
-        \u0441 \u0437\u0430\u043A\u0440\u044B\u0442\u044B\u043C\u0438 \u0433\u043B\u0430\u0437\u0430\u043C\u0438.
+        \u043D\u0435\u0433\u043E \u0441\u0431\u0435\u0436\u0430\u043B\u0430. \n\n\u0416\u0443\u0442\u043A\u0438\u0439,
+        \u043F\u0440\u043E\u0431\u0438\u0440\u0430\u044E\u0449\u0438\u0439 \u0434\u043E
+        \u0433\u043B\u0443\u0431\u0438\u043D\u044B \u0434\u0443\u0448\u0438 \u0441\u0442\u0435\u0440\u0438\u043B\u044C\u043D\u044B\u0439
+        \u0432\u043E\u0437\u0434\u0443\u0445 \u0441\u043E \u0432\u043A\u0443\u0441\u043E\u043C
+        \u043B\u0435\u043A\u0430\u0440\u0441\u0442\u0432 \u0438 \u0441\u043F\u0438\u0440\u0442\u0430.
+        \u041E\u043D \u043C\u0435\u043D\u044F \u0434\u0443\u0448\u0438\u0442 \u0438
+        \u0432\u044B\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0435\u0442
+        \u043D\u0430\u0438\u0437\u043D\u0430\u043D\u043A\u0443. \n\n\u041F\u0443\u0442\u044C
+        \u0434\u043E \u043A\u0430\u0431\u0438\u043D\u0435\u0442\u0430 \u044F \u0431\u044B
+        \u043C\u043E\u0433\u043B\u0430 \u043F\u0440\u043E\u0439\u0442\u0438 \u0441
+        \u0437\u0430\u043A\u0440\u044B\u0442\u044B\u043C\u0438 \u0433\u043B\u0430\u0437\u0430\u043C\u0438.
         \u041C\u0435\u043D\u044F \u043F\u0443\u0441\u043A\u0430\u044E\u0442 \u043A
         \u0421\u043E\u043D\u0435. \u0412 \u043A\u043E\u0440\u0438\u0434\u043E\u0440\u0435
         \u0441\u043B\u0430\u0434\u043A\u0438\u0439 \u043C\u044B\u043B\u044C\u043D\u044B\u0439
-        \u0437\u0430\u043F\u0430\u0445."
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u0427\u0442\u043E-\u0442\u043E \u0440\u0435\u0437\u043A\u043E \u0431\u044C\u0435\u0442
-        \u0432 \u043D\u043E\u0441, \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u043E\u0435
+        \u0437\u0430\u043F\u0430\u0445.\n\n\u0427\u0442\u043E-\u0442\u043E \u0440\u0435\u0437\u043A\u043E
+        \u0431\u044C\u0435\u0442 \u0432 \u043D\u043E\u0441, \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u043E\u0435
         \u0438 \u043A\u0430\u043A\u043E\u0435-\u0442\u043E \u0441\u0442\u0440\u0430\u043D\u043D\u043E\u0435,
         \u043D\u0435\u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u043A\u043E\u0435.
         \u042F \u043D\u0438\u043A\u043E\u0433\u0434\u0430 \u043D\u0435 \u0431\u044B\u043B\u0430
         \u0432 \u043A\u0432\u0430\u0440\u0442\u0438\u0440\u0435 \u0441 \u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u043C
         \u0442\u0440\u0443\u043F\u043E\u043C, \u043D\u043E \u044D\u0442\u043E \u0435\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435,
         \u0447\u0442\u043E \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442 \u043D\u0430
-        \u0443\u043C, \u043A\u043E\u0433\u0434\u0430 \u044F \u0432\u0434\u044B\u0445\u0430\u044E."
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u0427\u0443\u0442\u044C \u043F\u043E\u0433\u043E\u0434\u044F, \u0441
-        \u043F\u0440\u043E\u0431\u0438\u0440\u0430\u044E\u0449\u0435\u043C \u0441\u0435\u0440\u0434\u0446\u0435
-        \u0445\u043E\u043B\u043E\u0434\u043E\u043C \u0438 \u0434\u0440\u043E\u0436\u044C\u044E
-        \u044F \u0442\u043E\u043B\u043A\u0430\u044E \u0434\u0432\u0435\u0440\u044C."
+        \u0443\u043C, \u043A\u043E\u0433\u0434\u0430 \u044F \u0432\u0434\u044B\u0445\u0430\u044E.\n\n\u0427\u0443\u0442\u044C
+        \u043F\u043E\u0433\u043E\u0434\u044F, \u0441 \u043F\u0440\u043E\u0431\u0438\u0440\u0430\u044E\u0449\u0438\u043C
+        \u0441\u0435\u0440\u0434\u0446\u0435 \u0445\u043E\u043B\u043E\u0434\u043E\u043C
+        \u0438 \u0434\u0440\u043E\u0436\u044C\u044E \u044F \u0442\u043E\u043B\u043A\u0430\u044E
+        \u0434\u0432\u0435\u0440\u044C."
       font: 0
       inv: 0
       BGname: 0
@@ -110017,7 +109881,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 0
+      name: 2
       line: "-\u042F \u0440\u0430\u0434\u0430, \u0447\u0442\u043E \u0432\u0441\u0435
         \u0440\u0430\u0432\u043D\u043E \u043C\u043E\u0433\u0443 \u0442\u0435\u0431\u044F
         \u0443\u0432\u0438\u0434\u0435\u0442\u044C."
@@ -110287,7 +110151,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 4
-      line: "\u043E\u0433\u0434\u0430  \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E 
+      line: "-\u041A\u043E\u0433\u0434\u0430  \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E 
         \u0447\u0430\u0441\u043E\u0432 \u0437\u043E\u0432\u0435\u0448\u044C \u0432\u0440\u0430\u0447\u0430...
         \u0418 \u043A\u043E\u0433\u0434\u0430 \u043D\u0435 \u0432 \u0441\u0438\u043B\u0430\u0445
         \u0442\u0435\u0440\u043F\u0435\u0442\u044C, \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442\u0441\u044F...
@@ -110740,7 +110604,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "\u0418\u0437 \u0435\u0435 \u0432\u0435\u043D \u043D\u0430 \u0440\u0443\u043A\u0438
+      line: "\u0418\u0437 \u0435\u0435 \u0432\u0435\u043D \u043D\u0430 \u0440\u0443\u043A\u0435
         \u043F\u043E\u0432\u044B\u0441\u043A\u0430\u043A\u0438\u0432\u0430\u043B\u0438
         \u043A\u0430\u0442\u0435\u0442\u043E\u0440\u044B, \u0438 \u043A\u0430\u043F\u0435\u043B\u044C\u043D\u0438\u0446\u044B
         \u043F\u043E\u0432\u0430\u043B\u0438\u043B\u0438\u0441\u044C \u043D\u0430
@@ -115010,10 +114874,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 684
+    m_Top: 408
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 380
+  m_Spacing: 209.5
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -117509,7 +117373,7 @@ GameObject:
   - component: {fileID: 1952994835}
   - component: {fileID: 1952994834}
   m_Layer: 7
-  m_Name: Day3_Ru
+  m_Name: 'Day3_Ru '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117610,13 +117474,12 @@ MonoBehaviour:
       name: 2
       line: "\u041F\u0430\u0440\u0443 \u043C\u0438\u043D\u0443\u0442 \u0438 \u0432\u043E\u0442
         \u044F \u0443\u0436\u0435 \u0441\u0438\u0434\u0435\u043B\u0430, \u0443\u0442\u043A\u043D\u0443\u0432\u0448\u0438\u0441\u044C
-        \u0432 \u043C\u043E\u043D\u0438\u0442\u043E\u0440, \u0441\u043B\u043E\u0432\u043D\u043E
-        \u0432 \u0447\u0435\u0440\u043D\u0443\u044E \u0434\u044B\u0440\u0443, \u0433\u0434\u0435
-        \u043F\u043E \u0437\u0430\u043A\u043E\u043D\u0430\u043C \u043A\u0432\u0430\u043D\u0442\u043E\u0432\u043E\u0439
-        \u043C\u0435\u0445\u0430\u043D\u0438\u043A\u0438 \u0432\u0440\u0435\u043C\u044F
-        \u043E\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u043B\u043E\u0441\u044C,
-        \u0430 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C \u0438\u0441\u043A\u0430\u0436\u0430\u043B\u0430\u0441\u044C
-        \u0434\u043E \u043D\u0435\u0443\u0437\u043D\u0430\u0432\u0430\u0435\u043C\u043E\u0441\u0442\u0438."
+        \u0432 \u043C\u043E\u043D\u0438\u0442\u043E\u0440 \u043A\u0430\u043A \u0432
+        \u0447\u0435\u0440\u043D\u0443\u044E \u0434\u044B\u0440\u0443, \u0433\u0434\u0435
+        \u043F\u043E \u0432\u0441\u0435\u043C \u0437\u0430\u043A\u043E\u043D\u0430\u043C 
+        \u0432\u0440\u0435\u043C\u044F \u043E\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u043B\u043E\u0441\u044C,
+        \u0430 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C \u0441\u043A\u0440\u0443\u0447\u0438\u0432\u0430\u043B\u0430\u0441\u044C
+        \u0432 \u0431\u0443\u0431\u043B\u0438\u043A."
       font: 0
       inv: 0
       BGname: 0
@@ -117639,13 +117502,14 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "\u0424\u043E\u043A\u0441\u043D\u0435\u0442 -\u043C\u043E\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u0430\u044F
-        \u043A\u043E\u043B\u044B\u0431\u0435\u043B\u044C, \u043C\u043E\u044F \u043B\u0438\u0447\u043D\u0430\u044F
+      line: "\u0424\u043E\u043A\u0441\u043D\u0435\u0442 -\u043C\u043E\u0439 \u0442\u0430\u0439\u043D\u044B\u0439
+        \u043C\u0438\u0440, \u043C\u043E\u044F \u043B\u0438\u0447\u043D\u0430\u044F
         \u043C\u0430\u0442\u0440\u0438\u0446\u0430. \u0417\u0434\u0435\u0441\u044C
         \u044F \u043C\u043E\u0433\u0443 \u0431\u044B\u0442\u044C \u043A\u0435\u043C
         \u0443\u0433\u043E\u0434\u043D\u043E - \u043F\u043E\u0432\u0435\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u0438\u0446\u0435\u0439
         \u0442\u0440\u043E\u043B\u043B\u0435\u0439, \u043D\u043E\u0432\u044B\u043C
-        \u0444\u0438\u043B\u043E\u0441\u043E\u0444\u043E\u043C, \u0437\u0430\u0441\u0442\u0435\u043D\u0447\u0438\u0432\u043E\u0439
+        \u0444\u0438\u043B\u043E\u0441\u043E\u0444\u043E\u043C \u0432 \u0443\u0441\u0430\u0442\u043E\u0439
+        \u043C\u0430\u0441\u043A\u0435, \u0437\u0430\u0441\u0442\u0435\u043D\u0447\u0438\u0432\u043E\u0439
         \u0430\u043D\u0438\u043C\u0435-\u0448\u043A\u043E\u043B\u044C\u043D\u0438\u0446\u0435\u0439..."
       font: 0
       inv: 0
@@ -117669,12 +117533,12 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "\u0418\u043B\u0438 \u043F\u0440\u043E\u0441\u0442\u043E \u0441\u043E\u0431\u043E\u0439,
-        \u0432\u043F\u0438\u0442\u044B\u0432\u0430\u0442\u044C \u043A\u0430\u0436\u0434\u044B\u0439
-        \u0431\u0438\u0442 \u0442\u0435\u043A\u0441\u0442\u0430, \u0431\u0443\u0434\u0442\u043E
-        \u043A\u0430\u043F\u043B\u0438,  \u0438\u0437 \u0442\u0440\u0435\u0434\u0430
-        \u0432 \u0442\u0440\u0435\u0434, \u0434\u043E \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0439
-        \u043A\u0440\u043E\u0445\u0438."
+      line: "\u0418\u043B\u0438 \u043F\u0440\u043E\u0441\u0442\u043E \u0431\u044B\u0442\u044C
+        \u0441\u043E\u0431\u043E\u0439, \u0432\u043F\u0438\u0442\u044B\u0432\u0430\u0442\u044C
+        \u043A\u0430\u0436\u0434\u044B\u0439 \u0431\u0438\u0442 \u0442\u0435\u043A\u0441\u0442\u0430,
+        \u0431\u0443\u0434\u0442\u043E \u043A\u0430\u043F\u043B\u0438 \u0433\u0443\u0431\u043A\u043E\u0439, 
+        \u0438\u0437 \u0442\u0440\u0435\u0434\u0430 \u0432 \u0442\u0440\u0435\u0434,
+        \u0434\u043E \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0439 \u043A\u0440\u043E\u0445\u0438."
       font: 0
       inv: 0
       BGname: 0
@@ -117698,18 +117562,17 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u0412 \u0433\u043B\u0430\u0437\u0430\u0445 \u0442\u0430\u043D\u0446\u0435\u0432\u0430\u043B\u0438
-        \u043F\u0438\u043A\u0441\u0435\u043B\u0438, \u0438 \u043A\u0430\u0436\u0434\u0430\u044F
-        \u0441\u0442\u0440\u043E\u0447\u043A\u0430 \u0441\u043B\u043E\u0432\u043D\u043E
-        \u0434\u044B\u0448\u0430\u043B\u0430, \u0448\u0435\u043F\u0442\u0430\u043B\u0430
-        \u043E \u0442\u043E\u043C, \u0447\u0442\u043E \u0441\u043A\u0440\u044B\u0442\u043E
-        \u043E\u0442 \u0433\u043B\u0430\u0437. \u0424\u043E\u043A\u0441\u043D\u0435\u0442
-        - \u043C\u043E\u0435 \u043E\u0442\u0440\u0430\u0436\u0435\u043D\u0438\u0435
-        \u0438 \u043F\u0440\u043E\u0435\u043A\u0442\u043E\u0440, \u043C\u043E\u0439
+        \u043F\u0438\u043A\u0441\u0435\u043B\u0438, \u0441\u043A\u043B\u0430\u0434\u044B\u0432\u0430\u044F\u0441\u044C
+        \u0432 \u0441\u0442\u0440\u043E\u043A\u0438, \u0438 \u043A\u0430\u0436\u0434\u0430\u044F
+        \u0441\u0442\u0440\u043E\u0447\u043A\u0430 \u0448\u0435\u043F\u0442\u0430\u043B\u0430
+        \u043E \u0447\u0435\u043C-\u0442\u043E \u0442\u0430\u0439\u043D\u043E\u043C
+        \u0438 \u0441\u043A\u0440\u044B\u0442\u043E\u043C. \u0424\u043E\u043A\u0441\u043D\u0435\u0442
+        - \u0438 \u043A\u0430\u0440\u0442\u0438\u043D\u043A\u0430 \u0438 \u043F\u0440\u043E\u0435\u043A\u0442\u043E\u0440,
         \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0439
         \u0434\u0435\u043C\u043E\u043D-\u043F\u043E\u043C\u043E\u0449\u043D\u0438\u043A.
         \u041E\u043D \u043F\u043E\u0434\u0441\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442
-        \u043C\u043D\u0435 \u043A\u0430\u043A \u0436\u0438\u0442\u044C, \u0447\u0442\u043E
-        \u0434\u0443\u043C\u0430\u0442\u044C, \u043A\u0430\u043A \u0432\u0438\u0434\u0435\u0442\u044C. "
+        \u043A\u0430\u043A \u0436\u0438\u0442\u044C, \u0447\u0442\u043E \u0434\u0443\u043C\u0430\u0442\u044C,
+        \u043A\u0430\u043A \u0432\u0438\u0434\u0435\u0442\u044C. "
       font: 0
       inv: 0
       BGname: 0
@@ -118676,95 +118539,27 @@ MonoBehaviour:
       line: "\u042F \u0437\u0430\u0436\u043C\u0443\u0440\u0438\u043B\u0430\u0441\u044C,
         \u0430 \u043A\u043E\u0433\u0434\u0430 \u043E\u0442\u043A\u0440\u044B\u043B\u0430
         \u0433\u043B\u0430\u0437\u0430, \u043E\u043A\u0430\u0437\u0430\u043B\u0430\u0441\u044C
-        \u0432 \u043E\u0431\u044A\u044F\u0442\u0438\u044F\u0445 \u041A\u0438\u0440\u0430. "
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u041F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u044F\u0449\u0435\u0435
+        \u0432 \u043E\u0431\u044A\u044F\u0442\u0438\u044F\u0445 \u041A\u0438\u0440\u0430.
+        \n\n\u041F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u044F\u0449\u0435\u0435
         \u043A\u0430\u0436\u0435\u0442\u0441\u044F \u043A\u0430\u043A\u0438\u043C-\u0442\u043E
         \u0441\u043D\u043E\u043C. \u0422\u0435\u043F\u043B\u043E \u0440\u0430\u0437\u0431\u0435\u0436\u0430\u043B\u043E\u0441\u044C
         \u043F\u043E \u043A\u043E\u0436\u0435, \u0430 \u0432\u0441\u043B\u0435\u0434
         \u0437\u0430 \u043D\u0438\u043C \u0440\u0430\u0441\u043F\u043E\u043B\u0437\u043B\u0438\u0441\u044C
         \u0432\u043E\u043B\u043D\u044B \u0445\u043E\u043B\u043E\u0434\u0430, \u0432\u044B\u0437\u044B\u0432\u0430\u044F
         \u043C\u0443\u0440\u0430\u0448\u043A\u0438 \u0438 \u043C\u0435\u043B\u043A\u0443\u044E
-        \u0434\u0440\u043E\u0436\u044C."
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u042F \u0437\u0430\u0441\u043C\u0443\u0449\u0430\u043B\u0430\u0441\u044C,
+        \u0434\u0440\u043E\u0436\u044C.\n\n\u042F \u0437\u0430\u0441\u043C\u0443\u0449\u0430\u043B\u0430\u0441\u044C,
         \u043D\u0435\u0441\u043C\u043E\u0442\u0440\u044F \u043D\u0430 \u0442\u043E,
         \u0447\u0442\u043E \u0435\u0434\u0432\u0430 \u043B\u0438 \u043E\u0449\u0443\u0449\u0430\u043B\u0430
         \u043F\u0440\u0438\u043A\u043E\u0441\u043D\u043E\u0432\u0435\u043D\u0438\u044F.
         \u041C\u043D\u0435 \u0437\u043D\u0430\u043A\u043E\u043C\u043E \u044D\u0442\u043E
         \u0447\u0443\u0432\u0441\u0442\u0432\u043E, \u043A\u043E\u0433\u0434\u0430
         \u043E\u0431\u043D\u0438\u043C\u0430\u0435\u0448\u044C \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0430
-        \u0432\u043E \u0441\u043D\u0435."
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u0411\u0443\u0434\u0442\u043E \u043D\u0430 \u043C\u0435\u043D\u044F
-        \u043D\u0430\u043A\u0438\u043D\u0443\u043B\u0438 \u0442\u0435\u043F\u043B\u044B\u0439
-        \u0445\u0430\u043B\u0430\u0442,  \u0438 \u043E\u043D \u0435\u0434\u0432\u0430
-        \u043A\u0430\u0441\u0430\u0435\u0442\u0441\u044F \u043A\u043E\u0436\u0438,
-        \u0438\u043B\u0438 \u0432\u0435\u0442\u0435\u0440 \u043B\u0430\u0441\u043A\u0430\u0435\u0442
-        \u0435\u0434\u0432\u0430 \u0440\u0430\u0437\u043B\u0438\u0447\u0438\u043C\u044B\u0435
+        \u0432\u043E \u0441\u043D\u0435.\n\n\u0411\u0443\u0434\u0442\u043E \u043D\u0430
+        \u043C\u0435\u043D\u044F \u043D\u0430\u043A\u0438\u043D\u0443\u043B\u0438
+        \u0442\u0435\u043F\u043B\u044B\u0439 \u0445\u0430\u043B\u0430\u0442,  \u0438
+        \u043E\u043D \u0435\u0434\u0432\u0430 \u043A\u0430\u0441\u0430\u0435\u0442\u0441\u044F
+        \u043A\u043E\u0436\u0438, \u0438\u043B\u0438 \u0432\u0435\u0442\u0435\u0440
+        \u043B\u0430\u0441\u043A\u0430\u0435\u0442 \u0435\u0434\u0432\u0430 \u0440\u0430\u0437\u043B\u0438\u0447\u0438\u043C\u044B\u0435
         \u0432\u043E\u043B\u043E\u0441\u044B \u043D\u0430 \u0442\u0435\u043B\u0435. "
       font: 0
       inv: 0
@@ -119164,7 +118959,7 @@ MonoBehaviour:
         \u0443\u043B\u044B\u0431\u043D\u0443\u043B\u0441\u044F. \u041C\u043D\u0435
         \u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F \u0435\u0433\u043E \u0443\u043B\u044B\u0431\u043A\u0430.
         \u0421\u043D\u0438\u0441\u0445\u043E\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u0430\u044F
-        \u0438 \u0438\u0441\u043A\u0440\u0435\u043D\u043D\u0435\u0435 \u0434\u043E\u0431\u0440\u0430\u044F"
+        \u0438 \u0438\u0441\u043A\u0440\u0435\u043D\u043D\u0435 \u0434\u043E\u0431\u0440\u0430\u044F"
       font: 0
       inv: 0
       BGname: 0
@@ -119787,7 +119582,7 @@ MonoBehaviour:
         \u041C\u043E\u0440\u0433\u043D\u0438 \u0441\u0435\u043C\u044C \u0440\u0430\u0437,
         \u0445\u043B\u043E\u043F\u043D\u0438 \u0442\u0440\u0438 \u0440\u0430\u0437\u0430,
         \u0441\u0434\u0435\u043B\u0430\u0439 \u0441\u0430\u043B\u044C\u0442\u043E
-        \u043D\u0430\u0437\u0430\u0434 \u0438 \u043D\u0430 \u0443\u0442\u0440\u043E.."
+        \u043D\u0430\u0437\u0430\u0434 \u0438 \u043D\u0430 \u0443\u0442\u0440\u043E..."
       font: 0
       inv: 0
       BGname: 0
@@ -122012,10 +121807,11 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u0420\u0430\u0441\u043A\u0430\u0442\u0438\u0441\u0442\u043E\u0435 \u044D\u0445\u043E
-        \u043C\u043E\u0436\u0435\u0442 \u0437\u043D\u0430\u0447\u0438\u0442 \u0442\u043E\u043B\u044C\u043A\u043E
-        \u043E\u0434\u043D\u043E - \u044D\u0442\u043E\u0442 \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442
-        \u0442\u044F\u043D\u0435\u0442\u0441\u044F \u043D\u0430 \u0441\u043E\u0442\u043D\u0438
-        \u043C\u0435\u0442\u0440\u043E\u0432 \u0432 \u043E\u0431\u0435 \u0441\u0442\u043E\u0440\u043E\u043D\u044B. "
+        \u043C\u043E\u0436\u0435\u0442 \u0437\u043D\u0430\u0447\u0438\u0442\u044C
+        \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0434\u043D\u043E - \u044D\u0442\u043E\u0442
+        \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442 \u0442\u044F\u043D\u0435\u0442\u0441\u044F
+        \u043D\u0430 \u0441\u043E\u0442\u043D\u0438 \u043C\u0435\u0442\u0440\u043E\u0432
+        \u0432 \u043E\u0431\u0435 \u0441\u0442\u043E\u0440\u043E\u043D\u044B. "
       font: 0
       inv: 0
       BGname: 0
@@ -122041,7 +121837,7 @@ MonoBehaviour:
       line: "\u0417\u0434\u0435\u0441\u044C, \u043A\u0430\u0436\u0435\u0442\u0441\u044F,
         \u043E\u0447\u0435\u043D\u044C \u0434\u0430\u0432\u043D\u043E \u043D\u0438\u043A\u043E\u0433\u043E
         \u043D\u0435 \u0431\u044B\u043B\u043E - \u043C\u0435\u0441\u0442\u043E \u0432\u044B\u0433\u043B\u044F\u0434\u0438\u0442
-        \u0434\u0430\u0432\u043D\u043E \u0437\u0430\u0431\u0440\u043E\u0448\u0435\u043D\u043D\u044B\u043C.
+        \u0434\u0430\u0432\u043D\u043E \u0437\u0430\u0431\u0440\u043E\u0448\u0435\u043D\u044B\u043C.
         \u042D\u0442\u043E\u0442 \u0437\u0430\u043F\u0430\u0445... "
       font: 0
       inv: 0
@@ -122156,7 +121952,7 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u0412\u0441\u0435 \u0440\u0430\u0432\u043D\u043E, \u043A\u0443\u0434\u0430
-        \u043D\u0435 \u043F\u043E\u0439\u0434\u0435\u0448\u044C - \u0432\u0441\u044E\u0434\u0443
+        \u043D\u0438 \u043F\u043E\u0439\u0434\u0435\u0448\u044C - \u0432\u0441\u044E\u0434\u0443
         \u0432\u043B\u0430\u0436\u043D\u043E \u0438 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u043E."
       font: 0
       inv: 0
@@ -122500,9 +122296,9 @@ MonoBehaviour:
       name: 2
       line: "\u0412\u0435\u0441\u044C \u043F\u043E\u043B \u0432 \u043A\u043E\u043C\u043D\u0430\u0442\u0435
         \u0437\u0430\u043B\u0438\u0442 \u0433\u043D\u0438\u043B\u043E\u0439 \u0432\u043E\u0434\u043E\u0439.
-        \u041D\u0435\u0432\u043E\u043E\u0431\u0440\u0430\u0437\u0438\u043C\u044B\u0435
-        \u043F\u0443\u0447\u043A\u0438 \u043F\u0440\u043E\u0432\u043E\u0434\u043E\u0432
-        \u0441\u0432\u043E\u0434\u044F\u0442\u0441\u044F \u043A \u043D\u0430\u0433\u0440\u043E\u043C\u043E\u0436\u0434\u0435\u043D\u0438\u044E
+        \u0411\u0435\u0437\u0443\u043C\u043D\u044B\u0435 \u043F\u0443\u0447\u043A\u0438
+        \u043F\u0440\u043E\u0432\u043E\u0434\u043E\u0432 \u0441\u0445\u043E\u0434\u044F\u0442\u0441\u044F
+        \u043A \u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0435\u0439 \u0433\u043E\u0440\u0435
         \u0438\u0437 \u043C\u043E\u043D\u0438\u0442\u043E\u0440\u043E\u0432. "
       font: 0
       inv: 0
@@ -122885,7 +122681,7 @@ MonoBehaviour:
     - type: 0
       name: 5
       line: "-\u041A\u0442\u043E \u0437\u043D\u0430\u0435\u0442... \u0420\u0430\u043D\u044C\u0448\u0435
-        \u0441 \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u043A\u0438\u043C
+        \u0441 \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u043A\u0438\u043C\u0438
         \u0436\u0438\u0437\u043D\u044F\u043C\u0438 \u0432\u043E\u043E\u0431\u0449\u0435
         \u043D\u0435 \u0441\u0447\u0438\u0442\u0430\u043B\u0438\u0441\u044C. "
       font: 0
@@ -124445,7 +124241,7 @@ MonoBehaviour:
         \u041C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u0442\u043E\u043B\u044C\u043A\u043E
         \u043E\u043A\u0430\u0437\u0430\u0432\u0448\u0438\u0441\u044C \u0437\u0434\u0435\u0441\u044C,
         \u0432 \u0438\u0441\u043A\u0443\u0441\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u043C 
-        \u043C\u0438\u0440\u0435 \u0447\u0435\u043B\u043E\u0432\u0435\u043A \u043D\u0430\u0447\u043D\u0435\u0442
+        \u043C\u0438\u0440\u0435, \u0447\u0435\u043B\u043E\u0432\u0435\u043A \u043D\u0430\u0447\u043D\u0435\u0442
         \u0447\u0442\u043E-\u0442\u043E \u0437\u043D\u0430\u0447\u0438\u0442\u044C
         \u0438 \u0434\u0435\u0439\u0441\u0442\u0432\u043E\u0432\u0430\u0442\u044C
         \u0442\u0430\u043A, \u043A\u0430\u043A \u0445\u043E\u0442\u0435\u043B\u043E\u0441\u044C
@@ -124584,7 +124380,7 @@ MonoBehaviour:
         \u0441\u0435\u0431\u044F, \u043D\u0443\u0436\u043D\u043E \u0441\u043D\u0430\u0447\u0430\u043B\u0430
         \u0441\u0435\u0431\u044F \u043D\u0430\u0439\u0442\u0438. \u0410 \u044F \u0441\u0435\u0431\u044F
         \u043D\u0438\u043A\u043E\u0433\u0434\u0430 \u0438 \u043D\u0435 \u043D\u0430\u0445\u043E\u0434\u0438\u043B.
-        \u041F\u043E\u044D\u0442\u043E\u043C\u0443 \u043C\u043D\u0435  \u0438 \u043B\u0435\u0433\u0447\u0435.."
+        \u041F\u043E\u044D\u0442\u043E\u043C\u0443 \u043C\u043D\u0435  \u0438 \u043B\u0435\u0433\u0447\u0435..."
       font: 0
       inv: 0
       BGname: 0
@@ -125058,6 +124854,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 3
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: Black
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u042F \u043F\u043E\u043B\u0437\u043A\u043E\u043C \u0434\u043E\u0431\u0440\u0430\u043B\u0430\u0441\u044C
@@ -125150,7 +124969,7 @@ MonoBehaviour:
         \u0431\u043E\u043B\u044C. \u041E\u0442\u043B\u0438\u043F\u043D\u0443\u0432
         \u043E\u0442 \u0444\u0430\u044F\u043D\u0441\u043E\u0432\u043E\u0433\u043E
         \u0434\u0440\u0443\u0433\u0430, \u044F \u043F\u043E\u0434\u043D\u044F\u043B\u0430\u0441\u044C
-        \u043D\u0430 \u043A\u043E\u043B\u0435\u043D\u0438, \u0438 \u043A\u043E\u0435-\u043A\u0430\u043A
+        \u043D\u0430 \u043A\u043E\u043B\u0435\u043D\u0438 \u0438 \u043A\u043E\u0435-\u043A\u0430\u043A
         \u0432\u0441\u0442\u0430\u043B\u0430 \u0440\u043E\u0432\u043D\u043E. "
       font: 0
       inv: 0
@@ -125445,6 +125264,30 @@ MonoBehaviour:
         \u0443\u0445\u043E\u043C \u043A \u0445\u043E\u043B\u043E\u0434\u043D\u043E\u043C\u0443
         \u043C\u0435\u0442\u0430\u043B\u043B\u0443, \u043F\u044B\u0442\u0430\u043B\u0430\u0441\u044C
         \u0440\u0430\u0437\u043B\u0438\u0447\u0438\u0442\u044C \u0441\u043B\u043E\u0432\u0430. "
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 0
+      line: "-\u041F\u0440\u043E\u0441\u043D\u0438\u0441\u044C... \u0418 \u043F\u043E\u043C\u043E\u0433\u0438
+        \u043C\u043D\u0435... \u043F\u0440\u043E\u0441\u043D\u0443\u0442\u044C\u0441\u044F..."
       font: 0
       inv: 0
       BGname: 0
@@ -126080,6 +125923,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 3
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: Black
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0412\u043E \u043C\u043D\u0435 \u0440\u0430\u0437\u044B\u0433\u0440\u0430\u043B\u0441\u044F
@@ -126168,6 +126034,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 13
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: InvScenario7
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
   - name: "\u0414\u0435\u043D\u044C3 \u0418\u0441\u0445\u043E\u04341"
     lines:
     - type: 3
@@ -126178,7 +126067,7 @@ MonoBehaviour:
       BGname: 0
       effects: 0
       CGname: Black
-      show: 1
+      show: 0
       pose: 0
       spriteEffect: 0
       additionalPose: 
@@ -126220,7 +126109,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 2
+      name: 4
       line: "-\u0417\u0434\u0435\u0441\u044C \u0442\u0430\u043A \u0443\u044E\u0442\u043D\u043E!
         \u0415\u0441\u043B\u0438 \u0431\u044B \u043D\u0435 \u043F\u0440\u0430\u0432\u0438\u043B\u043E
         \"\u0422\u0438\u0448\u0438\u043D\u044B\", \u044F \u0431\u044B \u0447\u0430\u0441\u0442\u0435\u043D\u044C\u043A\u043E
@@ -126247,7 +126136,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 4
+      name: 2
       line: "-\u0414\u0430 \u043E \u0447\u0435\u043C \u0442\u044B... \u041D\u0430\u043C
         \u043D\u0435 \u0434\u0430\u0434\u0443\u0442 \u0434\u0430\u0436\u0435 \u0432
         \u043A\u0430\u0440\u0442\u043E\u0447\u043A\u0438 \u041F\u043E\u043A\u0435\u043C\u043E\u043D\u043E\u0432
@@ -126273,7 +126162,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 2
+      name: 4
       line: "-\u0418\u0442\u043E\u0433\u043E..."
       font: 0
       inv: 0
@@ -126381,7 +126270,7 @@ MonoBehaviour:
         \u041E\u043D \u0437\u043E\u0432\u0435\u0442 \u043B\u044E\u0434\u0435\u0439,
         \u043A\u043E\u0433\u0434\u0430 \u0442\u0435 \u0441\u043F\u044F\u0442, \u0438
         \u0437\u0430\u0431\u0438\u0440\u0430\u0435\u0442 \u0432 \u0441\u0432\u043E\u0439
-        \u043C\u0438\u0440, \u0435\u0441\u043B\u0438 \u043E\u043D\u0438 \u043E\u0442\u043A\u043B\u0438\u043A\u043D\u0443\u0442\u044C\u0441\u044F."
+        \u043C\u0438\u0440, \u0435\u0441\u043B\u0438 \u043E\u043D\u0438 \u043E\u0442\u043A\u043B\u0438\u043A\u043D\u0443\u0442\u0441\u044F."
       font: 0
       inv: 0
       BGname: 0
@@ -126510,7 +126399,7 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
-      pose: 0
+      pose: 2
       spriteEffect: 0
       additionalPose: 
       music: 0
@@ -126523,7 +126412,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1, y: 0, z: 0}
+      V3position: {x: 2, y: 0, z: 0}
     - type: 4
       name: 2
       line: 
@@ -126546,7 +126435,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: -1, y: 0, z: 0}
+      V3position: {x: -2, y: 0, z: 0}
     - type: 4
       name: 16
       line: 
@@ -126841,7 +126730,7 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
-      pose: 0
+      pose: 2
       spriteEffect: 0
       additionalPose: 
       music: 0
@@ -126854,7 +126743,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: -1, y: 0, z: 0}
+      V3position: {x: -2, y: 0, z: 0}
     - type: 4
       name: 4
       line: 
@@ -126864,7 +126753,7 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
-      pose: 0
+      pose: 2
       spriteEffect: 0
       additionalPose: 
       music: 0
@@ -126877,7 +126766,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1, y: 0, z: 0}
+      V3position: {x: 2, y: 0, z: 0}
     - type: 4
       name: 16
       line: 
@@ -126887,7 +126776,7 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
-      pose: 0
+      pose: 2
       spriteEffect: 0
       additionalPose: 
       music: 0
@@ -127096,7 +126985,7 @@ MonoBehaviour:
         \u0443\u0437\u043A\u0438\u043C\u0438 \u0433\u043B\u0430\u0437\u0430\u043C\u0438
         \u0438 \u0443\u0441\u0442\u0430\u0432\u0438\u043B\u0441\u044F \u043D\u0430
         \u043C\u0435\u043D\u044F \u0445\u043E\u043B\u043E\u0434\u043D\u043E \u0438
-        \u043E\u0442\u0441\u0440\u0430\u043D\u0435\u043D\u043D\u043E."
+        \u043E\u0442\u0441\u0442\u0440\u0430\u043D\u0435\u043D\u043D\u043E."
       font: 0
       inv: 0
       BGname: 0
@@ -127273,6 +127162,52 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 3
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: Black
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 7
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 4
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 11
       name: 0
       line: 
@@ -127348,7 +127283,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 2
+      name: 4
       line: "-\u0417\u0434\u0435\u0441\u044C \u0442\u0430\u043A \u0443\u044E\u0442\u043D\u043E!
         \u0415\u0441\u043B\u0438 \u0431\u044B \u043D\u0435 \u043F\u0440\u0430\u0432\u0438\u043B\u043E
         \"\u0422\u0438\u0448\u0438\u043D\u044B\", \u044F \u0431\u044B \u0447\u0430\u0441\u0442\u0435\u043D\u044C\u043A\u043E
@@ -127375,7 +127310,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 4
+      name: 2
       line: "-\u0414\u0430 \u043E \u0447\u0435\u043C \u0442\u044B... \u041D\u0430\u043C
         \u043D\u0435 \u0434\u0430\u0434\u0443\u0442 \u0434\u0430\u0436\u0435 \u0432
         \u043A\u0430\u0440\u0442\u043E\u0447\u043A\u0438 \u041F\u043E\u043A\u0435\u043C\u043E\u043D\u043E\u0432
@@ -127401,7 +127336,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 2
+      name: 4
       line: "-\u0418\u0442\u043E\u0433\u043E..."
       font: 0
       inv: 0
@@ -127455,7 +127390,7 @@ MonoBehaviour:
       line: "-\u041C\u043E\u0436\u043D\u043E \u0441 \u0443\u0432\u0435\u0440\u0435\u043D\u043D\u043E\u0441\u0442\u044C\u044E
         \u0441\u043A\u0430\u0437\u0430\u0442\u044C, \u0447\u0442\u043E \u044D\u0442\u043E\u0442
         \u0442\u0432\u043E\u0439 \u043C\u043E\u043D\u0441\u0442\u0440 \u0436\u0438\u0432\u0435\u0442
-        \u0432  \u0441\u0442\u0430\u0440\u043E\u043C \u0441\u0442\u0430\u0440\u043E\u043C
+        \u0432  \u0441\u0442\u0430\u0440\u043E\u043C-\u0441\u0442\u0430\u0440\u043E\u043C
         \u0432\u043E\u0435\u043D\u043D\u043E\u043C \u0431\u0443\u043D\u043A\u0435\u0440\u0435."
       font: 0
       inv: 0
@@ -127605,7 +127540,7 @@ MonoBehaviour:
         \u0431\u044B\u043B \u043F\u0440\u043E\u0441\u0442\u043E \u0441\u0442\u0440\u0430\u043D\u043D\u044B\u0439
         \u0437\u0430\u043F\u0430\u0445, \u043E\u043D \u0432\u0437\u044F\u043B\u0441\u044F
         \u0438\u0437 \u043D\u0438\u043E\u0442\u043A\u0443\u0434\u0430. \u041A\u0430\u043A\u043E\u0439-\u0442\u043E
-        \u0442\u0443\u0445\u043B\u044B\u0439, \u0437\u0435\u043C\u043B\u044F\u043D\u0438\u0441\u0442\u044B\u0439... "
+        \u0442\u0443\u0445\u043B\u044B\u0439, \u0437\u0435\u043C\u043B\u0438\u0441\u0442\u044B\u0439... "
       font: 0
       inv: 0
       BGname: 0
@@ -127869,7 +127804,7 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
-      pose: 0
+      pose: 2
       spriteEffect: 0
       additionalPose: 
       music: 0
@@ -127892,7 +127827,7 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
-      pose: 0
+      pose: 2
       spriteEffect: 0
       additionalPose: 
       music: 0
@@ -128661,6 +128596,52 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 3
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: Black
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 7
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 4
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 11
       name: 0
       line: 
@@ -128861,11 +128842,12 @@ MonoBehaviour:
       name: 2
       line: "\u041F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0442\u043E\u043B\u044C\u043A\u043E!
         \u0422\u0430\u043A \u043C\u043D\u043E\u0433\u043E... \u0418 \u0432 \u043A\u0430\u0436\u0434\u044B\u0439
-        \u0440\u0430\u0437 \u043A\u0430\u043A \u0432 \u043F\u0435\u0440\u0432\u044B\u0439
-        \u0431\u0430\u0431\u043E\u0447\u043A\u0438 \u0432 \u0436\u0438\u0432\u043E\u0442\u0435
-        \u043E\u0442 \u0432\u0438\u0434\u0430 \u0443\u043B\u0438\u0446 \u0441 \u0443\u0442\u043E\u043F\u0430\u044E\u0449\u0438\u043C
-        \u0432 \u043D\u0438\u0445 \u0441\u0432\u0435\u0442\u043E\u043C \u0442\u0443\u0441\u043A\u043B\u044B\u0445
-        \u0444\u043E\u043D\u0430\u0440\u0435\u0439."
+        \u0440\u0430\u0437 \u043A\u0430\u043A \u0432 \u043F\u0435\u0440\u0432\u044B\u0439.
+        \u0411\u0430\u0431\u043E\u0447\u043A\u0438 \u0432 \u0436\u0438\u0432\u043E\u0442\u0435
+        \u043E\u0442 \u0432\u0438\u0434\u0430 \u0441\u0432\u0435\u0442\u044F\u0449\u0438\u0445\u0441\u044F
+        \u043F\u0443\u0448\u0438\u0441\u0442\u044B\u0445 \u043A\u043B\u0443\u0431\u043A\u043E\u0432
+        \u0441\u0432\u0435\u0442\u0430, \u0442\u043E\u043D\u0443\u0449\u0438\u0445
+        \u0432 \u043D\u043E\u0447\u0438."
       font: 0
       inv: 0
       BGname: 0
@@ -130897,58 +130879,14 @@ MonoBehaviour:
         \u0438\u0434\u0435\u0448\u044C \u043F\u043E \u0442\u0438\u0445\u0438\u043C
         \u043A\u043E\u0440\u0438\u0434\u043E\u0440\u0430\u043C, \u0432 \u043A\u043E\u0442\u043E\u0440\u044B\u0445
         \u0435\u0449\u0435 \u0433\u043E\u0440\u0438\u0442 \u0441\u0432\u0435\u0442,
-        \u0441\u043E\u0432\u0441\u0435\u043C \u043E\u0434\u043D\u0430."
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u042D\u0445\u043E\u043C \u043E\u0442\u0440\u0430\u0436\u0430\u044E\u0442\u0441\u044F
-        \u043E\u0442 \u0442\u043E\u0448\u043D\u043E\u0442\u043D\u043E-\u0433\u043E\u043B\u0443\u0431\u044B\u0445
+        \u0441\u043E\u0432\u0441\u0435\u043C \u043E\u0434\u043D\u0430.\n\n\u042D\u0445\u043E\u043C
+        \u043E\u0442\u0440\u0430\u0436\u0430\u044E\u0442\u0441\u044F \u043E\u0442
+        \u0442\u043E\u0448\u043D\u043E\u0442\u043D\u043E-\u0433\u043E\u043B\u0443\u0431\u044B\u0445
         \u0441\u0442\u0435\u043D \u0448\u0430\u0433\u0438, \u0438 \u0434\u0430\u0436\u0435
         \u043D\u0435 \u0432\u0435\u0440\u0438\u0442\u0441\u044F, \u0447\u0442\u043E
         \u0437\u0434\u0435\u0441\u044C \u0441\u043E\u0432\u0441\u0435\u043C \u043D\u0435\u0434\u0430\u0432\u043D\u043E
-        \u0431\u0435\u0433\u0430\u043B\u0438 \u0442\u043E\u043B\u043F\u044B \u0448\u043A\u043E\u043B\u044C\u043D\u0438\u043A\u043E\u0432.   "
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 8
-      name: 2
-      line: "\u0412 \u043F\u043E\u043B\u043D\u043E\u0439 \u0442\u0438\u0448\u0438\u043D\u0435
+        \u0431\u0435\u0433\u0430\u043B\u0438 \u0442\u043E\u043B\u043F\u044B \u0448\u043A\u043E\u043B\u044C\u043D\u0438\u043A\u043E\u0432.  
+        \n\n\u0412 \u043F\u043E\u043B\u043D\u043E\u0439 \u0442\u0438\u0448\u0438\u043D\u0435
         \u043C\u044B \u043F\u0440\u043E\u0441\u043A\u043E\u043B\u044C\u0437\u043D\u0443\u043B\u0438
         \u0432 \u043A\u0430\u0431\u0438\u043D\u0435\u0442 \u0434\u0438\u0440\u0435\u043A\u0442\u043E\u0440\u0430,
         \u043D\u0430 \u043C\u0435\u0441\u0442\u0435 \u0435\u0433\u043E \u043D\u0435
@@ -131093,7 +131031,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: -1, y: 0, z: 0}
+      V3position: {x: -2, y: 0, z: 0}
     - type: 4
       name: 17
       line: 
@@ -131690,7 +131628,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: -1, y: 0, z: 0}
+      V3position: {x: -2, y: 0, z: 0}
     - type: 0
       name: 2
       line: "-\u042F \u0437\u043D\u0430\u044E, \u0447\u0442\u043E \u0432\u044B \u043F\u043E\u0434\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u0435\u0442\u0435
@@ -131887,7 +131825,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: -1, y: 0, z: 0}
+      V3position: {x: -2, y: 0, z: 0}
     - type: 0
       name: 17
       line: "-\u041D\u0443 \u0438... \u0413\u0434\u0435 \u0431\u044B \u0442\u044B
@@ -132850,7 +132788,7 @@ MonoBehaviour:
       name: 2
       line: "\u0414\u0430 \u043D\u0443, \u044D\u0442\u043E \u0433\u043E\u0440\u044F\u0449\u0438\u0439
         \u0441\u0430\u043C\u043E\u043B\u0435\u0442... \u041E\u0442\u043A\u0443\u0434\u0430
-        \u043E\u043D \u0437\u0434\u0435\u0441\u044C."
+        \u043E\u043D \u0437\u0434\u0435\u0441\u044C?"
       font: 0
       inv: 0
       BGname: 0
@@ -132877,7 +132815,7 @@ MonoBehaviour:
         \u0447\u0442\u043E-\u0442\u043E \u0432\u044B\u0441\u044B\u043F\u0430\u0442\u044C\u0441\u044F.\n\u0412\u043C\u0435\u0441\u0442\u043E
         \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u0441\u043F\u0440\u044F\u0442\u0430\u0442\u044C\u0441\u044F,
         \u044F \u043F\u043E\u0447\u0435\u043C\u0443-\u0442\u043E \u0432\u044B\u0448\u043B\u0430
-        \u043D\u0430 \u043E\u0442\u043A\u0440\u044B\u0442\u0443\u044E \u043F\u043B\u043E\u0449\u0430\u0434\u043A\u0443,
+        \u043D\u0430 \u043E\u0442\u043A\u0440\u044B\u0442\u0443\u044E \u043F\u043B\u043E\u0449\u0430\u0434\u043A\u0443
         \u0438 \u043D\u0430\u0447\u0430\u043B\u0430 \u0432\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u0442\u044C\u0441\u044F
         \u0432 \u043D\u0435\u0431\u043E."
       font: 0
@@ -132906,7 +132844,7 @@ MonoBehaviour:
         \u0431\u0443\u043C\u0430\u0433\u0438.  \u0421\u043E\u0442\u043D\u0438 \u043B\u0438\u0441\u0442\u043E\u0432\u043E\u043A
         \u043F\u043E\u0440\u0445\u0430\u043B\u0438 \u0432\u0441\u043B\u0435\u0434
         \u0437\u0430 \u0441\u0430\u043C\u043E\u043B\u0435\u0442\u043E\u043C, \u043E\u0442\u0434\u0435\u043B\u044F\u043B\u0438\u0441\u044C
-        \u0441\u0442\u0430\u0438 \u0438  \u0441\u0430\u0434\u0438\u043B\u0438\u0441\u044C
+        \u043E\u0442  \u0441\u0442\u0430\u0438 \u0438  \u0441\u0430\u0434\u0438\u043B\u0438\u0441\u044C
         \u043D\u0430 \u043A\u0440\u044B\u0448\u0438, \u0432\u044B\u0441\u044B\u043F\u0430\u043B\u0438\u0441\u044C
         \u043D\u0430 \u0434\u043E\u0440\u043E\u0433\u0443, \u0442\u043E\u043D\u0443\u043B\u0438
         \u0432  \u043B\u0443\u0436\u0430\u0445."
@@ -133103,6 +133041,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 7
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 4
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 2
       name: 0
       line: 
@@ -133234,7 +133195,7 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
-      pose: 0
+      pose: 2
       spriteEffect: 0
       additionalPose: 
       music: 0

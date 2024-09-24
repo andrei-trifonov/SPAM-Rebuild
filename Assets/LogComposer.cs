@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LogComposer : MonoBehaviour
 {
@@ -15,13 +16,35 @@ public class LogComposer : MonoBehaviour
 
     public void RenewLog(GDB.Name name, string line)
     {
-        logName.Add(name);
-        logLine.Add(line);
-        
-        if (logLine.Count >= maxLogSize){
-            logLine.Remove(logLine[0]);
-            logName.Remove(logName[0]);
+        string[] words = line.Split(' ');
+        List<string> lines = new List<string>();
+        string currentLine = "";
+        foreach (string word in words)
+        {
+            if (currentLine.Length + word.Length > 230)
+            {
+                lines.Add(currentLine.Trim());
+                currentLine = word;
+            }
+            else
+            {
+                currentLine += " " + word;
+            }
         }
+        lines.Add(currentLine.Trim());
+        foreach (string line_ in lines)
+        {
+            logName.Add(name);
+            logLine.Add(line_);
+            
+            if (logLine.Count >= maxLogSize){
+                logLine.Remove(logLine[0]);
+                logName.Remove(logName[0]);
+            }
+        }
+       
+        
+       
     }
     
     void Flush()
