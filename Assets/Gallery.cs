@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class Gallery : MonoBehaviour
     [SerializeField] private GameObject closeGalleryButton;
     [SerializeField] private GameObject closeImageButton;
     [SerializeField] private GameObject galleryObject;
+    [SerializeField] private TMP_Text pageText;
     void Start()
     {
         Sprite[] sprites = Resources.LoadAll<Sprite>("CG/");
@@ -32,6 +34,7 @@ public class Gallery : MonoBehaviour
 
 
         UpdatePage(0);
+        pageText.text = (currentPage + 1).ToString();
         
     }
 
@@ -43,6 +46,7 @@ public class Gallery : MonoBehaviour
         {
             currentPage = 0;
         }
+        pageText.text = (currentPage + 1).ToString();
         Debug.Log("Page: " + currentPage);
         UpdatePage(currentPage);
     }
@@ -54,13 +58,14 @@ public class Gallery : MonoBehaviour
         {
             currentPage = Mathf.CeilToInt((float)cgName.Count / buttons.Count ) - 1;
         }
+        pageText.text = (currentPage + 1).ToString();
         Debug.Log("Page: " + currentPage);
         UpdatePage(currentPage);
     }
 
     private void UpdatePage(int page)
     {
-
+       
         try
         {
             for (int i = 0; i < buttons.Count; i++)

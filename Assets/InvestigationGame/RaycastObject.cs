@@ -1,6 +1,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,10 +22,12 @@ public class RaycastObject : MonoBehaviour
 
     public GameObject Settings;
     public Canvas Preloader;
+    public GameObject PreloaderObj;
 
     IEnumerator LoadSceneCoroutine()
     {
         Preloader.enabled = true;
+        PreloaderObj.SetActive(true);
         yield return new WaitForSeconds(1);
         SceneManager.LoadSceneAsync("FinalGameplayScene");
     }
