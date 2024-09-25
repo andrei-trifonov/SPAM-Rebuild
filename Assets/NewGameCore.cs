@@ -822,10 +822,17 @@ public class NewGameCore : MonoBehaviour
         }
 
         RemoveActor(line.name.ToString());
+        ResourceRequest request;
+        if (line.pose == GDB.Pose.Custom)
+        {
+            request = Resources.LoadAsync<GameObject>("Actors/"+line.name.ToString() + line.additionalPose.ToString());
+        }
+        else
+        {
+             request =
+                Resources.LoadAsync<GameObject>("Actors/" + line.name.ToString() + line.pose.ToString());
+        }
 
-
-        ResourceRequest request = Resources.LoadAsync<GameObject>("Actors/"+line.name.ToString() + line.pose.ToString());
-                               
         while (!request.isDone)
         {
              yield return null;
@@ -843,6 +850,8 @@ public class NewGameCore : MonoBehaviour
 
 
              Actor actor;
+ if (line.name == GDB.Name.Женя){
+ actor = new Actor(line.V3position, GDB.Name.Соня, line.pose);}
              if (line.name == GDB.Name.Мира && FindVariable(GDB.Variables.Injure) >=0 && saveObj.Variables[FindVariable(GDB.Variables.Injure)].varValue > 0)
                  actor = new Actor(line.V3position, GDB.Name.Мира_травма, line.pose);
              else
@@ -1466,6 +1475,12 @@ public class NewGameCore : MonoBehaviour
 
 
         }
+        else
+        {
+            lineNum++;
+            Step();
+           
+        }
     }
 
     void varAction(Item line)
@@ -1617,7 +1632,10 @@ public class NewGameCore : MonoBehaviour
             {
                ActorOnScene = FindActorOnScene(GDB.Name.Мира_травма.ToString());
             }
-
+            if (line.name==GDB.Name.Женя && ActorOnScene == null)
+            {
+               ActorOnScene = FindActorOnScene(GDB.Name.Соня.ToString());
+            }
             if (ActorOnScene != null)
             {
                 

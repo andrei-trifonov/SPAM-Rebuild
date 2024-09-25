@@ -12,6 +12,8 @@ public class GameMenuController : MonoBehaviour
     public GameObject Menu;
 
     public Canvas Preloader;
+    public GameObject PreloaderObject;
+    public List<GameObject> DisableOnPreloading;
 
     public void ShowGameMenu(){}
 
@@ -33,7 +35,15 @@ public class GameMenuController : MonoBehaviour
     }
     public void ExitToMenu()
     {
+        
+        foreach (GameObject go in DisableOnPreloading)
+        {
+            go.SetActive(false);
+        }
         Preloader.enabled = true;
+        PreloaderObject.SetActive(true);
+
+        
         SceneManager.LoadSceneAsync("MainMenuScene");
     }
 
