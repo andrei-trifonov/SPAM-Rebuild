@@ -124,7 +124,8 @@ public class NewGameCore : MonoBehaviour
     private AudioSource fadeInMusic;
     private AudioSource fadeOutMusic;
     [SerializeField] GameObject musicPlayer;
-    [SerializeField] private Animator musicIcon;
+    [SerializeField] private Animator musicIcon1;
+[SerializeField] private Animator musicIcon2;
     [SerializeField] private TMP_Text musicName;
     [SerializeField] private TMP_Text musicAuthor;
     private List<Track> TrackList;
@@ -1091,11 +1092,13 @@ public class NewGameCore : MonoBehaviour
         //Design
         if (!skipping)
         {
-            musicIcon.SetBool("Play", true);
+            musicIcon1.SetBool("Play", true);
+musicIcon2.SetBool("Play", true);
             musicName.text = TrackList[(int) line.music].Name;
             musicAuthor.text = TrackList[(int) line.music].Author;
             yield return new WaitForSeconds(0.5f);
-            musicIcon.SetBool("Play", false);
+            musicIcon1.SetBool("Play", false);
+musicIcon2.SetBool("Play", false);
         } 
 
         CoroutinesWorking.Remove(cid);
