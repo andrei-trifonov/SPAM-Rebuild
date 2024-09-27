@@ -21,7 +21,7 @@ public class TextEffects : MonoBehaviour
     void FixedUpdate()
     {
         if (effect == GDB.Fonts.Computer){
-        textComponent.enableAutoSizing=(true);
+        textComponent.fontSize = 25;;
         }
         else{
         textComponent.fontSize = 36;

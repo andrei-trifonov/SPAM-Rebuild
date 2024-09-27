@@ -125,14 +125,16 @@ public class NewGameCore : MonoBehaviour
     private AudioSource fadeOutMusic;
     [SerializeField] GameObject musicPlayer;
     [SerializeField] private Animator musicIcon1;
-[SerializeField] private Animator musicIcon2;
+    [SerializeField] private Animator musicIcon2;
     [SerializeField] private TMP_Text musicName;
     [SerializeField] private TMP_Text musicAuthor;
     private List<Track> TrackList;
     [SerializeField] private AudioSource sceneAudioPlayer;
     [SerializeField] private AudioSource soundPlayer;
 
-    [SerializeField] private GameObject saveLoadMarker;
+    [SerializeField] private GameObject saveLoadMarker1;
+    [SerializeField] private GameObject saveLoadMarker2;
+    [SerializeField] private GameObject saveLoadMarker3;
 
     private List<Actor> actorsOnScene = new List<Actor>();
     
@@ -314,16 +316,34 @@ public class NewGameCore : MonoBehaviour
 
     IEnumerator BlinkSLMarkerCoroutine(int state)
     {
-        saveLoadMarker.SetActive(true);
-        foreach (Transform label in saveLoadMarker.transform)
+        saveLoadMarker1.SetActive(true);
+        saveLoadMarker2.SetActive(true);
+        saveLoadMarker3.SetActive(true);
+        foreach (Transform label in saveLoadMarker1.transform)
         {
             label.gameObject.SetActive(false);
         }
-        saveLoadMarker.transform.GetChild(state).gameObject.SetActive(true);
+                foreach (Transform label in saveLoadMarker2.transform)
+                {
+                    label.gameObject.SetActive(false);
+                }
+                        foreach (Transform label in saveLoadMarker3.transform)
+                        {
+                            label.gameObject.SetActive(false);
+                        }
+        saveLoadMarker1.transform.GetChild(state).gameObject.SetActive(true);
+        saveLoadMarker2.transform.GetChild(state).gameObject.SetActive(true);
+        saveLoadMarker3.transform.GetChild(state).gameObject.SetActive(true);
         yield return new WaitForSeconds(2.5f);
-        saveLoadMarker.SetActive(false);
-        saveLoadMarker.transform.GetChild(0).gameObject.SetActive(false);
-        saveLoadMarker.transform.GetChild(1).gameObject.SetActive(false);
+        saveLoadMarker1.SetActive(false);
+        saveLoadMarker2.SetActive(false);
+        saveLoadMarker3.SetActive(false);
+        saveLoadMarker1.transform.GetChild(0).gameObject.SetActive(false);
+        saveLoadMarker2.transform.GetChild(0).gameObject.SetActive(false);
+        saveLoadMarker3.transform.GetChild(0).gameObject.SetActive(false);
+        saveLoadMarker1.transform.GetChild(1).gameObject.SetActive(false);
+        saveLoadMarker2.transform.GetChild(1).gameObject.SetActive(false);
+        saveLoadMarker3.transform.GetChild(1).gameObject.SetActive(false);
     }
     public void Load(string savenum)
     {
@@ -815,6 +835,11 @@ public class NewGameCore : MonoBehaviour
 
     IEnumerator LoadActor(Item line, int id, bool isLoad)
     {
+         if (line.name == GDB.Name.Женя){
+            line.name = GDB.Name.Соня;
+         }
+         if (line.name == GDB.Name.Мира && FindVariable(GDB.Variables.Injure) >=0 && saveObj.Variables[FindVariable(GDB.Variables.Injure)].varValue > 0)
+             line.name = GDB.Name.Мира_травма;
         CoroutinesWorking.Add(id);
         GameObject ActorOnScene = FindActorOnScene(line.name.ToString());
         if (ActorOnScene != null)
@@ -851,14 +876,10 @@ public class NewGameCore : MonoBehaviour
 
 
              Actor actor;
- if (line.name == GDB.Name.Женя){
- actor = new Actor(line.V3position, GDB.Name.Соня, line.pose);}
-             if (line.name == GDB.Name.Мира && FindVariable(GDB.Variables.Injure) >=0 && saveObj.Variables[FindVariable(GDB.Variables.Injure)].varValue > 0)
-                 actor = new Actor(line.V3position, GDB.Name.Мира_травма, line.pose);
-             else
-             {
-                 actor = new Actor(line.V3position, line.name, line.pose);
-             }
+        
+             
+             actor = new Actor(line.V3position, line.name, line.pose);
+             
              actor.obj = ActorOnScene;
              actorsOnScene.Add(actor);
              Debug.Log("Actor loaded successfully!");
@@ -966,6 +987,7 @@ public class NewGameCore : MonoBehaviour
             soundPlayer.Stop();
             if (!isLoad)
             {
+            
                 lineNum++;
                 Step();
             }
@@ -1092,11 +1114,13 @@ public class NewGameCore : MonoBehaviour
         //Design
         if (!skipping)
         {
+            musicIcon1.gameObject.SetActive(true);
             musicIcon1.SetBool("Play", true);
 musicIcon2.SetBool("Play", true);
             musicName.text = TrackList[(int) line.music].Name;
             musicAuthor.text = TrackList[(int) line.music].Author;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(3.15f);
+            musicIcon1.gameObject.SetActive(false);
             musicIcon1.SetBool("Play", false);
 musicIcon2.SetBool("Play", false);
         } 

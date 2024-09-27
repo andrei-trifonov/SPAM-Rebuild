@@ -156,7 +156,7 @@ Material:
     - _GradientSize: 10
     - _Initialized: 1
     - _InputTab: 1
-    - _LightContribution: 1
+    - _LightContribution: 0
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
     - _Metallic: 0
@@ -216,7 +216,7 @@ Material:
     - _BaseColor: {r: 0.8000001, g: 0.7033522, b: 0.049284246, a: 1}
     - _Color: {r: 0.8000001, g: 0.7033522, b: 0.049284246, a: 1}
     - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
-    - _DetailMapColor: {r: 0, g: 0, b: 0, a: 1}
+    - _DetailMapColor: {r: 0.5188679, g: 0.40853262, b: 0.10524208, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}

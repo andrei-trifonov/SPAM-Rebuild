@@ -343,7 +343,7 @@ TextureImporter:
         width: 102
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,7 +364,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,7 +385,7 @@ TextureImporter:
         width: 43
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -393,6 +393,27 @@ TextureImporter:
       bones: []
       spriteID: e9b4bbd69b2fa4147868206372966b63
       internalID: 1828003331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Courier_gui_14
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 604
+        width: 260
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d671d2f0d3d5472449ed5712390e5173
+      internalID: -959755805
       vertices: []
       indices: 
       edges: []
@@ -414,6 +435,7 @@ TextureImporter:
       Courier_gui_10: -1270169329
       Courier_gui_4: -1483957449
       Courier_gui_12: 1793896890
+      Courier_gui_14: -959755805
       Courier_gui_0: 2114522895
       Courier_gui_11: -1652508062
       Courier_gui_2: -1141588597
