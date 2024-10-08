@@ -1,5 +1,4 @@
-﻿#if UNITY_EDITOR
-
+﻿
 using System;
 using ExternalPropertyAttributes;
 using UnityEngine;
@@ -56,14 +55,14 @@ public class CurveRenderer : MonoBehaviour {
     }
 
     private void Update() {
-#if UNITY_EDITOR
+
         if (!end1 || !end2) return;
         if (end1.position != _lastPositionEnd1 || end2.position != _lastPositionEnd2) {
             Refresh();
         }
 
         _meshFilter.sharedMesh = _mesh;
-#endif
+
     }
 
     private void Refresh() {
@@ -162,5 +161,3 @@ public class CurveRenderer : MonoBehaviour {
     }
 }
 }
-
-#endif

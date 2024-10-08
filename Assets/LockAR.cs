@@ -8,8 +8,8 @@ public class LockAR : MonoBehaviour
 {
     public Camera mainCamera; // ссылка на вашу главную камеру
 
-    private int targetWidth = 1920; // желаемая ширина в пикселях (16:9)
-    private int targetHeight = 1080; // желаемая высота в пикселях (16:9)
+    private int targetWidth;
+    private int targetHeight;
 
     void Start()
     {
@@ -21,8 +21,8 @@ public class LockAR : MonoBehaviour
         float screenAspectRatio = (float)screenWidth / screenHeight;
 
         // Вычисляем новое разрешение камеры
-        int newWidth = targetWidth;
-        int newHeight = targetHeight;
+        int newWidth = screenWidth;
+        int newHeight = screenHeight;
         if (screenAspectRatio > 16f / 9f) // экран шире, чем 16:9
         {
             newWidth = (int)(screenHeight * (16f / 9f));

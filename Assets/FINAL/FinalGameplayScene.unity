@@ -67246,14 +67246,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 0
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 0
   m_Looping: 0
@@ -69228,7 +69226,7 @@ GameObject:
   - component: {fileID: 857773804}
   - component: {fileID: 857773805}
   m_Layer: 7
-  m_Name: 'Day2_Ru '
+  m_Name: Day2_Ru
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69369,6 +69367,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: airsyren
       music: 0
       time: 0
       value: 0
@@ -69960,31 +69981,6 @@ MonoBehaviour:
         \u0440\u0443\u043A\u0438 \u044F \u0432\u043A\u043B\u044E\u0447\u0430\u044E
         \u043C\u0430\u0448\u0438\u043D\u0443 - \u0421\u043E\u043D\u044F \u043F\u0440\u0438\u0441\u043B\u0430\u043B\u0430
         \u043A\u0443\u0447\u0443 \u0441\u0441\u044B\u043B\u043E\u043A. "
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: 
-      show: 0
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
-    - type: 0
-      name: 2
-      line: "\u041B\u0430\u0434\u043D\u043E, \u043D\u0435 \u0432\u0430\u0436\u043D\u043E.
-        \u0427\u0442\u043E \u0442\u0430\u043C \u043F\u0440\u0438\u0441\u043B\u0430\u043B\u0430
-        \u0421\u043E\u043D\u044F?"
       font: 0
       inv: 0
       BGname: 0
@@ -73199,6 +73195,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: fall
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0417\u0430\u043F\u043D\u0443\u0432\u0448\u0438\u0441\u044C, \u043E\u043D\u0430
@@ -74986,7 +75005,7 @@ MonoBehaviour:
       line: "\u0410\u043B\u0438\u043D\u0430 \u043B\u043E\u0432\u043A\u043E \u043F\u0440\u043E\u0448\u043B\u0430\u0441\u044C
         \u043F\u043E \u0441\u043F\u0438\u0446\u0430\u043C \u043A \u043F\u0435\u0440\u0432\u043E\u0439
         \u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u0432\u0435\u0442\u0432\u0438,
-        \u043E\u0431\u0445\u0432\u0430\u0442\u0438\u043B\u0430 \u0435\u0435 \u0440\u0443\u043A\u0430\u043C\u0438,
+        \u043E\u0431\u0445\u0432\u0430\u0442\u0438\u043B\u0430 \u0435\u0435 \u0440\u0443\u043A\u0430\u043C\u0438
         \u0438 \u0432\u0441\u043A\u0430\u0440\u0430\u0431\u043A\u0430\u043B\u0430\u0441\u044C
         \u043D\u0430\u0432\u0435\u0440\u0445."
       font: 0
@@ -77248,6 +77267,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: fall
       music: 0
       time: 0
       value: 0
@@ -79713,6 +79755,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: dne-can-open-medium
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041C\u044B \u043E\u0442\u043A\u0440\u044B\u043B\u0438 \u0448\u0438\u043F\u0443\u0447\u0438\u0435
@@ -81277,6 +81342,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: horror
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u042F\u0440\u043A\u0438\u0439 \u0441\u0432\u0435\u0442 \u043F\u043E\u043B\u0438\u0446\u0435\u0439\u0441\u043A\u043E\u0433\u043E
@@ -81751,6 +81839,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: noise,_broken_radio_
       music: 0
       time: 0
       value: 0
@@ -88617,14 +88728,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 0
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 0
   m_Looping: 0
@@ -89601,6 +89710,124 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1024414741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1024414745}
+  - component: {fileID: 1024414744}
+  - component: {fileID: 1024414743}
+  - component: {fileID: 1024414742}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1024414742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024414741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!81 &1024414743
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024414741}
+  m_Enabled: 1
+--- !u!20 &1024414744
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024414741}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -100
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1024414745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024414741}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 373.69278, y: 324.91547, z: -15.367176}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1029090818
 GameObject:
   m_ObjectHideFlags: 0
@@ -99048,7 +99275,7 @@ GameObject:
   - component: {fileID: 1497932535}
   - component: {fileID: 1497932534}
   m_Layer: 7
-  m_Name: Day4_Ru
+  m_Name: 'Day4_Ru '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103519,29 +103746,6 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
-    - type: 3
-      name: 0
-      line: 
-      font: 0
-      inv: 0
-      BGname: 0
-      effects: 0
-      CGname: Placeholder
-      show: 1
-      pose: 0
-      spriteEffect: 0
-      additionalPose: 
-      music: 0
-      time: 0
-      value: 0
-      signs: 0
-      var: 0
-      ThoType: 0
-      signsIf: 0
-      emoji: 0
-      menu_label: []
-      menu_jump: []
-      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0423 \u0442\u0451\u0442\u0438 \u043F\u043E\u0434 \u0437\u043E\u043D\u0442\u0438\u043A\u043E\u043C
@@ -103641,6 +103845,29 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 3
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: Black
+      show: 1
       pose: 0
       spriteEffect: 0
       additionalPose: 
@@ -104670,9 +104897,10 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "-\u0427\u0442\u043E \u0441 \u0442\u043E\u0431\u043E\u0439? \u041F\u043E\u0447\u0435\u043C\u0443
-        \u0442\u044B \u0432\u0441\u0435\u043C \u043F\u043E\u0440\u0442\u0438\u0448\u044C
-        \u043F\u0440\u0430\u0437\u0434\u043D\u0438\u043A?"
+      line: "-\u0427\u0442\u043E \u0441 \u0442\u043E\u0431\u043E\u0439? \u0415\u0441\u043B\u0438
+        \u0442\u044B \u0445\u043E\u0447\u0435\u0448\u044C \u0438\u0441\u043F\u043E\u0440\u0442\u0438\u0442\u044C
+        \u0432\u0441\u0435\u043C \u043F\u0440\u0430\u0437\u0434\u043D\u0438\u043A,
+        \u043B\u0443\u0447\u0448\u0435 \u0432\u0430\u043B\u0438 \u043E\u0442\u0441\u044E\u0434\u0430!"
       font: 0
       inv: 0
       BGname: 0
@@ -104700,7 +104928,7 @@ MonoBehaviour:
       inv: 0
       BGname: 0
       effects: 0
-      CGname: Placeholder
+      CGname: Black
       show: 1
       pose: 0
       spriteEffect: 0
@@ -104751,7 +104979,7 @@ MonoBehaviour:
       name: 14
       line: "-\u041E\u043D\u0430 \u0442\u0430\u043A \u0438\u0437-\u0437\u0430 \u0444\u043E\u043D\u0430\u0440\u0438\u043A\u0430
         \u0440\u0430\u0441\u0441\u0442\u0440\u043E\u0438\u043B\u0430\u0441\u044C?
-        \u041D\u0430\u0434\u043E \u0435\u0435 \u043D\u0430\u0439\u0442\u0438, \u043F\u043E\u0439\u0434\u0451\u043C."
+        \u041D\u0430\u043C \u043D\u0443\u0436\u043D\u043E \u0435\u0435 \u0443\u0441\u043F\u043E\u043A\u043E\u0438\u0442\u044C..."
       font: 0
       inv: 0
       BGname: 0
@@ -104774,8 +105002,8 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "-\u0418 \u0433\u0434\u0435 \u0436\u0435 \u0435\u0435 \u0438\u0441\u043A\u0430\u0442\u044C?
-        \n"
+      line: "-\u0418 \u0433\u0434\u0435 \u0435\u0435 \u0442\u0435\u043F\u0435\u0440\u044C
+        \u0432\u044B\u043B\u043E\u0432\u0438\u0448\u044C? \n"
       font: 0
       inv: 0
       BGname: 0
@@ -104948,6 +105176,29 @@ MonoBehaviour:
       effects: 0
       CGname: 
       show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 3
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: cg37
+      show: 1
       pose: 0
       spriteEffect: 0
       additionalPose: 
@@ -105521,7 +105772,8 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 4
-      line: "-\u041F\u0440\u043E\u0449\u0430\u0439.\n"
+      line: "-\u0422\u043E\u0441\u043A\u0430. \u0412\u043E\u043A\u0440\u0443\u0433
+        \u0442\u043E\u043B\u044C\u043A\u043E \u0442\u043E\u0441\u043A\u0430.\n"
       font: 0
       inv: 0
       BGname: 0
@@ -105542,15 +105794,15 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
-    - type: 3
-      name: 0
-      line: 
+    - type: 0
+      name: 4
+      line: "-\u041F\u0440\u043E\u0449\u0430\u0439."
       font: 0
       inv: 0
       BGname: 0
       effects: 0
-      CGname: cg31
-      show: 1
+      CGname: 
+      show: 0
       pose: 0
       spriteEffect: 0
       additionalPose: 
@@ -105682,6 +105934,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: fire
       music: 0
       time: 0
       value: 0
@@ -108297,7 +108572,7 @@ GameObject:
   - component: {fileID: 1635867695}
   - component: {fileID: 1635867694}
   m_Layer: 7
-  m_Name: Day5_Ru
+  m_Name: 'Day5_Ru '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109440,6 +109715,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: punch
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 3
       name: 0
       line: 
@@ -109447,7 +109745,7 @@ MonoBehaviour:
       inv: 0
       BGname: 0
       effects: 0
-      CGname: Placeholder
+      CGname: cg38
       show: 1
       pose: 0
       spriteEffect: 0
@@ -117439,7 +117737,7 @@ GameObject:
   - component: {fileID: 1892622406}
   - component: {fileID: 1892622407}
   m_Layer: 0
-  m_Name: 'Scenario_Ru '
+  m_Name: Scenario_Ru
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118903,6 +119201,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: electric_strike
       music: 0
       time: 0
       value: 0
@@ -120499,6 +120820,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: phone_response
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0413\u0443\u0434\u043A\u0438... \u041D\u0438\u0447\u0435\u0433\u043E.
@@ -120536,6 +120880,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: phone_bips
       music: 0
       time: 0
       value: 0
@@ -122101,6 +122468,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: big_fall
       music: 0
       time: 0
       value: 0
@@ -124424,7 +124814,7 @@ MonoBehaviour:
       inv: 0
       BGname: 0
       effects: 0
-      CGname: Placeholder
+      CGname: cg35
       show: 1
       pose: 0
       spriteEffect: 0
@@ -127424,6 +127814,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: metal_door
       music: 0
       time: 0
       value: 0
@@ -133341,6 +133754,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: airplane
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0418\u0437 \u0441\u0430\u043C\u043E\u043B\u0435\u0442\u0430 \u043D\u0430\u0447\u0430\u043B\u043E
@@ -133885,6 +134321,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 3
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: cg34
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041F\u043E\u0447\u0435\u043C\u0443 \u0431\u044B \u0438 \u043D\u0435\u0442.
@@ -133962,10 +134421,10 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u041A\u043E\u0435-\u043A\u0430\u043A \u043C\u044B \u0434\u043E\u0433\u043E\u0432\u043E\u0440\u0438\u043B\u0438\u0441\u044C,
-        \u0447\u0442\u043E \u0441\u0434\u0435\u043B\u0430\u0435\u043C \u043C\u0430\u043A\u0430\u0440\u043E\u043D\u044B
-        \u0441 \u0441\u043E\u0441\u0438\u0441\u043A\u0430\u043C\u0438. \u0414\u0430,
-        \u043C\u043E\u0436\u0435\u0442, \u043F\u0440\u043E\u0441\u0442\u043E\u0435
-        \u0431\u043B\u044E\u0434\u043E, \u043D\u043E \u0438 \u044F \u043D\u0435 \u0448\u0435\u0444-\u043F\u043E\u0432\u0430\u0440."
+        \u0447\u0442\u043E \u0441\u0434\u0435\u043B\u0430\u0435\u043C \u043D\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u044B\u0439
+        \u0440\u044B\u0431\u043D\u044B\u0439 \u0441\u0443\u043F. \u0414\u0430, \u043C\u043E\u0436\u0435\u0442,
+        \u043F\u0440\u043E\u0441\u0442\u043E\u0435 \u0431\u043B\u044E\u0434\u043E,
+        \u043D\u043E \u0438 \u044F \u043D\u0435 \u0448\u0435\u0444-\u043F\u043E\u0432\u0430\u0440."
       font: 0
       inv: 0
       BGname: 0
@@ -133990,12 +134449,12 @@ MonoBehaviour:
       name: 2
       line: "\u041F\u0443\u0440\u0440-\u043F\u0443\u0440 \u0437\u0430\u043D\u044F\u043B\u0441\u044F
         \u0440\u0430\u0441\u0447\u0435\u043A\u0440\u044B\u0436\u0435\u0432\u0430\u043D\u0438\u0435\u043C
-        \u0441\u043E\u0441\u0438\u0441\u043E\u043A \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E
+        \u0442\u0443\u0448\u043A\u0438 \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E
         \u043A\u043E\u0433\u0442\u0435\u0439. \u041D\u0430 \u043C\u043D\u0435 - \u0432\u0430\u0440\u043A\u0430
-        \u043C\u0430\u043A\u0430\u0440\u043E\u043D. \u0425\u043E\u0440\u043E\u0448\u043E,
+        \u043E\u0432\u043E\u0449\u0435\u0439. \u0425\u043E\u0440\u043E\u0448\u043E,
         \u0447\u0442\u043E \u0432 \u0448\u043A\u0430\u0444\u0447\u0438\u043A\u0435
         \u043D\u0430 \u043A\u0443\u0445\u043D\u0435 \u043E\u0441\u0442\u0430\u0432\u0430\u043B\u043E\u0441\u044C
-        \u043F\u043E\u043B \u043F\u0430\u0447\u043A\u0438."
+        \u043F\u0430\u0440\u0430 \u043C\u043E\u0440\u043A\u043E\u0432\u043E\u043A."
       font: 0
       inv: 0
       BGname: 0
@@ -136278,7 +136737,7 @@ GameObject:
   - component: {fileID: 2106391946}
   - component: {fileID: 2106391947}
   m_Layer: 7
-  m_Name: Day1_Ru
+  m_Name: 'Day1_Ru '
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -139432,6 +139891,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: tramdoors
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 4
       name: 2
       line: 
@@ -139916,6 +140398,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: tramdoors
       music: 0
       time: 0
       value: 0
@@ -148284,7 +148789,7 @@ MonoBehaviour:
       inv: 0
       BGname: 0
       effects: 0
-      CGname: Placeholder
+      CGname: cg36
       show: 1
       pose: 0
       spriteEffect: 0
@@ -148997,11 +149502,34 @@ MonoBehaviour:
       inv: 0
       BGname: 0
       effects: 3
-      CGname: Placeholder
+      CGname: cg39
       show: 1
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: fingercut
       music: 0
       time: 0
       value: 0
@@ -151782,12 +152310,57 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 4
+      name: 2
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 3
+      spriteEffect: 1
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 1.5, y: 0, z: 0}
+    - type: 4
+      name: 4
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 4
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 2.5, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u042F \u0437\u0430\u043F\u0440\u044B\u0433\u043D\u0443\u043B\u0430
-        \u043A \u0421\u043E\u043D\u0435 \u043D\u0430 \u0448\u0435\u044E, \u043E\u0442
-        \u0447\u0435\u0433\u043E \u0442\u0430 \u0435\u0434\u0432\u0430 \u043D\u0435
-        \u0443\u043F\u0430\u043B\u0430.\r\n"
+        \u043A \u0421\u043E\u043D\u0435 \u043D\u0430 \u0448\u0435\u044E, \u043E\u0442\u0447\u0435\u0433\u043E
+        \u0442\u0430 \u0435\u0434\u0432\u0430 \u043D\u0435 \u0443\u043F\u0430\u043B\u0430.\r\n"
       font: 0
       inv: 0
       BGname: 0
@@ -151880,7 +152453,7 @@ MonoBehaviour:
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
-      name: 2
+      name: 4
       line: "-\u041D\u0443!\r\n"
       font: 0
       inv: 0
@@ -151999,12 +152572,9 @@ MonoBehaviour:
       V3position: {x: -2.5, y: 0, z: 0}
     - type: 0
       name: 4
-      line: "-\u041F\u0440\u0438\u043C\u0443 \u044D\u0442\u043E \u043A\u0430\u043A
-        \u043F\u0440\u043E\u044F\u0432\u043B\u0435\u043D\u0438\u0435 \u043B\u044E\u0431\u0432\u0438,
-        \u0430 \u043D\u0435 \u043F\u043E\u043F\u044B\u0442\u043A\u0443 \u043C\u0435\u043D\u044F
-        \u0443\u0431\u0438\u0442\u044C, \u0445\u043E\u0442\u044F \u044D\u0442\u043E
-        \u0438 \u0441\u043B\u043E\u0436\u043D\u043E. \u041C\u0438\u0440\u0430, \u0431\u043E\u043B\u044C\u0448\u0435
-        \u0442\u0430\u043A \u043D\u0435 \u0434\u0435\u043B\u0430\u0439!\r\n"
+      line: "-\u0422\u044B \u0442\u043E\u0447\u043D\u043E \u0445\u043E\u0447\u0435\u0448\u044C
+        \u043C\u0435\u043D\u044F \u0443\u0431\u0438\u0442\u044C, \u041C\u0438\u0440\u0430,
+        \u0431\u043E\u043B\u044C\u0448\u0435 \u0442\u0430\u043A \u043D\u0435 \u0434\u0435\u043B\u0430\u0439!\r\n"
       font: 0
       inv: 0
       BGname: 0
@@ -152123,10 +152693,9 @@ MonoBehaviour:
     - type: 0
       name: 4
       line: "-\u0418 \u0432\u0441\u0451-\u0442\u0430\u043A\u0438, \u043F\u043E\u0447\u0435\u043C\u0443
-        \u0442\u044B \u0443\u0431\u0435\u0436\u0430\u043B\u0430 \u0438\u0437 \u043A\u043B\u0443\u0431\u0430?
-        \u0422\u044B \u0432\u044B\u0433\u043B\u044F\u0434\u0435\u043B\u0430 \u0442\u0430\u043A,
-        \u0431\u0443\u0434\u0442\u043E \u0442\u0435\u0431\u044F \u0447\u0442\u043E-\u0442\u043E
-        \u043D\u0430\u043F\u0443\u0433\u0430\u043B\u043E, \u044F \u043F\u043E\u0448\u043B\u0430
+        \u0442\u044B \u0441\u0431\u0435\u0436\u0430\u043B\u0430 \u0438\u0437 \u043A\u043B\u0443\u0431\u0430?
+        \u0422\u044B \u0431\u044B\u043B\u0430 \u0431\u043B\u0435\u0434\u043D\u0430\u044F
+        \u043A\u0430\u043A \u043B\u0438\u0441\u0442, \u044F \u043F\u043E\u0448\u043B\u0430
         \u0437\u0430 \u0442\u043E\u0431\u043E\u0439, \u043D\u043E... \u0422\u044B
         \u0431\u044B\u043B\u0430 \u0443\u0436\u0435 \u0434\u0430\u043B\u0435\u043A\u043E.\r\n"
       font: 0
@@ -152251,7 +152820,7 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "-\u041B\u0430\u0434\u043D\u043E. \u0425\u043E\u0440\u043E\u0448\u043E.
-        \u0412 \u043E\u0431\u0449\u0435\u043C... \u0422\u0430\u043C, \u0432 \u0442\u0443\u0430\u043B\u0435\u0442\u0435
+        \u0412 \u043E\u0431\u0449\u0435\u043C... \u0422\u0430\u043C, \u0432 \u0442\u0443\u0430\u043B\u0435\u0442\u0435,
         \u0431\u044B\u043B \u0443\u0436\u0430\u0441\u043D\u044B\u0439 \u0437\u0430\u043F\u0430\u0445
         \u0438... \u0427\u0442\u043E-\u0442\u043E \u0447\u0435\u0440\u043D\u043E\u0435
         \u0442\u043E\u0440\u0447\u0430\u043B\u043E \u0438\u0437 \u0441\u043B\u0438\u0432\u0430...
@@ -167686,8 +168255,8 @@ MonoBehaviour:
       name: 2
       line: "-\u041D\u0435 \u0441\u043E\u0432\u0441\u0435\u043C... \u041F\u0440\u043E\u0441\u0442\u043E
         \u0434\u0443\u043C\u0430\u043B\u0430, \u0447\u0442\u043E \u0442\u044B \u043F\u0440\u0438\u0433\u043B\u0430\u0441\u0438\u0448\u044C
-        \u043F\u043E\u0433\u0443\u043B\u044F\u0442\u044C \u0438\u043B\u0438\u2026
-        \u041D\u0435\u0432\u0430\u0436\u043D\u043E \u0432 \u043E\u0431\u0449\u0435\u043C.\r\n"
+        \u043F\u043E\u0433\u0443\u043B\u044F\u0442\u044C \u0438\u043B\u0438... \u041D\u0435\u0432\u0430\u0436\u043D\u043E
+        \u0432 \u043E\u0431\u0449\u0435\u043C.\r\n"
       font: 0
       inv: 0
       BGname: 0
@@ -167941,7 +168510,7 @@ MonoBehaviour:
         \u0431\u0443\u0434\u0443 \u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C
         \u043D\u0430 \u043C\u043E\u043D\u0438\u0442\u043E\u0440? \u041D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E,
         \u043A\u0430\u043A \u044D\u0442\u043E \u0432\u043E\u043E\u0431\u0449\u0435
-        \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442\u2026\r\n"
+        \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442."
       font: 0
       inv: 0
       BGname: 0
@@ -168070,9 +168639,9 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 15
       name: 2
-      line: "-\u041F\u0440\u044F\u043C\u043E\u2026 \u041D\u0430 \u0433\u043E\u043B\u043E\u0432\u0443?
+      line: "-\u041F\u0440\u044F\u043C\u043E... \u041D\u0430 \u0433\u043E\u043B\u043E\u0432\u0443?
         \u041D\u043E \u043E\u043D \u0437\u0430\u043A\u0440\u043E\u0435\u0442 \u043C\u043E\u0438
-        \u0433\u043B\u0430\u0437\u0430\u2026 0_o"
+        \u0433\u043B\u0430\u0437\u0430... 0_o"
       font: 0
       inv: 0
       BGname: 0
@@ -168095,7 +168664,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 15
       name: 5
-      line: "-\u0422\u0443\u0434\u0430, \u043A\u0443\u0434\u0430 \u043C\u044B \u0438\u0434\u0435\u043C,
+      line: "-\u0422\u0430\u043C, \u043A\u0443\u0434\u0430 \u043C\u044B \u043D\u044B\u0440\u043D\u0435\u043C,
         \u0433\u043B\u0430\u0437\u0430 \u043D\u0435 \u043D\u0443\u0436\u043D\u044B.\r\n"
       font: 0
       inv: 0
@@ -168146,7 +168715,7 @@ MonoBehaviour:
         \u043C\u0435\u0442\u0430\u043B\u043B\u0438\u0447\u0435\u0441\u043A\u0443\u044E
         \u0441\u0444\u0435\u0440\u0443.\r\n\u0420\u0443\u043A\u0438 \u0434\u0440\u043E\u0436\u0430\u0442,
         \u0438 \u044D\u0442\u0430 \u0434\u0440\u043E\u0436\u044C \u043F\u0435\u0440\u0435\u0434\u0430\u0435\u0442\u0441\u044F
-        \u0434\u0430\u043B\u044C\u0448\u0435\u2026 \u0421 \u0442\u0440\u0443\u0434\u043E\u043C
+        \u0434\u0430\u043B\u044C\u0448\u0435... \u0421 \u0442\u0440\u0443\u0434\u043E\u043C
         \u044F \u0437\u0430\u0441\u043E\u0432\u044B\u0432\u0430\u044E \u0433\u043E\u043B\u043E\u0432\u0443
         \u0432\u043D\u0443\u0442\u0440\u044C \u0448\u0430\u0440\u0430. \u0413\u043E\u043B\u043E\u0432\u0430
         \u0441\u0442\u0430\u043B\u0430 \u0442\u044F\u0436\u0435\u043B\u0435\u0435
@@ -168174,7 +168743,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "\u0422\u0435\u043C\u043D\u043E\u2026 \u0410\u0431\u0441\u043E\u043B\u044E\u0442\u043D\u043E
+      line: "\u0422\u0435\u043C\u043D\u043E... \u0410\u0431\u0441\u043E\u043B\u044E\u0442\u043D\u043E
         \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u0442\u0435\u043C\u043D\u043E.
         \u041D\u0430 \u043E\u0449\u0443\u043F\u044C \u043D\u0430\u0445\u043E\u0436\u0443
         \u043A\u0430\u043A\u0443\u044E-\u0442\u043E \u043A\u043D\u043E\u043F\u043A\u0443.
@@ -168236,7 +168805,7 @@ MonoBehaviour:
         \u0431\u044B\u043B\u043E \u0441\u043B\u0443\u0447\u0438\u0442\u044C\u0441\u044F?\r\n\u041C\u043D\u0435
         \u0441\u0442\u0440\u0430\u0448\u043D\u043E.  \u0422\u0435\u043C\u043D\u043E\u0442\u0430
         \u043F\u043E\u0432\u0441\u044E\u0434\u0443. \u042F \u043D\u0435 \u0432\u0438\u0436\u0443
-        \u043D\u0438 \u0440\u0443\u043A, \u043D\u0438 \u043D\u043E\u0433\u2026 \r\n"
+        \u043D\u0438 \u0440\u0443\u043A, \u043D\u0438 \u043D\u043E\u0433... \r\n"
       font: 0
       inv: 0
       BGname: 0
@@ -168246,6 +168815,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: electric_strike
       music: 0
       time: 0
       value: 0
@@ -168292,8 +168884,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 0
-      line: "\r \u041A\u0430\u043A \u0441\u0442\u0440\u0430\u0448\u043D\u043E\u2026
-        \n"
+      line: "\r \u041A\u0430\u043A \u0441\u0442\u0440\u0430\u0448\u043D\u043E...\n"
       font: 0
       inv: 0
       BGname: 0
@@ -168316,7 +168907,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 0
-      line: " \u041A\u0430\u043A \u0441\u0442\u0440\u0430\u0448\u043D\u043E\u2026\r\n\u0412\u0441\u043F\u044B\u0448\u043A\u0430
+      line: " \u041A\u0430\u043A \u0441\u0442\u0440\u0430\u0448\u043D\u043E...\n\u0412\u0441\u043F\u044B\u0448\u043A\u0430
         \u0431\u0435\u043B\u043E\u0433\u043E \u0441\u0432\u0435\u0442\u0430. \u041E\u0442
         \u043D\u0435\u043E\u0436\u0438\u0434\u0430\u043D\u043D\u043E\u0441\u0442\u0438
         \u044F \u0437\u0430\u043A\u0440\u0438\u0447\u0430\u043B\u0430. \r"
@@ -168386,10 +168977,33 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: noise,_broken_radio_
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 5
-      line: "%#\u20BD4@-\u041C\u0438\u0440\u0430*\u2014 #4? \u041C\u0438\u0440\u0430?
-        \u0422\u044B \u0441\u043B\u044B\u0448\u0438\u0448\u044C \u043C\u0435\u043D\u044F?\r\n"
+      line: "... \u041C\u0438.... \u041C\u0438\u0440\u0430? \u0422\u044B \u0441\u043B\u044B\u0448\u0438\u0448\u044C
+        \u043C\u0435\u043D\u044F?\r\n"
       font: 0
       inv: 0
       BGname: 0
@@ -168440,7 +169054,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "\u0414\u044B\u0448\u0430\u0442\u044C\u2026 \u0433\u043B\u0430\u0432\u043D\u043E\u0435,
+      line: "\u0414\u044B\u0448\u0430\u0442\u044C... \u0433\u043B\u0430\u0432\u043D\u043E\u0435,
         \u0434\u044B\u0448\u0430\u0442\u044C.\r\n"
       font: 0
       inv: 0
@@ -168604,12 +169218,12 @@ MonoBehaviour:
       V3position: {x: -2.5, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "-\u041D\u0435\u0442\u2026 \u041F\u043E\u0434\u043E\u0436\u0434\u0438\u2026
+      line: "-\u041D\u0435\u0442... \u041F\u043E\u0434\u043E\u0436\u0434\u0438...
         \u042D\u0442\u043E \u043D\u0438\u043A\u0430\u043A\u0430\u044F \u043D\u0435
-        \u0421\u0435\u0442\u044C, \u044D\u0442\u043E\u2026 \u042D\u0442\u043E \u0436\u0435
-        \u043D\u0430\u0448 \u043A\u043B\u0430\u0441\u0441! \u041F\u043E\u0447\u0435\u043C\u0443\u2026
-        \u042D\u0442\u043E\u2026 \u042D\u0442\u043E \u043A\u0430\u0440\u0442\u0438\u043D\u043A\u0430
-        \u0441\u043E \u0448\u043B\u0435\u043C\u0430? \u0422\u0430\u043C \u0436\u0435\u2026
+        \u0421\u0435\u0442\u044C, \u044D\u0442\u043E... \u042D\u0442\u043E \u0436\u0435
+        \u043D\u0430\u0448 \u043A\u043B\u0430\u0441\u0441! \u041F\u043E\u0447\u0435\u043C\u0443...
+        \u042D\u0442\u043E... \u042D\u0442\u043E \u043A\u0430\u0440\u0442\u0438\u043D\u043A\u0430
+        \u0441\u043E \u0448\u043B\u0435\u043C\u0430? \u0422\u0430\u043C \u0436\u0435...
         \u0422\u0430\u043C \u0436\u0435 \u044D\u043A\u0440\u0430\u043D, \u0442\u0430\u043A?
         \r\n"
       font: 0
@@ -168634,11 +169248,11 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "\u0422\u043E\u0433\u0434\u0430 \u043F\u043E\u0447\u0435\u043C\u0443\u2026
+      line: "\u0422\u043E\u0433\u0434\u0430 \u043F\u043E\u0447\u0435\u043C\u0443...
         \u041F\u043E\u0447\u0435\u043C\u0443 \u044F \u0432\u0438\u0436\u0443 \u0441\u0432\u043E\u0438
-        \u0440\u0443\u043A\u0438\u2026 \u041F\u043E\u0447\u0435\u043C\u0443 \u044F
-        \u0432\u0438\u0436\u0443 \u0441\u0435\u0431\u044F?\r\n\u041F\u043E\u0447\u0435\u043C\u0443
-        \u044F \u0432\u0438\u0436\u0443 \u0442\u0435\u0431\u044F? \u0422\u0435\u0431\u044F
+        \u0440\u0443\u043A\u0438... \u041F\u043E\u0447\u0435\u043C\u0443 \u044F \u0432\u0438\u0436\u0443
+        \u0441\u0435\u0431\u044F?\r\n\u041F\u043E\u0447\u0435\u043C\u0443 \u044F
+        \u0432\u0438\u0436\u0443 \u0442\u0435\u0431\u044F? \u0422\u0435\u0431\u044F
         \u043D\u0435 \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C
         \u0437\u0434\u0435\u0441\u044C!\r\n"
       font: 0
@@ -168663,11 +169277,11 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 5
-      line: "-\u042D\u0442\u043E \u201C\u041F\u0441\u0438\u0445\u0435\u044F\u201D,
-        \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u043D\u0435\u0439\u0440\u043E\u043D\u043D\u043E\u0439
-        \u043F\u0440\u043E\u0435\u043A\u0446\u0438\u0438. \u041C\u044B \u043C\u043E\u0436\u0435\u043C
-        \u043E\u0431\u0449\u0430\u0442\u044C\u0441\u044F \u043F\u043E \u0421\u0435\u0442\u0438
-        \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E \u043D\u0435\u0435."
+      line: "-\u042D\u0442\u043E \"\u041F\u0441\u0438\u0445\u0435\u044F\", \u0441\u0438\u0441\u0442\u0435\u043C\u0430
+        \u043D\u0435\u0439\u0440\u043E\u043D\u043D\u043E\u0439 \u043F\u0440\u043E\u0435\u043A\u0446\u0438\u0438.
+        \u041C\u044B \u043C\u043E\u0436\u0435\u043C \u043E\u0431\u0449\u0430\u0442\u044C\u0441\u044F
+        \u043F\u043E \u0421\u0435\u0442\u0438 \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E
+        \u043D\u0435\u0435."
       font: 0
       inv: 0
       BGname: 0
@@ -168713,7 +169327,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 5
-      line: "-\u201D\u041F\u0441\u0438\u0445\u0435\u044F\u201D \u043F\u0435\u0440\u0435\u0434\u0430\u0435\u0442
+      line: "-\"\u041F\u0441\u0438\u0445\u0435\u044F\" \u043F\u0435\u0440\u0435\u0434\u0430\u0435\u0442
         \u0438\u043C\u043F\u0443\u043B\u044C\u0441\u044B \u043C\u043E\u0437\u0433\u0430,
         \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044F \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438
         \u0447\u0435\u0442\u0432\u0435\u0440\u0442\u043E\u0433\u043E \u043F\u0440\u043E\u0442\u043E\u043A\u043E\u043B\u0430
@@ -168740,7 +169354,7 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
-      line: "-\u0418 \u0432\u0441\u0435 \u0432\u043E\u043A\u0440\u0443\u0433\u2026\r\n"
+      line: "-\u0418 \u0432\u0441\u0435 \u0432\u043E\u043A\u0440\u0443\u0433...\n"
       font: 0
       inv: 0
       BGname: 0
@@ -168843,7 +169457,7 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u042F \u0434\u043E\u043A\u043E\u0441\u043D\u0443\u043B\u0430\u0441\u044C
-        \u0434\u043E \u0435\u0433\u043E \u043E\u0434\u0435\u0436\u0434\u044B. \u041D\u0430\u043E\u0449\u0443\u043F\u044C\u2026
+        \u0434\u043E \u0435\u0433\u043E \u043E\u0434\u0435\u0436\u0434\u044B. \u041D\u0430\u043E\u0449\u0443\u043F\u044C...
         \u041D\u0430\u0441\u0442\u043E\u044F\u0449\u0430\u044F.\r\n"
       font: 0
       inv: 0
@@ -168893,8 +169507,8 @@ MonoBehaviour:
       line: "-\u041D\u0435\u0442, \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u044D\u0442\u043E\u0433\u043E
         \u0431\u044B\u0442\u044C. \u042F \u0442\u043E\u0447\u043D\u043E \u0443\u043C\u0435\u0440\u043B\u0430,
         \u0438\u043B\u0438 \u044D\u0442\u043E \u0441\u043E\u043D. \u042D\u0442\u043E\u0433\u043E
-        \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C\u2026
-        \u042D\u0442\u043E \u043D\u0435\u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u2026\r\n"
+        \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C... \u042D\u0442\u043E
+        \u043D\u0435\u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E..."
       font: 0
       inv: 0
       BGname: 0
@@ -168954,6 +169568,29 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: fall
       music: 0
       time: 0
       value: 0
@@ -169310,7 +169947,7 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "-\u0410 \u043A\u0430\u043A \u043C\u043D\u0435 \u0435\u0449\u0451 \u0440\u0435\u0430\u0433\u0438\u0440\u043E\u0432\u0430\u0442\u044C?
-        \u042F \u0432\u043E\u043E\u0431\u0449\u0435 \u043D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E
+        \u042F \u0432\u043E\u043E\u0431\u0449\u0435 \u043D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E,
         \u0447\u0442\u043E \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u0438\u0442...
         \u042F \u043D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E, \u043A\u0430\u043A
         \u044F \u0437\u0434\u0435\u0441\u044C \u043E\u043A\u0430\u0437\u0430\u043B\u0430\u0441\u044C! "
@@ -169386,7 +170023,7 @@ MonoBehaviour:
       name: 2
       line: "\u041A\u0438\u0440 \u0437\u0430\u043C\u0435\u0440, \u043F\u044B\u0442\u0430\u044F\u0441\u044C 
         \u043D\u0430\u0439\u0442\u0438 \u0432\u044B\u0445\u043E\u0434 \u0438\u0437
-        \u0441\u043B\u043E\u0436\u0438\u0432\u0448\u0435\u0439\u0441\u044F \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u0438\n\n"
+        \u0441\u043B\u043E\u0436\u0438\u0432\u0448\u0435\u0439\u0441\u044F \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u0438.\n\n"
       font: 0
       inv: 0
       BGname: 0
@@ -169830,7 +170467,7 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "\u0418\u0437 \u0434\u0438\u043D\u0430\u043C\u0438\u043A\u043E\u0432
-        \u043F\u043E\u043B\u0438\u043B\u0430\u0441\u044C \u043C\u0443\u0437\u044B\u043A\u0430...
+        \u043F\u043E\u043B\u0438\u043B\u0430\u0441\u044C \u043C\u0443\u0437\u044B\u043A\u0430.
         \u042F \u043D\u0435 \u0441\u0438\u043B\u044C\u043D\u043E \u0440\u0430\u0437\u0431\u0438\u0440\u0430\u044E\u0441\u044C
         \u0432 \u0436\u0430\u043D\u0440\u0430\u0445, \u043D\u043E, \u043C\u043D\u0435
         \u043A\u0430\u0436\u0435\u0442\u0441\u044F, \u044D\u0442\u043E \u043D\u0430\u0437\u044B\u0432\u0430\u0435\u0442\u0441\u044F...
@@ -170370,7 +171007,7 @@ MonoBehaviour:
       signsIf: 0
       emoji: 0
       menu_label:
-      - "\u041D\u0443... "
+      - "\u041D\u0443..."
       - "\u0414\u0430, \u0434\u0430, \u0434\u0430!"
       menu_jump:
       - 0.2.9.4
@@ -170605,7 +171242,7 @@ MonoBehaviour:
       CGname: 
       show: 0
       pose: 3
-      spriteEffect: 0
+      spriteEffect: 3
       additionalPose: 
       music: 0
       time: 0
@@ -172981,7 +173618,7 @@ MonoBehaviour:
       emoji: 0
       menu_label: []
       menu_jump: []
-      V3position: {x: 1, y: 0, z: 0}
+      V3position: {x: 1.5, y: 0, z: 0}
     - type: 0
       name: 6
       line: "-\u041E\u043F\u0430! \u0413\u0434\u0435 \u043F\u0440\u043E\u043F\u0430\u0434\u0430\u043B\u0430? "
@@ -174392,7 +175029,7 @@ MonoBehaviour:
     - type: 0
       name: 2
       line: "-\u041E\u043D \u0442\u043E\u0447\u043D\u043E \u0437\u0430\u043C\u0435\u0442\u0438\u043B,
-        \u0447\u0442\u043E \u044F \u0447\u0442\u043E-\u0442\u043E \u043D\u0435 \u0434\u043E\u0433\u043E\u0432\u0430\u0440\u0438\u0432\u0430\u044E.
+        \u0447\u0442\u043E \u044F \u0447\u0442\u043E-\u0442\u043E \u043D\u0435\u0434\u043E\u0433\u043E\u0432\u0430\u0440\u0438\u0432\u0430\u044E.
         \u041E\u043D \u0442\u043E\u0447\u043D\u043E \u0437\u0430\u043F\u043E\u0434\u043E\u0437\u0440\u0438\u0442
         \u043C\u0435\u043D\u044F... \u042F \u0432 \u043F\u043E\u043B\u043D\u043E\u0439
         \u0436\u043E\u043F\u0435. \u041C\u043E\u0436\u0435\u0442, \u043C\u043D\u0435

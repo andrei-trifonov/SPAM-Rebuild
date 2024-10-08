@@ -102,6 +102,7 @@ public class InvestigationController : MonoBehaviour
     private int curLocalization;
     public void SetNewGame(string sceneName, List<int> Unlocks, int drugsCount)
     {
+        
         curLocalization = Core.GetLocalization();
         sliderFromMainGame.SetActive(false);
         usedDrug = false;
@@ -113,7 +114,11 @@ public class InvestigationController : MonoBehaviour
         textDrugs1.text = "SPAM: " + drugsCount.ToString();
         textDrugs2.text = "SPAM: " + drugsCount.ToString();
         canInv.enabled = true;
-        
+        if (Core.RetInjure())
+        {
+            drugsButton1.SetActive(false);
+            drugsButton2.SetActive(false);
+        }
     }
 
     IEnumerator LoadInv(string line, List<int> Unlocks)

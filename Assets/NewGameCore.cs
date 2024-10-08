@@ -833,6 +833,11 @@ public class NewGameCore : MonoBehaviour
         return null;
     }
 
+    public bool RetInjure()
+    {
+            return (FindVariable(GDB.Variables.Injure) >= 0 && saveObj.Variables[FindVariable(GDB.Variables.Injure)].varValue > 0);
+    }
+
     IEnumerator LoadActor(Item line, int id, bool isLoad)
     {
          if (line.name == GDB.Name.Женя){
@@ -898,7 +903,7 @@ public class NewGameCore : MonoBehaviour
         //ActorOnScene.GetComponent<Animator>().WriteDefaultValues();
 
         ActorOnScene.GetComponent<Animator>().SetBool(line.spriteEffect.ToString(), true);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
         ActorOnScene.GetComponent<Animator>().SetBool(line.spriteEffect.ToString(), false);
 
         if (line.pose == GDB.Pose.Hide || line.spriteEffect == GDB.SpriteEffect.DissolveOut)
