@@ -178,26 +178,27 @@ public static class GDB
     public enum Music
     {
         None,
-        DvadcatDesyat,
-        Bodhi,
-        Bolezn21Veka,
-        DiscoOkrain,
-        DolgayaDorogaDomoy,
-        KogdaNachinayetsaUtro,
-        Krypton,
-        Krypton2,
-        Odinok,
-        Otrajenia,
-        Otsyuda,
-        Paranoia,
-        PechalBudetDlitsyaVechno,
-        Raspadayas,
-        RozdenieSverhnovoy,
-        AbstynentnySindrom,
-        Toshnota,
-        TvoeRozdenie,
-        UmiratOtTogoChotTiNeUmiraesh,
-        ZavtraBudeshUbivatMenya
+        CloudsofMyDepression,
+        Decay,
+        Reduction,
+        Unfortune,
+        Afterlie,
+        CatFromDream,
+        Disorientation,
+        F,
+        LittleMaid,
+        Panic,
+        Paroxysm,
+        Qxdwx,
+        Runaway,
+        Travel,
+        WarmDay,
+        ZeroReflections,
+        Heranuca,
+        Dissociation
+        
+        
+        
 }
     public enum Variables
     {

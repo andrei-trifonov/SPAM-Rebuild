@@ -22,7 +22,7 @@ public class EventTextField : MonoBehaviour
     {
         Debug.Log(Text.text); 
         
-        if ((Text.text == "Я хочу проснуться​ZWSP") || (Text.text == "I want to wake upZWSP"))
+        if ((Text.text == "Я хочу проснуться​") || (Text.text == "I want to wake upZWSP"))
         {
             Core.jumpAction("День4 Секрет");
             

@@ -40460,6 +40460,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 2864514142110023463, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1572061d85f09e8458b8c50077095999, type: 2}
     - target: {fileID: 3508780942461400130, guid: 13e9989fa9e2240448157c38d136abd9, type: 3}
       propertyPath: m_Name
       value: Preloader
@@ -69285,6 +69289,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 12
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 2
       name: 0
       line: 
@@ -69873,6 +69900,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 12
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 3
       name: 0
       line: 
@@ -69910,6 +69960,29 @@ MonoBehaviour:
       additionalPose: 
       music: 0
       time: 3
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 16
+      time: 0
       value: 0
       signs: 0
       var: 0
@@ -71123,6 +71196,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 14
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041F\u0440\u0438\u0432\u044B\u0447\u043D\u0430\u044F \u0434\u043E\u0440\u043E\u0436\u043A\u0430
@@ -71428,6 +71524,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 2, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 5
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F, \u0443 \u0437\u0430\u0431\u043E\u0440\u0430
@@ -72101,6 +72220,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 8
       time: 0
       value: 0
       signs: 0
@@ -73004,6 +73146,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 11
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041A\u0438\u0440\u0430 \u043F\u0443\u043B\u0435\u0439 \u043D\u043E\u0441\u0438\u043B\u0430\u0441\u044C
@@ -73344,6 +73509,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 1
       time: 0
       value: 0
       signs: 0
@@ -73705,6 +73893,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 1
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 3
       name: 0
       line: 
@@ -73820,6 +74031,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 1.5, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 15
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0421\u043E\u043D\u044F \u0443\u0436\u0435 \u0442\u0443\u0442, \u0432
@@ -74412,6 +74646,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 15
       time: 0
       value: 0
       signs: 0
@@ -75326,6 +75583,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 17
       time: 0
       value: 0
       signs: 0
@@ -76510,6 +76790,29 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
   - name: "\u0414\u0435\u043D\u044C2 \u0410\u043B\u0438\u043D\u04303"
     lines:
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 9
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 1
       line: "-\u0412\u0438\u0434\u0438\u0448\u044C, \u0442\u0430\u043C, \u0432\u0434\u0430\u043B\u0435\u043A\u0435?"
@@ -79098,6 +79401,29 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
   - name: "\u0414\u0435\u043D\u044C2 \u0421\u043E\u043D\u044F1"
     lines:
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 14
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "-\u0421\u043B\u0443\u0448\u0430\u0439, \u0447\u0442\u043E \u043D\u0430\u0441\u0447\u0435\u0442
@@ -80783,6 +81109,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 9
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 16
       name: 0
       line: 
@@ -81692,6 +82041,29 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
   - name: "\u0414\u0435\u043D\u044C2 \u0421\u0436\u0435\u0447\u044C"
     lines:
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 1
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "-\u0415\u0441\u043B\u0438 \u0442\u043E\u043B\u044C\u043A\u043E \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E...
@@ -82538,6 +82910,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 13
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "-\u041D\u0430\u043C \u043B\u0443\u0447\u0448\u0435 \u0438\u0434\u0442\u0438,
@@ -82964,6 +83359,29 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
   - name: "\u0414\u0435\u043D\u044C2 \u0410\u043B\u0438\u043D\u04304"
     lines:
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 9
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041A\u043E\u0433\u0434\u0430-\u043D\u0438\u0431\u0443\u0434\u044C
@@ -83369,6 +83787,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 5
       time: 0
       value: 0
       signs: 0
@@ -86550,6 +86991,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 8
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F, \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0430\u0442\u044C\u0441\u044F
@@ -87466,6 +87930,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 6
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 7
       name: 0
       line: 
@@ -87975,6 +88462,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 6
       time: 0
       value: 0
       signs: 0
@@ -91133,52 +91643,42 @@ MonoBehaviour:
   TrackList:
   - Name: "\u0411\u0435\u0437 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u044F"
     Author: "\u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043D"
-  - Name: 2010
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u0411\u043E\u0434\u0445\u0438"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u0411\u043E\u043B\u0435\u0437\u043D\u044C XXI \u0432\u0435\u043A\u0430"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u0414\u0438\u0441\u043A\u043E \u043E\u043A\u0440\u0430\u0438\u043D"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u0414\u043E\u043B\u0433\u0430\u044F \u0434\u043E\u0440\u043E\u0433\u0430
-      \u0434\u043E\u043C\u043E\u0439"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u041A\u043E\u0433\u0434\u0430 \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0441\u044F
-      \u0443\u0442\u0440\u043E"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u041A\u0440\u0438\u043F\u0442\u043E\u043D"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u041A\u0440\u0438\u043F\u0442\u043E\u043D ver. 2"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u041E\u0434\u0438\u043D\u043E\u043A"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u041E\u0442\u0440\u0430\u0436\u0435\u043D\u0438\u0435"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u041E\u0442\u0441\u044E\u0434\u0430"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u041F\u0430\u0440\u0430\u043D\u043E\u0439\u044F"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u041F\u0435\u0447\u0430\u043B\u044C \u0431\u0443\u0434\u0435\u0442 \u0434\u043B\u0438\u0442\u044C\u0441\u044F
-      \u0432\u0435\u0447\u043D\u043E"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u0420\u0430\u0441\u043F\u0430\u0434\u0430\u044F\u0441\u044C"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u0420\u043E\u0436\u0434\u0435\u043D\u0438\u0435 \u0441\u0432\u0435\u0440\u0445\u043D\u043E\u0432\u043E\u0439"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u0410\u0431\u0441\u0442\u0438\u043D\u0435\u043D\u0442\u043D\u044B\u0439
-      \u0441\u0438\u043D\u0434\u0440\u043E\u043C"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u0422\u0432\u043E\u0435 \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u0435!"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u0423\u043C\u0438\u0440\u0430\u0442\u044C \u043E\u0442 \u0442\u043E\u0433\u043E,
-      \u0447\u0442\u043E \u0442\u044B \u043D\u0435 \u0443\u043C\u0438\u0440\u0430\u0435\u0448\u044C"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
-  - Name: "\u0417\u0430\u0432\u0442\u0440\u0430 \u0431\u0443\u0434\u0435\u0448\u044C
-      \u0443\u0431\u0438\u0432\u0430\u0442\u044C \u043C\u0435\u043D\u044F"
-    Author: "\u041D\u0435\u0431\u043E\u0442\u043E\u0448\u043D\u0438\u0442"
+  - Name: Clouds of My Depression
+    Author: Ozoi The Maid
+  - Name: Decay
+    Author: Ozoi The Maid
+  - Name: Reduction
+    Author: Ozoi The Maid
+  - Name: Unfortune
+    Author: Ozoi The Maid
+  - Name: Afterlie
+    Author: Sib The Maid
+  - Name: Cat From Dream
+    Author: Sib The Maid
+  - Name: Disorientation
+    Author: Sib The Maid
+  - Name: F
+    Author: Sib The Maid
+  - Name: Little Maid...
+    Author: Sib The Maid
+  - Name: Panic
+    Author: Sib The Maid
+  - Name: Paroxysm
+    Author: Sib The Maid
+  - Name: Qxdwx aopp
+    Author: Sib The Maid
+  - Name: Runaway
+    Author: Sib The Maid
+  - Name: Travel
+    Author: Sib The Maid
+  - Name: Warm Day
+    Author: Sib The Maid
+  - Name: Zero Reflections
+    Author: Sib The Maid
+  - Name: Guitar to Heranuco
+    Author: Sib The Maid
+  - Name: Dissociation
+    Author: Sib The Maid
 --- !u!1 &1143977905
 GameObject:
   m_ObjectHideFlags: 0
@@ -106971,6 +107471,30 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 0
+      name: 2
+      line: "\u0427\u0442\u043E-\u0442\u043E \u0437\u0430\u0442\u0440\u0435\u0449\u0430\u043B\u043E
+        \u0432 \u0433\u043E\u043B\u043E\u0432\u0435."
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 11
       name: 0
       line: 
@@ -108572,7 +109096,7 @@ GameObject:
   - component: {fileID: 1635867695}
   - component: {fileID: 1635867694}
   m_Layer: 7
-  m_Name: 'Day5_Ru '
+  m_Name: Day5_Ru
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114013,6 +114537,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 11
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: Credits
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
   - name: "\u041A\u043E\u043D\u0435\u04461 \u0421\u0435\u043A\u0440\u0435\u0442"
     lines:
     - type: 0
@@ -114681,6 +115228,54 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 11
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: Credits
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+  - name: Credits
+    lines:
+    - type: 16
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: Credits
       music: 0
       time: 0
       value: 0
@@ -118180,7 +118775,7 @@ GameObject:
   - component: {fileID: 1952994835}
   - component: {fileID: 1952994834}
   m_Layer: 7
-  m_Name: 'Day3_Ru '
+  m_Name: Day3_Ru
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118265,6 +118860,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 10
       time: 0
       value: 0
       signs: 0
@@ -118986,6 +119604,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: -1, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 12
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0425\u043E\u0440\u043E\u0448\u043E. \u0412\u0438\u0434\u0438\u043C\u043E,
@@ -119874,6 +120515,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 8
       time: 0
       value: 0
       signs: 0
@@ -120914,6 +121578,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 7
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0428\u0438\u043F\u0435\u043D\u0438\u0435 \u0432 \u0442\u0440\u0443\u0431\u043A\u0435
@@ -121778,6 +122465,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 15
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "-\u0421\u043B\u0443\u0448\u0430\u0439..."
@@ -122230,6 +122940,29 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
   - name: "\u0414\u0435\u043D\u044C3 \u0421\u043A\u0440\u044B\u0442\u044C\u0441\u044F"
     lines:
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 3
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041C\u043D\u0435 \u0441\u0440\u043E\u0447\u043D\u043E \u043D\u0443\u0436\u043D\u043E
@@ -122591,6 +123324,29 @@ MonoBehaviour:
       ThoType: 0
       signsIf: 0
       emoji: 10
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 10
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
@@ -123346,6 +124102,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 2
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0418\u0437 \u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u043A\u043E\u043B\u0431\u044B
@@ -123873,6 +124652,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 8
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 2
       name: 0
       line: 
@@ -124066,6 +124868,29 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
   - name: "\u0414\u0435\u043D\u044C3 \u0423\u0441\u043F\u043E\u043A\u043E\u0438\u0442\u044C\u0441\u044F"
     lines:
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 17
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "-\u0421 \u0447\u0435\u0433\u043E \u0442\u044B \u044D\u0442\u043E \u0432\u0434\u0440\u0443\u0433
@@ -125705,6 +126530,29 @@ MonoBehaviour:
       V3position: {x: 0, y: 0, z: 0}
   - name: "\u0414\u0435\u043D\u044C3 \u0421\u043E\u043D\u044F1"
     lines:
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 8
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 2
       name: 0
       line: 
@@ -127898,6 +128746,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 2
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 3
       name: 0
       line: 
@@ -128786,6 +129657,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 1, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 9
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041C\u044B \u043E\u0442\u043A\u0440\u044B\u043B\u0438 \u0434\u0432\u0435\u0440\u044C,
@@ -129682,6 +130576,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 8
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041C\u043E\u0436\u0435\u0442, \u0432\u0441\u0451-\u0442\u0430\u043A\u0438
@@ -129961,6 +130878,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 9
       time: 0
       value: 0
       signs: 0
@@ -130403,6 +131343,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 17
       time: 0
       value: 0
       signs: 0
@@ -131696,6 +132659,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 16
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 2
       name: 0
       line: 
@@ -132000,6 +132986,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 2, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 5
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u0414\u0432\u0435\u0440\u044C \u0440\u0435\u0437\u043A\u043E \u0440\u0430\u0441\u043F\u0430\u0445\u043D\u0443\u043B\u0430\u0441\u044C,
@@ -132427,6 +133436,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 3
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 4
       name: 1
       line: 
@@ -132710,6 +133742,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 17
       time: 0
       value: 0
       signs: 0
@@ -133632,6 +134687,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 16
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "-\u0410? \u0427\u0442\u043E \u0442\u0430\u043A\u043E\u0435?"
@@ -134117,6 +135195,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 15
       time: 0
       value: 0
       signs: 0
@@ -136737,7 +137838,7 @@ GameObject:
   - component: {fileID: 2106391946}
   - component: {fileID: 2106391947}
   m_Layer: 7
-  m_Name: 'Day1_Ru '
+  m_Name: Day1_Ru
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -136831,7 +137932,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 3
+      music: 5
       time: 0
       value: 0
       signs: 0
@@ -137425,7 +138526,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 4
+      music: 2
       time: 0
       value: 0
       signs: 0
@@ -139377,7 +140478,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 12
+      music: 3
       time: 0
       value: 0
       signs: 0
@@ -139823,7 +140924,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 5
+      music: 8
       time: 0
       value: 0
       signs: 0
@@ -140603,7 +141704,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 15
+      music: 17
       time: 0
       value: 0
       signs: 0
@@ -141590,7 +142691,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 18
+      music: 8
       time: 0
       value: 0
       signs: 0
@@ -144222,7 +145323,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 20
+      music: 6
       time: 0
       value: 0
       signs: 0
@@ -145020,7 +146121,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 2
+      music: 14
       time: 0
       value: 0
       signs: 0
@@ -146360,7 +147461,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 13
+      music: 7
       time: 0
       value: 0
       signs: 0
@@ -148771,7 +149872,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 14
+      music: 12
       time: 0
       value: 0
       signs: 0
@@ -150031,7 +151132,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 19
+      music: 9
       time: 0
       value: 0
       signs: 0
@@ -150801,7 +151902,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 12
+      music: 11
       time: 0
       value: 0
       signs: 0
@@ -151016,7 +152117,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 12
+      music: 11
       time: 0
       value: 0
       signs: 0
@@ -151712,7 +152813,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 1
+      music: 15
       time: 0
       value: 0
       signs: 0
@@ -154211,7 +155312,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 12
+      music: 14
       time: 0
       value: 0
       signs: 0
@@ -154901,7 +156002,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 11
+      music: 10
       time: 0
       value: 0
       signs: 0
@@ -158752,7 +159853,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 10
+      music: 14
       time: 0
       value: 0
       signs: 0
@@ -162182,7 +163283,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 14
+      music: 15
       time: 0
       value: 0
       signs: 0
@@ -163158,7 +164259,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 3
+      music: 17
       time: 0
       value: 0
       signs: 0
@@ -164342,7 +165443,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 3
+      music: 16
       time: 0
       value: 0
       signs: 0
@@ -166627,7 +167728,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 2
+      music: 14
       time: 0
       value: 0
       signs: 0
@@ -168099,7 +169200,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 2
+      music: 13
       time: 0
       value: 0
       signs: 0
@@ -168966,7 +170067,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 10
+      music: 7
       time: 0
       value: 0
       signs: 0
@@ -169491,7 +170592,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 12
+      music: 3
       time: 0
       value: 0
       signs: 0
@@ -170009,6 +171110,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 3
       time: 0
       value: 0
       signs: 0
@@ -170746,6 +171870,29 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
+    - type: 5
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: short_applause_normal
+      music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
     - type: 0
       name: 2
       line: "\u041E\u0442\u043E\u0432\u0441\u044E\u0434\u0443 \u0440\u0430\u0437\u0434\u0430\u043B\u0438\u0441\u044C
@@ -171411,6 +172558,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 2
       time: 0
       value: 0
       signs: 0
@@ -172658,6 +173828,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: 
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 1
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 2
       time: 0
       value: 0
       signs: 0
@@ -176929,7 +178122,7 @@ MonoBehaviour:
       pose: 0
       spriteEffect: 0
       additionalPose: 
-      music: 5
+      music: 8
       time: 0
       value: 0
       signs: 0
@@ -177787,6 +178980,29 @@ MonoBehaviour:
       spriteEffect: 0
       additionalPose: "\u0414\u0435\u043D\u044C2 \u041D\u0430\u0447\u0430\u043B\u043E"
       music: 0
+      time: 0
+      value: 0
+      signs: 0
+      var: 0
+      ThoType: 0
+      signsIf: 0
+      emoji: 0
+      menu_label: []
+      menu_jump: []
+      V3position: {x: 0, y: 0, z: 0}
+    - type: 6
+      name: 0
+      line: 
+      font: 0
+      inv: 0
+      BGname: 0
+      effects: 0
+      CGname: 
+      show: 0
+      pose: 0
+      spriteEffect: 0
+      additionalPose: 
+      music: 8
       time: 0
       value: 0
       signs: 0

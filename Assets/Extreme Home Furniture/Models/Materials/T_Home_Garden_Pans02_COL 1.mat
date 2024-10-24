@@ -214,7 +214,7 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailBlend: 0
     - _DetailMapBlendingMode: 0
-    - _DetailMapImpact: 0
+    - _DetailMapImpact: 0.366
     - _DetailMix: 0.5
     - _DetailNormalMapIntensity: 1
     - _DetailNormalMapScale: 1
@@ -339,7 +339,7 @@ Material:
     - _Color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
     - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
-    - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DetailMapColor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 1, g: 1, b: 1, a: 0.85056}
@@ -350,7 +350,7 @@ Material:
     - _LightAttenuation: {r: 0, g: 1, b: 0, a: 0}
     - _LightTransmissionColor: {r: 1, g: 0.65, b: 0, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _OutlineColor: {r: 0.26689214, g: 0.3962264, b: 0.2739137, a: 1}
+    - _OutlineColor: {r: 0.33316126, g: 0.4811321, b: 0.3421292, a: 1}
     - _RimBrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimDarkColor: {r: 0, g: 0, b: 0, a: 1}
