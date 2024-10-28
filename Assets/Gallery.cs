@@ -22,8 +22,8 @@ public class Gallery : MonoBehaviour
     void Start()
     {
         Sprite[] sprites = Resources.LoadAll<Sprite>("CG/");
-        int spriteCount = sprites.Length - 4;
-        for (int i = 0; i < sprites.Length; i++)
+        int spriteCount = sprites.Length - 5;
+        for (int i = 0; i < spriteCount; i++)
         {
             cgName.Add("cg" + (i + 1));
             if (PlayerPrefs.GetInt(cgName.Last()) == 0)
@@ -31,9 +31,12 @@ public class Gallery : MonoBehaviour
                 cgName[i] = lockedImage;
             }
         }
+        for (int i = spriteCount; i < sprites.Length; i++)
+        {
+            cgName.Add("No_gal");
+        }
 
-
-        UpdatePage(0);
+    UpdatePage(0);
         pageText.text = (currentPage + 1).ToString();
         
     }
@@ -66,41 +69,39 @@ public class Gallery : MonoBehaviour
     private void UpdatePage(int page)
     {
        
-        try
+
+        for (int i = 0; i < buttons.Count; i++)
         {
-            for (int i = 0; i < buttons.Count; i++)
-            {
-                int spriteIndex = page * buttons.Count + i;
-                //Debug.Log(spriteIndex);
-                buttons[i].image.sprite = placeholderImage;
-                StartCoroutine(LoadCG(cgName[spriteIndex], buttons[i]));
-            }
+            int spriteIndex = page * buttons.Count + i;
+            //Debug.Log(spriteIndex);
+            buttons[i].image.sprite = placeholderImage;
+            StartCoroutine(LoadCG(cgName[spriteIndex], buttons[i]));
         }
-        catch
-        {
-        }
+       
     }
     IEnumerator LoadCG(string name, Button button)
     {
         
         ResourceRequest request = Resources.LoadAsync<Sprite>("CG/"+ name);
-                   
-        while (!request.isDone)
-        {
-            yield return null;
-        }
-                   
-        if (request.asset == null)
-        {
-            Debug.LogError("Failed to load CG at path: CG/" + name);
-        }
-        else
-        {
-            Sprite sprite = request.asset as Sprite;
-            button.image.sprite = sprite;
-        }
+   
+            while (!request.isDone)
+            {
+                yield return null;
+            }
 
-      
+            if (request.asset == null)
+            {
+                Debug.LogError("Failed to load CG at path: CG/" + name);
+            }
+            else
+            {
+                Sprite sprite = request.asset as Sprite;
+                button.image.sprite = sprite;
+            }
+        
+
+        
+
 
 
     }

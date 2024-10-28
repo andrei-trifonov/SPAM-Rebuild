@@ -56,17 +56,19 @@ public class VarItem
 [System.Serializable]
 public class Actor
 {
-    public Actor(Vector3 Position, GDB.Name Name, GDB.Pose Pose)
+    public Actor(Vector3 Position, GDB.Name Name, GDB.Pose Pose, string Additional)
     {
         this.Name = Name;
         this.Pose = Pose;
         this.Position = Position;
+        this.Additional = Additional;
     }
 
     public GameObject obj;
     public Vector3 Position;
     public GDB.Name Name;
     public GDB.Pose Pose;
+    public string Additional;
 }
 
 public class NewGameCore : MonoBehaviour
@@ -233,6 +235,11 @@ public class NewGameCore : MonoBehaviour
 
     private void Start()
     {
+        curLocalization = 0;
+        PlayerPrefs.SetString("Localization", "Russian");
+        Debug.Log("Installed RUS locale");
+        extensionScenarios = extensionScenarios_RU;
+        /*
         if (PlayerPrefs.GetString("Localization") == "")
         {
             if (Application.systemLanguage == SystemLanguage.Russian ||
@@ -253,7 +260,7 @@ public class NewGameCore : MonoBehaviour
                 }
 
         }
-      
+*/      
         if (PlayerPrefs.GetString("Localization") == "Russian")
         {
             curLocalization = 0;
@@ -397,7 +404,7 @@ public class NewGameCore : MonoBehaviour
                     item.pose = actor.Pose;
                     item.name = actor.Name;
                     item.V3position = actor.Position;
-
+                    item.additionalPose = actor.Additional;
                     actorAction(item, true);
                 }
 
@@ -460,7 +467,7 @@ public class NewGameCore : MonoBehaviour
             List<Actor> actors = new List<Actor>();
             foreach (Actor actor in actorsOnScene)
             {
-                actors.Add(new Actor(actor.obj.transform.position, actor.Name, actor.Pose));
+                actors.Add(new Actor(actor.obj.transform.position, actor.Name, actor.Pose, actor.Additional));
             }
 
             saveObj.Savetime = "" + System.DateTime.Now;
@@ -883,7 +890,7 @@ public class NewGameCore : MonoBehaviour
              Actor actor;
         
              
-             actor = new Actor(line.V3position, line.name, line.pose);
+             actor = new Actor(line.V3position, line.name, line.pose, line.additionalPose );
              
              actor.obj = ActorOnScene;
              actorsOnScene.Add(actor);
