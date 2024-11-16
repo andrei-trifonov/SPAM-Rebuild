@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class LogComposer : MonoBehaviour
 {
     public int maxLogSize;
-    public List<GDB.Name> logName;
+    public List<string> logName;
     public List<string> logLine;
     public GameObject Group;
     public GameObject Prefab;
     public List <LogElement> Logs;
     public GameObject Visual;
 
-    public void RenewLog(GDB.Name name, string line)
+    public void RenewLog(string name, string line)
     {
         string[] words = line.Split(' ');
         List<string> lines = new List<string>();
@@ -66,7 +66,7 @@ public class LogComposer : MonoBehaviour
         {
             LogElement inst = Instantiate(Prefab, Group.transform).GetComponent<LogElement>();
             inst.Name.text = logName[i].ToString().Replace("_", "-");
-            inst.Name.color = GDB.CharColor((int)logName[i]);
+            inst.Name.color = new Color(0.1f, 0.5f, 0.3f);;
             inst.Text.text = logLine[i];
             Debug.Log(logName[i]);
             Debug.Log(i);

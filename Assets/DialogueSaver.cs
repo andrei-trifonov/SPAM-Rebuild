@@ -20,7 +20,7 @@ using System.Collections.Generic;
    [ExecuteInEditMode]
    public class DialogueSaver : MonoBehaviour
    {
-        private string filePath = "C:\\SPAM_Restored\\Assets\\dialogue";
+        private string filePath =      Path.Combine("C:\\Users\\user2\\Documents\\SPAM_Restored\\Assets\\", "Dialogue\\");
    
        public List <Dialogue> Dialogues; // This should be assigned in Unity Inspector
       
@@ -31,7 +31,8 @@ using System.Collections.Generic;
            
           
            foreach(Dialogue dialogue in Dialogues){
-DialogueSaveData saveData = new DialogueSaveData();
+               Debug.Log(dialogue.gameObject.name);
+            DialogueSaveData saveData = new DialogueSaveData();
            saveData.Labels = new LabelSampleWrapper[dialogue.Labels.Count];
            for (int i = 0; i < dialogue.Labels.Count; i++)
            {
@@ -41,9 +42,9 @@ DialogueSaveData saveData = new DialogueSaveData();
                    lines = dialogue.Labels[i].lines.ToArray()
                };
            }                           
-   
+           filePath = Path.Combine("C:\\Users\\user2\\Documents\\SPAM_Restored\\Assets\\", "Dialogue\\");
            string json = JsonUtility.ToJson(saveData);
-          
+           Debug.Log(filePath  + dialogue.gameObject.name + ".json");
            File.WriteAllText(filePath + dialogue.gameObject.name + ".json", json);
            
   	 }

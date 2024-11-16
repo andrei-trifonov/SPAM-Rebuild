@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using UnityEditor.Rendering;
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using Random = UnityEngine.Random;
@@ -37,6 +38,7 @@ public class SaveObject
     public int lastLineNum = 0;
     public int lastLabelNum = 0;
     public string previewName = "";
+    public int locale;
 }
 
 [System.Serializable]
@@ -174,15 +176,17 @@ public class NewGameCore : MonoBehaviour
     }
     public void ChangeLocalization(int num)
     {
-        if (!loading && CoroutinesWorking.Count == 0)
+        if (!loading && CoroutinesWorking.Count == 0 && num != curLocalization)
         {
             if (num == 0)
             {
                 extensionScenarios = extensionScenarios_RU;
+                Debug.Log("Rus");
             }
             else
             {
                 extensionScenarios = extensionScenarios_EN;
+                Debug.Log("En");
             }
 
             curLocalization = num;
@@ -195,6 +199,11 @@ public class NewGameCore : MonoBehaviour
 
                 }
             }
+
+            saveObj.lastLine = "";
+            Save("Auto");
+            
+            SceneManager.LoadScene(1);
         }
     }
 
@@ -235,11 +244,7 @@ public class NewGameCore : MonoBehaviour
 
     private void Start()
     {
-        curLocalization = 0;
-        PlayerPrefs.SetString("Localization", "Russian");
-        Debug.Log("Installed RUS locale");
-        extensionScenarios = extensionScenarios_RU;
-        /*
+
         if (PlayerPrefs.GetString("Localization") == "")
         {
             if (Application.systemLanguage == SystemLanguage.Russian ||
@@ -260,7 +265,7 @@ public class NewGameCore : MonoBehaviour
                 }
 
         }
-*/      
+
         if (PlayerPrefs.GetString("Localization") == "Russian")
         {
             curLocalization = 0;
@@ -354,11 +359,11 @@ public class NewGameCore : MonoBehaviour
     }
     public void Load(string savenum)
     {
-        
-        if (!loading && CoroutinesWorking.Count == 0 )
+
+        if (!loading && CoroutinesWorking.Count == 0)
         {
             //Clean scene
-            
+
             menuTimerSlider.SetActive(false);
             StopAllCoroutines();
             loading = true;
@@ -367,16 +372,16 @@ public class NewGameCore : MonoBehaviour
             ClearSprites();
             CG.enabled = false;
             ClearBG();
-                
-            
+
+
             ApplyTextEffects(GDB.Fonts.Regular);
             textContent.text = "";
             textFS.text = "";
             textAuthor.text = "";
-                
+
             menuTimerSlider.SetActive(false);
-            SaveObject loadedData = JsonUtility.FromJson<SaveObject>(PlayerPrefs.GetString(savenum+"Save"));
-         
+            SaveObject loadedData = JsonUtility.FromJson<SaveObject>(PlayerPrefs.GetString(savenum + "Save"));
+
             saveObj = loadedData;
             if (saveObj == null)
             {
@@ -384,15 +389,15 @@ public class NewGameCore : MonoBehaviour
                 loading = false;
                 return;
             }
-            
+
             //Load music
             Item item = new Item();
             item.music = loadedData.lastMusic;
-    
+
             item.show = true;
 
-            
-            if (loadedData.lastMusic!= GDB.Music.None)
+
+            if (loadedData.lastMusic != GDB.Music.None)
                 musicAction(item, true);
             if (loadedData.lastCG == "")
             {
@@ -418,21 +423,31 @@ public class NewGameCore : MonoBehaviour
                 item.CGname = loadedData.lastCG;
             }
 
-            else 
+            else
             {
-            Debug.Log(loadedData.lastCG);
+                Debug.Log(loadedData.lastCG);
                 item = new Item();
                 item.show = true;
                 item.CGname = loadedData.lastCG;
                 cgAction(item, true);
             }
+
             //Return line num label num
             lineNum = loadedData.lastLineNum;
             labelNum = loadedData.lastLabelNum;
 
-            
+
             item = new Item();
-            item.line = loadedData.lastLine;
+            if (loadedData.locale != curLocalization)
+            {
+                item.line = "...";
+            }
+            else
+            {
+                item.line = loadedData.lastLine;
+            }
+        
+
             item.name = loadedData.lastAuthor;
             if (loadedData.textDisplay == GDB.TextDisplay.Dialogue)
             {
@@ -474,6 +489,7 @@ public class NewGameCore : MonoBehaviour
             saveObj.Actors = actors;
             saveObj.lastLineNum = lineNum;
             saveObj.lastLabelNum = labelNum;
+            saveObj.locale = curLocalization;
             if (saveObj.lastCG!="")
                 saveObj.previewName = saveObj.lastCG;
             else if (saveObj.lastBG != GDB.BGName.None)
@@ -674,7 +690,12 @@ public class NewGameCore : MonoBehaviour
                     break;
                 case GDB.Investigation.AddDrugs:
                 {
-                    StartCoroutine(NewThoughtCoroutine("Еще один стимулятор", cid++));
+                             if (curLocalization == 1)
+                            {  StartCoroutine(NewThoughtCoroutine("One more SPAM", cid++));}
+                            else{
+                              StartCoroutine(NewThoughtCoroutine("Еще один стимулятор", cid++));
+                            }
+                          
                     saveObj.drugsCount++;
 
 
@@ -1524,8 +1545,12 @@ musicIcon2.SetBool("Play", false);
 
     void varAction(Item line)
     {
-        
-        StartCoroutine(NewThoughtCoroutine("Они это запомнят", cid++));
+         if (curLocalization == 1)
+        {  StartCoroutine(NewThoughtCoroutine("They will remember that", cid++));}
+        else{
+          StartCoroutine(NewThoughtCoroutine("Они это запомнят", cid++));
+        }
+      
         //Debug.Log(line.value); 
         switch (line.signs)
         {
@@ -1629,7 +1654,7 @@ musicIcon2.SetBool("Play", false);
         textFS.text = "";
         textAuthor.text = "";
         FSPanel.SetActive(false);
-        Log.RenewLog(line.name, line.line);
+        Log.RenewLog(GetAuthorName(line), line.line);
         saveObj.lastAuthor = line.name;
         saveObj.lastLine = line.line;
         saveObj.textDisplay = GDB.TextDisplay.Chat;
@@ -1705,7 +1730,7 @@ musicIcon2.SetBool("Play", false);
 
             textAuthor.color = GDB.CharColor((int)line.name);
        
-            Log.RenewLog(line.name, line.line);
+            Log.RenewLog(GetAuthorName(line), line.line);
 
             ApplyTextEffects(line.font);
 
@@ -1721,7 +1746,9 @@ musicIcon2.SetBool("Play", false);
                 textContent.text = line.line;
             }
             Debug.Log(line.name.ToString());
-            textAuthor.text = line.name.ToString().Replace("_", "-").Replace("Мира-травма", "Мира");
+
+            textAuthor.text = GetAuthorName(line);
+
             if (!isLoad)
                 lineNum++;
         }
@@ -1729,6 +1756,68 @@ musicIcon2.SetBool("Play", false);
         
        
     }
+
+    public string GetAuthorName(Item line)
+    {
+                    string author="";
+            if (curLocalization == 1)
+            {
+                switch (line.name)
+                {
+                    case GDB.Name.Алина: author = "Alina";
+                        break;
+                    case GDB.Name.Ангел: author = "Angel";
+                        break;
+                    case GDB.Name.Директор: author = "Principal";
+                        break;
+                    case GDB.Name.Женя: author = "Zhenya";
+                        break;
+                    case GDB.Name.Инспектор: author = "Cop";
+                        break;
+                    case GDB.Name.Кир: author = "Kir";
+                        break;
+                    case GDB.Name.Кира: author = "Kira";
+                        break;
+                    case GDB.Name.Кот: author = "Cat";
+                        break;
+                    case GDB.Name.Левая: author = "Left one";
+                        break;
+                    case GDB.Name.Мама: author = "Mom";
+                        break;
+                    case GDB.Name.Мира: author = "Mira";
+                        break;
+                    case GDB.Name.Мира_травма: author = "Mira";
+                        break;
+                    case GDB.Name.Миша: author = "Misha";
+                        break;
+                    case GDB.Name.Наташа: author = "Natasha";
+                        break;
+                    case GDB.Name.Никто: author = "";
+                        break;
+                    case GDB.Name.Поп: author = "Priest";
+                        break;
+                    case GDB.Name.Правая: author = "Right one";
+                        break;
+                    case GDB.Name.Пурр_пур:author = "Purr-purr";
+                        break;
+                    case GDB.Name.Соня: author = "Sonya";
+                        break;
+                    case GDB.Name.Толя: author= "Tolik";
+                        break;
+                    case GDB.Name.Учитель: author = "Teacher";
+                        break;
+                    
+                }
+            }
+
+            else
+            {
+                author = line.name.ToString().Replace("_", "-").Replace("Мира-травма", "Мира");
+            }
+
+            return author;
+    }
+
     void FSTextAction(Item line, bool isLoad)
     {
         FSPanel.SetActive(true);
@@ -1744,7 +1833,7 @@ musicIcon2.SetBool("Play", false);
 
         castingLine = "";
 
-        Log.RenewLog(line.name, line.line);
+        Log.RenewLog(GetAuthorName(line), line.line);
 
         if (!skipping && textDelay > 0)
         {

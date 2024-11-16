@@ -39107,7 +39107,7 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
-    - type: 11
+    - type: 16
       name: 0
       line: /End of Demo/
       font: 0
@@ -39118,7 +39118,7 @@ MonoBehaviour:
       show: 0
       pose: 0
       spriteEffect: 0
-      additionalPose: "\u0414\u0435\u043D\u044C2 \u041D\u0430\u0447\u0430\u043B\u043E"
+      additionalPose: CreditsDemoEn
       music: 0
       time: 0
       value: 0
@@ -97119,16 +97119,8 @@ MonoBehaviour:
   Camera: {fileID: 519420037}
   extensionScenarios_RU:
   - {fileID: 2106391946}
-  - {fileID: 857773804}
-  - {fileID: 1952994835}
-  - {fileID: 1497932535}
-  - {fileID: 1635867695}
   extensionScenarios_EN:
   - {fileID: 97775414}
-  - {fileID: 519675852}
-  - {fileID: 1717587835}
-  - {fileID: 1650396094}
-  - {fileID: 978356459}
   Log: {fileID: 1916718079}
   choiseBox: {fileID: 5746164450407689610, guid: 797798d42e1b76b41bdd9eb5603c7116, type: 3}
   choiseGroup: {fileID: 1926733182}
@@ -208286,7 +208278,7 @@ MonoBehaviour:
       menu_label: []
       menu_jump: []
       V3position: {x: 0, y: 0, z: 0}
-    - type: 11
+    - type: 16
       name: 0
       line: "/\u041A\u043E\u043D\u0435\u0446 \u0434\u0435\u043C\u043E\u0432\u0435\u0440\u0441\u0438\u0438/"
       font: 0
@@ -208297,7 +208289,7 @@ MonoBehaviour:
       show: 0
       pose: 0
       spriteEffect: 0
-      additionalPose: "\u0414\u0435\u043D\u044C2 \u041D\u0430\u0447\u0430\u043B\u043E"
+      additionalPose: CreditsDemo
       music: 0
       time: 0
       value: 0

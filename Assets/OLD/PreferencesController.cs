@@ -19,6 +19,7 @@ public class PreferencesController : MonoBehaviour
     public Toggle textCheck;
     public TMPro.TMP_Dropdown language;
     public bool mainMenu;
+    public int languageOld;
     private void SetSettings(int sliderNum)
     {
         switch (sliderNum){
@@ -49,11 +50,13 @@ public class PreferencesController : MonoBehaviour
         if (PlayerPrefs.GetString("Localization") == "Russian")
         {
             language.value = 0;
+            languageOld = 0;
         }
         
         if (PlayerPrefs.GetString("Localization") == "English")
         {
             language.value = 1;
+            languageOld = 1;
         }
         if (!mainMenu)
         {
@@ -121,12 +124,17 @@ public class PreferencesController : MonoBehaviour
     
     public void OnLangValueChanged()
     {
+        Debug.Log(language.ToString() + languageOld.ToString());
         if (language.value == 0)
             PlayerPrefs.SetString("Localization", "Russian");
         if (language.value == 1)
             PlayerPrefs.SetString("Localization", "English");
-        if (!mainMenu)
+        if (!mainMenu && languageOld != language.value)
+        {
+            languageOld = language.value;
             m_Core.ChangeLocalization(language.value);
+        }
+
         PlayerPrefs.Save();
     }
 }
