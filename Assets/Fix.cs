@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
 
-public class PizdaBomjihi : MonoBehaviour
+public class Fix : MonoBehaviour
 {
-    public VideoPlayer videoPlayer;  // Ссылка на Video Player
+    public VideoPlayer videoPlayer;
     private bool Block;
     private float videoDuration;
 
@@ -21,13 +21,11 @@ public class PizdaBomjihi : MonoBehaviour
     void Update()
     {
     if (videoPlayer.clip!= null){ 
-        videoDuration = (float)videoPlayer.clip.length;
-        // Обновляем таймер
+        videoDuration = (float)videoPlayer.clip.length;//Убрать из upd
+        
         float currentTime = (float)videoPlayer.time;
        
-        //Debug.Log("Time " +videoPlayer.time );
-        //Debug.Log("Duration " + videoDuration );
-        // Проверяем, закончилось ли видео
+
        
         if (videoPlayer.time >= videoDuration-0.2f && Block == false)
         {
@@ -50,6 +48,6 @@ public class PizdaBomjihi : MonoBehaviour
         videoDuration = (float)videoPlayer.clip.length;
         Block = false;
     }
-    // Форматирование времени в формате "ММ:СС"
+
     
 }
