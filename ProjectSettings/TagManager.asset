@@ -14,11 +14,13 @@ TagManager:
   - ThoCam
   - Interactive
   - Thought
+  - Enemy
+  - Corpse
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - Custom_Outline

@@ -155,7 +155,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorGradient: {r: 0.093271606, g: 0.18867922, b: 0.16039713, a: 0.85056}
+    - _ColorGradient: {r: 0.45859733, g: 0.5377358, b: 0.51465374, a: 0.85056}
     - _DetailMapColor: {r: 1, g: 0.6168224, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}

@@ -30,7 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
@@ -41,127 +41,167 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\RequiredAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\RequiredAttribute.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
      <Compile Include="Assets\living birds\scripts\lb_CrowProximity.cs" />
      <Compile Include="Assets\ToonWater\Scripts\Core\ToonWaterFloatObject.cs" />
+     <Compile Include="Assets\Gallery.cs" />
+     <Compile Include="Assets\DialogueSaver.cs" />
      <Compile Include="Assets\OLD\PreferencesController.cs" />
      <Compile Include="Assets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\MetaAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\ICustomAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\SpecialCaseDrawerAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\DropdownAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Post Process\Scripts\QuibliPostProcess.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\MetaAttribute.cs" />
+     <Compile Include="Assets\Episode2\FootIK.cs" />
+     <Compile Include="Assets\SkipButton.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\ICustomAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\SpecialCaseDrawerAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\DropdownAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Post Process\Scripts\QuibliPostProcess.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\ReorderableListAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\ReorderableListAttribute.cs" />
      <Compile Include="Assets\Assets\LightFlicking.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\IGroupAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Post Process\Effects\Scripts\ColorGrading.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\IGroupAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Post Process\Effects\Scripts\ColorGrading.cs" />
+     <Compile Include="Assets\ActivateOneFromArray.cs" />
+     <Compile Include="Assets\EventTextField.cs" />
      <Compile Include="Assets\RDB.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\EnumFlagsAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\EnumFlagsAttribute.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
      <Compile Include="Assets\InvestigationGame\InvestigationController.cs" />
-     <Compile Include="Assets\Resources\Quibli\Scripts\Mesh Generators\CurveRenderer.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Scripts\Mesh Generators\CurveRenderer.cs" />
+     <Compile Include="Assets\Episode2\PlayerController.cs" />
      <Compile Include="Assets\ToonWater\Scripts\Core\ToonWaterBall.cs" />
-     <Compile Include="Assets\Resources\Quibli\Post Process\Scripts\CompoundPass.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Post Process\Scripts\CompoundPass.cs" />
      <Compile Include="Assets\OLD\Core.cs" />
      <Compile Include="Assets\InvestigationGame\Thought.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\ShowIfAttribute.cs" />
+     <Compile Include="Assets\Episode2\IK2.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\ShowIfAttribute.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXEffectController.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\ReadOnlyAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\ShowNonSerializedFieldAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\ProgressBarAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\ButtonAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\ReadOnlyAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\ShowNonSerializedFieldAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\ProgressBarAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\ButtonAttribute.cs" />
+     <Compile Include="Assets\InvestigationGame\RaycastCamera.cs" />
+     <Compile Include="Assets\ChatMessage.cs" />
+     <Compile Include="Assets\ChatManager.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
      <Compile Include="Assets\ChoiseBox.cs" />
+     <Compile Include="Assets\Credits.cs" />
      <Compile Include="Assets\living birds\scripts\lb_BirdController.cs" />
+     <Compile Include="Assets\DisableAfterTime.cs" />
      <Compile Include="Assets\ToonWater\Scripts\SmoothCameraOrbit.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\TagAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Post Process\Scripts\CompoundRenderer.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\EnableIfAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\OnValueChangedAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\HideIfAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\TagAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Post Process\Scripts\CompoundRenderer.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\EnableIfAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\OnValueChangedAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\HideIfAttribute.cs" />
+     <Compile Include="Assets\DeleteOnActivate.cs" />
      <Compile Include="Assets\OLD\BGObject.cs" />
-     <Compile Include="Assets\Resources\Quibli\Scripts\Mesh Generators\GrassMeshGenerator.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\ShowNativePropertyAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Scripts\Mesh Generators\GrassMeshGenerator.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes_SpecialCase\ShowNativePropertyAttribute.cs" />
      <Compile Include="Assets\living birds\scripts\lb_Bird.cs" />
      <Compile Include="Assets\GraphComposer.cs" />
      <Compile Include="Assets\InvestigationGame\ClueObject.cs" />
      <Compile Include="Assets\OLD\MapPoint.cs" />
+     <Compile Include="Assets\EventQTE.cs" />
      <Compile Include="Assets\Assets\SaveManager.cs" />
      <Compile Include="Assets\CG.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\SceneAttribute.cs" />
+     <Compile Include="Assets\Episode2\CameraOrbit.cs" />
+     <Compile Include="Assets\SingletoneForIntro.cs" />
+     <Compile Include="Assets\CoverScript.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\SceneAttribute.cs" />
+     <Compile Include="Assets\OpenURL.cs" />
      <Compile Include="Assets\OLD\GameMenuController.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\Utility\EConditionOperator.cs" />
+     <Compile Include="Assets\Tutorial.cs" />
+     <Compile Include="Assets\EnableOnClick.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\Utility\EConditionOperator.cs" />
      <Compile Include="Assets\Assets\YesnoScreen.cs" />
      <Compile Include="Assets\CTI URP\CTI Runtime Components URP\Scripts\CTI_SRP_CustomWind.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\MinMaxSliderAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\MinMaxSliderAttribute.cs" />
      <Compile Include="Assets\TextEffects.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\FoldoutAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Scripts\Mesh Generators\FoliageGenerator.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\FoldoutAttribute.cs" />
+     <Compile Include="Assets\DialogueLoader.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Scripts\Mesh Generators\FoliageGenerator.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
      <Compile Include="Assets\ToonWater\Scripts\Core\ToonWater.cs" />
      <Compile Include="Assets\LogElement.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\LabelAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\ShowIfAttributeBase.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\LabelAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\ShowIfAttributeBase.cs" />
+     <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\SimpleLabel.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\AllowNestingAttribute.cs" />
+     <Compile Include="Assets\ExitToMenu.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\AllowNestingAttribute.cs" />
+     <Compile Include="Assets\Episode2\TargetFollow2D.cs" />
      <Compile Include="Assets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\ValidatorAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\ValidatorAttribute.cs" />
      <Compile Include="Assets\GDB.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\InfoBoxAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\ResizableTextAreaAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\InfoBoxAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\ResizableTextAreaAttribute.cs" />
      <Compile Include="Assets\Assets\Fader.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
      <Compile Include="Assets\CameraMoveZoom.cs" />
      <Compile Include="Assets\RotateToPoint.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\ShowAssetPreviewAttribute.cs" />
+     <Compile Include="Assets\CameraConstantWidth.cs" />
+     <Compile Include="Assets\OSTList.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\ShowAssetPreviewAttribute.cs" />
      <Compile Include="Assets\Assets\LoadButton.cs" />
      <Compile Include="Assets\Epic Toon FX\Scripts\ETFXRotation.cs" />
      <Compile Include="Assets\ToonWater\Scripts\SmoothFollowCamBump.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\MinValueAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\DisableIfAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\MinValueAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\DisableIfAttribute.cs" />
      <Compile Include="Assets\OLD\Choose.cs" />
      <Compile Include="Assets\NewGameCore.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\ValidateInputAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\ValidateInputAttribute.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\Expandable.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\Expandable.cs" />
      <Compile Include="Assets\CrowFly.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\DrawerAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\CurveRangeAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\DrawerAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\CurveRangeAttribute.cs" />
+     <Compile Include="Assets\AnimateOnClick.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
      <Compile Include="Assets\OLD\SpriteObject.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\MaxValueAttribute.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\AnimatorParamAttribute.cs" />
+     <Compile Include="Assets\DisableOnClick.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\ValidatorAttributes\MaxValueAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\AnimatorParamAttribute.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXEffectCycler.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\BoxGroupAttribute.cs" />
+     <Compile Include="Assets\InvestigationGame\InvestigationScenario.cs" />
+     <Compile Include="Assets\Fix.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\BoxGroupAttribute.cs" />
      <Compile Include="Assets\LogComposer.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXEffectControllerPooled.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\Utility\EColor.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\Utility\EColor.cs" />
+     <Compile Include="Assets\TypewriterEffect.cs" />
+     <Compile Include="Assets\GraphComposerNew.cs" />
      <Compile Include="Assets\OLD\FirstLaunchSettings.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\InputAxisAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\InputAxisAttribute.cs" />
      <Compile Include="Assets\ToonWater\Scripts\Core\ToonWaterDuck.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\MetaAttributes\EnableIfAttributeBase.cs" />
-     <Compile Include="Assets\Resources\Quibli\Post Process\Effects\Scripts\StylizedDetail.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\MetaAttributes\EnableIfAttributeBase.cs" />
+     <Compile Include="Assets\LockAR.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Post Process\Effects\Scripts\StylizedDetail.cs" />
      <Compile Include="Assets\OLD\AudioFadeOut.cs" />
+     <Compile Include="Assets\InvestigationGame\RaycastObject.cs" />
+     <Compile Include="Assets\OpeningScript.cs" />
      <Compile Include="Assets\living birds\demo\livingBirdsDemoScript.cs" />
      <Compile Include="Assets\OLD\CreateSpriteCoordinate.cs" />
      <Compile Include="Assets\Dialogue.cs" />
-     <Compile Include="Assets\Resources\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\HorizontalLineAttribute.cs" />
+     <Compile Include="Assets\Resources_moved\Quibli\Utils\EditorAttributes\Core\DrawerAttributes\HorizontalLineAttribute.cs" />
      <Compile Include="Assets\InvestigationGame\DragNDropObject.cs" />
      <Compile Include="Assets\OLD\Label.cs" />
+     <Compile Include="Assets\3D\AnimateWindows.cs" />
+     <Compile Include="Assets\InvestigationGame\InvestigationBrain.cs" />
+     <Compile Include="Assets\DestroyComponentAfterTime.cs" />
      <Compile Include="Assets\OLD\GroupManager.cs" />
-     <Compile Include="Assets\Gallery.cs" />
+     <Compile Include="Assets\Episode2\EnemyScaner.cs" />
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\CTI URP Leaves.shader" />
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\Includes\CTI URP Lighting.hlsl" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\SpriteGlitch.shader" />
      <None Include="Assets\Oak Trees Package\Oak Trees Version 2.0\CTI Runtime Components\Shaders\CTI_LOD_Billboard_301.shader" />
-     <None Include="Assets\Resources\script2.txt" />
-     <None Include="Assets\Resources\Quibli\Shaders\LibraryUrp\LitForwardPass_DR.hlsl" />
+     <None Include="Assets\Resources_moved\script2.txt" />
+     <None Include="Assets\Resources_moved\Quibli\Shaders\LibraryUrp\LitForwardPass_DR.hlsl" />
      <None Include="Assets\Minimalist\Shaders\URP\Minimalist Standard SRP Batched.shader" />
      <None Include="Assets\Epic Toon FX\Prefabs\Combat\Combat FX.txt" />
      <None Include="Assets\Extreme Street Pack\README.txt" />
@@ -171,28 +211,34 @@
      <None Include="Assets\Minimalist\Shaders\Common\Minimalist Sky.shader" />
      <None Include="Assets\Epic Toon FX\Changelog.txt" />
      <None Include="Assets\Minimalist\Shaders\URP\MinimalistMetaPass.hlsl" />
-     <None Include="Assets\Resources\Quibli\Shaders\LibraryUrp\QuibliVertex.hlsl" />
+     <None Include="Assets\Resources_moved\Quibli\Shaders\LibraryUrp\QuibliVertex.hlsl" />
      <None Include="Assets\Open World Nature\Plugins\com.VisualDesignCafe.PackageManager\VisualDesignCafe.Editor.PackageManager.xml" />
      <None Include="Assets\Open World Nature\Grasslands\(Source Assets)\Shaders\Vegetation.shader" />
+     <None Include="Assets\Dialogue\Day2_En.json" />
      <None Include="Assets\Open World Nature\Plugins\com.VisualDesignCafe.Assemblies\VisualDesignCafe.Editor.Web.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-     <None Include="Assets\Resources\Quibli\Shaders\LibraryUrp\StylizedInput.hlsl" />
+     <None Include="Assets\Resources_moved\Quibli\Shaders\LibraryUrp\StylizedInput.hlsl" />
      <None Include="Assets\Open World Nature\Plugins\com.VisualDesignCafe.OpenWorldNature\VisualDesignCafe.Nature.Editor.xml" />
      <None Include="Assets\Open World Nature\Common\PostProcessing Profiles\Use with Unity&apos;s Postprocessing Stack.txt" />
-     <None Include="Assets\Resources\Quibli\Shaders\Skybox.shader" />
-     <None Include="Assets\Resources\Quibli\Post Process\Effects\Resources\StylizedDetail.shader" />
+     <None Include="Assets\Resources_moved\Quibli\Shaders\Skybox.shader" />
+     <None Include="Assets\Resources_moved\Quibli\Post Process\Effects\Resources\StylizedDetail.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-     <None Include="Assets\Resources\all_assets.txt" />
+     <None Include="Assets\Resources_moved\all_assets.txt" />
      <None Include="Assets\ToonWater\ToonWater - Readme.txt" />
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\Includes\CTI URP Billboard.hlsl" />
-     <None Include="Assets\Resources\Quibli\Post Process\Effects\Resources\ColorGrading.shader" />
+     <None Include="Assets\Dialogue\Day3_Ru .json" />
+     <None Include="Assets\Resources_moved\Quibli\Post Process\Effects\Resources\ColorGrading.shader" />
      <None Include="Assets\Minimalist\Minimalist V2.7.2 (Readme).txt" />
+     <None Include="Assets\Dialogue\Day1_En.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\Includes\CTI URP Bending.hlsl" />
      <None Include="Assets\Open World Nature\Plugins\com.VisualDesignCafe.Assemblies\VisualDesignCafe.Editor.Events.xml" />
      <None Include="Assets\Open World Nature\Grasslands\(Source Assets)\Shaders\Tree Billboard.shader" />
-     <None Include="Assets\Resources\Quibli\Shaders\LibraryUrp\Lighting_DR.hlsl" />
+     <None Include="Assets\Resources_moved\Quibli\Shaders\LibraryUrp\Lighting_DR.hlsl" />
+     <None Include="Assets\Dialogue\Day1_Ru .json" />
+     <None Include="Assets\Dialogue\Day5_Ru .json" />
      <None Include="Assets\Minimalist\Shaders\URP\Minimalist Standard.shader" />
+     <None Include="Assets\Dialogue\Day5_En.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\CTI URP Bark Array.shader" />
      <None Include="Assets\Epic Toon FX\Prefabs\Interactive\Interactive FX.txt" />
@@ -211,24 +257,29 @@
      <None Include="Assets\Epic Toon FX\Upgrade\URP Compatibility.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Open World Nature\Grasslands\(Source Assets)\Shaders\Grass.shader" />
-     <None Include="Assets\Resources\Quibli\Shaders\StylizedLighting.hlsl" />
-     <None Include="Assets\Resources\Quibli\Shaders\StylizedLit.shader" />
+     <None Include="Assets\Dialogue\Day2_Ru .json" />
+     <None Include="Assets\Resources_moved\Quibli\Shaders\StylizedLighting.hlsl" />
+     <None Include="Assets\Resources_moved\Quibli\Shaders\StylizedLit.shader" />
      <None Include="Assets\Oak Trees Package\Oak Trees Version 2.0\CTI Runtime Components\Shaders\CTI_LOD_Leaves_301.shader" />
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\CTI URP Bark.shader" />
-     <None Include="Assets\Resources\Quibli\Shaders\LibraryUrp\SuppressWarnings.hlsl" />
-     <None Include="Assets\Resources\script.txt" />
+     <None Include="Assets\Resources_moved\Quibli\Shaders\LibraryUrp\SuppressWarnings.hlsl" />
+     <None Include="Assets\Resources_moved\script.txt" />
      <None Include="Assets\Minimalist\Shaders\URP\MinimalistInputSrpBatched.hlsl" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Dialogue\Day4_Ru .json" />
+     <None Include="Assets\Dialogue\Day4_En.json" />
      <None Include="Assets\Oak Trees Package\Oak Trees Version 2.0\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />
-     <None Include="Assets\Resources\Quibli\Post Process\ShaderLibrary\Core.hlsl" />
+     <None Include="Assets\Resources_moved\Quibli\Post Process\ShaderLibrary\Core.hlsl" />
+     <None Include="Assets\Dialogue\Day3_En.json" />
      <None Include="Assets\Open World Nature\Plugins\com.VisualDesignCafe.OpenWorldNature\VisualDesignCafe.Nature.xml" />
-     <None Include="Assets\Resources\script3.txt" />
+     <None Include="Assets\Resources_moved\script3.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\Resources\Quibli\Shaders\Grass\StylizedFoliage.hlsl" />
+     <None Include="Assets\Resources_moved\Quibli\Shaders\Grass\StylizedFoliage.hlsl" />
      <None Include="Assets\DejaVu Fonts License.txt" />
      <None Include="Assets\CTI URP\CTI Runtime Components URP\Shaders\Includes\CTI URP Inputs.hlsl" />
      <None Include="Assets\Minimalist\Shaders\URP\Minimalist Standard LocalSpace.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\Trailer\SpriteOutline.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Minimalist\Shaders\URP\Minimalist Standard SRP Batched LocalSpace.shader" />
      <None Include="Assets\My Toon Shader.shader" />
@@ -237,13 +288,14 @@
      <None Include="Assets\Minimalist\Shaders\URP\MinimalistInput.hlsl" />
      <None Include="Assets\Assets\_www.unityassetcollection.com.txt" />
      <None Include="Assets\Open World Nature\Grasslands\(Source Assets)\Shaders\Tree Leaves.shader" />
+     <None Include="Assets\Dialogue\Day4_En .json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\Resources\Quibli\Shaders\Grass\FoliageLib.hlsl" />
+     <None Include="Assets\Resources_moved\Quibli\Shaders\Grass\FoliageLib.hlsl" />
      <None Include="Assets\Minimalist\Shaders\URP\MinimalistShadowCasterPass.hlsl" />
      <None Include="Assets\Minimalist\Shaders\URP\Minimalist.hlsl" />
      <None Include="Assets\Open World Nature\Plugins\com.VisualDesignCafe.OpenWorldNature\VisualDesignCafe.Editor.OpenWorldNature.xml" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
-     <None Include="Assets\Resources\Quibli\Shaders\LightBeam.shader" />
+     <None Include="Assets\Resources_moved\Quibli\Shaders\LightBeam.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Minimalist\Shaders\URP\MinimalistDepthOnlyPass.hlsl" />
      <Reference Include="UnityEngine">
@@ -909,14 +961,8 @@
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.CacheServer">
-     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
-     </Reference>
      <Reference Include="PsdPlugin">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Addressables">
-     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -933,11 +979,11 @@
      <Reference Include="Unity.2D.Path.Editor">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.UI">
-     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
@@ -954,17 +1000,23 @@
      <Reference Include="Unity.ShaderGraph.Editor">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+     </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics.Editor">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Addressables.Editor">
-     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.2D.Common.Editor">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Animation.Rigging.Editor">
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
@@ -1011,9 +1063,6 @@
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.ResourceManager">
-     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Postprocessing.Editor">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
@@ -1028,6 +1077,9 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Animation.Rigging">
+     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -1059,14 +1111,8 @@
      <Reference Include="Unity.2D.Common.Runtime">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.ScriptableBuildPipeline">
-     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
-     <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
      <HintPath>C:\Users\user2\Documents\SPAM_Restored\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
