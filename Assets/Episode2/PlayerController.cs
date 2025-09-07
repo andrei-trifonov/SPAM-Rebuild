@@ -42,8 +42,7 @@ public class PlayerController : MonoBehaviour
 
     public enum PlayerMode { FreeMove, Combat }
     public PlayerMode currentMode = PlayerMode.FreeMove;
-    private bool rotationBlocked;
-    
+   
     [Header("Components")]
     public CharacterController controller;
     public Animator animator;
@@ -149,7 +148,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator FireBullet()
     {
-        rotationBlocked = true;
+    
         animator.SetInteger("RandAttack", UnityEngine.Random.Range(0,2));       
         fireBlock = true;
         if (Weapons[pickWeapon].ammoLeft>0)
@@ -159,7 +158,7 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("Fire");
         yield return new WaitForSeconds(Weapons[pickWeapon].fireTime);
         fireBlock = false;
-        rotationBlocked = false;
+     
     }
     IEnumerator Reload()
     {
@@ -293,8 +292,7 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
         float Speed = Mathf.Abs(vertical);
-        if (!rotationBlocked || Speed>=0.1f)
-        {
+     
             // Вращаем персонажа вокруг своей оси
             transform.Rotate(Vector3.up * horizontal * walkRotationSpeed * Time.deltaTime);
           
@@ -310,12 +308,6 @@ public class PlayerController : MonoBehaviour
 
             animator.SetBool("IsTurningLeft", isTurningLeft);
             animator.SetBool("IsTurningRight", isTurningRight);
-        }
-
-        else
-        {
-            animator.SetBool("IsTurningLeft", false);
-            animator.SetBool("IsTurningRight", false);
-        }
+       
     }
 }
